@@ -26,10 +26,12 @@ class App extends Component {
   }
   render(){
     return(
-     
+     <div>
+         <Header/>
+    
       <Row style={{width:'100%',margin:'0 auto'}}>
         <Col span={24}>
-         <Header/>
+       
           <CustomBreadcrumb data={this.props.common.breadcrumb} />
         </Col>
         <Col span={6}>
@@ -39,6 +41,7 @@ class App extends Component {
           {this.props.children||'内容区域'}
         </Col>
       </Row>
+      </div>
     )
   }
 }
