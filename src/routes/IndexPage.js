@@ -87,7 +87,7 @@ class App extends Component {
 
 
 <div className="content-con j_categoryContent">
-    <div className="pannel-con j_CategoryMenuPannel" style={{display: 'block'}}><div className="pannel-0">
+    <div className="pannel-con j_CategoryMenuPannel" style={{display: 'none'}}><div className="pannel-0">
   <div className="hot-word-con" data-spm="subpannel2016025">
     
       <div className="hot-word-line">
@@ -142,7 +142,18 @@ class App extends Component {
 </div>
 
 
+<div className="banner-con j_mainBanner loading" data-spm="2016006">
 
+<div className="banner-slider j_bannerSlider">
+ <Carousel autoplay effect="fade">
+    <div><img  src="http://img.mukewang.com/5926501b000111f012000460.jpg" style={{width:'100%',height:'500px'}}/></div>
+    <div><img  src="http://img.mukewang.com/592177a8000180ca12000460.jpg" style={{width:'100%',height:'500px'}}/></div>
+    <div><img  src="http://img.mukewang.com/59278d45000173ba12000460.jpg" style={{width:'100%',height:'500px'}}/></div>
+    <div><img  src="http://img.mukewang.com/591d825f00016a2612000460.jpg" style={{width:'100%',height:'500px'}}/></div>
+  </Carousel>
+  </div>
+
+  </div>
 
 
 
@@ -151,12 +162,7 @@ class App extends Component {
 </div>
 
              </div>
-     <Carousel autoplay effect="fade">
-    <div><img  src="http://img.mukewang.com/5926501b000111f012000460.jpg" style={{width:'100%',height:'400px'}}/></div>
-    <div><img  src="http://img.mukewang.com/592177a8000180ca12000460.jpg" style={{width:'100%',height:'400px'}}/></div>
-    <div><img  src="http://img.mukewang.com/59278d45000173ba12000460.jpg" style={{width:'100%',height:'400px'}}/></div>
-    <div><img  src="http://img.mukewang.com/591d825f00016a2612000460.jpg" style={{width:'100%',height:'400px'}}/></div>
-  </Carousel>
+    
       <Row style={{width:'100%',margin:'0 auto'}}>
         <Col span={24}>
        
