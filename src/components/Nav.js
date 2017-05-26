@@ -26,22 +26,29 @@ import styles from '../routes/IndexPage.css';
 
                          <form name="searchTop" action="//list.tmall.com/search_product.htm" className="mallSearch-form clearfix" target="_top" acceptCharset="gbk" acceptCharset="gbk">
             <fieldset>
+               
                 <legend>天猫搜索</legend>
                       <div className="mallSearch-input clearfix">
-                          <label style={{visibility: 'visible',display:'none'}}>搜索 天猫 商品/品牌/店铺</label>
-                      <div className="mallSearch-input clearfix">
+                          
+                     
+                       
                           <label  style={{visibility: 'visible',display:'none'}}>搜索 天猫 商品/品牌/店铺</label>
-                          <div className="s-combobox" id="s-combobox-139">
+                            
+                          <div className="s-combobox s-combobox-focused s-combobox-hover" id="s-combobox-139">
                               <div className="s-combobox-input-wrap">
-                                      <input type="text" name="q" accessKey="s" autoComplete="off"  value="" id="mq" className="s-combobox-input" role="combobox"  title="请输入搜索文字" aria-label="请输入搜索文字"/>
+                                   
+                                      <input type="text" name="q"    accessKey="s" autoComplete="off"  id="mq" className="s-combobox-input" role="combobox"  title="请输入搜索文字" aria-label="请输入搜索文字"/>
                               </div>
-                          <label  className="s-combobox-placeholder" style={{color: 'rgb(102, 102, 102)', visibility: 'visible'}}>精品咖啡机 非买不可</label></div>
+                          <label  className="s-combobox-placeholder" style={{color: 'rgb(204, 204, 204)', visibility: 'hidden',display:'none'}}>精品课程 非学不可</label>
+                          
+                          
+                          </div>
                           <button type="submit">搜索<s></s></button>
                           <input id="J_Type" type="hidden" name="type" value="p"/>
                           <input id="J_MallSearchStyle" type="hidden" name="style" value=""/>
                           <input id="J_Cat" type="hidden" name="cat" value="all"/>
                           <input type="hidden" name="vmarket" value=""/>
-                    </div>
+                    
                     </div>
              </fieldset>
          </form>

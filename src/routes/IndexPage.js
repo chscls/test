@@ -38,11 +38,15 @@ class App extends Component {
 		<div className="inner-con1">
 			<div className="inner-con2 clearfix">
 				<a href="//chaoshi.tmall.com/?acm=lb-zebra-148799-667861.1003.4.1266918&amp;scm=1003.4.lb-zebra-148799-667861.OTHER_14561837688591_1266918" aria-label="天猫超市">			
-						<img alt="" src="//img.alicdn.com/tps/i2/TB1xgT8LVXXXXaZXFXX8ueZHFXX-180-72.png"/>
+						资源
 					<div className="hover-pic"></div>
 				</a>
         <a href="//3c.tmall.com/?acm=lb-zebra-148799-667861.1003.4.1266918&amp;scm=1003.4.lb-zebra-148799-667861.OTHER_14561822298635_1266918">
-						农业
+						题库
+					<div className="hover-pic"></div>
+				</a>
+        <a href="//3c.tmall.com/?acm=lb-zebra-148799-667861.1003.4.1266918&amp;scm=1003.4.lb-zebra-148799-667861.OTHER_14561822298635_1266918">
+						直播
 					<div className="hover-pic"></div>
 				</a>
 			</div>
@@ -51,7 +55,7 @@ class App extends Component {
 </div>
 <div className="j_category category-con">
 	<div className="category-inner-con j_categoryInnerCon j_categoryTab">
-<div className="j_logo logo-con" data-spm="2015002"><div className="doodle-con j_doodleCon"><a className="j_doodleLink" style={{display:'block',height:'100%',width:'100%'}} href="//lenovo.tmall.com/campaign-3734-28.htm?pos=1&amp;acm=201603169.1003.2.1776914&amp;scm=1003.2.201603169.ITEM_1495066068192_1776914"><img className="doodle hide j_doodle" src="https://img.alicdn.com/tfs/TB1uIlNRpXXXXb2apXXXXXXXXXX-290-130.gif" data-src="https://img.alicdn.com/tfs/TB1uIlNRpXXXXb2apXXXXXXXXXX-290-130.gif"/></a></div></div>
+<div className="j_logo logo-con" data-spm="2015002"><div className="doodle-con j_doodleCon"><a className="j_doodleLink" style={{display:'block',height:'100%',width:'100%'}} href="//lenovo.tmall.com/campaign-3734-28.htm?pos=1&amp;acm=201603169.1003.2.1776914&amp;scm=1003.2.201603169.ITEM_1495066068192_1776914"><img className="doodle hide j_doodle" src="123.gif" data-src="123.gif"/></a></div></div>
 
     <div className="category-type">
         <i className="fp-iconfont"></i>
@@ -64,9 +68,9 @@ class App extends Component {
             
             <li className="j_MenuNav nav-item nav-item-0 category-loaded" data-spm="category2016010">
                 <i className="fp-iconfont nav-item-icon icon"></i><i className="dot fp-iconfont"></i>
-                <a href="//nvzhuang.tmall.com/?acm=lb-zebra-148799-667863.1003.8.708026&amp;scm=1003.8.lb-zebra-148799-667863.ITEM_14561681423980_708026">川菜</a>
+                <a style={{color:'black'}} href="//nvzhuang.tmall.com/?acm=lb-zebra-148799-667863.1003.8.708026&amp;scm=1003.8.lb-zebra-148799-667863.ITEM_14561681423980_708026">川菜</a>
                 
-                    /<a href="//neiyi.tmall.com/?acm=lb-zebra-148799-667863.1003.8.708026&amp;scm=1003.8.lb-zebra-148799-667863.ITEM_14561681423980_708026">农业</a>
+                    /<a style={{color:'black'}} href="//neiyi.tmall.com/?acm=lb-zebra-148799-667863.1003.8.708026&amp;scm=1003.8.lb-zebra-148799-667863.ITEM_14561681423980_708026">农业</a>
                 
                 
                 <b className="arrow"></b>
@@ -74,9 +78,9 @@ class App extends Component {
             
             <li className="j_MenuNav nav-item nav-item-1 category-loaded" data-spm="category2016011">
                 <i className="fp-iconfont nav-item-icon icon"></i><i className="dot fp-iconfont"></i>
-                <a href="//nanzhuang.tmall.com/?acm=lb-zebra-148799-667863.1003.8.708026&amp;scm=1003.8.lb-zebra-148799-667863.ITEM_14561677576501_708026">医学</a>
+                <a style={{color:'black'}} href="//nanzhuang.tmall.com/?acm=lb-zebra-148799-667863.1003.8.708026&amp;scm=1003.8.lb-zebra-148799-667863.ITEM_14561677576501_708026">医学</a>
                 
-                    /<a href="//sports.tmall.com/?acm=lb-zebra-148799-667863.1003.8.708026&amp;scm=1003.8.lb-zebra-148799-667863.ITEM_14561677576501_708026">护理</a>
+                    /<a style={{color:'black'}} href="//sports.tmall.com/?acm=lb-zebra-148799-667863.1003.8.708026&amp;scm=1003.8.lb-zebra-148799-667863.ITEM_14561677576501_708026">护理</a>
                 
                 
                 <b className="arrow"></b>
