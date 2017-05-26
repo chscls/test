@@ -5,6 +5,7 @@ import styles from './IndexPage.css';
 import "antd/dist/antd.less";   // 引入官方提供的 less 样式入口文件
 import Silder from '../components/Silder'
 import Header from '../components/Header'
+import Nav from '../components/Nav'
 import { Carousel } from 'antd';
 import CustomBreadcrumb from '../components/breadcrumb'
 import Videojs from 'video.js'
@@ -29,71 +30,65 @@ class App extends Component {
     return(
      <div>
          <Header/>
-         
-         <div id="header">
-           <div className="headerLayout">
-             <div className="headerCon">
-<h1 id="mallLogo" style={{visibility:'visible'}}>
-                    <span className="mlogo">
-                    
-                     <a href="/" title="天猫Tmall.com"><s className={styles.mlogo}></s>天猫Tmall.com</a>
-                    
-                    </span>
-                    
-                 </h1>
+<Nav/>
+           <div id="content">
+<div className="main-nav" data-spm="2016004">
+	<div className="inner-con0">
+		<div className="inner-con1">
+			<div className="inner-con2 clearfix">
+				<a href="//chaoshi.tmall.com/?acm=lb-zebra-148799-667861.1003.4.1266918&amp;scm=1003.4.lb-zebra-148799-667861.OTHER_14561837688591_1266918" aria-label="天猫超市">			
+						<img alt="" src="//img.alicdn.com/tps/i2/TB1xgT8LVXXXXaZXFXX8ueZHFXX-180-72.png"/>
+					<div className="hover-pic"></div>
+				</a>
+        <a href="//3c.tmall.com/?acm=lb-zebra-148799-667861.1003.4.1266918&amp;scm=1003.4.lb-zebra-148799-667861.OTHER_14561822298635_1266918">
+						农业
+					<div className="hover-pic"></div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div className="j_category category-con">
+	<div className="category-inner-con j_categoryInnerCon j_categoryTab">
+<div className="j_logo logo-con" data-spm="2015002"><div className="doodle-con j_doodleCon"><a className="j_doodleLink" style={{display:'block',height:'100%',width:'100%'}} href="//lenovo.tmall.com/campaign-3734-28.htm?pos=1&amp;acm=201603169.1003.2.1776914&amp;scm=1003.2.201603169.ITEM_1495066068192_1776914"><img className="doodle hide j_doodle" src="https://img.alicdn.com/tfs/TB1uIlNRpXXXXb2apXXXXXXXXXX-290-130.gif" data-src="https://img.alicdn.com/tfs/TB1uIlNRpXXXXb2apXXXXXXXXXX-290-130.gif"/></a></div></div>
 
-                 <div className="header-extra">
-                    
-                        <div className="header-banner">          
-<div></div>   
-                        </div>
-                <div id="mallSearch">
+    <div className="category-type">
+        <i className="fp-iconfont"></i>
+        <div className="text">课程分类</div>
+    </div>
 
-                         <form name="searchTop" action="//list.tmall.com/search_product.htm" className="mallSearch-form clearfix" target="_top" acceptCharset="gbk" acceptCharset="gbk">
-            <fieldset>
-                <legend>天猫搜索</legend>
-                      <div className="mallSearch-input clearfix">
-                          <label style={{visibility: 'visible',display:'none'}}>搜索 天猫 商品/品牌/店铺</label>
-                      <div className="mallSearch-input clearfix">
-                          <label  style={{visibility: 'visible',display:'none'}}>搜索 天猫 商品/品牌/店铺</label>
-                          <div className="s-combobox" id="s-combobox-139">
-                              <div className="s-combobox-input-wrap">
-                                      <input type="text" name="q" accessKey="s" autoComplete="off"  value="" id="mq" className="s-combobox-input" role="combobox"  title="请输入搜索文字" aria-label="请输入搜索文字"/>
-                              </div>
-                          <label  className="s-combobox-placeholder" style={{color: 'rgb(102, 102, 102)', visibility: 'visible'}}>精品咖啡机 非买不可</label></div>
-                          <button type="submit">搜索<s></s></button>
-                          <input id="J_Type" type="hidden" name="type" value="p"/>
-                          <input id="J_MallSearchStyle" type="hidden" name="style" value=""/>
-                          <input id="J_Cat" type="hidden" name="cat" value="all"/>
-                          <input type="hidden" name="vmarket" value=""/>
-                    </div>
-                    </div>
-             </fieldset>
-         </form>
-                   
-             
-        
-    <ul  className="hot-query" style={{height:'25px'}}>
-      <li className="hot-query-highlight">
-        <a href="//list.tmall.com/search_product.htm?from=mallfp..pc_1.0_hq&amp;click_id=t恤男&amp;q=t恤男">农业</a>
-        </li>
-        <li className="hot-query-highlight"><a href="//list.tmall.com/search_product.htm?from=mallfp..pc_1.1_hq&amp;click_id=连衣裙&amp;q=连衣裙">护理</a>
-        </li>
-        <li className="hot-query-highlight"><a href="//list.tmall.com/search_product.htm?from=mallfp..pc_1.2_hq&amp;click_id=夏凉被&amp;q=夏凉被">汽车</a>
-        </li>
+<div className="category-tab-content">
+    <div className="nav-con j_tabPannel category-tab-pannel pannel-normal">
+        <ul className="normal-nav clearfix">
+            
+            <li className="j_MenuNav nav-item nav-item-0 category-loaded" data-spm="category2016010">
+                <i className="fp-iconfont nav-item-icon icon"></i><i className="dot fp-iconfont"></i>
+                <a href="//nvzhuang.tmall.com/?acm=lb-zebra-148799-667863.1003.8.708026&amp;scm=1003.8.lb-zebra-148799-667863.ITEM_14561681423980_708026">川菜</a>
+                
+                    /<a href="//neiyi.tmall.com/?acm=lb-zebra-148799-667863.1003.8.708026&amp;scm=1003.8.lb-zebra-148799-667863.ITEM_14561681423980_708026">农业</a>
+                
+                
+                <b className="arrow"></b>
+            </li>
+            
+            <li className="j_MenuNav nav-item nav-item-1 category-loaded" data-spm="category2016011">
+                <i className="fp-iconfont nav-item-icon icon"></i><i className="dot fp-iconfont"></i>
+                <a href="//nanzhuang.tmall.com/?acm=lb-zebra-148799-667863.1003.8.708026&amp;scm=1003.8.lb-zebra-148799-667863.ITEM_14561677576501_708026">医学</a>
+                
+                    /<a href="//sports.tmall.com/?acm=lb-zebra-148799-667863.1003.8.708026&amp;scm=1003.8.lb-zebra-148799-667863.ITEM_14561677576501_708026">护理</a>
+                
+                
+                <b className="arrow"></b>
+            </li>
+        </ul>
+    </div>
+    
+</div>
 
-      </ul>
-      
-      
-      
-      </div></div>
+</div>
+</div>
 
-                 
-<div>
-  </div>
-  </div>
-           </div>
-           </div>
+             </div>
      <Carousel autoplay effect="fade">
     <div><img  src="http://img.mukewang.com/5926501b000111f012000460.jpg" style={{width:'100%',height:'400px'}}/></div>
     <div><img  src="http://img.mukewang.com/592177a8000180ca12000460.jpg" style={{width:'100%',height:'400px'}}/></div>
