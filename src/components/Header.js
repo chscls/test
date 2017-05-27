@@ -104,6 +104,7 @@ class Header extends React.Component {
           onOk={this.handleOk}
           confirmLoading={confirmLoading}
           onCancel={this.handleCancel}
+          footer={null}
           width="332px"
         >
           <NormalLoginForm/>
