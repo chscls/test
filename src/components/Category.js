@@ -14,7 +14,7 @@ const Category = (props) => {
 		<span className="text">医学护理</span>
 	</div>
 	
-		<a href="https://pages.tmall.com/wow/huanxin/act/refreshment-pc?spm=875.7931836/B.2015039.1.PdrDwa&amp;abtest=&amp;pos=1&amp;abbucket=&amp;acm=09031.1003.1.1362091&amp;scm=1003.1.09031.OTHER_1001_1362091&amp;syncIds=39572898272,0" className="channel-item j_exposureParam" data-exposure="//ac.mmstat.com/1.gif?tpp_scm=1007.13704.68562.100200300000000&amp;tpp_pvid=e6fd7a14-9314-4a83-a251-70c1b8e87fc3" data-spm-anchor-id="875.7931836/B.2015039.1">
+		<a href="" data-spm-anchor-id="875.7931836/B.2015039.1">
 				<div className="item-title">医学</div>
 			<div className="item-sub-title">当一名好医生</div>
 			<div className="img-con">
@@ -25,7 +25,7 @@ const Category = (props) => {
 	
 	<div className="seprate"></div>
 	
-		<a href="https://www.tmall.com/wow/fushi/act/globalfashion?spm=875.7931836/B.2015039.2.PdrDwa&amp;trackInfo=903201;853970682;28125;538978734995;3;28125_538978734995;1007.13362.68645.100200300000000;ca5aae04-c932-4555-990d-c23b0a688690;1;0:1007.13362.68645.100200300000000;ca5aae04-c932-4555-990d-c23b0a688690;0:1;903201;853970682;28125;538978734995;3;28125_538978734995&amp;item_id=538978734995&amp;pvid=&amp;pos=1&amp;activity_id=28125&amp;acm=09032.1003.2.1050812&amp;scm=1003.2.09032.OTHER_1477176087019_1050812" className="channel-item j_exposureParam" data-exposure="//ac.mmstat.com/1.gif?trackInfo=903201;853970682;28125;538978734995;3;28125_538978734995;1007.13362.68645.100200300000000;ca5aae04-c932-4555-990d-c23b0a688690;1;0:1007.13362.68645.100200300000000;ca5aae04-c932-4555-990d-c23b0a688690;0:1;903201;853970682;28125;538978734995;3;28125_538978734995&amp;scm=1003.1.09032.OTHER_1477176087019_1050812" data-spm-anchor-id="875.7931836/B.2015039.2">
+		<a href="" data-spm-anchor-id="875.7931836/B.2015039.2">
 				<div className="item-title">护理</div>
 			<div className="item-sub-title">当一名好护士</div>
 			<div className="img-con">
@@ -42,7 +42,7 @@ const Category = (props) => {
 		<span className="text">技术前沿</span>
 	</div>
 	
-		<a href="https://shouji.tmall.com?spm=875.7931836/B.2015039.3.PdrDwa&amp;pos=1&amp;acm=09033.1003.2.1783961&amp;scm=1003.2.09033.OTHER_1493628938396_1783961" className="channel-item j_exposureParam" data-exposure="" data-spm-anchor-id="875.7931836/B.2015039.3">
+		<a href="" className="channel-item j_exposureParam" data-exposure="" data-spm-anchor-id="875.7931836/B.2015039.3">
 			<div className="item-title">软件馆</div>
 			<div className="item-sub-title">人工智能大数据</div>
 			<div className="img-con">
@@ -53,7 +53,7 @@ const Category = (props) => {
 	
 	<div className="seprate"></div>
 	
-		<a href="https://ku.tmall.com/?spm=875.7931836/B.2015039.4.PdrDwa&amp;trackInfo=903401;382621;782;520785920421;3;782_520785920421;1007.13362.68645.100200300000000;d1f2931b-f832-432a-ab9a-090b2ca7b2ff;1;0:1007.13362.68645.100200300000000;d1f2931b-f832-432a-ab9a-090b2ca7b2ff;0:1;903401;382621;782;520785920421;3;782_520785920421&amp;item_id=520785920421&amp;pvid=&amp;pos=1&amp;activity_id=782&amp;acm=09034.1003.2.936061&amp;scm=1003.2.09034.OTHER_1479946989475_936061" className="channel-item j_exposureParam" data-exposure="//ac.mmstat.com/1.gif?trackInfo=903401;382621;782;520785920421;3;782_520785920421;1007.13362.68645.100200300000000;d1f2931b-f832-432a-ab9a-090b2ca7b2ff;1;0:1007.13362.68645.100200300000000;d1f2931b-f832-432a-ab9a-090b2ca7b2ff;0:1;903401;382621;782;520785920421;3;782_520785920421&amp;scm=1003.1.09034.OTHER_1479946989475_936061" data-spm-anchor-id="875.7931836/B.2015039.4">
+		<a href="" data-spm-anchor-id="875.7931836/B.2015039.4">
 					<div className="item-title">硬件馆</div>
 			<div className="item-sub-title">虚拟现实</div>
 			<div className="img-con">
@@ -70,7 +70,7 @@ const Category = (props) => {
 		<span className="text">川菜大师</span>
 	</div>
 	
-		<a href="//pages.tmall.com/wow/huanxin/act/mustbuy?spm=875.7931836/B.2015039.5.PdrDwa&amp;abtest=_AB-LR1342-PR1342&amp;pos=1&amp;abbucket=_AB-M1342_B0&amp;acm=09035.1003.1.1532524&amp;scm=1003.1.09035.OTHER_4001_1532524&amp;syncIds=0,40755976991" className="channel-item j_exposureParam" data-exposure="//ac.mmstat.com/1.gif?tpp_scm=1007.13704.68562.100200300000000&amp;tpp_pvid=66afba11-f800-4ac8-957f-77041f782b46" data-spm-anchor-id="875.7931836/B.2015039.5">
+		<a href="" data-spm-anchor-id="875.7931836/B.2015039.5">
 		<div className="item-title">川菜</div>
 			<div className="item-sub-title">当一名好厨师</div>
 			<div className="img-con">
@@ -81,7 +81,7 @@ const Category = (props) => {
 	
 	<div className="seprate"></div>
 	
-		<a href="https://miao.tmall.com/?spm=875.7931836/B.2015039.6.PdrDwa&amp;trackInfo=903601;908355462;29600;531620778709;3;29600_531620778709;1007.13362.68645.100200300000000;30ef5bda-a849-4de8-9931-0e4e77080cb8;1;0:1007.13362.68645.100200300000000;30ef5bda-a849-4de8-9931-0e4e77080cb8;0:1;903601;908355462;29600;531620778709;3;29600_531620778709&amp;item_id=531620778709&amp;pvid=&amp;pos=1&amp;activity_id=29600&amp;acm=09036.1003.2.1306495&amp;scm=1003.2.09036.OTHER_1478209261321_1306495" className="channel-item j_exposureParam" data-exposure="//ac.mmstat.com/1.gif?trackInfo=903601;908355462;29600;531620778709;3;29600_531620778709;1007.13362.68645.100200300000000;30ef5bda-a849-4de8-9931-0e4e77080cb8;1;0:1007.13362.68645.100200300000000;30ef5bda-a849-4de8-9931-0e4e77080cb8;0:1;903601;908355462;29600;531620778709;3;29600_531620778709&amp;scm=1003.1.09036.OTHER_1478209261321_1306495" data-spm-anchor-id="875.7931836/B.2015039.6">
+		<a href="" data-spm-anchor-id="875.7931836/B.2015039.6">
 	<div className="item-title">农业</div>
 			<div className="item-sub-title">智慧农业</div>
 			<div className="img-con">
@@ -98,7 +98,7 @@ const Category = (props) => {
 		<span className="text">汽车机械</span>
 	</div>
 	
-		<a href="//www.tmall.com/wow/import/act/wgh?spm=875.7931836/B.2015039.7.PdrDwa&amp;trackInfo=903701;484846241;1031;44863601012;3;1031_44863601012;1007.13362.68645.100200300000000;841dd17f-237b-4da6-92ed-9354f964b984;1;0:1007.13362.68645.100200300000000;841dd17f-237b-4da6-92ed-9354f964b984;0:1;903701;484846241;1031;44863601012;3;1031_44863601012&amp;item_id=44863601012&amp;pvid=&amp;pos=1&amp;activity_id=1031&amp;acm=09037.1003.2.922200&amp;scm=1003.2.09037.OTHER_1478070463325_922200" className="channel-item j_exposureParam" data-exposure="//ac.mmstat.com/1.gif?trackInfo=903701;484846241;1031;44863601012;3;1031_44863601012;1007.13362.68645.100200300000000;841dd17f-237b-4da6-92ed-9354f964b984;1;0:1007.13362.68645.100200300000000;841dd17f-237b-4da6-92ed-9354f964b984;0:1;903701;484846241;1031;44863601012;3;1031_44863601012&amp;scm=1003.1.09037.OTHER_1478070463325_922200" data-spm-anchor-id="875.7931836/B.2015039.7">
+		<a href="" data-spm-anchor-id="875.7931836/B.2015039.7">
 			<div className="item-title">汽车</div>
 			<div className="item-sub-title">造更好的车</div>
 			<div className="img-con">
@@ -109,7 +109,7 @@ const Category = (props) => {
 	
 	<div className="seprate"></div>
 	
-		<a href="https://tmallchoice.tmall.com/?spm=875.7931836/B.2015039.8.PdrDwa&amp;pos=1&amp;acm=09038.1003.2.1706690&amp;scm=1003.2.09038.OTHER_1494395137523_1706690" className="channel-item j_exposureParam" data-exposure="" data-spm-anchor-id="875.7931836/B.2015039.8">
+		<a href="" className="channel-item j_exposureParam" data-exposure="" data-spm-anchor-id="875.7931836/B.2015039.8">
 			<div className="item-title">机械</div>
 			<div className="item-sub-title">中国制造</div>
 			<div className="img-con">
@@ -126,7 +126,7 @@ const Category = (props) => {
 		<span className="text">个性推荐</span>
 	</div>
 	
-		<a href="https://www.tmall.com/wow/grp/16039/tun?spm=875.7931836/B.2015039.9.PdrDwa&amp;pos=1&amp;acm=201608023.1003.1.1297637&amp;scm=1003.1.201608023.OTHER_5001_1297637&amp;syncIds=40001868294" className="channel-item j_exposureParam" data-exposure="//ac.mmstat.com/1.gif?tpp_scm=1007.13704.68562.100200300000000&amp;tpp_pvid=dc013673-d5d7-4682-b126-1913871f607a" data-spm-anchor-id="875.7931836/B.2015039.9">
+		<a href="" className="channel-item j_exposureParam" data-exposure="//ac.mmstat.com/1.gif?tpp_scm=1007.13704.68562.100200300000000&amp;tpp_pvid=dc013673-d5d7-4682-b126-1913871f607a" data-spm-anchor-id="875.7931836/B.2015039.9">
 			<div className="item-title">国学</div>
 			<div className="item-sub-title">居家必备</div>
 			<div className="img-con">
@@ -137,7 +137,7 @@ const Category = (props) => {
 	
 	<div className="seprate"></div>
 	
-		<a href="https://www.tmall.com/wow/grp/16039/8090?spm=875.7931836/B.2015039.10.PdrDwa&amp;pos=2&amp;acm=201608023.1003.1.1297637&amp;scm=1003.1.201608023.OTHER_5002_1297637&amp;syncIds=527329133952" className="channel-item j_exposureParam" data-exposure="//ac.mmstat.com/1.gif?tpp_scm=1007.13704.68562.100200300000000&amp;tpp_pvid=dc013673-d5d7-4682-b126-1913871f607a" data-spm-anchor-id="875.7931836/B.2015039.10">
+		<a href="" data-spm-anchor-id="875.7931836/B.2015039.10">
 			<div className="item-title">艺术</div>
 			<div className="item-sub-title">生活更美好</div>
 			<div className="img-con">
@@ -148,7 +148,7 @@ const Category = (props) => {
 	
 </div>
 </div>
-	<div data-spm="2016901" style={{marginTop: '10px'}} className="tanx-con-mm_12852562_1778064_37802121 full-banner clearfix j_tanxBanner j_LazyloadCon fp-content-loading j_exposureCon" data-inited="1"><a href="https://click.mz.simba.taobao.com/ecpm?e=FfW1i%2Bx4U001coovOinjSD6gEdXn0VYUcu7lTK3qqzUw%2FZSp%2FO%2FfM7%2BLt2khHsChClQupYKoz4a7GsveaVM4lgtIBuaU4rc8UK7RDtIZydUyXElRAMLwo9OMT%2BjBtNp7%2FMunkswZxss3raQopFwc8EIQgPjj8GCr7I1RE%2BA%2BExJyD7uMQ%2BGVAs3eQZDe8L65r6eYcEHsY6lhsyUzvE7KQbLDU22ROm4fHu3yN3re1vWmETCSJyV1pb6x0hxvL1XsqpqtvE5BYkbKBgvtWhOvg7sEeYkLQ%2BD8EboYhmR1FsuzChHIS4d58BgoqG7QlwxqKkrZ6%2BlcbrMbeEC0GJrdOBW0kLmjjWUHXzw4mcHNcwoq0eFFS53N5P6SxR1g51pYEG0a8sdIX7foLX8X5k6oSQ%3D%3D&amp;u=https%3A%2F%2Fmochagushi.tmall.com%2Fshop%2Fview_shop.htm%3Fmytmenu%3Dmdianpu%26utkn%3Dg%252Cysulf2fzzlfmfrxmxwrll2q1493552045301%26user_number_id%3D377636605%26scm%3D1028.1.1.20001&amp;k=409">
+	<div data-spm="2016901" style={{marginTop: '10px'}} className="tanx-con-mm_12852562_1778064_37802121 full-banner clearfix j_tanxBanner j_LazyloadCon fp-content-loading j_exposureCon" data-inited="1"><a href="">
     <img src="12.jpg" width="1620" height="90"/></a><a href="">
     <img src="12.jpg" width="1620" height="90"/></a>
 		<ins style={{display:'inline-block',padding:'0',margin:'0',width:'1620px',height:'90px',zoom:'1',position:'relative'}} id="tanxssp-outer-conmm_12852562_1778064_37802121">

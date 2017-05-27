@@ -11,7 +11,7 @@ import styles from '../routes/IndexPage.css';
 <h1 id="mallLogo" style={{visibility:'visible'}}>
                     <span className="mlogo">
                     
-                     <a href="/" title="天猫Tmall.com"><s className={styles.mlogo}></s>天猫Tmall.com</a>
+                     <a href="/" title=""><s className={styles.mlogo}></s></a>
                     
                     </span>
                     

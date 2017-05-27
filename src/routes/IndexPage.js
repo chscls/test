@@ -30,19 +30,19 @@ class App extends Component {
 	<div className="inner-con0">
 		<div className="inner-con1">
 			<div className="inner-con2 clearfix">
-				<a href="//chaoshi.tmall.com/?acm=lb-zebra-148799-667861.1003.4.1266918&amp;scm=1003.4.lb-zebra-148799-667861.OTHER_14561837688591_1266918" aria-label="天猫超市">			
+				<a href="" aria-label="天猫超市">			
 						资源
 					<div className="hover-pic"></div>
 				</a>
-        <a href="//3c.tmall.com/?acm=lb-zebra-148799-667861.1003.4.1266918&amp;scm=1003.4.lb-zebra-148799-667861.OTHER_14561822298635_1266918">
+        <a href="">
 						题库
 					<div className="hover-pic"></div>
 				</a>
-        <a href="//3c.tmall.com/?acm=lb-zebra-148799-667861.1003.4.1266918&amp;scm=1003.4.lb-zebra-148799-667861.OTHER_14561822298635_1266918">
+        <a href="">
 						直播
 					<div className="hover-pic"></div>
 				</a>
-        <a href="//3c.tmall.com/?acm=lb-zebra-148799-667861.1003.4.1266918&amp;scm=1003.4.lb-zebra-148799-667861.OTHER_14561822298635_1266918">
+        <a href="">
 						答疑
 					<div className="hover-pic"></div>
 				</a>

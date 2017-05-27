@@ -17,19 +17,19 @@ const Footer = (props) => {
         
             <div className="mui-global-fragment-load" data-fragment="tmbase/mui_footer_desc"><dl id="ensure">
     <dt><span>购课指南</span></dt>
-    <dd><a href="" target="_blank">免费注册</a> <a href="https://www.alipay.com/user/reg_select.htm" target="_blank">开通支付宝</a> <a href="https://www.alipay.com/user/login.htm?goto=https%3A%2F%2Fwww.alipay.com%2Fuser%2Finpour_request.htm" target="_blank">支付宝充值</a></dd>
+    <dd><a href="" target="_blank">免费注册</a> <a href="" target="_blank">开通支付宝</a> <a href="https://www.alipay.com/user/login.htm?goto=https%3A%2F%2Fwww.alipay.com%2Fuser%2Finpour_request.htm" target="_blank">支付宝充值</a></dd>
 </dl>
 <dl id="beginner">
     <dt><span>知用保障</span></dt>
-    <dd><a href="" target="_blank">发票保障</a> <a href="//service.tmall.com/support/tmall/knowledge-1124063.htm" target="_blank">售后规则</a> <a href="//service.tmall.com/support/tmall/knowledge-1126800.htm" target="_blank">缺货赔付</a></dd>
+    <dd><a href="" target="_blank">发票保障</a> <a href="" target="_blank">售后规则</a> <a href="//service.tmall.com/support/tmall/knowledge-1126800.htm" target="_blank">缺货赔付</a></dd>
 </dl>
 <dl id="payment">
     <dt><span>支付方式</span></dt>
-    <dd><a href="" target="_blank">快捷支付</a> <a href="https://payservice.alipay.com/intro/index.htm?c=xyk" target="_blank">信用卡</a> <a href="https://payservice.alipay.com/intro/index.htm?c=yeb" target="_blank">余额宝</a> <a href="https://payservice.alipay.com/intro/index.htm?c=hb" target="_blank">蚂蚁花呗</a> <a href="//tms.alicdn.com/market/cainiao/codchn.php" target="_blank">货到付款</a></dd>
+    <dd><a href="" target="_blank">快捷支付</a> <a href="" target="_blank">信用卡</a> <a href="https://payservice.alipay.com/intro/index.htm?c=yeb" target="_blank">余额宝</a> <a href="https://payservice.alipay.com/intro/index.htm?c=hb" target="_blank">蚂蚁花呗</a> <a href="//tms.alicdn.com/market/cainiao/codchn.php" target="_blank">货到付款</a></dd>
 </dl>
 <dl id="seller">
     <dt><span>商家服务</span></dt>
-    <dd><a href="" target="_blank" className="join">商家入驻</a> <a href="//shangjia.tmall.com/portal.htm" target="_blank">学校中心</a> <a href="//peixun.tmall.com/" target="_blank">知用智库</a> <a href="//www.tmall.com/wow/seller/act/guize" target="_blank">知用规则</a> <a href="//e56.tmall.com" target="_blank">物流服务</a>
+    <dd><a href="" target="_blank" className="join">商家入驻</a> <a href="" target="_blank">学校中心</a> <a href="//peixun.tmall.com/" target="_blank">知用智库</a> <a href="//www.tmall.com/wow/seller/act/guize" target="_blank">知用规则</a> <a href="//e56.tmall.com" target="_blank">物流服务</a>
         <a href="" target="_blank">喵言喵语</a> <a href="//fw.tmall.com/" target="_blank">运营服务</a></dd>
 </dl>
 <dl id="mobile">
