@@ -4,7 +4,7 @@ export default {
     breadcrumb:[
       {
         name:'首页',
-        path:'/dashboard'
+        path:'/'
       }
     ]
   },

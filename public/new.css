@@ -152,7 +152,7 @@ width: auto;
 height: 26px;
 position: relative!important;
 background: #f2f2f2;
-z-index: 999;
+z-index: 1000;
 -webkit-transform: translate3d(0,0,0);
 border-bottom: 1px solid #e5e5e5
 }
@@ -514,7 +514,7 @@ width: 74px
 }
 
 #site-nav .sn-favorite .menu-bd {
-width: 62px
+width: 81px
 }
 
 #site-nav .sn-seller .menu-bd {
@@ -1376,7 +1376,7 @@ display: none
 	min-width: 990px;
 	width: auto!important;
 	position: relative;
-	z-index: 1000
+	z-index: 999
 }
 
 #mallPage #header.mui-global-header-fixed {

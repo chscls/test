@@ -46,12 +46,7 @@ class Header extends React.Component {
   }
     render() {
         const { visible, confirmLoading, ModalText,reg } = this.state;
-        var loginButton;
-        if (this.state.reg) {
-  loginButton = <RegistrationForm/>;
-} else {
-  loginButton =  <NormalLoginForm/>;
-}
+        
   return (
      <div id="site-nav" className={styles.siteNav}>
 
@@ -68,7 +63,7 @@ class Header extends React.Component {
             <ul className="sn-quick-menu">
                 <li className="sn-mytaobao menu-item j_MyTaobao">
                     <div className="sn-menu">
-                        <a className="menu-hd" href="" target="_top" rel="nofollow" tabIndex="0" aria-haspopup="true" aria-expanded="false">我的课程<b></b></a>
+                        <Link to="login" className="menu-hd" href="" target="_top" rel="nofollow" tabIndex="0" aria-haspopup="true" aria-expanded="false">我的课程<b></b></Link>
                         <div className="menu-bd" role="menu" aria-hidden="true" id="menu-20">
                             <div className="menu-bd-panel" id="myTaobaoPanel">
                                 <a href="" target="_top" rel="nofollow">已学课程</a>
@@ -115,7 +110,7 @@ class Header extends React.Component {
 
 
 
-<Modal title="登录" 
+<Modal title={this.state.reg ? "注册" : "登录"} 
           visible={visible}
           onOk={this.handleOk}
           confirmLoading={confirmLoading}
@@ -123,7 +118,7 @@ class Header extends React.Component {
           footer={null}
           width={this.state.reg ? "500px" : "332px"}
         >
-          {loginButton}
+          {this.state.reg ?<RegistrationForm/>:<NormalLoginForm/>}
         </Modal>
 
      
