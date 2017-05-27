@@ -42,9 +42,13 @@ const r35 = (location, callback) => {
 export default function({ history }) {
   return (
     <Router hjsistory={history}>
-      <Route path="/" component={IndexPage}>
+      <Route path="/" component={IndexPage}/>
         {/* 添加一个路由，嵌套进我们想要嵌套的 UI 里 */}
     
+           
+      
+         <Route path="login" getComponent={r35} >
+
         <Route path="12" getComponent={r12} />
         <Route path="21" getComponent={r21} />
         <Route path="22" getComponent={r22} />
@@ -53,9 +57,7 @@ export default function({ history }) {
         <Route path="33" getComponent={r33} />
         <Route path="34" getComponent={r34} />
          <Route path="11" getComponent={r11} />
-           
-      </Route>
-         <Route path="login" getComponent={r35} />
+</Route>
     </Router>
   );
 };
