@@ -1,11 +1,21 @@
 import React from 'react';
 import { connect } from 'dva';
+import { Pagination, LocaleProvider,DatePicker } from 'antd';
+const { MonthPicker, RangePicker } = DatePicker;
 class Option extends React.Component{
   constructor(props){
     super(props)
   }
   render(){
-    return (<div>菜单二1</div>)
+    return (<div><div>
+    <DatePicker />
+    <br />
+    <MonthPicker  placeholder="Select month" />
+    <br />
+    <RangePicker />
+  </div>
+   <Pagination defaultCurrent={1} total={50} showSizeChanger />
+    </div>)
   }
   componentDidMount(){
     const breadcrumbData = {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
 import VideoJs from '../components/VideoJs'
+
 class Option extends React.Component{
   constructor(props){
     super(props)
@@ -8,7 +9,8 @@ class Option extends React.Component{
   render(){
     return (<div>
 <VideoJs vtt="video/demo.captions.vtt2"/>
-    </div>)
+</div>
+)
   }
   componentDidMount(){
     const breadcrumbData = {

@@ -6,11 +6,11 @@ import "antd/dist/antd.less";   // 引入官方提供的 less 样式入口文件
 import Silder from '../components/Silder'
 import Header from '../components/Header'
 import Nav from '../components/Nav'
-import { Carousel } from 'antd';
+
 import CustomBreadcrumb from '../components/breadcrumb'
 import Videojs from 'video.js'
-
-import { Row, Col } from 'antd';
+import enUS from 'antd/lib/locale-provider/en_US';
+import { Row, Col, LocaleProvider,Carousel } from 'antd';
 
 const breadcrumbData = [
     {
@@ -29,6 +29,7 @@ class App extends Component {
   }
   render(){
     return(
+      <LocaleProvider >
      <div>
          <Header/>
 <Nav/>
@@ -47,6 +48,10 @@ class App extends Component {
 				</a>
         <a href="//3c.tmall.com/?acm=lb-zebra-148799-667861.1003.4.1266918&amp;scm=1003.4.lb-zebra-148799-667861.OTHER_14561822298635_1266918">
 						直播
+					<div className="hover-pic"></div>
+				</a>
+        <a href="//3c.tmall.com/?acm=lb-zebra-148799-667861.1003.4.1266918&amp;scm=1003.4.lb-zebra-148799-667861.OTHER_14561822298635_1266918">
+						答疑
 					<div className="hover-pic"></div>
 				</a>
 			</div>
@@ -181,6 +186,7 @@ class App extends Component {
         </Col>
       </Row>
       </div>
+      </LocaleProvider>
     )
   }
 }
