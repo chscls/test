@@ -6,7 +6,7 @@ import "antd/dist/antd.less";   // 引入官方提供的 less 样式入口文件
 import Silder from '../components/Silder'
 import Header from '../components/Header'
 import Nav from '../components/Nav'
-
+import Activity2 from '../components/Activity2'
 import CustomBreadcrumb from '../components/breadcrumb'
 import Videojs from 'video.js'
 import enUS from 'antd/lib/locale-provider/en_US';
@@ -32,7 +32,7 @@ class App extends Component {
       <LocaleProvider >
      <div>
          <Header/>
-<Nav/>
+          <Nav/>
            <div id="content">
 <div className="main-nav" data-spm="2016004">
 	<div className="inner-con0">
@@ -58,9 +58,12 @@ class App extends Component {
 		</div>
 	</div>
 </div>
+
+
+
 <div className="j_category category-con">
 	<div className="category-inner-con j_categoryInnerCon j_categoryTab">
-<div className="j_logo logo-con" data-spm="2015002"><div className="doodle-con j_doodleCon"><a className="j_doodleLink" style={{display:'block',height:'100%',width:'100%'}} href="//lenovo.tmall.com/campaign-3734-28.htm?pos=1&amp;acm=201603169.1003.2.1776914&amp;scm=1003.2.201603169.ITEM_1495066068192_1776914"><img className="doodle hide j_doodle" src="123.gif" data-src="123.gif"/></a></div></div>
+  <div className="j_logo logo-con" data-spm="2015002"><div className="doodle-con j_doodleCon"><a className="j_doodleLink" style={{display:'block',height:'100%',width:'100%'}} href="//lenovo.tmall.com/campaign-3734-28.htm?pos=1&amp;acm=201603169.1003.2.1776914&amp;scm=1003.2.201603169.ITEM_1495066068192_1776914"><img className="doodle hide j_doodle" src="123.gif" data-src="123.gif"/></a></div></div>
 
     <div className="category-type">
         <i className="fp-iconfont"></i>
@@ -165,11 +168,13 @@ class App extends Component {
 
   </div>
 
+    </div>
 
 
 
 </div>
-</div>
+
+<Activity2/>
 
              </div>
     
