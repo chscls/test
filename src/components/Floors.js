@@ -151,8 +151,8 @@ const Floors = (props) => {
 	
 		
 			<a className="grid second-grid" href="">
-				<div className="title">个性印花连衣裙</div>
-				<div className="sub-title">优雅的时尚潮流</div>
+				<div className="title">竹林小餐</div>
+				<div className="sub-title">蒜味浓厚，肥而不腻</div>
 				<img src="23.jpg"/>
 				
     
@@ -162,9 +162,9 @@ const Floors = (props) => {
 	
 		
 			<a className="grid second-grid" href="">
-				<div className="title">真皮艺术</div>
-				<div className="sub-title">夏天必buy畅销款</div>
-				<img src="19.jpg"/>
+				<div className="title">史密斯夫妇</div>
+				<div className="sub-title">色泽美观，质嫩味鲜，麻辣浓香</div>
+				<img src="24.jpg"/>
 				
     
 
