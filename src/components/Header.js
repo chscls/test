@@ -1,8 +1,41 @@
-import React from 'react';
+import React, { Component, PropTypes }from 'react';
 import { Icon } from 'antd';
 import { Link } from 'dva/router';
+import { Modal, Button } from 'antd';
+import { Form,  Input,  Checkbox } from 'antd';
 import styles from '../routes/IndexPage.css';
-const Header = (props) => {
+import NormalLoginForm from '../components/NormalLoginForm'
+class Header extends React.Component {
+      state = {
+    ModalText: 'Content of the modal',
+    visible: false,
+  }
+  showModal = () => {
+      
+    this.setState({
+      visible: true,
+    });
+  }
+  handleOk = () => {
+    this.setState({
+      ModalText: 'The modal will be closed after two seconds',
+      confirmLoading: true,
+    });
+    setTimeout(() => {
+      this.setState({
+        visible: false,
+        confirmLoading: false,
+      });
+    }, 2000);
+  }
+  handleCancel = () => {
+    console.log('Clicked cancel button');
+    this.setState({
+      visible: false,
+    });
+  }
+    render() {
+        const { visible, confirmLoading, ModalText } = this.state;
   return (
      <div id="site-nav" className={styles.siteNav}>
 
@@ -15,7 +48,7 @@ const Header = (props) => {
 <div id="sn-bd">
         <b className="sn-edge"></b>
         <div className="sn-container">
-            <p id="login-info" className="sn-login-info"><em>喵，欢迎来知用慕课</em><Link className="sn-login" to="login">请登录</Link>  <Link to="login" className="sn-register">免费注册</Link></p>
+            <p id="login-info" className="sn-login-info"><em>喵，欢迎来知用慕课</em><a className="sn-login"  onClick={this.showModal}>请登录</a>  <Link to="login" className="sn-register">免费注册</Link></p>
             <ul className="sn-quick-menu">
                 <li className="sn-mytaobao menu-item j_MyTaobao">
                     <div className="sn-menu">
@@ -66,12 +99,22 @@ const Header = (props) => {
 
 
 
-
+<Modal title="登录" 
+          visible={visible}
+          onOk={this.handleOk}
+          confirmLoading={confirmLoading}
+          onCancel={this.handleCancel}
+          width="332px"
+        >
+          <NormalLoginForm/>
+        </Modal>
 
      
           
      </div>
   );
+}
+
 };
 
 Header.propTypes = {
