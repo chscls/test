@@ -2004,8 +2004,8 @@ div#footer {
 }
 
 #tmall-copyright {
-	border-top: 2px solid #FF0036;
-	background: #000;
+	border-top: 2px solid #b93600;
+	background: #0c60aa;
 	text-align: left;
 	min-height: 177px
 }
@@ -2022,7 +2022,7 @@ div#footer {
 
 #tmall-copyright .footer-copyright {
 	line-height: 20px;
-	background: #000;
+	background: #0c60aa;
 	color: #a4a4a4
 }
 
@@ -2038,9 +2038,9 @@ div#footer {
 }
 
 #footer .server-num,#server-num {
-	color: #000;
+	color: #0c60aa;
 	font-size: 11px;
-	background: #000
+	background: #0c60aa;
 }
 
 @media (max-width:1210px) {
