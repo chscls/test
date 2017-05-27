@@ -5,15 +5,25 @@ import { Modal, Button } from 'antd';
 import { Form,  Input,  Checkbox } from 'antd';
 import styles from '../routes/IndexPage.css';
 import NormalLoginForm from '../components/NormalLoginForm'
+import RegistrationForm from '../components/RegistrationForm'
 class Header extends React.Component {
       state = {
     ModalText: 'Content of the modal',
     visible: false,
+   
   }
   showModal = () => {
       
     this.setState({
       visible: true,
+     
+    });
+  }
+    showRegModal = () => {
+      
+    this.setState({
+      visible: true,
+      reg:true,
     });
   }
   handleOk = () => {
@@ -35,7 +45,13 @@ class Header extends React.Component {
     });
   }
     render() {
-        const { visible, confirmLoading, ModalText } = this.state;
+        const { visible, confirmLoading, ModalText,reg } = this.state;
+        var loginButton;
+        if (this.state.reg) {
+  loginButton = <RegistrationForm/>;
+} else {
+  loginButton =  <NormalLoginForm/>;
+}
   return (
      <div id="site-nav" className={styles.siteNav}>
 
@@ -48,7 +64,7 @@ class Header extends React.Component {
 <div id="sn-bd">
         <b className="sn-edge"></b>
         <div className="sn-container">
-            <p id="login-info" className="sn-login-info"><em>喵，欢迎来知用慕课</em><a className="sn-login"  onClick={this.showModal}>请登录</a>  <Link to="login" className="sn-register">免费注册</Link></p>
+            <p id="login-info" className="sn-login-info"><em>喵，欢迎来知用慕课</em><a className="sn-login"  onClick={this.showModal}>请登录</a>  <a onClick={this.showRegModal} className="sn-register">免费注册</a></p>
             <ul className="sn-quick-menu">
                 <li className="sn-mytaobao menu-item j_MyTaobao">
                     <div className="sn-menu">
@@ -105,9 +121,9 @@ class Header extends React.Component {
           confirmLoading={confirmLoading}
           onCancel={this.handleCancel}
           footer={null}
-          width="332px"
+          width={this.state.reg ? "500px" : "332px"}
         >
-          <NormalLoginForm/>
+          {loginButton}
         </Modal>
 
      
