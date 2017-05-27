@@ -57,11 +57,11 @@ import styles from '../routes/IndexPage.css';
         
     <ul  className="hot-query" style={{height:'25px'}}>
       <li className="hot-query-highlight">
-        <a href="//list.tmall.com/search_product.htm?from=mallfp..pc_1.0_hq&amp;click_id=t恤男&amp;q=t恤男">农业</a>
+        <a href="">农业</a>
         </li>
-        <li className="hot-query-highlight"><a href="//list.tmall.com/search_product.htm?from=mallfp..pc_1.1_hq&amp;click_id=连衣裙&amp;q=连衣裙">护理</a>
+        <li className="hot-query-highlight"><a href="">护理</a>
         </li>
-        <li className="hot-query-highlight"><a href="//list.tmall.com/search_product.htm?from=mallfp..pc_1.2_hq&amp;click_id=夏凉被&amp;q=夏凉被">汽车</a>
+        <li className="hot-query-highlight"><a href="">汽车</a>
         </li>
 
       </ul>
