@@ -76,7 +76,7 @@ resize inherited
         osourceBuffer = ms.addSourceBuffer(mime);
 
         // 加载一段 chunk，然后 append 到 sourceBuffer 中
-        this.fetchBuffer('http://192.168.1.220:8080/567_dashinit.mp4', buffer => {
+        this.fetchBuffer('http://eas.msvtc.net:52060/567_dashinit.mp4', buffer => {
         	
         	osourceBuffer.appendBuffer(buffer)
         });
@@ -89,9 +89,9 @@ resize inherited
             // 然后加入
             var urll;
              if(i<10){
-            urll='http://192.168.1.220:8080/567_dashinit.mp4';
+            urll='http://eas.msvtc.net:52060/567_dashinit.mp4';
              }else{
-            	 urll='http://192.168.1.220:8080/567_dashinit.mp4';
+            	 urll='http://eas.msvtc.net:52060/567_dashinit.mp4';
              }
              
             this.fetchBuffer(urll, buffer => {
