@@ -2,7 +2,7 @@
 import { Icon } from 'antd';
 import { Link } from 'dva/router';
 import styles from '../routes/IndexPage.css';
- 
+ import Category from '../components/Category'
  const Activity2 = (props) => {
   return (
  
@@ -13,7 +13,7 @@ import styles from '../routes/IndexPage.css';
     </div>
 
 <div className="j_newHotBrand new-hot-brand-con j_exposureCon">
-<div className="module-body j_newHotBrandBody">
+<div className="module-body j_newHotBrandBody" style={{width:'1230px'}}>
 
 <div className="live-con data-loaded">
 
@@ -621,7 +621,7 @@ import styles from '../routes/IndexPage.css';
 
 
 </div>
-
+<Category/>
 </div>);
 };
 

@@ -7,6 +7,7 @@ import Silder from '../components/Silder'
 import Header from '../components/Header'
 import Nav from '../components/Nav'
 import Activity2 from '../components/Activity2'
+
 import CustomBreadcrumb from '../components/breadcrumb'
 import Videojs from 'video.js'
 import enUS from 'antd/lib/locale-provider/en_US';
@@ -155,10 +156,10 @@ class App extends Component {
 </div>
 
 
-<div className="banner-con j_mainBanner loading" data-spm="2016006">
+<div className="banner-con j_mainBanner loading" data-spm="2016006" style={{width:'1230px'}}>
 
-<div className="banner-slider j_bannerSlider">
- <Carousel autoplay effect="fade">
+<div className="banner-slider j_bannerSlider" style={{width:'1230px'}}>
+ <Carousel autoplay effect="fade"  >
     <div><img  src="http://img.mukewang.com/5926501b000111f012000460.jpg" style={{width:'100%',height:'500px'}}/></div>
     <div><img  src="http://img.mukewang.com/592177a8000180ca12000460.jpg" style={{width:'100%',height:'500px'}}/></div>
     <div><img  src="http://img.mukewang.com/59278d45000173ba12000460.jpg" style={{width:'100%',height:'500px'}}/></div>
