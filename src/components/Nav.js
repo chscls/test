@@ -24,7 +24,7 @@ import styles from '../routes/IndexPage.css';
                         </div>
                 <div id="mallSearch">
 
-                         <form name="searchTop" action="//list.tmall.com/search_product.htm" className="mallSearch-form clearfix" target="_top" acceptCharset="gbk" acceptCharset="gbk">
+                         <form name="searchTop" action="" className="mallSearch-form clearfix" target="_top" acceptCharset="gbk" acceptCharset="gbk">
             <fieldset>
                
                 <legend>天猫搜索</legend>

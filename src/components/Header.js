@@ -29,10 +29,10 @@ const Header = (props) => {
                     </div>
                 </li>
                 <li className="sn-seller-center hidden j_SellerCenter">
-                    <a target="_top" href="//mai.taobao.com/seller_admin.htm">商家中心</a>
+                    <a target="_top" href="">商家中心</a>
                 </li>
                 <li className="sn-mybrand"><i className="mui-global-iconfont">㑉</i>
-                    <a target="_top" id="J_SnMyBrand" className="sn-mybrand-link" href="//mybrand.tmall.com?scm=1048.1.1.1">我关注的学校</a>
+                    <a target="_top" id="J_SnMyBrand" className="sn-mybrand-link" href="">我关注的学校</a>
                 </li>
                 <li className="sn-cart mini-cart menu"><i className="mui-global-iconfont">󰅈</i>
                     <a className="sn-cart-link" href="" target="_top" rel="nofollow" id="mc-menu-hd">购物车<span className="mc-count mc-pt3">0</span>件</a>
