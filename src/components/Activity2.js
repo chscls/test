@@ -3,6 +3,8 @@ import { Icon } from 'antd';
 import { Link } from 'dva/router';
 import styles from '../routes/IndexPage.css';
  import Category from '../components/Category'
+
+ import Floors from '../components/Floors'
  const Activity2 = (props) => {
   return (
  
@@ -622,6 +624,7 @@ import styles from '../routes/IndexPage.css';
 
 </div>
 <Category/>
+<Floors/>
 </div>);
 };
 

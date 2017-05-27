@@ -154,7 +154,7 @@ const Category = (props) => {
 		<ins style={{display:'inline-block',padding:'0',margin:'0',width:'1620px',height:'90px',zoom:'1',position:'relative'}} id="tanxssp-outer-conmm_12852562_1778064_37802121">
             <div id="tanxssp_con_mm_12852562_1778064_37802121" style={{overflow:'hidden',display:'inline-block',position:'relative',width:'1620px',height:'90px',zoom:'1',font:"12px/1.5 tahoma,'Hiragino Sans GB','microsoft yahei',sans-serif"}}>
         <a href="" target="_blank">
-        <img border="0" src="12.jpg" width="1620px" height="90px"/></a>
+        <img  src="12.jpg" width="1620px" height="90px"/></a>
         </div>
         </ins>
         <a className="j_tanxItem" id="tanx-a-mm_12852562_1778064_37802121" style={{display: 'none'}}>
