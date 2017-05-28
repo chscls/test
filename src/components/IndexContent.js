@@ -4,6 +4,7 @@ import { Link } from 'dva/router';
 import styles from '../routes/IndexPage.css';
 import Activity2 from '../components/Activity2'
 import {Carousel } from 'antd';
+import Nav from '../components/Nav'
 class IndexContent extends React.Component {
   constructor(props){
     super(props)
@@ -11,6 +12,8 @@ class IndexContent extends React.Component {
 
    render(){
     return(
+        <div>
+         <Nav/>
   <div id="content">
 <div className="main-nav" data-spm="2016004">
 	<div className="inner-con0">
@@ -227,7 +230,7 @@ class IndexContent extends React.Component {
 
 <Activity2/>
 
-             </div>);
+           </div>  </div>);
 
    }
              };

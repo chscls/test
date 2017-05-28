@@ -4,6 +4,7 @@ import { Link } from 'dva/router';
 import styles from '../routes/IndexPage.css';
  
  const Nav = (props) => {
+   
   return (
   <div id="header">
            <div className="headerLayout">
@@ -43,7 +44,9 @@ import styles from '../routes/IndexPage.css';
                           
                           
                           </div>
-                          <Link to="Search"><button type="button">搜索<s></s></button></Link>
+                           <Link to="Search"><button type="button">搜索<s></s></button></Link>
+                        
+                         
                           <input id="J_Type" type="hidden" name="type" value="p"/>
                           <input id="J_MallSearchStyle" type="hidden" name="style" value=""/>
                           <input id="J_Cat" type="hidden" name="cat" value="all"/>

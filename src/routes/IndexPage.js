@@ -5,7 +5,7 @@ import styles from './IndexPage.css';
 import "antd/dist/antd.less";   // 引入官方提供的 less 样式入口文件
 
 import Header from '../components/Header'
-import Nav from '../components/Nav'
+
 
 import Footer from '../components/Footer'
 import IndexContent from '../components/IndexContent'
@@ -25,7 +25,7 @@ class App extends Component {
      <div>
          <Header/>
 
-          <Nav/>
+         
 
              {this.props.children|| <IndexContent/>}
         

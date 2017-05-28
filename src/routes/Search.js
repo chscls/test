@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'dva';
 import { Link } from 'dva/router';
 import {  LocaleProvider} from 'antd';
+import Nav from '../components/Nav'
 class Search extends Component{
    constructor(props){
     super(props)
@@ -9,10 +10,12 @@ class Search extends Component{
 render(){
 return (
 <LocaleProvider >
+  <div>
+   <Nav/>
      <div id="content">
-       搜索页
+      
          </div>
-
+</div>
 </LocaleProvider >
 )
 
