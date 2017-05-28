@@ -57,11 +57,11 @@ import styles from '../routes/IndexPage.css';
         
     <ul  className="hot-query" style={{height:'25px'}}>
       <li className="hot-query-highlight">
-        <a href="">农业</a>
+        <Link to="Search" href="">农业</Link>
         </li>
-        <li className="hot-query-highlight"><a href="">护理</a>
+        <li className="hot-query-highlight"><Link to="Search">护理</Link>
         </li>
-        <li className="hot-query-highlight"><a href="">汽车</a>
+        <li className="hot-query-highlight"><Link to="Search">汽车</Link>
         </li>
 
       </ul>

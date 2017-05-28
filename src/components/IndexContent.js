@@ -16,22 +16,22 @@ class IndexContent extends React.Component {
 	<div className="inner-con0">
 		<div className="inner-con1">
 			<div className="inner-con2 clearfix">
-				<a href="" aria-label="">			
+				<Link to="Questions" aria-label="">			
 						资源
 					<div className="hover-pic"></div>
-				</a>
-        <a href="">
+				</Link>
+        <Link to="Questions">
 						题库
 					<div className="hover-pic"></div>
-				</a>
-        <a href="">
+				</Link>
+         <Link to="Questions">
 						直播
 					<div className="hover-pic"></div>
-				</a>
-        <a href="">
+				</Link>
+       <Link to="Questions">
 						答疑
 					<div className="hover-pic"></div>
-				</a>
+				</Link>
 			</div>
 		</div>
 	</div>
@@ -210,10 +210,10 @@ class IndexContent extends React.Component {
 
 <div className="banner-slider j_bannerSlider" style={{width:'1230px'}}>
  <Carousel autoplay effect="fade"  >
-    <div><img  src="http://img.mukewang.com/5926501b000111f012000460.jpg" style={{width:'100%',height:'500px'}}/></div>
-    <div><img  src="http://img.mukewang.com/592177a8000180ca12000460.jpg" style={{width:'100%',height:'500px'}}/></div>
-    <div><img  src="http://img.mukewang.com/59278d45000173ba12000460.jpg" style={{width:'100%',height:'500px'}}/></div>
-    <div><img  src="http://img.mukewang.com/591d825f00016a2612000460.jpg" style={{width:'100%',height:'500px'}}/></div>
+    <div><Link to="Course"><img  src="http://img.mukewang.com/5926501b000111f012000460.jpg" style={{width:'100%',height:'500px'}}/></Link></div>
+    <div><Link to="Course"><img  src="http://img.mukewang.com/592177a8000180ca12000460.jpg" style={{width:'100%',height:'500px'}}/></Link></div>
+    <div><Link to="Course"><img  src="http://img.mukewang.com/59278d45000173ba12000460.jpg" style={{width:'100%',height:'500px'}}/></Link></div>
+    <div><Link to="Course"><img  src="http://img.mukewang.com/591d825f00016a2612000460.jpg" style={{width:'100%',height:'500px'}}/></Link></div>
   </Carousel>
   </div>
 
