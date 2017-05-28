@@ -6,6 +6,7 @@ import styles from '../routes/IndexPage.css';
  const Nav2 = (props) => {
    
   return (
+      <div>
  <div  id="header" style={{height:'80px'}}>
 
 <div id="headerCon">
@@ -54,7 +55,7 @@ import styles from '../routes/IndexPage.css';
     </div>
     </div><div className="shopwt"><div className="shopwt-desc">
     <div className="shopwt-title">手机逛</div>
-    <i className="shopwt-qr"></i>
+    <i className="shopwt-qr"><Icon type="qrcode" /></i>
 </div>
 <a className="slogo-triangle">
     <i className="icon-triangle"></i>
@@ -68,7 +69,7 @@ import styles from '../routes/IndexPage.css';
     <div id="shopMallSearch" className="mall-search">
                                 <form name="searchTop" action="//list.tmall.com/search_product.htm" className="shopMallSearch-form" acceptCharset="gbk">
             <fieldset>
-                <legend style={{display:'none'}}>天猫搜索</legend>
+                <legend style={{display:'none'}}></legend>
                 <div className="mallSearch-input clearfix">
                     <div className="defaultSearch">
                         <div id="s-combobox-133" className="s-combobox"><div className="s-combobox-input-wrap"><input type="text" name="q" data-current="//blackdeckerjzh.tmall.com" accessKey="s" autoComplete="off"  id="mq" className="s-combobox-input" role="combobox" aria-haspopup="true" title="请输入搜索文字" aria-label="请输入搜索文字"/>
@@ -89,6 +90,41 @@ import styles from '../routes/IndexPage.css';
 </div>
             <input id="J_ShopSearchUrl" type="hidden" value="//blackdeckerjzh.tmall.com"/>
     </div>
+    
+    
+    <div id="page" className = "tm-style-detail">  
+        <div id="content"> 
+
+
+<div className="tb-shop" id="hd"><div className="layout grid-m J_TLayout" data-widgetid="14866275007" data-componentid="23" data-prototypeid="23" data-id="14866275007" data-max="">
+        <div className="col-main">
+        <div className="main-wrap J_TRegion" data-modules="main" data-width="h990" data-max="">
+            <div className="J_TModule" data-widgetid="14866275008" id="shop14866275008" data-componentid="11209193" data-spm="110.0.11209193-14866275008"  data-title="全屏轮播海报">
+<div style={{width:'995px',margin:'auto'}}><img src="http://www.scu.edu.cn/portal2013/lib/images/scroll.jpg"/></div>
+</div>
+<div className="J_TModule" data-widgetid="14866275009" id="shop14866275009" data-componentid="5002" data-spm="110.0.5002-14866275009"  data-title="导航">
+
+</div>
+
+        </div>
+    </div>
+</div> </div>
+
+
+
+
+
+        </div>
+    
+    
+    
+    
+    </div>
+    
+    </div>
+
+
+
     );
 };
 

@@ -8344,3 +8344,25 @@ width: 540px!important;
 	width: 80px;
 	height: 30px
 }
+
+#hd{
+    width: auto!important;
+	    max-height: 150px;
+    overflow: hidden;
+    padding-bottom: 0;
+    position: relative;
+}
+#hd .layout{
+    width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+	}
+#hd .col-main{
+	    float: left;
+    width: 100%;
+    min-height: 1px;
+	}
+#hd .main-wrap{
+	 width: 100%;
+	}
+	    
