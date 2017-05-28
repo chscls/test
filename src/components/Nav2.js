@@ -18,8 +18,8 @@ import styles from '../routes/IndexPage.css';
     <div className="slogo">
                 <a className="slogo-shopname" href="//blackdeckerjzh.tmall.com" data-spm="d4918089"><strong>四川大学</strong></a>
         <div className="slogo-extraicon  ">
-                                                    <span className="ww-light ww-static" data-nick="%E7%99%BE%E5%BE%97%E5%90%9B%E4%B9%8B%E5%AE%8F%E4%B8%93%E5%8D%96%E5%BA%97" data-tnick="%E7%99%BE%E5%BE%97%E5%90%9B%E4%B9%8B%E5%AE%8F%E5%B0%88%E8%B3%A3%E5%BA%97" data-encode="true" data-display="inline" data-icon="static">
-                                                       </span>
+                    <span className="ww-light ww-static" data-nick="%E7%99%BE%E5%BE%97%E5%90%9B%E4%B9%8B%E5%AE%8F%E4%B8%93%E5%8D%96%E5%BA%97" data-tnick="%E7%99%BE%E5%BE%97%E5%90%9B%E4%B9%8B%E5%AE%8F%E5%B0%88%E8%B3%A3%E5%BA%97" data-encode="true" data-display="inline" data-icon="static">
+                                              <Icon type="phone" /> <Icon type="mail" /><Icon type="mobile" />        </span>
         </div>
     </div>
     <div id="shop-info">
@@ -33,15 +33,15 @@ import styles from '../routes/IndexPage.css';
     </script>
         <div className="main-info">
                                     <div className="shopdsr-item">
-                    <div className="shopdsr-title">口 碑</div>
+                    <div className="shopdsr-title">口碑</div>
                                             <div className="shopdsr-score shopdsr-score-up-ctrl"><span className="shopdsr-score-con">9.8</span><s className="shopdsr-score-up"></s></div>
                                     </div>
                                         <div className="shopdsr-item">
-                    <div className="shopdsr-title">课 程</div>
+                    <div className="shopdsr-title">课程</div>
                                             <div className="shopdsr-score shopdsr-score-up-ctrl"><span className="shopdsr-score-con">9.8</span><s className="shopdsr-score-up"></s></div>
                                     </div>
                                         <div className="shopdsr-item">
-                    <div className="shopdsr-title">师 资</div>
+                    <div className="shopdsr-title">师资</div>
                                             <div className="shopdsr-score shopdsr-score-up-ctrl"><span className="shopdsr-score-con">9.8</span><s className="shopdsr-score-up"></s></div>
                                     </div>
                         <a className="slogo-triangle"><i className="icon-triangle"></i></a>
