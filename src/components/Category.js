@@ -14,25 +14,25 @@ const Category = (props) => {
 		<span className="text">医学护理</span>
 	</div>
 	
-		<a href="" data-spm-anchor-id="875.7931836/B.2015039.1">
+		<Link to="Good" data-spm-anchor-id="875.7931836/B.2015039.1">
 				<div className="item-title">医学</div>
 			<div className="item-sub-title">当一名好医生</div>
 			<div className="img-con">
 				<div className="img-mask"></div>
 				<img alt="" src="5.jpg"/>
 			</div>
-		</a>
+			</Link>
 	
 	<div className="seprate"></div>
 	
-		<a href="" data-spm-anchor-id="875.7931836/B.2015039.2">
+		<Link to="Good"  data-spm-anchor-id="875.7931836/B.2015039.2">
 				<div className="item-title">护理</div>
 			<div className="item-sub-title">当一名好护士</div>
 			<div className="img-con">
 				<div className="img-mask"></div>
 				<img alt="" src="6.jpg" width="100%"/>
 			</div>
-		</a>
+			</Link>
 	
 </div>
 
@@ -42,25 +42,25 @@ const Category = (props) => {
 		<span className="text">技术前沿</span>
 	</div>
 	
-		<a href="" className="channel-item j_exposureParam" data-exposure="" data-spm-anchor-id="875.7931836/B.2015039.3">
+		<Link to="Good"  className="channel-item j_exposureParam" data-exposure="" data-spm-anchor-id="875.7931836/B.2015039.3">
 			<div className="item-title">软件馆</div>
 			<div className="item-sub-title">人工智能大数据</div>
 			<div className="img-con">
 				<div className="img-mask"></div>
 				<img alt="" src="1.jpg"/>
 			</div>
-		</a>
+			</Link>
 	
 	<div className="seprate"></div>
 	
-		<a href="" data-spm-anchor-id="875.7931836/B.2015039.4">
+		<Link to="Good"  data-spm-anchor-id="875.7931836/B.2015039.4">
 					<div className="item-title">硬件馆</div>
 			<div className="item-sub-title">虚拟现实</div>
 			<div className="img-con">
 				<div className="img-mask"></div>
 				<img alt="" src="2.jpg" width="100%"/>
 			</div>
-		</a>
+		</Link>
 	
 </div>
 
@@ -70,25 +70,25 @@ const Category = (props) => {
 		<span className="text">川菜大师</span>
 	</div>
 	
-		<a href="" data-spm-anchor-id="875.7931836/B.2015039.5">
+		<Link to="Good" data-spm-anchor-id="875.7931836/B.2015039.5">
 		<div className="item-title">川菜</div>
 			<div className="item-sub-title">当一名好厨师</div>
 			<div className="img-con">
 				<div className="img-mask"></div>
 				<img alt="" src="3.jpg"/>
 			</div>
-		</a>
+		</Link>
 	
 	<div className="seprate"></div>
 	
-		<a href="" data-spm-anchor-id="875.7931836/B.2015039.6">
+		<Link to="Good"  data-spm-anchor-id="875.7931836/B.2015039.6">
 	<div className="item-title">农业</div>
 			<div className="item-sub-title">智慧农业</div>
 			<div className="img-con">
 				<div className="img-mask"></div>
 				<img alt="" src="4.jpg" width="100%"/>
 			</div>
-		</a>
+	</Link>
 	
 </div>
 
@@ -98,25 +98,25 @@ const Category = (props) => {
 		<span className="text">汽车机械</span>
 	</div>
 	
-		<a href="" data-spm-anchor-id="875.7931836/B.2015039.7">
+		<Link to="Good"  data-spm-anchor-id="875.7931836/B.2015039.7">
 			<div className="item-title">汽车</div>
 			<div className="item-sub-title">造更好的车</div>
 			<div className="img-con">
 				<div className="img-mask"></div>
 				<img alt="" src="7.jpg"/>
 			</div>
-		</a>
+		</Link>
 	
 	<div className="seprate"></div>
 	
-		<a href="" className="channel-item j_exposureParam" data-exposure="" data-spm-anchor-id="875.7931836/B.2015039.8">
+		<Link to="Good"  className="channel-item j_exposureParam" data-exposure="" data-spm-anchor-id="875.7931836/B.2015039.8">
 			<div className="item-title">机械</div>
 			<div className="item-sub-title">中国制造</div>
 			<div className="img-con">
 				<div className="img-mask"></div>
 				<img alt="" src="8.jpg" width="100%"/>
 			</div>
-		</a>
+		</Link>
 	
 </div>
 

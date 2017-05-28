@@ -43,7 +43,7 @@ import styles from '../routes/IndexPage.css';
                           
                           
                           </div>
-                          <button type="submit">搜索<s></s></button>
+                          <Link to="Search"><button type="button">搜索<s></s></button></Link>
                           <input id="J_Type" type="hidden" name="type" value="p"/>
                           <input id="J_MallSearchStyle" type="hidden" name="style" value=""/>
                           <input id="J_Cat" type="hidden" name="cat" value="all"/>

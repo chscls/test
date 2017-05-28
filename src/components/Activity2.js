@@ -182,7 +182,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -203,7 +203,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -224,7 +224,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -245,7 +245,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -266,7 +266,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -285,7 +285,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+        <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -303,7 +303,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -321,7 +321,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -339,7 +339,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -357,7 +357,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -375,7 +375,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -393,7 +393,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -411,7 +411,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -429,7 +429,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -447,7 +447,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -465,7 +465,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -483,7 +483,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -501,7 +501,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -519,7 +519,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -537,7 +537,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -555,7 +555,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -573,7 +573,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   
@@ -591,7 +591,7 @@ import styles from '../routes/IndexPage.css';
           
         </div>
         <div className="enter">
-          <a href="#">点击进入</a>
+          <Link to="School">点击进入</Link>
         </div>
       </div>
   

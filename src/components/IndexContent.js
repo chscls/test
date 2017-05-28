@@ -16,7 +16,7 @@ class IndexContent extends React.Component {
 	<div className="inner-con0">
 		<div className="inner-con1">
 			<div className="inner-con2 clearfix">
-				<a href="" aria-label="天猫超市">			
+				<a href="" aria-label="">			
 						资源
 					<div className="hover-pic"></div>
 				</a>
@@ -54,9 +54,9 @@ class IndexContent extends React.Component {
             
             <li className="j_MenuNav nav-item nav-item-0 category-loaded" data-spm="category2016010">
                 <i className="fp-iconfont nav-item-icon icon"></i><i className="dot fp-iconfont"></i>
-                <a style={{color:'black'}} href="">	农林牧渔</a>
+                <Link to="Search" style={{color:'black'}} href="">	农林牧渔</Link>
                 
-                    /<a style={{color:'black'}} href="">交通运输</a>
+                    /<Link to="Search" style={{color:'black'}} href="">交通运输</Link>
                 
                 
                 <b className="arrow"></b>
@@ -64,27 +64,27 @@ class IndexContent extends React.Component {
             
             <li className="j_MenuNav nav-item nav-item-1 category-loaded" data-spm="category2016011">
                 <i className="fp-iconfont nav-item-icon icon"></i><i className="dot fp-iconfont"></i>
-                <a style={{color:'black'}} href="">生化药品</a>
+                <Link to="Search" style={{color:'black'}} href="">生化药品</Link>
                 
-                    /<a style={{color:'black'}} href="">资源开发测绘</a>
+                    /<Link to="Search" style={{color:'black'}} href="">资源开发测绘</Link>
                 
                 
-                <b className="arrow"></b>
+                <Link className="arrow"></Link>
             </li>
             <li className="j_MenuNav nav-item nav-item-1 category-loaded" data-spm="category2016011">
                 <i className="fp-iconfont nav-item-icon icon"></i><i className="dot fp-iconfont"></i>
-                <a style={{color:'black'}} href="">材料能源</a>
+                <Link style={{color:'black'}} href="">材料能源</Link>
                 
-                    /<a style={{color:'black'}} href="">土建</a>
+                    /<Link to="Search" style={{color:'black'}} href="">土建</Link>
                 
                 
                 <b className="arrow"></b>
             </li>
               <li className="j_MenuNav nav-item nav-item-1 category-loaded" data-spm="category2016011">
                 <i className="fp-iconfont nav-item-icon icon"></i><i className="dot fp-iconfont"></i>
-                <a style={{color:'black'}} href="">水利</a>
+                <Link to="Search" style={{color:'black'}} href="">水利</Link>
                 
-                    /<a style={{color:'black'}} href="">制造</a>
+                    /<Link to="Search" style={{color:'black'}} href="">制造</Link>
                 
                 
                 <b className="arrow"></b>
@@ -92,54 +92,54 @@ class IndexContent extends React.Component {
           
              <li className="j_MenuNav nav-item nav-item-1 category-loaded" data-spm="category2016011">
                 <i className="fp-iconfont nav-item-icon icon"></i><i className="dot fp-iconfont"></i>
-                <a style={{color:'black'}} href="">电子信息</a>
+                <Link to="Search" style={{color:'black'}} href="">电子信息</Link>
                 
-                    /<a style={{color:'black'}} href="">环保气象安全</a>
+                    /<Link to="Search" style={{color:'black'}} href="">环保气象安全</Link>
                 
                 
                 <b className="arrow"></b>
             </li>
              <li className="j_MenuNav nav-item nav-item-1 category-loaded" data-spm="category2016011">
                 <i className="fp-iconfont nav-item-icon icon"></i><i className="dot fp-iconfont"></i>
-                <a style={{color:'black'}} href="">轻纺食品</a>
+                <Link to="Search" style={{color:'black'}} href="">轻纺食品</Link>
                 
-                    /<a style={{color:'black'}} href="">	财经</a>
+                    /<Link to="Search" style={{color:'black'}} href="">	财经</Link>
                 
                 
                 <b className="arrow"></b>
             </li>
             <li className="j_MenuNav nav-item nav-item-1 category-loaded" data-spm="category2016011">
                 <i className="fp-iconfont nav-item-icon icon"></i><i className="dot fp-iconfont"></i>
-                <a style={{color:'black'}} href="">医药卫生</a>
+                <Link to="Search" style={{color:'black'}} href="">医药卫生</Link>
                 
-                    /<a style={{color:'black'}} href="">	旅游</a>
+                    /<Link to="Search" style={{color:'black'}} href="">	旅游</Link>
                 
                 
                 <b className="arrow"></b>
             </li>
                 <li className="j_MenuNav nav-item nav-item-1 category-loaded" data-spm="category2016011">
                 <i className="fp-iconfont nav-item-icon icon"></i><i className="dot fp-iconfont"></i>
-                <a style={{color:'black'}} href="">公共事业</a>
+                <Link to="Search" style={{color:'black'}} href="">公共事业</Link>
                 
-                    /<a style={{color:'black'}} href="">	文化教育</a>
+                    /<Link to="Search" style={{color:'black'}} href="">	文化教育</Link>
                 
                 
                 <b className="arrow"></b>
             </li>
                <li className="j_MenuNav nav-item nav-item-1 category-loaded" data-spm="category2016011">
                 <i className="fp-iconfont nav-item-icon icon"></i><i className="dot fp-iconfont"></i>
-                <a style={{color:'black'}} href="">艺术设计传媒</a>
+                <Link to="Search" style={{color:'black'}} href="">艺术设计传媒</Link>
                 
-                    /<a style={{color:'black'}} href="">公安</a>
+                    /<Link to="Search" style={{color:'black'}} href="">公安</Link>
                 
                 
                 <b className="arrow"></b>
             </li>
              <li className="j_MenuNav nav-item nav-item-1 category-loaded" data-spm="category2016011">
                 <i className="fp-iconfont nav-item-icon icon"></i><i className="dot fp-iconfont"></i>
-                <a style={{color:'black'}} href="">法律</a>
+                <Link to="Search" style={{color:'black'}} href="">法律</Link>
                 
-                    /<a style={{color:'black'}} href="">其他</a>
+                    /<Link to="Search" style={{color:'black'}} href="">其他</Link>
                 
                 
                 <b className="arrow"></b>
