@@ -788,7 +788,7 @@ const Floors = (props) => {
     
     
     <li className="wonderful-item ">
-        <a className="card-item  " href="">
+        <Link className="card-item  " to="Search">
             <span className="item-pic">
             <img src="//img.alicdn.com/bao/uploaded/i3/2616970884/TB2PLT.khxmpuFjSZFNXXXrRXXa_!!2616970884.jpg_400x400q60.jpg" width="100%"/>
                 </span>
@@ -813,7 +813,7 @@ const Floors = (props) => {
                         
                     </span>
                 </span>
-        </a>
+        </Link>
     </li>
     
     

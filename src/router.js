@@ -38,14 +38,17 @@ const r35 = (location, callback) => {
   require.ensure([], require => {callback(null,
     require('./routes/login'))}, 'login')
 };
-
+const r36 = (location, callback) => {
+  require.ensure([], require => {callback(null,
+    require('./routes/Search'))}, 'Search')
+};
 export default function({ history }) {
   return (
     <Router hjsistory={history}>
       <Route path="/" component={IndexPage}/>
         {/* 添加一个路由，嵌套进我们想要嵌套的 UI 里 */}
     
-           
+            <Route path="Search" getComponent={r36} />
       
          <Route path="login" getComponent={r35} >
 
@@ -58,6 +61,8 @@ export default function({ history }) {
         <Route path="34" getComponent={r34} />
          <Route path="11" getComponent={r11} />
 </Route>
+
+  
     </Router>
   );
 };
