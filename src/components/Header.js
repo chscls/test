@@ -16,7 +16,7 @@ class Header extends React.Component {
       
     this.setState({
       visible: true,
-     
+     reg:false,
     });
   }
     showRegModal = () => {
