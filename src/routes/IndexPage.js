@@ -26,7 +26,9 @@ class App extends Component {
          <Header/>
 
           <Nav/>
-         <IndexContent/>
+
+             {this.props.children|| <IndexContent/>}
+        
     <Footer/>
      
 

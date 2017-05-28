@@ -12,8 +12,7 @@ render(){
 return (
 <LocaleProvider >
      <div>
-         <Header/>
- <Nav/>
+       qwwwwwwwwwwwwwww
          </div>
 
 </LocaleProvider >
@@ -24,7 +23,9 @@ return (
 
 
 };
-Search.propTypes = {
-};
 
-export default Search;
+
+function mapStateToProps({ common }) {
+  return {common};
+}
+export default connect(mapStateToProps)(Search);
