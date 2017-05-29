@@ -33,7 +33,7 @@ return (
 
       
      
-      <ul className="av-collapse row-2" style={{marginTop:'5px'}}>
+      <ul className="av-collapse row-2" style={{marginTop:'0px'}}>
   <li style={{    border:'1px solid #e1e1e1',
     width: '70px',
     textAlign: 'center',
@@ -64,7 +64,7 @@ return (
  
   </Col>
     </Row>
-    <Row style={{border: '1px solid #ccc',backgroundColor:'#F7F5F5'}}>
+    <Row style={{border: '1px solid #ccc',backgroundColor:'#F7F5F5',marginTop: '-1px'}}>
       <Col span={2} >分类</Col>
       <Col span={22} style={{backgroundColor:'white'}}>
      <div > 
@@ -74,8 +74,8 @@ return (
     overflow: 'hidden',float: 'left',
     height: '22px',
     lineHeight: '22px'}}>
- <a title="办公设备/办公耗材/相关服务" data-f="shop-cat-qp" data-c="cat-qp" href="" data-spm-anchor-id="a220m.1000858.1000721.1">
- <b>蒜苗回锅肉</b>
+ <a title="" data-f="shop-cat-qp" data-c="cat-qp" href="" data-spm-anchor-id="a220m.1000858.1000721.1">
+ <b>蒜苗回锅肉</b> 
  </a>
  </li>
 <li style={{    margin: '0 5px 8px 0',
