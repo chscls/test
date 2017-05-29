@@ -100,10 +100,87 @@ import styles from '../routes/IndexPage.css';
         <div className="col-main">
         <div className="main-wrap J_TRegion" data-modules="main" data-width="h990" data-max="">
             <div className="J_TModule" data-widgetid="14866275008" id="shop14866275008" data-componentid="11209193" data-spm="110.0.11209193-14866275008"  data-title="全屏轮播海报">
-<div style={{width:'995px',margin:'auto'}}><img src="http://www.scu.edu.cn/portal2013/lib/images/scroll.jpg"/></div>
+<div style={{width:'995px',margin:'auto'}}><img style={{width:'100%',height:'120px'}} src="http://www.scu.edu.cn/portal2013/lib/images/scroll.jpg"/></div>
 </div>
 <div className="J_TModule" data-widgetid="14866275009" id="shop14866275009" data-componentid="5002" data-spm="110.0.5002-14866275009"  data-title="导航">
 
+
+
+
+
+<ul className="menu-list" style={{float:'left', margin:'0',
+    padding: '0',
+    width:'725px',
+    height: '30px',
+    background: 'none',
+    position: 'relative',
+    zIndex: '9',
+    }}>
+                        			                             				                            <li className="menu menu-selected" data-page-id="1303015052">
+                            <a className="link" style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}} href="" rel="nofollow"><span className="title" style={{color:'white'}}>首页</span></a>   
+                        </li>
+					                    
+                 
+                
+                                     			                                                                      
+                                                <li className="menu" data-page-id="1326231563">
+                           
+                                                        <a className="link" style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}   href="" rel="nofollow">
+                                    <span className="title" style={{color:'white'}}>医学 </span></a>
+                        </li>
+                                                            
+                                     			                                                 <li data-cat-id="419081673" className="menu ">
+                        <a className="link " style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}  href="" rel="nofollow">
+                            <span className="title" style={{color:'white'}}>化学</span>
+                                                    </a>
+                                                            </li>
+
+                
+                                     			                                                 <li data-cat-id="1174676726" className="menu popup-container">
+                        <a className="link popup-trigger" style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}  href="" rel="nofollow">
+                            <span className="title" style={{color:'white'}}>物理</span>
+                                                            <i className="popup-icon cat-popup-i"></i>
+                                                    </a>
+                                                                
+                                        </li>
+
+                
+                                     			                                                 <li data-cat-id="1174676745" className="menu popup-container">
+                        <a className="link popup-trigger"style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}   href="" rel="nofollow">
+                            <span className="title" style={{color:'white'}}>电子信息</span>
+                                                            <i className="popup-icon cat-popup-i"></i>
+                                                    </a>
+                                                                
+                                        </li>
+
+                
+                                     			                                                 <li data-cat-id="1174676734" className="menu popup-container">
+                        <a className="link popup-trigger" style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}  href="" rel="nofollow">
+                            <span className="title" style={{color:'white'}}>历史</span>
+                                                            <i className="popup-icon cat-popup-i"></i>
+                                                    </a>
+                                                                
+                                        </li>
+
+                
+                                     			                                                 <li data-cat-id="1174676742" className="menu popup-container">
+                        <a className="link popup-trigger" style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}  href="" rel="nofollow">
+                            <span className="title" style={{color:'white'}}>传媒</span>
+                                                            <i className="popup-icon cat-popup-i"></i>
+                                                    </a>
+                                                                
+                                        </li>
+
+                
+                                             </ul>
+
+
+
+
+
+
+
+                                             
 </div>
 
         </div>

@@ -8351,7 +8351,7 @@ width: 540px!important;
     overflow: hidden;
     padding-bottom: 0;
     position: relative;
-	background-color:white;
+	background:url(cd.jpg) repeat-x center 0 #FFF;
 }
 #hd .layout{
     width: 990px;
@@ -8366,4 +8366,10 @@ width: 540px!important;
 #hd .main-wrap{
 	 width: 100%;
 	}
-	    
+	    #bd{
+	width: 100%;
+	position: relative;
+    overflow: hidden;
+	    margin-left: auto;
+    margin-right: auto;
+	}
