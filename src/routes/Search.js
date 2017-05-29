@@ -426,7 +426,24 @@ return (
 
 
 
-
+<div style={{float:'right',marginBottom:'10px'}}>
+ <Pagination  showQuickJumper defaultCurrent={2} total={500} />
+</div>
+<div className="btmSearch-loading" id="J_BtmSearch">
+   <div className="btmSearch" data-spm="a220m.1000858.1000729">
+<div className="btmSearch-main">
+<form className="btmSearch-form clearfix" action="" target="_top" name="searchTop">
+<fieldset>
+<div className="btmSearch-input clearfix">
+<input type="text" value="" autoComplete="off" tabIndex="9" accessKey="s" className="btmSearch-mq" id="btm-mq" data-bts="0" name="q" aria-label="搜索关键词"/>
+<button type="submit" className="ui-btn-search-l" aria-label="搜索">搜索<s></s></button>
+<input type="hidden" name="type" value="p"/>
+<input type="hidden" name="redirect" value="notRedirect"/>
+</div>
+</fieldset>
+</form>
+</div>
+</div>  </div>
 
 
          </div>

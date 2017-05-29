@@ -8718,6 +8718,68 @@ width: 540px!important;
     color: #fff;
     line-height: 12px;
 }
+.szcourse-cart.active {
+    z-index: 1;
+}
+.szcourse-cart {
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+}
+.szcourse-cart .szcourse-cart-B .szcourse-bottom .l {
+    color: #93999f;
+	float:left
+}
+.szcourse-cart .szcourse-cart-B .szcourse-bottom .r {
+    color: #f01414;
+	float:right
+}
 
-
+.btmSearch-loading {
+    height: 100px;
+    background: url(//assets.alicdn.com/apps/tmall/mui/loading/img/loading.gif) 50% 50% no-repeat;
+}
+.btmSearch {
+    padding: 27px 0;
+    background-color: #f4f4f4;
+    margin-top: 40px;
+}
+.btmSearch-main {
+    width: 530px;
+    margin: 0 auto;
+}
+.btmSearch-form {
+    z-index: 9999;
+    background-position: -2px -16px;
+    background-color: #fff;
+}
+.btmSearch-input {
+    height: 29px;
+    position: relative;
+    border: 2px solid #0c60aa;
+}
+.btmSearch .btmSearch-input .s-combobox-input, .btmSearch-mq {
+    float: left;
+    display: block;
+    color: #000;
+    font-weight: 900;
+    line-height: 17px;
+    width: 423px;
+    height: 25px;
+    padding: 5px 2px 4px 4px;
+    border-width: 0;
+    margin: 0;
+}
+.ui-btn-search-l {
+    width: 103px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    overflow: hidden;
+    border: none;
+    outline: 0;
+    color: #fff;
+    cursor: pointer;
+    background-color: #0c60aa;
+}
 	   
