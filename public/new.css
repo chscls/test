@@ -8378,22 +8378,13 @@ width: 540px!important;
     width: 1190px!important;
 		    margin: auto;
 	}
-.attrValues{
-
-	    position: relative;
-    float: left;
-    background-color: #FFF;
-    width: 90%;
-    padding: 4px 0 0;
-    overflow: hidden;
-}
-	#attrValues li a{  
-	        position: relative;
-    color: #806F66;
-    display: inline-block;
-    padding: 1px 20px 1px 4px;
-    line-height: 20px;
-    height: 20px;
-    white-space: nowrap;
-	}
-	   
+	.f-ico-arrow-d{
+    top: 6px;
+    right: 5px;
+    width: 7px;
+    height: 10px;
+    line-height: 10px;
+	background-position: -30px -23px;
+	    position: absolute;
+		background: url(//img.alicdn.com/tfs/TB1Hm3sRXXXXXaRXVXXXXXXXXXX-165-206.png) 9999px 9999px no-repeat;
+	   }

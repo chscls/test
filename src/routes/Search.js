@@ -3,7 +3,7 @@ import { connect } from 'dva';
 import { Link } from 'dva/router';
 import {  LocaleProvider} from 'antd';
 import Nav from '../components/Nav'
-import { Breadcrumb,Input,Row,Col } from 'antd';
+import { Breadcrumb,Input,Row,Col,Pagination,Icon  } from 'antd';
 const Search2 = Input.Search;
 class Search extends Component{
    constructor(props){
@@ -32,7 +32,7 @@ return (
       <Col span={22}>
 
       
-      <div id="attrValues" className="attrValues">
+     
       <ul className="av-collapse row-2" style={{marginTop:'5px'}}>
   <li style={{    border:'1px solid #e1e1e1',
     width: '70px',
@@ -61,7 +61,7 @@ return (
  </li>
 
   </ul>
-  </div>
+ 
   </Col>
     </Row>
     <Row>
@@ -99,6 +99,32 @@ return (
     </Row>
     
 </div>
+
+
+
+
+
+
+<div id="page">
+<div id="pageTool" >
+  <div id="pageSort" style={{float:'left'}}>
+<a style={{float:'left',border: '1px solid #ccc',padding:'0 15px 0 5px',    position: 'relative'}}>综合<Icon type="arrow-down" /></a>
+<a style={{float:'left',border: '1px solid #ccc',padding:'0 15px 0 5px' ,  position: 'relative'}}>人气<Icon type="arrow-down" /></a>
+<a style={{float:'left',border: '1px solid #ccc',padding:'0 15px 0 5px' ,  position: 'relative'}}>价格<Icon type="arrow-down" /></a>
+<a style={{float:'left',border: '1px solid #ccc',padding:'0 15px 0 5px' ,  position: 'relative'}}>销量<Icon type="arrow-down" /></a>
+  </div>
+  <div id="pageBar" style={{float:'right'}}>
+  <Pagination  simple defaultCurrent={2} total={50} />
+  </div>
+</div>
+  </div>
+
+
+
+
+
+
+
          </div>
 </div>
 </LocaleProvider >
