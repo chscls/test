@@ -384,7 +384,215 @@ return (
 								</div>
 							</a>
 																				</div>
-															
+
+
+
+
+
+<div className="index-card-container course-card-container container ">
+			
+			<a target="_blank" className="course-card" href="/learn/96">
+			
+				<div className="course-card-top cart-color green">
+					<i className="imv2-war"></i>
+															<span>Android</span>
+														</div>
+				
+				<div className="course-card-content">
+					<h3 className="course-card-name">Android攻城狮的第一门课（入门篇）</h3>
+										<p title="想快速掌握Android应用开发基础，选择学习这门课程就对了。">想快速掌握Android应用开发基础，选择学习这门课程就对了。</p>
+										<div className="clearfix course-card-bottom">
+						<div className="course-card-info">
+														初级<span>·</span>
+							246682人在学
+						</div>
+						
+											</div>
+				</div>
+			</a>
+			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
+			
+				
+											<div className="course-card-bk">
+					<img src="http://www.imooc.com/courseimg/s/cover017_s.jpg"/>
+				</div>
+									</div>
+	
+	<div className="index-card-container course-card-container container ">
+			
+			<a target="_blank" className="course-card" href="/learn/96">
+			
+				<div className="course-card-top cart-color green">
+					<i className="imv2-war"></i>
+															<span>Android</span>
+														</div>
+				
+				<div className="course-card-content">
+					<h3 className="course-card-name">Android攻城狮的第一门课（入门篇）</h3>
+										<p title="想快速掌握Android应用开发基础，选择学习这门课程就对了。">想快速掌握Android应用开发基础，选择学习这门课程就对了。</p>
+										<div className="clearfix course-card-bottom">
+						<div className="course-card-info">
+														初级<span>·</span>
+							246682人在学
+						</div>
+						
+											</div>
+				</div>
+			</a>
+			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
+			
+				
+											<div className="course-card-bk">
+					<img src="http://www.imooc.com/courseimg/s/cover017_s.jpg"/>
+				</div>
+									</div>
+	
+	<div className="index-card-container course-card-container container ">
+			
+			<a target="_blank" className="course-card" href="/learn/96">
+			
+				<div className="course-card-top cart-color green">
+					<i className="imv2-war"></i>
+															<span>Android</span>
+														</div>
+				
+				<div className="course-card-content">
+					<h3 className="course-card-name">Android攻城狮的第一门课（入门篇）</h3>
+										<p title="想快速掌握Android应用开发基础，选择学习这门课程就对了。">想快速掌握Android应用开发基础，选择学习这门课程就对了。</p>
+										<div className="clearfix course-card-bottom">
+						<div className="course-card-info">
+														初级<span>·</span>
+							246682人在学
+						</div>
+						
+											</div>
+				</div>
+			</a>
+			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
+			
+				
+											<div className="course-card-bk">
+					<img src="http://www.imooc.com/courseimg/s/cover017_s.jpg"/>
+				</div>
+									</div>
+	
+	<div className="index-card-container course-card-container container ">
+			
+			<a target="_blank" className="course-card" href="/learn/96">
+			
+				<div className="course-card-top cart-color green">
+					<i className="imv2-war"></i>
+															<span>Android</span>
+														</div>
+				
+				<div className="course-card-content">
+					<h3 className="course-card-name">Android攻城狮的第一门课（入门篇）</h3>
+										<p title="想快速掌握Android应用开发基础，选择学习这门课程就对了。">想快速掌握Android应用开发基础，选择学习这门课程就对了。</p>
+										<div className="clearfix course-card-bottom">
+						<div className="course-card-info">
+														初级<span>·</span>
+							246682人在学
+						</div>
+						
+											</div>
+				</div>
+			</a>
+			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
+			
+				
+											<div className="course-card-bk">
+					<img src="http://www.imooc.com/courseimg/s/cover017_s.jpg"/>
+				</div>
+									</div>
+	<div className="index-card-container course-card-container container ">
+			
+			<a target="_blank" className="course-card" href="/learn/96">
+			
+				<div className="course-card-top cart-color green">
+					<i className="imv2-war"></i>
+															<span>Android</span>
+														</div>
+				
+				<div className="course-card-content">
+					<h3 className="course-card-name">Android攻城狮的第一门课（入门篇）</h3>
+										<p title="想快速掌握Android应用开发基础，选择学习这门课程就对了。">想快速掌握Android应用开发基础，选择学习这门课程就对了。</p>
+										<div className="clearfix course-card-bottom">
+						<div className="course-card-info">
+														初级<span>·</span>
+							246682人在学
+						</div>
+						
+											</div>
+				</div>
+			</a>
+			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
+			
+				
+											<div className="course-card-bk">
+					<img src="http://www.imooc.com/courseimg/s/cover017_s.jpg"/>
+				</div>
+									</div>
+	<div className="index-card-container course-card-container container ">
+			
+			<a target="_blank" className="course-card" href="/learn/96">
+			
+				<div className="course-card-top cart-color green">
+					<i className="imv2-war"></i>
+															<span>Android</span>
+														</div>
+				
+				<div className="course-card-content">
+					<h3 className="course-card-name">Android攻城狮的第一门课（入门篇）</h3>
+										<p title="想快速掌握Android应用开发基础，选择学习这门课程就对了。">想快速掌握Android应用开发基础，选择学习这门课程就对了。</p>
+										<div className="clearfix course-card-bottom">
+						<div className="course-card-info">
+														初级<span>·</span>
+							246682人在学
+						</div>
+						
+											</div>
+				</div>
+			</a>
+			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
+			
+				
+											<div className="course-card-bk">
+					<img src="http://www.imooc.com/courseimg/s/cover017_s.jpg"/>
+				</div>
+									</div>
+	<div className="index-card-container course-card-container container ">
+			
+			<a target="_blank" className="course-card" href="/learn/96">
+			
+				<div className="course-card-top cart-color green">
+					<i className="imv2-war"></i>
+															<span>Android</span>
+														</div>
+				
+				<div className="course-card-content">
+					<h3 className="course-card-name">Android攻城狮的第一门课（入门篇）</h3>
+										<p title="想快速掌握Android应用开发基础，选择学习这门课程就对了。">想快速掌握Android应用开发基础，选择学习这门课程就对了。</p>
+										<div className="clearfix course-card-bottom">
+						<div className="course-card-info">
+														初级<span>·</span>
+							246682人在学
+						</div>
+						
+											</div>
+				</div>
+			</a>
+			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
+			
+				
+											<div className="course-card-bk">
+					<img src="http://www.imooc.com/courseimg/s/cover017_s.jpg"/>
+				</div>
+									</div>
+	
+
+
+
+
 		
 						<div className="index-card-container course-card-container container ">
 			
