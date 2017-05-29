@@ -131,7 +131,7 @@ return (
 			<img src="http://climg.mukewang.com/585243df00014f2406000338.jpg"/>
 			<a target="_blank" href="http://class.imooc.com/sc/6" style={{background: 'linear-gradient(-145deg, rgba(255,115,155,1), rgba(255,115,155,0.6))'}}>
 				<div className="path-cart-p1 clearfix">
-					<i className="imv2-path"></i>
+				<Icon style={{float:'left',fontSize:'20px',color:'white'}} type="retweet" />
 					<span>职业路径</span>
 				</div>
 				
