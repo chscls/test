@@ -17,7 +17,7 @@ return (
      <div id="main">
      
  <div className="crumbClip">
-  <Breadcrumb>
+  <Breadcrumb style={{height:'30px'}}>
     <Breadcrumb.Item>轻纺食品</Breadcrumb.Item>
     <Breadcrumb.Item><a href="">食品</a></Breadcrumb.Item>
     <Breadcrumb.Item><a href="">川菜</a></Breadcrumb.Item>
@@ -109,7 +109,7 @@ return (
 
 <div id="page">
 <div id="pageTool" >
-  <div id="pageSort" style={{float:'left',marginTop:'3px'}}>
+  <div id="pageSort" style={{float:'left',marginTop:'5px',height:'25px'}}>
 <a style={{float:'left',border: '1px solid #ccc',padding:'0 15px 0 5px',    position: 'relative'}}>综合<Icon type="arrow-down" /></a>
 <a style={{float:'left',border: '1px solid #ccc',padding:'0 15px 0 5px' ,   position: 'relative'}}>人气<Icon type="arrow-down" /></a>
 <a style={{float:'left',border: '1px solid #ccc',padding:'0 15px 0 5px' ,  position: 'relative'}}>价格<Icon type="arrow-down" /></a>
