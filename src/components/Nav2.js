@@ -117,7 +117,7 @@ import styles from '../routes/IndexPage.css';
     zIndex: '9',
     }}>
                         			                             				                            <li className="menu menu-selected" data-page-id="1303015052">
-                            <a className="link" style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}} href="" rel="nofollow"><span className="title" style={{color:'white'}}>首页</span></a>   
+                            <Link to="School" className="link" style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}} href="" rel="nofollow"><span className="title" style={{color:'white'}}>首页</span></Link>   
                         </li>
 					                    
                  
