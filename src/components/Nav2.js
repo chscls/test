@@ -17,7 +17,7 @@ import styles from '../routes/IndexPage.css';
         
         <div id="shopExtra" data-spm="1997427721">
     <div className="slogo">
-                <a className="slogo-shopname" href="//blackdeckerjzh.tmall.com" data-spm="d4918089"><strong>四川大学</strong></a>
+                <Link to="School" className="slogo-shopname" data-spm="d4918089"><strong>四川大学</strong></Link>
         <div className="slogo-extraicon  ">
                     <span className="ww-light ww-static" data-nick="%E7%99%BE%E5%BE%97%E5%90%9B%E4%B9%8B%E5%AE%8F%E4%B8%93%E5%8D%96%E5%BA%97" data-tnick="%E7%99%BE%E5%BE%97%E5%90%9B%E4%B9%8B%E5%AE%8F%E5%B0%88%E8%B3%A3%E5%BA%97" data-encode="true" data-display="inline" data-icon="static">
                                               <Icon type="phone" /> <Icon type="mail" /><Icon type="mobile" />        </span>
