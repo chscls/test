@@ -27,9 +27,9 @@ return (
     onSearch={value => console.log(value)}
   /></Breadcrumb.Item>
   </Breadcrumb>
-<Row style={{bolder:'red'}}>
+<Row style={{border: '1px solid #ccc',backgroundColor:'#F7F5F5'}}>
       <Col span={2}>学校</Col>
-      <Col span={22}>
+      <Col span={22} style={{backgroundColor:'white'}}>
 
       
      
@@ -64,9 +64,11 @@ return (
  
   </Col>
     </Row>
-    <Row>
-      <Col span={2}>分类</Col>
-      <Col span={22}><ul className="av-expand" data-atp="{loc},{cat},,,{f},3,{c},">
+    <Row style={{border: '1px solid #ccc',backgroundColor:'#F7F5F5'}}>
+      <Col span={2} >分类</Col>
+      <Col span={22} style={{backgroundColor:'white'}}>
+     <div > 
+      <ul className="av-expand" data-atp="{loc},{cat},,,{f},3,{c},">
 <li style={{    margin: '0 5px 8px 0',
     width: '180px',
     overflow: 'hidden',float: 'left',
@@ -95,7 +97,7 @@ return (
  </a>
  </li>
 
- </ul></Col>
+ </ul></div></Col>
     </Row>
     
 </div>
@@ -107,9 +109,9 @@ return (
 
 <div id="page">
 <div id="pageTool" >
-  <div id="pageSort" style={{float:'left'}}>
+  <div id="pageSort" style={{float:'left',marginTop:'3px'}}>
 <a style={{float:'left',border: '1px solid #ccc',padding:'0 15px 0 5px',    position: 'relative'}}>综合<Icon type="arrow-down" /></a>
-<a style={{float:'left',border: '1px solid #ccc',padding:'0 15px 0 5px' ,  position: 'relative'}}>人气<Icon type="arrow-down" /></a>
+<a style={{float:'left',border: '1px solid #ccc',padding:'0 15px 0 5px' ,   position: 'relative'}}>人气<Icon type="arrow-down" /></a>
 <a style={{float:'left',border: '1px solid #ccc',padding:'0 15px 0 5px' ,  position: 'relative'}}>价格<Icon type="arrow-down" /></a>
 <a style={{float:'left',border: '1px solid #ccc',padding:'0 15px 0 5px' ,  position: 'relative'}}>销量<Icon type="arrow-down" /></a>
   </div>
