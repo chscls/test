@@ -8351,6 +8351,7 @@ width: 540px!important;
     overflow: hidden;
     padding-bottom: 0;
     position: relative;
+	background-color:white;
 }
 #hd .layout{
     width: 990px;
