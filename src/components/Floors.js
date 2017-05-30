@@ -89,7 +89,7 @@ const Floors = (props) => {
 			<Link to="Course" className="grid one-grid" >
 				<div className="title">红海洋</div>
 				<div className="sub-title">麻、辣、鲜、香四味俱全</div>
-				<img src="19.jpg"/>
+				<img src="19.png"/>
 				
     
 	</Link>
