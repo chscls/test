@@ -8783,3 +8783,133 @@ width: 540px!important;
     background-color: #0c60aa;
 }
 	   
+.tm-fcs-panel{
+
+
+	    background-color: #e9e9e9;
+    background-repeat: no-repeat;
+    background-position: left 0;
+    position: relative;
+    left: 0;
+    z-index: 10;
+    font: 12px/1.5 "Microsoft Yahei",tahoma,arial;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-right: 20px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAggAAADGCAMAAACAX4i8AAAAGXRFW…pPjEIHTIwfEOig+5sqQgfcO7xDoAMmxhMEOuAUeTj8FGAACqmqUagiyncAAAAASUVORK5CYII=);
+
+}
+
+#detail .tm-price-panel.tm-price-cur {
+    line-height: 30px;
+	position: static;
+    color: #333;
+    padding-left: 0;
+}
+.tm-price-panel {
+    position: static;
+    color: #333;
+    padding-left: 0;
+}
+#detail .tm-fcs-panel dl dt.tb-metatit {
+    color: #999;
+    font-size: 12px;
+    text-align: left;
+    float: left;
+    width: 69px;
+    margin: 0 0 0 8px;
+}
+    
+	#detail .tm-fcs-panel dl dd {
+    color: #333;
+    margin-left: 70px;
+    font-family: Arial;
+}
+#J_StrPriceModBox dd, .tariff-rule {
+    position: relative;
+}
+#detail .tm-price-panel.tm-price-cur .tm-price, #detail .tm-price-panel.tm-price-cur .tm-yen {
+    font-family: Arial;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+}
+#detail .tm-price-panel.tm-price-cur .tm-yen {
+    color: #FF0036;
+    font-size: 18px;
+}
+#detail .tm-price-panel.tm-price-cur .tm-price {
+    color: #FF0036;
+    font-size: 24px;
+    font-weight: bolder;
+}
+#detail .tm-price-panel.tm-price-cur .tm-price, #detail .tm-price-panel.tm-price-cur .tm-yen {
+    font-family: Arial;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+}
+#detail .tm-fcs-panel dl.tm-shopPromo-panel {
+    position: relative;
+    z-index: 5;
+    line-height: 32px;
+}
+#detail .tm-fcs-panel dl.tm-shopPromo-panel .tm-shopPromotion-title {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+#detail .tm-fcs-panel dl dt.tb-metatit {
+    color: #999;
+    font-size: 12px;
+    text-align: left;
+    float: left;
+    width: 69px;
+    margin: 0 0 0 8px;
+}
+#detail .tm-fcs-panel dl.tm-shopPromo-panel .tm-gold dd {
+    color: #b5621b;
+    font-size: 13px;
+}
+#detail .tm-fcs-panel dl.tm-shopPromo-panel dd {
+    color: #666;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    margin-right: 50px;
+}
+#detail .tm-fcs-panel dl.tm-shopPromo-panel .more {
+    color: #8d8d8d;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    text-decoration: none;
+}
+#detail .tm-fcs-panel dl.tm-shopPromo-panel .tm-gold .more, #detail .tm-fcs-panel dl.tm-shopPromo-panel .tm-gold .more s {
+    color: #b5621b;
+}
+.tm-ind-panel {
+    border: 1px dotted #c9c9c9;
+    border-width: 1px 0;
+    margin: -1px 20px 0 0;
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;
+    clear: both;
+    display: flex;
+}
+.tm-ind-item {
+    float: left;
+    width: 33%;
+    text-align: center;
+    position: relative;
+    left: -1px;
+    border-left: 1px solid #e5dfda;
+    flex: 1;
+    line-height: 16px;
+}
+.tm-ind-panel .canClick {
+    cursor: pointer;
+}

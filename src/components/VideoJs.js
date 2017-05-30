@@ -12,7 +12,7 @@ const VideoJs = React.createClass({
  
 render() {
   return (
-<video id="example_video_1" className="video-js vjs-default-skin"  controls  width="800" height="600"> 
+<video id="example_video_1" className="video-js vjs-default-skin"  controls  width="355" height="266"> 
 
     
 </video> 

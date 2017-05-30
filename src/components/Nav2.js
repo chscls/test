@@ -100,7 +100,7 @@ import styles from '../routes/IndexPage.css';
         <div className="col-main">
         <div className="main-wrap J_TRegion" data-modules="main" data-width="h990" data-max="">
             <div className="J_TModule" data-widgetid="14866275008" id="shop14866275008" data-componentid="11209193" data-spm="110.0.11209193-14866275008"  data-title="全屏轮播海报">
-<div style={{width:'995px',margin:'auto'}}><img style={{width:'100%',height:'120px'}} src="http://www.scu.edu.cn/portal2013/lib/images/scroll.jpg"/></div>
+<div style={{width:'995px',margin:'auto'}}><img style={{width:'100%',height:'120px'}} src="scroll.jpg"/></div>
 </div>
 <div className="J_TModule" data-widgetid="14866275009" id="shop14866275009" data-componentid="5002" data-spm="110.0.5002-14866275009"  data-title="导航">
 
