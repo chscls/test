@@ -35,7 +35,7 @@ render() {
 
 
     var newbtn = document.createElement('div');
-newbtn.innerHTML = '<button class="vjs-control" id="downloadButton" style="background-color:red" onclick="alert()"></button>';
+newbtn.innerHTML = '<button class="vjs-control" id="downloadButton" style="background-color:black" onclick="alert()"></button>';
 var controlBar = document.getElementsByClassName('vjs-control-bar')[0];
 var insertBeforeNode = document.getElementsByClassName('vjs-fullscreen-control')[0];
 controlBar.insertBefore(newbtn,insertBeforeNode);
