@@ -8914,3 +8914,65 @@ width: 540px!important;
     cursor: pointer;
 }
 
+.tb-action {
+    clear: both;
+    padding: 10px 0 0 66px;
+    margin: 10px 0 0;
+}
+.tb-btn-sku {
+    margin-right: 10px;
+    float: left;
+}
+
+#detail .tb-btn-sku a {
+    margin-right: 0;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 178px;
+    background-color: #ffeded;
+    border: 1px solid #FF0036;
+    color: #FF0036;
+    font-family: 'Microsoft Yahei';
+}
+
+#detail .tb-btn-sku a, #detail .tm-change-left {
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 16px;
+}
+#detail .tb-btn-sku .ensureText, .tb-attention .tm-multi-wrap {
+    display: none;
+}
+#detail .tb-btn-add a, #detail .tb-btn-basket a, #detail .tb-btn-buycar a {
+    background-color: #ff0036;
+    border: 1px solid #ff0036;
+    color: #fff;
+}
+
+#detail .tb-btn-sku a {
+    margin-right: 0;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 178px;
+    background-color: #ffeded;
+    border: 1px solid #FF0036;
+    color: #FF0036;
+    font-family: 'Microsoft Yahei';
+}
+#detail .tb-btn-sku a, #detail .tm-change-left {
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 16px;
+}
+#detail .hidden, #detail .tb-hidden {
+    display: none;
+}
+#detail .tb-btn-add a, #detail .tb-btn-basket a, #detail .tb-btn-buycar a {
+    background-color: #ff0036;
+    border: 1px solid #ff0036;
+    color: #fff;
+}

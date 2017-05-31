@@ -3,7 +3,7 @@ import { connect } from 'dva';
 import { Link } from 'dva/router';
 import {  LocaleProvider} from 'antd';
 import Nav2 from '../components/Nav2'
-import { Row,Col } from 'antd';
+import { Row,Col,Icon } from 'antd';
 import VideoJs from '../components/VideoJs'
 class Course extends Component{
    constructor(props){
@@ -66,8 +66,20 @@ Google亲儿子AndroidStudio即将上位，赶紧学习安装配置、使用技�
             <li className="tm-ind-item tm-ind-reviewCount canClick tm-line3" id="J_ItemRates"><div className="tm-indcon"><span className="tm-label">累计评价</span><span className="tm-count">21</span></div></li>
     	
 								                <li className="tm-ind-item tm-ind-emPointCount" data-spm="1000988"><div className="tm-indcon"><a href="//vip.tmall.com/vip/index.htm" target="_blank"><span className="tm-label">送知用积分</span><span className="tm-count">249</span></a></div></li>
-			</ul>  
+		
+    
+    	</ul>  
        
+			<dl className="tm-shopPromo-panel"><div className="tm-shopPromotion-title tm-gold">简介：Android Studio是Google在I/O大会上发布的一个新的集成开发环境，可以让Android开发变的更简单。本课程会详细的向您介绍Android Studio的安装配置、使用技巧以及相对于Eclipse开发的优势，并通过实际的操作让大家快速熟悉Android Studio的使用，让您体验更强大的开发工具</div></dl>
+    
+<div className="tb-action tm-clear">
+																	                <div className="tb-btn-buy tb-btn-sku">
+                    <a id="J_LinkBuy" href="#" rel="nofollow" data-addfastbuy="true" title="点击此按钮，到下一步确认购买信息。" role="button">立即学习<span className="ensureText">确认</span></a>
+                </div>
+							      <div className="tb-btn-basket tb-btn-sku "><a href="#" rel="nofollow" id="J_LinkBasket" role="button"><Icon type="shopping-cart" />加入购物车<span className="ensureText">确认</span></a></div>
+			            <div className="tb-btn-add tb-btn-sku tb-hidden"><a href="#" rel="nofollow" id="J_LinkAdd" role="button"><Icon type="shopping-cart" />加入购物车</a></div>
+        			</div>
+
        
        
         </div>
