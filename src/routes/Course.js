@@ -19,10 +19,10 @@ return (
    <Nav2/>
      <div id="detail" style={{width:'1230px',margin:'auto',background:'white'}}>
      <Row  style={{marginTop:'20px'}}>
-      <Col span={20}>
+      <Col span={19}>
       
-      <Row>
-     <Col span={10}><div>
+       <Row>
+          <Col span={10}><div>
        
        
         <VideoJs vtt="video/demo.captions.vtt2"/> </div>
@@ -58,17 +58,19 @@ Google亲儿子AndroidStudio即将上位，赶紧学习安装配置、使用技�
 
 			</script> 
                  
-<dl className="tm-shopPromo-panel"><div className="tm-shopPromotion-title tm-gold"><dt className="tb-metatit">本校活动</dt><dd>满1元,送50元店铺优惠券；满299元,包邮,送50元店铺优…</dd><a className="more" data-spm-anchor-id="a220o.1000855.0.0">更多优惠<s></s></a></div><div className="tm-floater-Box hidden"><div className="floater fold">     <div className="hd">         <em className="title">本店活动</em>         全店299包邮返券                               到2017-06-01 09:59:59结束                  <a className="more unmore" data-spm-anchor-id="a220o.1000855.0.0">收起<s></s></a>         <a className="more">更多优惠<s></s></a>              </div>     <ul className="bd">                  <li className="noCoupon" data-index="0">             <p>                                      满<em>1</em>元                                                                                                                                  ,送50元店铺优惠券                                                                                                                                                            </p>                      </li>                  <li className="noCoupon" data-index="1">             <p>                                      满<em>299</em>元                                                                                        ,包邮                                                                                        ,送50元店铺优惠券                                                                                                                                                            </p>                      </li>              </ul>     <div className="ft">         <span className="title">不包邮地区：</span>台湾;香港;澳门;海外         <a className="all" target="_blank" href="//marketing.tmall.com/home/tsp/page.htm?id=3495470378_59357538">所有活动商品</a>     </div> </div></div></dl></div>
+<dl className="tm-shopPromo-panel"><div className="tm-shopPromotion-title tm-gold"><dt className="tb-metatit">本校活动</dt><dd>满1元,送50元学校优惠券；满299元,送50元学校优惠券</dd><a className="more" data-spm-anchor-id="a220o.1000855.0.0">更多优惠<s></s></a></div><div className="tm-floater-Box hidden"><div className="floater fold">     <div className="hd">         <em className="title">本店活动</em>         全店299包邮返券                               到2017-06-01 09:59:59结束                  <a className="more unmore" data-spm-anchor-id="a220o.1000855.0.0">收起<s></s></a>         <a className="more">更多优惠<s></s></a>              </div>     <ul className="bd">                  <li className="noCoupon" data-index="0">             <p>                                      满<em>1</em>元                                                                                                                                  ,送50元店铺优惠券                                                                                                                                                            </p>                      </li>                  <li className="noCoupon" data-index="1">             <p>                                      满<em>299</em>元                                                                                        ,包邮                                                                                        ,送50元店铺优惠券                                                                                                                                                            </p>                      </li>              </ul>     <div className="ft">         <span className="title">不包邮地区：</span>台湾;香港;澳门;海外         <a className="all" target="_blank" href="//marketing.tmall.com/home/tsp/page.htm?id=3495470378_59357538">所有活动商品</a>     </div> </div></div></dl></div>
        
        
        
        
        
      <ul className="tm-ind-panel">
-                 			<li className="tm-ind-item tm-ind-sellCount " data-label="月销量"><div className="tm-indcon"><span className="tm-label">月销量</span><span className="tm-count">19</span></div></li>
-            <li className="tm-ind-item tm-ind-reviewCount canClick tm-line3" id="J_ItemRates"><div className="tm-indcon"><span className="tm-label">累计评价</span><span className="tm-count">21</span></div></li>
+       	 <li className="tm-ind-item tm-ind-reviewCount canClick tm-line3" ><div className="tm-indcon"><span className="tm-label">综合评分</span><span className="tm-count">9.8</span></div></li>
     	
-								                <li className="tm-ind-item tm-ind-emPointCount" data-spm="1000988"><div className="tm-indcon"><a href="//vip.tmall.com/vip/index.htm" target="_blank"><span className="tm-label">送知用积分</span><span className="tm-count">249</span></a></div></li>
+                 			<li className="tm-ind-item tm-ind-sellCount " data-label="月销量"><div className="tm-indcon"><span className="tm-label">学习人数</span><span className="tm-count">19121</span></div></li>
+            <li className="tm-ind-item tm-ind-reviewCount canClick tm-line3" id="J_ItemRates"><div className="tm-indcon"><span className="tm-label">难度级别</span><span className="tm-count">中级</span></div></li>
+    
+			<li className="tm-ind-item tm-ind-emPointCount" data-spm="1000988"><div className="tm-indcon"><a href="" target="_blank"><span className="tm-label">送知用积分</span><span className="tm-count">249</span></a></div></li>
 		
     
     	</ul>  
@@ -96,8 +98,44 @@ Google亲儿子AndroidStudio即将上位，赶紧学习安装配置、使用技�
   </Col>
       </Row>
       </Col>
-      <Col span={2}></Col>
-推荐内容
+      <Col span={5}>
+      
+      
+      
+      
+      
+      <div id="jiangshi" className="box mb40 js-usercard-box">
+        <h4>讲师提示</h4>
+                        <div className="teacher-info">
+            <a href="/u/279399/courses?sort=publish" target="_blank">
+                <img data-userid="279399" className="js-usercard-dialog" src="http://img.mukewang.com/53f5aae6000129aa01400140-80-80.jpg" width="80" height="80"/>
+            </a>
+            <span className="tit">
+                <a href="/u/279399/courses?sort=publish" target="_blank">Tony</a><br/>
+            </span>
+            <span className="job">资深Android工程师</span>
+        </div>
+                                <div className="course-info-tip">
+                        <dl className="first">
+                <dt>课程须知</dt>
+                <dd className="autowrap">学习本课程前，需要熟悉Linux的常用命令，可参见课程《Linux达人养成计划I》。</dd>
+            </dl>
+                                    <dl>
+                <dt>老师告诉你能学到什么？</dt>
+                <dd className="autowrap">1、了解软件包管理的基本概念
+2、能够使用rpm命令对软件进行安装、卸载等操作
+3、能够使用yum对软件进行在线管理
+4、能够安装源码包
+5、能够使用脚本安装包</dd>
+            </dl>
+                    </div>
+            </div>
+      
+      
+      
+      
+      </Col>
+
       </Row>
          </div>
 </div>
