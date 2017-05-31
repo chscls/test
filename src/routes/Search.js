@@ -132,7 +132,7 @@ return (
 	
 							<div className="path-card-container">
 			<img src="http://climg.mukewang.com/585243df00014f2406000338.jpg"/>
-			<a target="_blank" href="http://class.imooc.com/sc/6" style={{background: 'linear-gradient(-145deg, rgba(255,115,155,1), rgba(255,115,155,0.6))'}}>
+			<Link to="Course"  href="http://class.imooc.com/sc/6" style={{background: 'linear-gradient(-145deg, rgba(255,115,155,1), rgba(255,115,155,0.6))'}}>
 				<div className="path-cart-p1 clearfix">
 				<Icon style={{float:'left',fontSize:'20px',color:'white'}} type="retweet" />
 					<span>职业路径</span>
@@ -145,14 +145,14 @@ return (
 					<span className="l">588人在学</span>
 					<span className="r">￥399.00</span>
 				</div>
-			</a>
+			</Link>
 		</div>
 					
 	
 													
 						<div className="index-card-container course-card-container container ">
 			
-			<a target="_blank" className="course-card" href="/learn/96">
+			<Link to="Course"  className="course-card" >
 			
 				<div className="course-card-top cart-color green">
 					<i className="imv2-war"></i>
@@ -170,7 +170,7 @@ return (
 						
 											</div>
 				</div>
-			</a>
+			</Link>
 			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
 			
 				
@@ -183,7 +183,7 @@ return (
 													
 						<div className="index-card-container course-card-container container ">
 			
-			<a target="_blank" className="course-card" href="/learn/107">
+			<Link to="Course"  className="course-card" >
 			
 				<div className="course-card-top cart-color green">
 					<i className="imv2-war"></i>
@@ -201,7 +201,7 @@ return (
 						
 											</div>
 				</div>
-			</a>
+			</Link>
 			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
 			
 				
@@ -214,7 +214,7 @@ return (
 													
 						<div className="index-card-container course-card-container container ">
 			
-			<a target="_blank" className="course-card" href="/learn/206">
+			<Link to="Course"  className="course-card" href="/learn/206">
 			
 				<div className="course-card-top cart-color green">
 					<i className="imv2-war"></i>
@@ -232,7 +232,7 @@ return (
 						
 											</div>
 				</div>
-			</a>
+			</Link>
 			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
 			
 				
@@ -245,7 +245,7 @@ return (
 													
 						<div className="index-card-container course-card-container container ">
 			
-			<a target="_blank" className="course-card" href="/learn/179">
+			<Link to="Course"  className="course-card" >
 			
 				<div className="course-card-top cart-color green">
 					<i className="imv2-war"></i>
@@ -263,7 +263,7 @@ return (
 						
 											</div>
 				</div>
-			</a>
+			</Link>
 			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
 			
 				
@@ -274,7 +274,7 @@ return (
 	
     
 																		<div className="moco-course-wrap szcoursewrap">
-																					<a href="http://coding.imooc.com/class/101.html" target="_blank" className="szcourse-cart active">
+																					<Link to="Course" href="http://coding.imooc.com/class/101.html"  className="szcourse-cart active">
 								<div className="szcourse-cart-A">
 									<div className="szcourse-cart-b">
 										<div className="szcourse-p1 clearfix">
@@ -301,8 +301,8 @@ return (
 										</div>
 									</div>
 								</div>
-							</a>
-																												<a href="http://coding.imooc.com/class/100.html" target="_blank" className="szcourse-cart ">
+							</Link>
+																												<Link to="Course" href="http://coding.imooc.com/class/100.html" className="szcourse-cart ">
 								<div className="szcourse-cart-A">
 									<div className="szcourse-cart-b">
 										<div className="szcourse-p1 clearfix">
@@ -329,8 +329,8 @@ return (
 										</div>
 									</div>
 								</div>
-							</a>
-																												<a href="http://coding.imooc.com/class/89.html" target="_blank" className="szcourse-cart ">
+							</Link>
+																												<Link to="Course" href="http://coding.imooc.com/class/89.html"  className="szcourse-cart ">
 								<div className="szcourse-cart-A">
 									<div className="szcourse-cart-b">
 										<div className="szcourse-p1 clearfix">
@@ -357,8 +357,8 @@ return (
 										</div>
 									</div>
 								</div>
-							</a>
-																												<a href="http://coding.imooc.com/class/84.html" target="_blank" className="szcourse-cart ">
+							</Link>
+																											<Link to="Course" href="http://coding.imooc.com/class/84.html"  className="szcourse-cart ">
 								<div className="szcourse-cart-A">
 									<div className="szcourse-cart-b">
 										<div className="szcourse-p1 clearfix">
@@ -385,7 +385,7 @@ return (
 										</div>
 									</div>
 								</div>
-							</a>
+							</Link>
 																				</div>
 
 
@@ -394,7 +394,7 @@ return (
 
 <div className="index-card-container course-card-container container ">
 			
-			<a target="_blank" className="course-card" href="/learn/96">
+			<Link to="Course"  className="course-card" href="/learn/96">
 			
 				<div className="course-card-top cart-color green">
 					<i className="imv2-war"></i>
@@ -412,7 +412,7 @@ return (
 						
 											</div>
 				</div>
-			</a>
+			</Link>
 			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
 			
 				
@@ -423,7 +423,7 @@ return (
 	
 	<div className="index-card-container course-card-container container ">
 			
-			<a target="_blank" className="course-card" href="/learn/96">
+			<Link to="Course" className="course-card" href="/learn/96">
 			
 				<div className="course-card-top cart-color green">
 					<i className="imv2-war"></i>
@@ -441,7 +441,7 @@ return (
 						
 											</div>
 				</div>
-			</a>
+			</Link>
 			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
 			
 				
@@ -452,7 +452,7 @@ return (
 	
 	<div className="index-card-container course-card-container container ">
 			
-			<a target="_blank" className="course-card" href="/learn/96">
+			<Link to="Course" className="course-card" href="/learn/96">
 			
 				<div className="course-card-top cart-color green">
 					<i className="imv2-war"></i>
@@ -470,7 +470,7 @@ return (
 						
 											</div>
 				</div>
-			</a>
+			</Link>
 			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
 			
 				
@@ -481,7 +481,7 @@ return (
 	
 	<div className="index-card-container course-card-container container ">
 			
-			<a target="_blank" className="course-card" href="/learn/96">
+			<Link to="Course"  className="course-card" href="/learn/96">
 			
 				<div className="course-card-top cart-color green">
 					<i className="imv2-war"></i>
@@ -499,7 +499,7 @@ return (
 						
 											</div>
 				</div>
-			</a>
+			</Link>
 			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
 			
 				
@@ -509,7 +509,7 @@ return (
 									</div>
 	<div className="index-card-container course-card-container container ">
 			
-			<a target="_blank" className="course-card" href="/learn/96">
+			<Link to="Course"  className="course-card" href="/learn/96">
 			
 				<div className="course-card-top cart-color green">
 					<i className="imv2-war"></i>
@@ -527,7 +527,7 @@ return (
 						
 											</div>
 				</div>
-			</a>
+			</Link>
 			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
 			
 				
@@ -537,7 +537,7 @@ return (
 									</div>
 	<div className="index-card-container course-card-container container ">
 			
-			<a target="_blank" className="course-card" href="/learn/96">
+			<Link to="Course"  className="course-card" href="/learn/96">
 			
 				<div className="course-card-top cart-color green">
 					<i className="imv2-war"></i>
@@ -555,7 +555,7 @@ return (
 						
 											</div>
 				</div>
-			</a>
+			</Link>
 			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
 			
 				
@@ -565,7 +565,7 @@ return (
 									</div>
 	<div className="index-card-container course-card-container container ">
 			
-			<a target="_blank" className="course-card" href="/learn/96">
+			<Link to="Course"  className="course-card" href="/learn/96">
 			
 				<div className="course-card-top cart-color green">
 					<i className="imv2-war"></i>
@@ -583,7 +583,7 @@ return (
 						
 											</div>
 				</div>
-			</a>
+			</Link>
 			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
 			
 				
@@ -599,7 +599,7 @@ return (
 		
 						<div className="index-card-container course-card-container container ">
 			
-			<a target="_blank" className="course-card" href="/learn/484">
+			<Link to="Course" className="course-card" href="/learn/484">
 			
 				<div className="course-card-top cart-color green">
 					<i className="imv2-war"></i>
@@ -619,7 +619,7 @@ return (
 						
 											</div>
 				</div>
-			</a>
+			</Link>
 			<img src="/static/img/index/new/new.png" className="course-cart-new"/>
 			
 				
