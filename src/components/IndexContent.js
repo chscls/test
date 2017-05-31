@@ -11,6 +11,8 @@ class IndexContent extends React.Component {
     this.state = {
       detailShow: 'none',
     }
+    this.handleMouseOver = this.handleMouseOver.bind(this);
+    this.handleMouseLeave= this.handleMouseLeave.bind(this);
   }
 
   handleMouseOver = (e) => {
