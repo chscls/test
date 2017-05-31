@@ -211,11 +211,11 @@ x[i].style.backgroundColor = "rgba(238, 238, 238, 0.952941)";
                   <div className='sub-logo-con'>
                     <div data-spm='subpannel2016026'>
                       <Link to="School" className='logo' href=''><img src='100.jpg' /></Link>
-                      <Link to="School" className='logo' href=''><img src='//img.alicdn.com/bao/uploaded/i4/T1gRqVXk4fXXb1upjX.jpg_170x120q30.jpg' /></Link>
-                      <Link to="School" className='logo' href=''><img src='//img.alicdn.com/bao/uploaded/TB1wNJAHFXXXXc7XpXXSutbFXXX.jpg_170x120q30.jpg' /></Link>
+                      <Link to="School" className='logo' href=''><img src='101.jpg' /></Link>
+                      <Link to="School" className='logo' href=''><img src='103.jpg' /></Link>
                     </div>
                     <div data-spm='subpannel2016027'>
-                      <Link to="Search" className='activity clearfix' href=''><img src='https://img.alicdn.com/tps/TB1xnkQKVXXXXaJXXXXXXXXXXXX-378-174.jpg' />
+                      <Link to="Search" className='activity clearfix' href=''><img src='102.jpg' />
                         <div className='title'></div>
                         <div className='sub-title'></div>
                       </Link>
