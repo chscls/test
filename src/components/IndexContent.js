@@ -18,25 +18,32 @@ class IndexContent extends React.Component {
       detailShow: 'block',
 
     })
-   var y = e.currentTarget;
-    var x= y.parentNode.childNodes;
-    
-     
-   
-    
- for(var i=0;i<x.length;i++){
-x[i].style.backgroundColor = "rgba(238, 238, 238, 0.952941)";
-}
- y.style.backgroundColor = "white";
+    var y = e.currentTarget;
+    var x = y.parentNode.childNodes;
+
+
+
+
+    for (var i = 0; i < x.length; i++) {
+      x[i].style.backgroundColor = "rgba(238, 238, 238, 0.952941)";
+    }
+    y.style.backgroundColor = "white";
   }
-   
+
   handleMouseLeave = (e) => {
     this.setState({
       detailShow: 'none'
     })
+    var x = document.getElementById("ctc").childNodes;
 
+
+
+
+    for (var i = 0; i < x.length; i++) {
+      x[i].style.backgroundColor = "rgba(238, 238, 238, 0.952941)";
+    }
   }
-  
+
   render() {
     return (
       <div>
@@ -77,7 +84,7 @@ x[i].style.backgroundColor = "rgba(238, 238, 238, 0.952941)";
               </div>
               <div className='category-tab-content'  >
                 <div className='nav-con j_tabPannel category-tab-pannel pannel-normal'>
-                  <ul className='normal-nav clearfix'>
+                  <ul id="ctc" className='normal-nav clearfix'>
                     <li className='j_MenuNav nav-item nav-item-0 category-loaded' data-spm='category2016010' onMouseOver={this.handleMouseOver} >
                       <i className='fp-iconfont nav-item-icon icon'></i><i className='dot fp-iconfont'></i>
                       <Link to='Search'
@@ -202,7 +209,7 @@ x[i].style.backgroundColor = "rgba(238, 238, 238, 0.952941)";
                         </div>
                         <div className='line-con'>
                           <Link to="School" className='hot-word highlight ' href=''>养鸡</Link>
-                          <Link to="School"className='hot-word ' href=''>养鸭</Link>
+                          <Link to="School" className='hot-word ' href=''>养鸭</Link>
                           <div className='seprate clearfix'></div>
                         </div>
                       </div>
