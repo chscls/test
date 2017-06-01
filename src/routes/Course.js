@@ -296,6 +296,24 @@ class Course extends Component {
 </div>
 
 
+
+<div className="J_TModule" data-widgetid="16173239884" id="shop16173239884" data-componentid="5003" data-spm="110.0.5003-16173239884" microscope-data="5003-16173239884" data-title="自定义内容区">	        <div className="skin-box tb-module tshop-pbsm tshop-pbsm-shop-self-defined">
+	
+        <s className="skin-box-tp"><b></b></s>
+		        <div className="skin-box-bd clear-fix">
+            <span>
+								    <p><img src="//gdp.alicdn.com/imgextra/i2/2616970884/TB2XdmEl4hmpuFjSZFyXXcLdFXa-2616970884.jpg" alt=""/> </p>
+							</span>
+        </div>
+        <s className="skin-box-bt"><b></b></s>
+		
+	</div>
+</div>
+
+
+
+
+
 </div>
 
 
