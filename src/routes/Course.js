@@ -3,7 +3,7 @@ import { connect } from 'dva';
 import { Link } from 'dva/router';
 import {  LocaleProvider} from 'antd';
 import Nav2 from '../components/Nav2'
-import {Tabs,Row,Col,Icon,Collapse } from 'antd';
+import {Tabs,Row,Col,Icon,Collapse,Pagination } from 'antd';
 import VideoJs from '../components/VideoJs'
 const Panel = Collapse.Panel;
 const TabPane = Tabs.TabPane;
@@ -246,7 +246,7 @@ Google亲儿子AndroidStudio即将上位，赶紧学习安装配置、使用技�
   </Col>
    <Col span={15}>
 
-<Tabs defaultActiveKey="1" animated='false' tabPosition="top">
+<Tabs defaultActiveKey="1" animated={false} tabPosition="top">
     <TabPane tab={<span><Icon type="bars" />章节</span>} key="1">
       <Collapse bordered={false} >
     <Panel header="第1章 概述" key="1">
@@ -290,7 +290,157 @@ Android Studio这款开发工具被首次公布，这也是为了方便开发者
 
     </TabPane>
       <TabPane tab={<span><Icon type="like-o" />评论</span>} key="3">
-     评论
+    <ul className="mod-post" id="comment-list">
+                <li className="post-row" id="94098">
+            <div className="media">
+                <a href="/u/1187337/courses" target="_blank"><img src="http://img.mukewang.com/56a1d0f1000105a801000100-40-40.jpg" width="40" height="40"/></a>
+            </div>
+            <div className="bd">
+                <div className="tit">
+                    <a href="/u/1187337/courses" target="_blank">Php小剑客</a>
+                </div>
+                <p className="cnt">或许在工作中我们会遇到能让你请教的同事，但是毕竟不是每个人都是无私的，慕课的教程帮助了千千万万求学的程序员，非常感谢。</p>
+                <div className="footer clearfix">
+                    <span title="创建时间" className="l timeago">时间：2015-08-05</span>
+                                        <a href="/video/8940" className="from">源自：4-1 yum源文件</a>
+                                        <div className="actions r">
+                        <a title="赞" href="javascript:;" className="js-pl-praise list-praise post-action" data-id="94098">
+                          <Icon type="like-o" />
+                            <em>56</em>
+                        </a>
+                    </div>
+                </div>
+            </div>
+      </li>
+             
+              <li className="post-row" id="425825">
+            <div className="media">
+                <a href="/u/3098766/courses" target="_blank"><img src="http://img.mukewang.com/533e4c640001354402000200-40-40.jpg" width="40" height="40"/></a>
+            </div>
+            <div className="bd">
+                <div className="tit">
+                    <a href="/u/3098766/courses" target="_blank">闲人度假</a>
+                </div>
+                <p className="cnt">在这里感谢Tony老师。讲得通俗易懂。学起来非常轻松愉快。节约很多时间就明白了很多知识点。</p>
+                <div className="footer clearfix">
+                    <span title="创建时间" className="l timeago">时间：2017-05-02</span>
+                                        <a href="/video/8925" className="from">源自：3-2 Linux中rpm命令管理之安装命令</a>
+                                        <div className="actions r">
+                        <a title="赞" href="javascript:;" className="js-pl-praise list-praise post-action" data-id="425825">
+                           <Icon type="like-o" />
+                            <em>1</em>
+                        </a>
+                    </div>
+                </div>
+            </div>
+      </li>
+              <li className="post-row" id="424907">
+            <div className="media">
+                <a href="/u/4894830/courses" target="_blank"><img src="http://img.mukewang.com/533e4c700001c60f02200220-40-40.jpg" width="40" height="40"/></a>
+            </div>
+            <div className="bd">
+                <div className="tit">
+                    <a href="/u/4894830/courses" target="_blank">慕粉2204247843</a>
+                </div>
+                <p className="cnt">骑驴找驴  这个比喻太形象了</p>
+                <div className="footer clearfix">
+                    <span title="创建时间" className="l timeago">时间：2017-04-30</span>
+                                        <a href="/video/8942" className="from">源自：4-3 yum命令(上)</a>
+                                        <div className="actions r">
+                        <a title="赞" href="javascript:;" className="js-pl-praise list-praise post-action" data-id="424907">
+                           <Icon type="like-o" />
+                            <em>1</em>
+                        </a>
+                    </div>
+                </div>
+            </div>
+      </li>
+              <li className="post-row" id="421928">
+            <div className="media">
+                <a href="/u/1355608/courses" target="_blank"><img src="http://img.mukewang.com/577ba9a70001591803610350-40-40.jpg" width="40" height="40"/></a>
+            </div>
+            <div className="bd">
+                <div className="tit">
+                    <a href="/u/1355608/courses" target="_blank">粗鲁的男人</a>
+                </div>
+                <p className="cnt">看了半天才发现这个源文件并不是yum软件的源码............应该是yum指定下载的来源的"源",我说怎么听得莫名其妙</p>
+                <div className="footer clearfix">
+                    <span title="创建时间" className="l timeago">时间：2017-04-24</span>
+                                        <a href="/video/8940" className="from">源自：4-1 yum源文件</a>
+                                        <div className="actions r">
+                        <a title="赞" href="javascript:;" className="js-pl-praise list-praise post-action" data-id="421928">
+                            <Icon type="like-o" />
+                            <em>0</em>
+                        </a>
+                    </div>
+                </div>
+            </div>
+      </li>
+              <li className="post-row" id="419785">
+            <div className="media">
+                <a href="/u/228492/courses" target="_blank"><img src="http://img.mukewang.com/53bfc99e0001050f01000100-40-40.jpg" width="40" height="40"/></a>
+            </div>
+            <div className="bd">
+                <div className="tit">
+                    <a href="/u/228492/courses" target="_blank">從鈊開始</a>
+                </div>
+                <p className="cnt">握草//、。苍天啊 。。。。</p>
+                <div className="footer clearfix">
+                    <span title="创建时间" className="l timeago">时间：2017-04-20</span>
+                                        <a href="/video/8925" className="from">源自：3-2 Linux中rpm命令管理之安装命令</a>
+                                        <div className="actions r">
+                        <a title="赞" href="javascript:;" className="js-pl-praise list-praise post-action" data-id="419785">
+                           <Icon type="like" />
+                            <em>0</em>
+                        </a>
+                    </div>
+                </div>
+            </div>
+      </li>
+              <li className="post-row" id="419006">
+            <div className="media">
+                <a href="/u/1139813/courses" target="_blank"><img src="http://img.mukewang.com/545850a00001fdd002200220-40-40.jpg" width="40" height="40"/></a>
+            </div>
+            <div className="bd">
+                <div className="tit">
+                    <a href="/u/1139813/courses" target="_blank">蹇飞</a>
+                </div>
+                <p className="cnt">JAVA是可以反编译的哟，！！！！！！！</p>
+                <div className="footer clearfix">
+                    <span title="创建时间" className="l timeago">时间：2017-04-19</span>
+                                        <a href="/video/8746" className="from">源自：2-1 Linux软件包管理之源码包</a>
+                                        <div className="actions r">
+                        <a title="赞" href="javascript:;" className="js-pl-praise list-praise post-action" data-id="419006">
+                            <Icon type="like" />
+                            <em>0</em>
+                        </a>
+                    </div>
+                </div>
+            </div>
+      </li>
+              <li className="post-row" id="417069">
+            <div className="media">
+                <a href="/u/3348078/courses" target="_blank"><img src="http://img.mukewang.com/54584e120001811202200220-40-40.jpg" width="40" height="40"/></a>
+            </div>
+            <div className="bd">
+                <div className="tit">
+                    <a href="/u/3348078/courses" target="_blank">小山坳</a>
+                </div>
+                <p className="cnt">更正：systemctl start httpd.service</p>
+                <div className="footer clearfix">
+                    <span title="创建时间" className="l timeago">时间：2017-04-16</span>
+                                        <a href="/video/8935" className="from">源自：5-1 Linux中源码包与RPM包区别</a>
+                                        <div className="actions r">
+                        <a title="赞" href="javascript:;" className="js-pl-praise list-praise post-action" data-id="417069">
+                            <Icon type="like" />
+                            <em>0</em>
+                        </a>
+                    </div>
+                </div>
+            </div>
+      </li>
+          </ul>
+          <Pagination showQuickJumper defaultCurrent={2} total={500} style={{float:'right',marginTop:'20px',marginBottom:'20px'}} />
     </TabPane>
     <TabPane tab={<span><Icon type="message" />问题</span>} key="4">
      问题

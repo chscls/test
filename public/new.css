@@ -9263,3 +9263,74 @@ width: 540px!important;
     border: 1px solid #ccc;
     color: #333;
 }
+
+.mod-post .post-row {
+    border-bottom: 1px solid #d9dde1;
+    overflow: hidden;
+    padding: 24px 0 16px 24px;
+}
+.mod-post .post-row .media {
+    float: left;
+    width: 40px;
+    margin-right: 10px;
+}
+.mod-post .post-row .media img {
+    display: block;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
+}
+.mod-post .post-row .bd {
+    margin-left: 60px;
+    margin-right: 20px;
+}
+.mod-post .post-row .tit {
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+.mod-post .post-row .cnt {
+    margin-top: 3px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #303538;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.mod-post .post-row .footer {
+    color: #93999f;
+    font-size: 12px;
+    margin-top: 15px;
+}
+.mod-post .post-row .from {
+    color: #93999f;
+    font-size: 12px;
+    margin-left: 28px;
+}
+.mod-post .post-row .post-action {
+    float: left;
+    display: block;
+    padding-left: 16px;
+    color: #93999f;
+    font-size: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    line-height: 22px;
+}
+.mod-post .post-row .post-action .icon, .mod-post .post-row .post-action .icon-thumb-revert {
+    font-size: 16px;
+    top: 2px;
+    position: relative;
+}
+.mod-post .post-row .post-action em {
+    padding: 0 3px;
+    line-height: 16px;
+
+}
+.r {
+    float: right;
+}
+.l {
+    float: left;
+}
