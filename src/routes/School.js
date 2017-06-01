@@ -15,7 +15,7 @@ class School extends Component{
   
 render(){
   var x=(<div id="bd">
-       <div style={{width:'1000px',margin:'auto'}}>
+       <div style={{width:'1230px',margin:'auto'}}>
 
 
 <table>
