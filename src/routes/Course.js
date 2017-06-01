@@ -3,9 +3,9 @@ import { connect } from 'dva';
 import { Link } from 'dva/router';
 import {  LocaleProvider} from 'antd';
 import Nav2 from '../components/Nav2'
-import {Tabs,Row,Col,Icon } from 'antd';
+import {Tabs,Row,Col,Icon,Collapse } from 'antd';
 import VideoJs from '../components/VideoJs'
-
+const Panel = Collapse.Panel;
 const TabPane = Tabs.TabPane;
 class Course extends Component{
    constructor(props){
@@ -246,12 +246,57 @@ Google亲儿子AndroidStudio即将上位，赶紧学习安装配置、使用技�
   </Col>
    <Col span={15}>
 
-<Tabs defaultActiveKey="1">
-    <TabPane tab={<span><Icon type="apple" />Tab 1</span>} key="1">
-      Tab 1
+<Tabs defaultActiveKey="1" animated='false' tabPosition="top">
+    <TabPane tab={<span><Icon type="bars" />章节</span>} key="1">
+      <Collapse bordered={false} >
+    <Panel header="第1章 概述" key="1">
+      <ul><li>1-1 Linux软件安装管理概述 (02:37) </li>
+          
+          </ul>
+     
+    </Panel>
+    <Panel header="第2章 软件包管理简介" key="2">
+       <ul><li>2-1 Linux软件包管理之源码包 (12:49)</li>
+      <li> 2-2 Linux软件包管理之RPM包和脚本安装包 (09:35)</li></ul>
+    </Panel>
+  
+  </Collapse>
     </TabPane>
-    <TabPane tab={<span><Icon type="android" />Tab 2</span>} key="2">
-      Tab 2
+    <TabPane tab={<span><Icon type="file-text" />详细介绍</span>} key="2">
+    架构组成编辑
+在IDEA的基础上，Android Studio 提供[2]  ：
+基于Gradle的构建支持
+Android 专属的重构和快速修复
+提示工具以捕获性能、可用性、版本兼容性等问题
+支持ProGuard 和应用签名
+基于模板的向导来生成常用的 Android 应用设计和组件
+功能强大的布局编辑器，可以让你拖拉 UI 控件并进行效果预览
+主要功能编辑
+2013年
+2013年5月16日，在I/O大会上，谷歌推出新的Android开发环境——Android Studio，并对开发者控制台进行了改进，增加了五个新的功能[3]  。
+Android Studio是谷歌推出了新的Android开发环境，开发者可以在编写程序的同时看到自己的应用在不同尺寸屏幕中的样子。
+谷歌对开发者控制台进行了改进，增加了五个新的功能，包括优化小贴士、应用翻译服务、推荐跟踪、营收曲线图、用版测试和阶段性展示。
+1、优化小贴士：在主体中打开你的应用，点击小贴士，会得到这样的建议：为你的应用开发平板电脑版本。
+2、应用翻译服务：允许开发者直接在开发主体中获得专业的翻译。上传你的需求，选择翻译，其会显示翻译方和价格，并在一周内发回译本。
+3、推荐跟踪：允许开发者找出最有效的广告
+4、营收曲线图：向开发者展示其应用营收，以国家进行划分
+5、试用版测试和阶段性展示：开发者可以对应用进行测试，然后向测试用户推出，测试结果不会对外公布。当一个版本的测试结束，开发者可以向特定比例用户推出[4]  。
+Android Studio这款开发工具被首次公布，这也是为了方便开发者基于Android开发。
+首先解决的一个问题是多分辨率。Android设备拥有大量不同尺寸的屏幕和分辨率，根据新的Studio，开发者可以很方便的调整在各个分辨率设备上的应用。
+同时Studio还解决语言问题，多语言版本（但是没有中文版本）、支持翻译都让开发者更适应全球开发环境。Studio还提供收入记录功能。
+最大的改变在于Beta测试的功能。Studio提供了Beta Testing，可以让开发者很方便试运行[2]  。
+2015年
+2015年5月29日，在谷歌I/O开发者大会上，谷歌发布AndroidStudio 1.3版，支持C++编辑和查错功能。Android Studio 1.3版开发码代码变得更加容易，速度提升，而且支持C++编辑和查错功能[5]  。
+
+    </TabPane>
+      <TabPane tab={<span><Icon type="like-o" />评论</span>} key="3">
+     评论
+    </TabPane>
+    <TabPane tab={<span><Icon type="message" />问题</span>} key="4">
+     问题
+    </TabPane>
+     <TabPane tab={<span><Icon type="book" />笔记</span>} key="5">
+     笔记
     </TabPane>
   </Tabs>
   </Col>
