@@ -9334,3 +9334,129 @@ width: 540px!important;
 .l {
     float: left;
 }
+
+
+.mod-qa-list {
+    padding: 20px 0;
+    border-bottom: 1px solid #d9dde1;
+    overflow: hidden;
+}
+.mod-qa-list .qa-medias {
+    width: 96px;
+    overflow: hidden;
+    text-align: center;
+}
+.mod-qa-list .qa-medias img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 50%;
+    vertical-align: top;
+}
+.mod-qa-list .qa-medias .nofinish {
+    font-size: 22px;
+    color: #b7bbbf;
+    border: 3px solid #fff;
+}
+.mod-qa-list .qa-content {
+    padding-right: 20px;
+    min-height: 85px;
+    position: relative;
+    overflow: hidden;
+}
+.mod-qa-list .qa-header {
+    font-size: 14px;
+    line-height: 20px;
+    color: #363d40;
+    position: relative;
+}
+.mod-qa-list .qa-header .name {
+    display: block;
+    max-width: 100%;
+    color: #93999f;
+    font-size: 12px;
+    line-height: 14px;
+    padding-bottom: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mod-qa-list .qa-header .qa-tit {
+    font-size: 16px;
+    font-weight: 700;
+    color: #14191e;
+    line-height: 24px;
+}
+.replycont {
+    margin-top: 10px;
+    position: relative;
+}
+.replydes {
+    color: #4d555d;
+    overflow: hidden;
+}
+.replydes, .replydes .nickname, .replydes .replysign {
+    font-size: 14px;
+    line-height: 22px;
+}
+.replydes .wait-answer {
+    color: #ff7802;
+    font-size: 12px;
+}
+.replydes .wait-answer strong {
+    font-weight: 700;
+    margin-right: 20px;
+}
+.replydes .wait-answer {
+    color: #ff7802;
+    font-size: 12px;
+}
+.replydes .myanswer {
+    padding-right: 12px;
+    border-right: 1px solid rgba(147,153,159,.4);
+}
+.replydes a {
+    font-size: 12px;
+    color: #71777d;
+}
+.replydes .what-credit {
+    padding-left: 12px;
+}
+.replydes a {
+    font-size: 12px;
+    color: #71777d;
+}
+.mod-qa-list .qa-footer {
+    margin-top: 12px;
+    color: #93999f;
+    font-size: 12px;
+}
+.mod-qa-list .qa-footer .l-box a {
+    color: #93999f;
+    margin-left: 30px;
+}
+.mod-qa-list .qa-footer .static-count {
+    font-size: 12px;
+    color: #93999f;
+}
+.mod-qa-list .qa-footer .static-count .static-item.answer {
+    margin-right: 26px;
+}
+.mod-qa-list .qa-footer .static-count .static-item {
+    display: inline-block;
+}
+
+.mod-qa-list .qa-medias .isfinish, .mod-qa-list .qa-medias .isflag, .mod-qa-list .qa-medias .issport, .mod-qa-list .qa-medias .nofinish {
+    font-size: 24px;
+    display: inline-block;
+    position: relative;
+    top: -20px;
+    left: 14px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #fff;
+}
+.replydes .adopt, .replydes .adopt .nickname {
+    color: #108ee9;
+}

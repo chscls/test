@@ -3,10 +3,12 @@ import { connect } from 'dva';
 import { Link } from 'dva/router';
 import {  LocaleProvider} from 'antd';
 import Nav2 from '../components/Nav2'
-import {Tabs,Row,Col,Icon,Collapse,Pagination } from 'antd';
+import {Tabs,Row,Col,Icon,Collapse,Pagination,Radio } from 'antd';
 import VideoJs from '../components/VideoJs'
 const Panel = Collapse.Panel;
 const TabPane = Tabs.TabPane;
+
+const RadioGroup = Radio.Group;
 class Course extends Component{
    constructor(props){
     super(props)
@@ -29,7 +31,7 @@ return (
        
         <VideoJs vtt="video/demo.captions.vtt2"/> 
         <p className="tm-action tm-clear">
-    <span id="J_EditItem"><a href="" target="_blank">举报</a></span>    			<a id="J_IShare" className="iShare tm-event" href="#"><Icon type="share-alt" />分享</a>
+    <span id="J_EditItem"><a href="" >举报</a></span>    			<a id="J_IShare" className="iShare tm-event" href="#"><Icon type="share-alt" />分享</a>
 				        <a id="J_AddFavorite" href="javascript:;" data-aldurl="//ald.taobao.com/recommend.htm?appId=03136&amp;itemId=544913594159 " className="favorite"><Icon type="star" /><span>收藏商品</span></a>
 		
 		
@@ -39,7 +41,7 @@ return (
         </div>
         
          </Col>
-      <Col span={14}> <div>
+      <Col span={14}  style={{minHeight:'388px'}}> <div>
         
        <h1 style={{paddingBottom: '.2em',
     lineHeight: '1',
@@ -126,11 +128,11 @@ Google亲儿子AndroidStudio即将上位，赶紧学习安装配置、使用技�
 
 
   </Col>
-<Col>
 
-<div className="tm-layout"  data-spm="1998132085"><a href="//3c.tmall.com" target="_blank"><img style={{width:'955px'}} src="12.jpg"/></a></div>
 
-</Col>
+<div style={{marginBottom:'5px'}} className="tm-layout"  data-spm="1998132085"><a href="//3c.tmall.com" target="_blank"><img style={{width:'955px'}} src="12.jpg"/></a></div>
+
+
   
       </Row>
       </Col>
@@ -443,7 +445,131 @@ Android Studio这款开发工具被首次公布，这也是为了方便开发者
           <Pagination showQuickJumper defaultCurrent={2} total={500} style={{float:'right',marginTop:'20px',marginBottom:'20px'}} />
     </TabPane>
     <TabPane tab={<span><Icon type="message" />问题</span>} key="4">
-     问题
+      <RadioGroup  >
+        <Radio value={1} checked={true}>全部</Radio>
+        <Radio value={2}>精华</Radio>
+      </RadioGroup>
+
+
+      <div className='course_quescon'>
+
+<div className="wenda-listcon mod-qa-list clearfix">
+            <div className="headslider qa-medias l">
+                <a href="/u/5377561/courses" className="media" target="_blank" title="qq_少年何愁__0"><img src="http://img.mukewang.com/user/592d7b1c000191d701000100-40-40.jpg" width="40" height="40"/>
+                                <Icon type="question" className='icon-ques-revert nofinish'/>
+                                </a>
+            </div>
+            <div className="wendaslider qa-content">
+                <h2 className="wendaquetitle qa-header">
+                    <a href="/u/5377561/courses" className="name" target="_blank" title="qq_少年何愁__0">
+                        qq_少年何愁__0
+                    </a>
+                    <div className="wendatitlecon qa-header-cnt clearfix">
+                        <a href="/qadetail/219612" target="_blank" className="qa-tit">
+                            <i>phpmyadmin</i>
+                        </a>
+                                            </div>
+                </h2>
+                <div className="replycont qa-body clearfix">
+                    
+                        <div className="replydes">
+                            <span className="wait-answer">快来回答问题，最佳答案可 +<strong>3积分</strong></span>
+                            <a href="/qadetail/219612" className="myanswer" target="_blank">我来回答</a>
+                            <a href="/about/faq?t=3" target="_blank" className="what-credit">什么是积分</a>
+                        </div>
+
+                                    </div>
+                <div className="replymegfooter qa-footer clearfix">
+                    <div className="wenda-time">
+                        <div className="l-box l">
+                            <em>时间：1天前</em>
+                                                        <a href="/video/13417" target="_blank">源自：1-1 http协议概述</a>
+                                                    </div>
+                        <a href="/qadetail/219612" target="_blank" className="replynumber static-count r">
+                            <span className="static-item answer">
+                                <b className="val">0</b>
+                                <span className="key">回答</span>
+                            </span>
+                            <span className="static-item">
+                                <b className="val">9</b>
+                                <span className="key">浏览</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<div className="wenda-listcon mod-qa-list clearfix">
+            <div className="headslider qa-medias l">
+                <a href="/u/4839885/courses" className="media" target="_blank" title="慕粉1001376443"><img src="http://img.mukewang.com/user/533e4c420001b2e502000200-40-40.jpg" width="40" height="40"/>
+                          <Icon type="check" className="icon-tick-revert isfinish"/>    
+                                </a>
+            </div>
+            <div className="wendaslider qa-content">
+                <h2 className="wendaquetitle qa-header">
+                    <a href="/u/4839885/courses" className="name" target="_blank" title="慕粉1001376443">
+                        慕粉1001376443
+                    </a>
+                    <div className="wendatitlecon qa-header-cnt clearfix">
+                        <a href="/qadetail/217679" target="_blank" className="qa-tit">
+                            <i>怎么提取源代码</i>
+                        </a>
+                                                                                                </div>
+                </h2>
+                <div className="replycont qa-body clearfix">
+                                                                                                                        <div className="l replydes">
+                                <span className="replysign adopt">[已采纳 
+                                    <a href="/u/5324685/courses" target="_blank" title="亦平凡" className="nickname">亦平凡</a>
+                                的回答]</span>
+                                <span className="replydet">file_get_contents</span>
+                            </div>
+                                                            </div>
+                <div className="replymegfooter qa-footer clearfix">
+                    <div className="wenda-time">
+                        <div className="l-box l">
+                            <em>时间：2017-05-18</em>
+                                                        <a href="/video/13416" target="_blank">源自：3-3 用户向客服发送信息界面实现</a>
+                                                    </div>
+                        <a href="/qadetail/217679" target="_blank" className="replynumber static-count r">
+                            <span className="static-item answer">
+                                <b className="val">1</b>
+                                <span className="key">回答</span>
+                            </span>
+                            <span className="static-item">
+                                <b className="val">19</b>
+                                <span className="key">浏览</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <Pagination showQuickJumper defaultCurrent={2} total={500} style={{float:'right',marginTop:'20px',marginBottom:'20px'}} />
+   
+      
     </TabPane>
      <TabPane tab={<span><Icon type="book" />笔记</span>} key="5">
      笔记
