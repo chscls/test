@@ -3,8 +3,10 @@ import { connect } from 'dva';
 import { Link } from 'dva/router';
 import {  LocaleProvider} from 'antd';
 import Nav2 from '../components/Nav2'
-import { Row,Col,Icon } from 'antd';
+import {Tabs,Row,Col,Icon } from 'antd';
 import VideoJs from '../components/VideoJs'
+
+const TabPane = Tabs.TabPane;
 class Course extends Component{
    constructor(props){
     super(props)
@@ -99,7 +101,7 @@ Google亲儿子AndroidStudio即将上位，赶紧学习安装配置、使用技�
                                                         	            <dl className="tm-clear">
                                     <dt className="tb-metatit">服务承诺</dt>
                                 <dd className="tm-laysku-dd">
-                    <ul className="tb-serPromise"><li><a href="//www.tmall.com/wow/tmall-3c/act/new-serve?spm=a222t.8014944.rdfw.4.1VwWU1&amp;wh_isdetail=true&amp;wh_default_id=0&amp;wh_content_id=2&amp;wh_service_id=0" title="全国联保" target="_blank">全国联保</a></li><li><a href="//www.tmall.com/wow/portal/act/bzj" title="该商品由中国人保承保正品保证险" target="_blank">正品保证</a></li><li><a href="//www.tmall.com/wow/tmall-3c/act/new-serve?spm=a222t.8014944.fuxq1.12.sZdNvh&amp;wh_isdetail=true&amp;wh_service_id=3&amp;wh_content_id=1&amp;wh_default_id=1" title="小家电和数码产品质量问题365天只换不修" target="_blank">只换不修</a></li><li><a href="//vip.tmall.com/vip/privilege.htm?spm=3.1000588.0.141.2a0ae8&amp;priv=speed" title="极速退款是为诚信会员提供的退款退货流程的专享特权，额度是根据每个用户当前的信誉评级情况而定" target="_blank">极速退款</a></li><li><a href="//service.tmall.com/support/tmall/knowledge-1121473.htm?spm=0.0.0.0.asbDA1" title="卖家为您购买的商品投保退货运费险" target="_blank">赠运费险</a></li><li><a href="//pages.tmall.com/wow/seller/act/seven-day" title="七天无理由退换" target="_blank">七天无理由退换</a></li></ul>
+                    <ul className="tb-serPromise"><li><a href="" title="七天无理由退换" target="_blank">七天无理由退换</a></li></ul>
                 </dd>
             </dl>
                                 						            	<div className="tm-pay-box">
@@ -176,13 +178,84 @@ Google亲儿子AndroidStudio即将上位，赶紧学习安装配置、使用技�
 <Row>
   <Col span={4}>
 
-学校
-  </Col>
-   <Col span={16}>
+<div id="J_DcShopArchive" className="J_DcAsyn" role="complementary"><div id="side-shop-info" data-spm="1997427133">
+    <div className="shop-intro">
+        
 
-课程详情
+        <h3 className="hd">
+            <div className="name">
+                <a data-spm="d4918065" className="shopLink" href="//jomoo.tmall.com">四川大学</a>
+             {/*   <span className="ww-light ww-small" data-icon="small" data-nick="%E4%B9%9D%E7%89%A7%E5%AE%98%E6%96%B9%E6%97%97%E8%88%B0%E5%BA%97" data-tnick="%E4%B9%9D%E7%89%A7%E5%AE%98%E6%96%B9%E6%97%97%E8%88%B0%E5%BA%97" data-encode="true" data-display="inline" data-from="cntaobao" data-item="41389303364" data-items="41389303364">
+                    
+                    
+                    <a href="https://amos.alicdn.com/getcid.aw?v=3&amp;groupid=0&amp;s=1&amp;charset=utf-8&amp;uid=%E4%B9%9D%E7%89%A7%E5%AE%98%E6%96%B9%E6%97%97%E8%88%B0%E5%BA%97&amp;site=cntaobao&amp;groupid=0&amp;s=1&amp;fromid=cntaobao" target="_blank" className="ww-inline ww-online" title="点此可以直接和卖家交流选好的宝贝，或相互交流网购体验，还支持语音视频噢。"><span>旺旺在线</span></a>
+                    
+                    </span>*/}
+            </div>
+            <i></i>
+        </h3><div style={{height: '0px',marginTop: '0px', marginBottom: '0px',overflow:'hidden', width: '122px'}}></div>
+
+        
+        
+       {/* <div className="shop-cert shop-house"><a className="icon" target="_blank" href="//jia.tmall.com/"></a>
+            <div className="text" target="_blank">已加入知用</div>
+        </div>*/}
+        
+        
+        
+        <div className="shop-cert shop-ages">
+            <span className="icon">100</span>
+            <div className="text">百年学府</div>
+        </div>
+        
+        
+        <div className="main-info">
+            
+            <div className="shopdsr-item">
+                <div className="shopdsr-title">口碑</div>
+                <div className="shopdsr-score shopdsr-score-up-ctrl">
+                    <span className="shopdsr-score-con">9.8</span>
+                    <s className="shopdsr-score-up"></s>
+                </div>
+            </div>
+            
+            <div className="shopdsr-item">
+                <div className="shopdsr-title">课程</div>
+                <div className="shopdsr-score shopdsr-score-up-ctrl">
+                    <span className="shopdsr-score-con">9.8</span>
+                    <s className="shopdsr-score-up"></s>
+                </div>
+            </div>
+            
+            <div className="shopdsr-item">
+                <div className="shopdsr-title">师资</div>
+                <div className="shopdsr-score shopdsr-score-up-ctrl">
+                    <span className="shopdsr-score-con">9.8</span>
+                    <s className="shopdsr-score-up"></s>
+                </div>
+            </div>
+            
+            <a target="_blank" href="//rate.taobao.com/user-rate-UMCxuvCgLMFIG.htm" style={{zIndex: '1',display: 'block',position: 'absolute', width: '100%',height: '100%'}}></a>
+        </div>
+        
+
+        
+        <div className="btnArea"><a data-spm="d4918061" href="//jomoo.tmall.com" target="_blank" className="enterShop">进校逛逛</a><a id="xshop_collection_href" href="//favorite.taobao.com/popup/add_collection.htm?id=64652363&amp;itemid=64652363&amp;itemtype=0&amp;ownerid=f13336a619c718746f38c7076641b8e5&amp;scjjc=2"  className="J_PopupTrigger collection xshop_sc J_TDialogTrigger J_TokenSign favShop" data-width="440" data-height="260" data-closebtn="true">收藏学校</a></div>
+    </div>
+</div></div>
   </Col>
-   <Col span={4}>
+   <Col span={15}>
+
+<Tabs defaultActiveKey="1">
+    <TabPane tab={<span><Icon type="apple" />Tab 1</span>} key="1">
+      Tab 1
+    </TabPane>
+    <TabPane tab={<span><Icon type="android" />Tab 2</span>} key="2">
+      Tab 2
+    </TabPane>
+  </Tabs>
+  </Col>
+   <Col span={5}>
 推荐课程
 
   </Col>
