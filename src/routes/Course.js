@@ -237,12 +237,14 @@ Google亲儿子AndroidStudio即将上位，赶紧学习安装配置、使用技�
                 </div>
             </div>
             
-            <a target="_blank" href="//rate.taobao.com/user-rate-UMCxuvCgLMFIG.htm" style={{zIndex: '1',display: 'block',position: 'absolute', width: '100%',height: '100%'}}></a>
+            <a target="_blank" href="" style={{zIndex: '1',display: 'block',position: 'absolute', width: '100%',height: '100%'}}></a>
         </div>
         
 
         
-        <div className="btnArea"><a data-spm="d4918061" href="//jomoo.tmall.com" target="_blank" className="enterShop">进校逛逛</a><a id="xshop_collection_href" href="//favorite.taobao.com/popup/add_collection.htm?id=64652363&amp;itemid=64652363&amp;itemtype=0&amp;ownerid=f13336a619c718746f38c7076641b8e5&amp;scjjc=2"  className="J_PopupTrigger collection xshop_sc J_TDialogTrigger J_TokenSign favShop" data-width="440" data-height="260" data-closebtn="true">收藏学校</a></div>
+        <div className="btnArea"><Link to="School" data-spm="d4918061" href="" className="enterShop">进校逛逛</Link>
+        
+        <a id="xshop_collection_href" href=""  className="J_PopupTrigger collection xshop_sc J_TDialogTrigger J_TokenSign favShop" data-width="440" data-height="260" data-closebtn="true">收藏学校</a></div>
     </div>
 </div></div>
   </Col>
@@ -250,8 +252,8 @@ Google亲儿子AndroidStudio即将上位，赶紧学习安装配置、使用技�
 
 <Tabs defaultActiveKey="1" animated={false} tabPosition="top">
     <TabPane tab={<span><Icon type="bars" />章节</span>} key="1">
-      <Collapse bordered={false} >
-    <Panel header="第1章 概述" key="1">
+      <Collapse bordered={false} defaultActiveKey={['1']}>
+    <Panel header="第1章 概述" key="1" >
       <ul><li>1-1 Linux软件安装管理概述 (02:37) </li>
           
           </ul>
