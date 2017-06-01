@@ -9063,3 +9063,81 @@ width: 540px!important;
     word-wrap: break-word;
     word-break: break-all;
 }
+
+.tm-action {
+    padding: 38px 40px 25px;
+    color: #999;
+}
+.tm-action #J_EditItem {
+    float: right;
+}
+.tm-action .iShare {
+    text-decoration: none;
+    float: left;
+    margin-right: 2em;
+}
+.tm-action a {
+    color: #999;
+}
+.tm-ser {
+    margin: 0 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.tm-ser dl {
+    margin-right: 67px;
+}
+.tb-metatit {
+    text-align: left;
+    float: left;
+    width: 66px;
+}
+.tb-metatit, .tb-metatit a {
+    color: #999;
+}
+.tm-ser .tm-laysku-dd {
+    margin-left: 66px;
+    width: auto;
+    float: none;
+}
+.tm-ser .tb-serPromise {
+    overflow: hidden;
+}
+.tm-ser .tb-serPromise li {
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+
+.tm-ser .tm-pay-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.tm-ser .tm-pay-box .tm-pay {
+    width: 67px;
+    overflow: visible;
+    z-index: 3;
+}
+.tm-ser .tm-pay-box .tm-pay .pay-toggler {
+    display: none;
+    font-family: tm-detail-font;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+.tm-ser .tm-pay-box .tm-pay .pay-credit {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    display: none;
+    text-align: left;
+}
+.tm-ser .tm-pay-box .tm-pay .pay-credit a {
+    float: left;
+    position: relative;
+    width: 50%;
+    color: #666;
+    text-indent: 19px;
+}
