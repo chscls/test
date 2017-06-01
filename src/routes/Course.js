@@ -188,7 +188,7 @@ class Course extends Component {
 
                                         <h3 className="hd">
                                             <div className="name">
-                                                <a data-spm="d4918065" className="shopLink" href="//jomoo.tmall.com">四川大学</a>
+                                                <Link to="School" data-spm="d4918065" className="shopLink" >四川大学</Link>
                                                 {/*   <span className="ww-light ww-small" data-icon="small" data-nick="%E4%B9%9D%E7%89%A7%E5%AE%98%E6%96%B9%E6%97%97%E8%88%B0%E5%BA%97" data-tnick="%E4%B9%9D%E7%89%A7%E5%AE%98%E6%96%B9%E6%97%97%E8%88%B0%E5%BA%97" data-encode="true" data-display="inline" data-from="cntaobao" data-item="41389303364" data-items="41389303364">
                     
                     
