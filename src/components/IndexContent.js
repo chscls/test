@@ -236,22 +236,22 @@ class IndexContent extends React.Component {
                 <div className='banner-slider j_bannerSlider' style={{ width: '1230px' }}>
                   <Carousel autoplay effect='fade'>
                     <div>
-                      <Link to='Course'>
+                      <Link to='School/Course'>
                         <img src='http://img.mukewang.com/5926501b000111f012000460.jpg' style={{ width: '100%', height: '500px' }} />
                       </Link>
                     </div>
                     <div>
-                      <Link to='Course'>
+                      <Link to='School/Course'>
                         <img src='http://img.mukewang.com/592177a8000180ca12000460.jpg' style={{ width: '100%', height: '500px' }} />
                       </Link>
                     </div>
                     <div>
-                      <Link to='Course'>
+                      <Link to='School/Course'>
                         <img src='http://img.mukewang.com/59278d45000173ba12000460.jpg' style={{ width: '100%', height: '500px' }} />
                       </Link>
                     </div>
                     <div>
-                      <Link to='Course'>
+                      <Link to='School/Course'>
                         <img src='http://img.mukewang.com/591d825f00016a2612000460.jpg' style={{ width: '100%', height: '500px' }} />
                       </Link>
                     </div>

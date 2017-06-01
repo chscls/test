@@ -125,49 +125,49 @@ import styles from '../routes/IndexPage.css';
                                      			                                                                      
                                                 <li className="menu" data-page-id="1326231563">
                            
-                                                        <a className="link" style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}   href="" rel="nofollow">
-                                    <span className="title" style={{color:'white'}}>医学 </span></a>
+                                                        <Link to="School/SchoolSearch" className="link" style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}   href="" rel="nofollow">
+                                    <span className="title" style={{color:'white'}}>医学 </span></Link>
                         </li>
                                                             
                                      			                                                 <li data-cat-id="419081673" className="menu ">
-                        <a className="link " style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}  href="" rel="nofollow">
+                         <Link to="School/SchoolSearch"  className="link " style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}  href="" rel="nofollow">
                             <span className="title" style={{color:'white'}}>化学</span>
-                                                    </a>
+                                                   </Link>
                                                             </li>
 
                 
                                      			                                                 <li data-cat-id="1174676726" className="menu popup-container">
-                        <a className="link popup-trigger" style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}  href="" rel="nofollow">
+                        <Link to="School/SchoolSearch"  className="link popup-trigger" style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}  href="" rel="nofollow">
                             <span className="title" style={{color:'white'}}>物理</span>
                                                             <i className="popup-icon cat-popup-i"></i>
-                                                    </a>
+                                                   </Link>
                                                                 
                                         </li>
 
                 
                                      			                                                 <li data-cat-id="1174676745" className="menu popup-container">
-                        <a className="link popup-trigger"style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}   href="" rel="nofollow">
+                         <Link to="School/SchoolSearch"  className="link popup-trigger"style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}   href="" rel="nofollow">
                             <span className="title" style={{color:'white'}}>电子信息</span>
                                                             <i className="popup-icon cat-popup-i"></i>
-                                                    </a>
+                                                    </Link>
                                                                 
                                         </li>
 
                 
                                      			                                                 <li data-cat-id="1174676734" className="menu popup-container">
-                        <a className="link popup-trigger" style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}  href="" rel="nofollow">
+                        <Link to="School/SchoolSearch"  className="link popup-trigger" style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}  href="" rel="nofollow">
                             <span className="title" style={{color:'white'}}>历史</span>
                                                             <i className="popup-icon cat-popup-i"></i>
-                                                    </a>
+                                                   </Link>
                                                                 
                                         </li>
 
                 
                                      			                                                 <li data-cat-id="1174676742" className="menu popup-container">
-                        <a className="link popup-trigger" style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}  href="" rel="nofollow">
+                         <Link to="School/SchoolSearch"  className="link popup-trigger" style={{ height: '30px', lineHeight: '30px', display: 'block',padding: '0 20px',color: '#333', fontSize: '14px',fontWeight: '700',float: 'left'}}  href="" rel="nofollow">
                             <span className="title" style={{color:'white'}}>传媒</span>
                                                             <i className="popup-icon cat-popup-i"></i>
-                                                    </a>
+                                                    </Link>
                                                                 
                                         </li>
 

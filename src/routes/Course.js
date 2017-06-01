@@ -18,9 +18,7 @@ class Course extends Component {
     }
     render() {
         return (
-            <LocaleProvider >
-                <div>
-                    <Nav2 />
+           
                     <div id="detail" style={{ width: '1230px', margin: 'auto', background: 'white' }}>
                         <Row style={{ marginTop: '20px' }}>
                             <Col span={19}>
@@ -721,7 +719,7 @@ Android Studio这款开发工具被首次公布，这也是为了方便开发者
                                 <h4>推荐课程</h4>
                                 <ul className="js-recom-course recom-course-list clearfix">
                                     <li className="clearfix">
-                                        <Link to="Course"  className="clearfix" ><div className="l course-img" style={{backgroundImage: 'url(http://szimg.mukewang.com/58b7d4d90001e3a705400300-360-202.jpg)'}}><div className="cart-color cyan"></div>
+                                        <Link to="School/Course"  className="clearfix" ><div className="l course-img" style={{backgroundImage: 'url(http://szimg.mukewang.com/58b7d4d90001e3a705400300-360-202.jpg)'}}><div className="cart-color cyan"></div>
                                         </div><div className="l content-box">
                                                 <p className="smalle-title">React Native开发双平台GitHub App </p>
                                                 <p className="content-text" title=""></p>
@@ -729,7 +727,7 @@ Android Studio这款开发工具被首次公布，这也是为了方便开发者
                                             </div>                    </Link>
                                     </li>
                                     <li className="clearfix">
-                                       <Link to="Course"  className="clearfix" ><div className="l course-img" style={{backgroundImage: 'url(http://www.imooc.com/courseimg/s/cover016_s.jpg)'}}>
+                                       <Link to="School/Course"  className="clearfix" ><div className="l course-img" style={{backgroundImage: 'url(http://www.imooc.com/courseimg/s/cover016_s.jpg)'}}>
                                         <div className="cart-color cyan"></div>
                                     </div><div className="l content-box">
                                             <p className="smalle-title">iOS基础之UIImageView知识拓展(下)</p>
@@ -744,8 +742,7 @@ Android Studio这款开发工具被首次公布，这也是为了方便开发者
 
 
                     </div>
-                </div>
-            </LocaleProvider >
+             
         )
 
 
