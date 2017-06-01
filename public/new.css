@@ -9460,3 +9460,198 @@ width: 540px!important;
 .replydes .adopt, .replydes .adopt .nickname {
     color: #108ee9;
 }
+
+.mod-post .post-row {
+    border-bottom: 1px solid #d9dde1;
+    overflow: hidden;
+    padding: 24px 0 16px 24px;
+}
+.mod-post .post-row .media img {
+    display: block;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
+}
+.mod-post .post-row .tit a {
+    font-size: 14px;
+    color: #4d555d;
+    font-weight: 700;
+}
+.notelist-content {
+    position: relative;
+    max-height: 168px;
+    line-height: 28px;
+    overflow: hidden;
+    font-size: 14px;
+    color: #4d555d;
+}
+.notelist-content .autowrap {
+    white-space: pre-wrap;
+    font-family: "微软雅黑";
+}
+.notelist-content-more {
+    position: absolute;
+    top: 140px;
+    left: 0;
+    right: 0;
+    height: 28px;
+    line-height: 28px;
+    background-color: #fff;
+}
+.notelist-content-more a {
+    font-size: 12px;
+    color: #999;
+}
+.post-row .sava_btn {
+    display: none;
+    float: right;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    transition: .4s;
+}
+.moco-btn-green {
+    color: #fff;
+    background-color: #00b33b;
+    border-color: #00b33b;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    -weibkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+.moco-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    border-radius: 0;
+    font-weight: 200;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+    background-image: none;
+    border: 1px solid transparent;
+    -webkit-appearance: none;
+    white-space: nowrap;
+    outline: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 2px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.answercon {
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+.answercon .answerImg {
+    float: left;
+    position: relative;
+}
+.answercon img {
+    overflow: hidden;
+    float: left;
+    cursor: pointer;
+}
+.answercon .answerImg i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 5px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    z-index: 1;
+    background-color: rgba(0,0,0,.4);
+}
+.hover-area {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.hover-area .catch-pic {
+    left: 0;
+    margin-left: -50%;
+    background: rgba(0,0,0,.5)!important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000, endcolorstr=#7F000000);
+}
+.hover-area .slider-door {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    color: #fff;
+    line-height: 90px;
+    text-align: center;
+    z-index: 2;
+}
+.hover-area a {
+    text-align: center;
+    float: left;
+    width: 50%;
+}
+.hover-area .catch-pic {
+    left: 0;
+    margin-left: -50%;
+    background: rgba(0,0,0,.5)!important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000, endcolorstr=#7F000000);
+}
+.hover-area .slider-door {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    color: #fff;
+    line-height: 90px;
+    text-align: center;
+    z-index: 2;
+}
+.hover-area a, .hover-area span {
+    height: 100%;
+    line-height: 88px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+.hover-area .catch-video {
+    right: 0;
+    margin-right: -50%;
+    background: rgba(0,0,0,.3)!important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#4C000000, endcolorstr=#4C000000);
+}
+.hover-area .slider-door {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    color: #fff;
+    line-height: 90px;
+    text-align: center;
+    z-index: 2;
+}
+
+.hover-area a, .hover-area span {
+    height: 100%;
+    /* line-height: 88px; */
+    text-align: center;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+
+.mod-post .post-row .footer {
+    color: #93999f;
+    font-size: 12px;
+    margin-top: 15px;
+}
