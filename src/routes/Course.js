@@ -142,7 +142,7 @@ Google亲儿子AndroidStudio即将上位，赶紧学习安装配置、使用技�
         <h4>讲师提示</h4>
                         <div className="teacher-info">
             <a href="/u/279399/courses?sort=publish" target="_blank">
-                <img data-userid="279399" className="js-usercard-dialog" src="http://img.mukewang.com/53f5aae6000129aa01400140-80-80.jpg" width="80" height="80"/>
+                <img data-userid="279399" className="js-usercard-dialog" src="http://img.mukewang.com/590b09de0001503904000400-200-200.jpg" width="80" height="80"/>
             </a>
             <span className="tit">
                 <a href="/u/279399/courses?sort=publish" target="_blank">Tony</a><br/>
@@ -163,7 +163,7 @@ Google亲儿子AndroidStudio即将上位，赶紧学习安装配置、使用技�
 5、能够使用脚本安装包</dd>
             </dl>
                     </div>
-            </div>
+              </div> 
       
       
       
@@ -171,6 +171,24 @@ Google亲儿子AndroidStudio即将上位，赶紧学习安装配置、使用技�
       </Col>
 
       </Row>
+
+
+<Row>
+  <Col span={4}>
+
+学校
+  </Col>
+   <Col span={16}>
+
+课程详情
+  </Col>
+   <Col span={4}>
+推荐课程
+
+  </Col>
+    </Row >
+
+
          </div>
 </div>
 </LocaleProvider >
