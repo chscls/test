@@ -8764,7 +8764,7 @@ width: 540px!important;
     color: #000;
     font-weight: 900;
     line-height: 17px;
-    width: 423px;
+    width: 424px;
     height: 25px;
     padding: 5px 2px 4px 4px;
     border-width: 0;
@@ -8781,6 +8781,8 @@ width: 540px!important;
     color: #fff;
     cursor: pointer;
     background-color: #0c60aa;
+	margin-top: -1px;
+	margin-left: -1px;
 }
 	   
 .tm-fcs-panel{
