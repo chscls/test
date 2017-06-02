@@ -1,11 +1,51 @@
 import React from 'react';
 import { connect } from 'dva';
+import { Timeline,Icon } from 'antd';
 class Option extends React.Component{
   constructor(props){
     super(props)
   }
   render(){
-    return (<div>菜单三1</div>)
+    return (<div>
+      
+      
+      
+      <Timeline pending={<a style={{ margin: 'auto',width:'100px'}} href="#">查看更多</a>}>
+    <Timeline.Item dot={<Icon type="clock-circle-o" style={{ fontSize: '16px'}}/>}>
+    
+       <div style={{width:'100%',height:'40px',float:'left',padding:'0px 5px'}}><h1>2016-07-01 至 2016-08-01</h1></div>
+    <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>课程名</p>  </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>课程名</p>  </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>课程名</p>  </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>课程名</p> </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>课程名</p>  </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>课程名</p> </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>课程名</p> </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>课程名</p>  </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>课程名</p>  </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>课程名</p>  </div>
+      <div style={{clear:'both'}}></div>
+      </Timeline.Item>
+       <Timeline.Item style={{height:'240px'}}dot={<Icon type="clock-circle-o" style={{ fontSize: '16px'}}/>}>
+    <div style={{width:'100%',height:'40px',float:'left',padding:'0px 5px'}}><h1>2016-06-01 至 2016-07-01</h1></div>
+    <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>课程名</p>  </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>课程名</p>  </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>课程名</p> </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>课程名</p> </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>课程名</p>  </div>
+       <div style={{clear:'both'}}></div>
+        </Timeline.Item>
+      <Timeline.Item style={{height:'240px'}}dot={<Icon type="clock-circle-o" style={{ fontSize: '16px'}}/>}>
+    <div style={{width:'100%',height:'40px',float:'left',padding:'0px 5px'}}><h1>2016-05-01 至 2016-06-01</h1></div>
+    <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>课程名</p></div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>课程名</p> </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>课程名</p> </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>课程名</p> </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>课程名</p>  </div>
+      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>课程名</p> </div>
+       <div style={{clear:'both'}}></div>
+       </Timeline.Item>
+  </Timeline></div>)
   }
   componentDidMount(){
     const breadcrumbData = {
@@ -14,7 +54,7 @@ class Option extends React.Component{
           name:'首页',
           path:'/'
         },{
-          name:'菜单三1'
+          name:'课程收藏'
         }
       ]
     };
