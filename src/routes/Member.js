@@ -3,10 +3,10 @@ import { connect } from 'dva';
 import { Link } from 'dva/router';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import CustomBreadcrumb from '../components/breadcrumb'
-import Header2 from '../components/Header'
+import Header from '../components/Header'
 import Silder from '../components/Silder'
 const { SubMenu } = Menu;
-const { LocaleProvider,Header, Content, Footer, Sider } = Layout;
+const { LocaleProvider, Content, Footer, Sider } = Layout;
 
 const breadcrumbData = [
     {
@@ -29,16 +29,17 @@ class Member extends Component{
   }
 render(){
 return ( <Layout>
-    <Header2/>
+    <Header/>
    
     <Content style={{ padding: '0 50px' }}>
-      <CustomBreadcrumb data={this.props.common.breadcrumb} />
+     
       <Layout style={{ padding: '24px 0', background: '#fff' }}>
         <Sider width={200} style={{ background: '#fff' }}>
            <Silder />
         </Sider>
         <Content style={{ padding: '0 24px', minHeight: this.getHeight() }}>
-          {this.props.children||'内容区域'}
+           <CustomBreadcrumb data={this.props.common.breadcrumb} />
+           <div style={{marginTop:'20px'}}> {this.props.children||'内容区域'}</div>
         </Content>
       </Layout>
     </Content>

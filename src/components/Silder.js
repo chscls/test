@@ -26,7 +26,7 @@ const Sider = React.createClass({
       >
 
       <Menu.Item key="0"><Link to="Member/11">首页</Link></Menu.Item>
-      <Menu.Item key="10"><Link to="Member/11">我的课程</Link></Menu.Item>
+      <Menu.Item key="10"><Link to="Member/22">我的课程</Link></Menu.Item>
         
         <SubMenu key="sub1" title={<span>我的收藏</span>}>
           <Menu.Item key="1"><Link to="Member/11">收藏的课程</Link></Menu.Item>

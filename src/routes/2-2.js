@@ -1,11 +1,16 @@
 import React from 'react';
 import { connect } from 'dva';
+import { Timeline,Icon } from 'antd';
 class Option extends React.Component{
   constructor(props){
     super(props)
   }
   render(){
-    return (<div>菜单二2</div>)
+    return (<div><Timeline pending={<a href="#">See more</a>}>
+    <Timeline.Item dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }}/>}><div>android</div></Timeline.Item>
+      <Timeline.Item ><div>ios</div></Timeline.Item>
+      <Timeline.Item><div>Technical testing 2015-09-01</div></Timeline.Item>
+  </Timeline></div>)
   }
   componentDidMount(){
     const breadcrumbData = {
@@ -14,7 +19,7 @@ class Option extends React.Component{
           name:'首页',
           path:'/'
         },{
-          name:'菜单二2'
+          name:'我的课程'
         }
       ]
     };
