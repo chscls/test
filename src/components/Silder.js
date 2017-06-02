@@ -31,10 +31,11 @@ const Sider = React.createClass({
         <SubMenu key="sub1" title={<span>我的收藏</span>}>
           <Menu.Item key="1"><Link to="Member/31">收藏的课程</Link></Menu.Item>
           <Menu.Item key="2"><Link to="Member/32">收藏的学校</Link></Menu.Item>
-         <Menu.Item key="3"><Link to="Member/33">代码编辑器</Link></Menu.Item>
-        </SubMenu>
         
+        </SubMenu>
+        <Menu.Item key="3"><Link to="Member/33">代码编辑器</Link></Menu.Item> 
       </Menu>
+      
     );
   },
 });
