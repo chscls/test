@@ -63,7 +63,7 @@ class Header extends React.Component {
             <ul className="sn-quick-menu">
                 <li className="sn-mytaobao menu-item j_MyTaobao">
                     <div className="sn-menu">
-                        <Link to="login" className="menu-hd" href="" target="_top" rel="nofollow" tabIndex="0" aria-haspopup="true" aria-expanded="false">我的课程<b></b></Link>
+                        <Link to="Member" className="menu-hd" href="" target="_top" rel="nofollow" tabIndex="0" aria-haspopup="true" aria-expanded="false">我的课程<b></b></Link>
                         <div className="menu-bd" role="menu" aria-hidden="true" id="menu-20">
                             <div className="menu-bd-panel" id="myTaobaoPanel">
                                 <a href="" target="_top" rel="nofollow">已学课程</a>

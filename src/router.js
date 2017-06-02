@@ -93,7 +93,12 @@ const r41 = (location, callback) => {
       require('./routes/SchoolSearch'))
   }, 'SchoolSearch')
 };
-
+const r42 = (location, callback) => {
+  require.ensure([], require => {
+    callback(null,
+      require('./routes/Member'))
+  }, 'Member')
+};
 export default function ({ history }) {
   return (
     <Router hjsistory={history}>
@@ -125,7 +130,7 @@ export default function ({ history }) {
         <Route path="11" getComponent={r11} />
       </Route>
 
-
+  <Route path="Member" getComponent={r42} />
     </Router>
   );
 };
