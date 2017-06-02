@@ -11,7 +11,7 @@ class Option extends React.Component{
       
       
       <Timeline pending={<a style={{ margin: 'auto',width:'100px'}} href="#">查看更多</a>}>
-    <Timeline.Item style={{height:'400px'}}dot={<Icon type="clock-circle-o" style={{ fontSize: '16px'}}/>}>
+    <Timeline.Item dot={<Icon type="clock-circle-o" style={{ fontSize: '16px'}}/>}>
     
        <div style={{width:'100%',height:'40px',float:'left',padding:'0px 5px'}}><h1>2016-07-01 至 2016-08-01</h1></div>
     <div style={{width:'150px',height:'180px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><Progress percent={50}  status="active" /><p style={{textAlign:'center'}}>课程名</p>  </div>
@@ -24,7 +24,7 @@ class Option extends React.Component{
       <div style={{width:'150px',height:'180px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><Progress percent={50}  /><p style={{textAlign:'center'}}>课程名</p>  </div>
       <div style={{width:'150px',height:'180px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><Progress percent={50} /><p style={{textAlign:'center'}}>课程名</p>  </div>
       <div style={{width:'150px',height:'180px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><Progress percent={0}  /><p style={{textAlign:'center'}}>课程名</p>  </div>
-      
+      <div style={{clear:'both'}}></div>
       </Timeline.Item>
        <Timeline.Item style={{height:'240px'}}dot={<Icon type="clock-circle-o" style={{ fontSize: '16px'}}/>}>
     <div style={{width:'100%',height:'40px',float:'left',padding:'0px 5px'}}><h1>2016-06-01 至 2016-07-01</h1></div>
@@ -33,7 +33,7 @@ class Option extends React.Component{
       <div style={{width:'150px',height:'180px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <Progress percent={90}  /><p style={{textAlign:'center'}}>课程名</p> </div>
       <div style={{width:'150px',height:'180px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <Progress percent={50}  /><p style={{textAlign:'center'}}>课程名</p> </div>
       <div style={{width:'150px',height:'180px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><Progress percent={70}  /><p style={{textAlign:'center'}}>课程名</p>  </div>
-      
+       <div style={{clear:'both'}}></div>
         </Timeline.Item>
       <Timeline.Item style={{height:'240px'}}dot={<Icon type="clock-circle-o" style={{ fontSize: '16px'}}/>}>
     <div style={{width:'100%',height:'40px',float:'left',padding:'0px 5px'}}><h1>2016-05-01 至 2016-06-01</h1></div>
@@ -43,7 +43,7 @@ class Option extends React.Component{
       <div style={{width:'150px',height:'180px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <Progress percent={50}  /><p style={{textAlign:'center'}}>课程名</p> </div>
       <div style={{width:'150px',height:'180px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><Progress percent={50} /><p style={{textAlign:'center'}}>课程名</p>  </div>
       <div style={{width:'150px',height:'180px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/> <Progress percent={50} /><p style={{textAlign:'center'}}>课程名</p> </div>
-      
+       <div style={{clear:'both'}}></div>
        </Timeline.Item>
   </Timeline></div>)
   }
