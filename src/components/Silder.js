@@ -35,6 +35,7 @@ const Sider = React.createClass({
         </SubMenu>
         <Menu.Item key="3"><Link to="Member/33">代码编辑器</Link></Menu.Item> 
         <Menu.Item key="4"><Link to="Member/11">我的订单</Link></Menu.Item> 
+          <Menu.Item key="5"><Link to="Member/35">设置</Link></Menu.Item> 
       </Menu>
       
     );

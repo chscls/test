@@ -33,7 +33,7 @@ class Option extends React.Component{
           name:'首页',
           path:'/'
         },{
-          name:'菜单三3'
+          name:'代码编辑'
         }
       ]
     };

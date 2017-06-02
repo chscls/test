@@ -99,6 +99,12 @@ const r42 = (location, callback) => {
       require('./routes/Member'))
   }, 'Member')
 };
+const r43 = (location, callback) => {
+  require.ensure([], require => {
+    callback(null,
+      require('./routes/3-5'))
+  }, '35')
+};
 export default function ({ history }) {
   return (
     <Router hjsistory={history}>
@@ -133,7 +139,7 @@ export default function ({ history }) {
         <Route path="33" getComponent={r33} />
         <Route path="34" getComponent={r34} />
         <Route path="11" getComponent={r11} />
-
+        <Route path="35" getComponent={r43} />
 
   </Route>
     </Router>
