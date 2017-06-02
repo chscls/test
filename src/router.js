@@ -118,9 +118,14 @@ export default function ({ history }) {
 
 
 
-      <Route path="login" getComponent={r35} >
+      <Route path="login" getComponent={r35} />
 
-        <Route path="12" getComponent={r12} />
+       
+      
+
+  <Route path="Member" getComponent={r42} >
+
+ 
         <Route path="21" getComponent={r21} />
         <Route path="22" getComponent={r22} />
         <Route path="31" getComponent={r31} />
@@ -128,9 +133,9 @@ export default function ({ history }) {
         <Route path="33" getComponent={r33} />
         <Route path="34" getComponent={r34} />
         <Route path="11" getComponent={r11} />
-      </Route>
 
-  <Route path="Member" getComponent={r42} />
+
+  </Route>
     </Router>
   );
 };
