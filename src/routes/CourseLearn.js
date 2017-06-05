@@ -8,9 +8,10 @@ class CourseLearn extends Component {
     constructor(props) {
         super(props)
         this.state={show:false}
+        
     }
     getSreenWidth(){
-        var x = window.innerWidth-370
+        var x = window.innerWidth-365
         
         return x;
     }
