@@ -3,7 +3,7 @@ import { connect } from 'dva';
 import { Link } from 'dva/router';
 import Header from '../components/Header'
 import VideoJs from '../components/VideoJs'
-import { Row, Col,Input,Modal,Switch, Button} from 'antd';
+import { Icon,Row, Col,Input,Modal,Switch, Button} from 'antd';
 class CourseLearn extends Component {
      state={
             show:false,
@@ -114,7 +114,7 @@ class CourseLearn extends Component {
                      </div>
                     <div id="section-list" className="section-list" style={{right: this.state.show?'0px':'-360px'}}>
                         <div className="operator">
-                            <div className={this.state.show?"op chapter light":"op chapter"} onClick={()=>this.setState({show:!this.state.show})}><em className="icon-menu"></em>章节</div>
+                            <div className={this.state.show?"op chapter light":"op chapter"} onClick={()=>this.setState({show:!this.state.show})}><Icon type="bars" />章节</div>
                             <div className="op notes" onClick={this.showModal1}><em className="icon-note"></em>笔记</div>
                             <div className="op question" onClick={this.showModal2}><em className="icon-addques"></em>提问</div>
                             <div className="op wiki" onClick={this.showModal3} ><em className="icon-wiki"></em>WIKI</div>

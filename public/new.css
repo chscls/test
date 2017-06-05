@@ -9805,7 +9805,7 @@ width: 540px!important;
     cursor: pointer;
     margin: 2px 0;
 }
-.section-list .operator .op em {
+.section-list .operator .op i{
     position: absolute;
     left: 0;
     top: 12px;
@@ -9917,4 +9917,13 @@ width: 540px!important;
     color: #787d82;
     line-height: 20px;
     text-align: left;
+}
+.section-list .operator .op i{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #B4BBBF;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 3px 0 0 3px;
 }
