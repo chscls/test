@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Icon } from 'antd';
 import { Link } from 'dva/router';
 import videojs from 'video.js';
@@ -8,8 +8,35 @@ import 'video.js/dist/video-js.css';
 import VTTJS_PATH from 'file!videojs-vtt.js/dist/vtt.min.js';
 import {RequestVideo} from '../utils/query';
 var ms;
-const VideoJs = React.createClass({
- 
+var video;
+class VideoJs extends Component {
+   
+ fetchBuffer (url, callback) {
+        
+        
+        var xhr = new XMLHttpRequest;
+     
+       //xhr.setRequestHeader(header: string, value: string);
+          xhr.open('get', url,true);
+        xhr.responseType = 'arraybuffer';
+        xhr.onload = function () {
+        	
+            callback(xhr.response);
+        };
+        xhr.send();
+        
+    }
+ stop(){
+    
+    video.pause();
+ }
+ getCurrentTime(){
+   
+     return video.currentTime();
+ }
+ play(){
+     video.play();
+ }
 render() {
   return (
 <video id="example_video_1" className="video-js vjs-default-skin"  controls style={{width:'100%',height:'98%'}}> 
@@ -22,7 +49,8 @@ render() {
     <track kind="subtitles" src={this.props.vtt} srcLang="en" label="English"></track>
 </video>*/
   );
-    },componentDidMount(){
+    }
+    componentDidMount(){
     
      var vo = document.querySelector('video');
     videojs.BYTES_PER_SECOND_GOAL = 8 * 1024 * 1024;
@@ -30,10 +58,10 @@ render() {
  
     vo.src = URL.createObjectURL(ms);
  //video.src ="http://vjs.zencdn.net/v/oceans.mp4";
-  var video=videojs(vo);
-   ms.addEventListener('sourceopen', this.sourceOpen);
+  video=videojs(vo);
+   ms.addEventListener('sourceopen', this.sourceOpen.bind(this));
 
-
+ 
     var newbtn = document.createElement('div');
 newbtn.innerHTML = '<button class="vjs-control" id="downloadButton" style="background-color:black" onclick="alert()"></button>';
 var controlBar = document.getElementsByClassName('vjs-control-bar')[0];
@@ -43,6 +71,7 @@ controlBar.insertBefore(newbtn,insertBeforeNode);
 
 //video.currentTime(20);
 video.on("pause", function(){
+    
     console.log("pause");
 });
 
@@ -66,7 +95,10 @@ volumechange
 waiting
 resize inherited
 */
-     }, sourceOpen () {
+     }
+     
+    
+     sourceOpen () {
         // 这个奇怪的字符串后面再解释a
         
         var i=2;
@@ -94,7 +126,7 @@ resize inherited
             	 urll='http://eas.msvtc.net:52060/567_dashinit.mp4';
              }
              
-            this.fetchBuffer(urll, buffer => {
+             this.fetchBuffer(urll, buffer => {
             	var myBufferedRange = osourceBuffer.buffered;
             	
             	
@@ -107,24 +139,10 @@ resize inherited
         
         });
        
-    },fetchBuffer (url, callback) {
-        
-        
-        var xhr = new XMLHttpRequest;
-     
-       //xhr.setRequestHeader(header: string, value: string);
-          xhr.open('get', url,true);
-        xhr.responseType = 'arraybuffer';
-        xhr.onload = function () {
-        	
-            callback(xhr.response);
-        };
-        xhr.send();
-        
     }
+   
     
-    });
-
+}
 
 
 export default VideoJs;

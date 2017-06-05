@@ -9,7 +9,7 @@ class CourseLearn extends Component {
             show:false,
             ModalText: 'Content of the modal',
          visible: false,
-         type:'note',
+        
         
         }
     constructor(props) {
@@ -18,18 +18,21 @@ class CourseLearn extends Component {
         
     }
     showModal1 = () => {
+         this.refs.getVideoJs.stop()
     this.setState({
       visible: true,
        type:'note'
     });
   }
    showModal2 = () => {
+       this.refs.getVideoJs.stop()
     this.setState({
       visible: true,
       type:'question'
     });
   }
    showModal3 = () => {
+       this.refs.getVideoJs.stop()
     this.setState({
       visible: true,
       type:'wiki'
@@ -57,11 +60,12 @@ class CourseLearn extends Component {
     
       if (this.state.type == "note") {
           return  (<div><Input type="textarea" rows={4} />
-        
+        播放时间:{this.getCurrentTime()}
          <Switch  checkedChildren={'截图'} unCheckedChildren={'不截图'} /></div>);
       }else if(this.state.type == "question"){
             return  ( <div><Input placeholder="请输入标题" />
             <Input type="textarea" rows={4} />
+             播放时间:{this.getCurrentTime()}
             <Switch  checkedChildren={'截图'} unCheckedChildren={'不截图'} /></div>);
       }else{
 
@@ -70,7 +74,13 @@ class CourseLearn extends Component {
 
   }
   afterClose(){
-      alert("关闭弹框")
+     
+      this.refs.getVideoJs.play()
+ 
+  }
+  getCurrentTime(){
+     
+     return this.refs.getVideoJs.getCurrentTime()
   }
     getSreenWidth(){
         var x = window.innerWidth-365
@@ -86,7 +96,7 @@ class CourseLearn extends Component {
           onOk={this.handleOk}
           confirmLoading={confirmLoading}
           onCancel={this.handleCancel}
-          afterClose={this.afterClose}
+          afterClose={this.afterClose.bind(this)}
           maskClosable={false}
         >
          
@@ -100,7 +110,7 @@ class CourseLearn extends Component {
 
                 <div id="bgarea" className="video-con">
                     <div className="js-box-wrap" style={{width: this.state.show?this.getSreenWidth():'100%', height: '600px'}}>
-                      <VideoJs/>
+                      <VideoJs ref="getVideoJs"/>
                      </div>
                     <div id="section-list" className="section-list" style={{right: this.state.show?'0px':'-360px'}}>
                         <div className="operator">
