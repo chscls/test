@@ -3,21 +3,36 @@ import { connect } from 'dva';
 import { Link } from 'dva/router';
 import Header from '../components/Header'
 import VideoJs from '../components/VideoJs'
-import { Row, Col ,Modal, Button} from 'antd';
+import { Row, Col,Input,Modal,Switch, Button} from 'antd';
 class CourseLearn extends Component {
      state={
             show:false,
             ModalText: 'Content of the modal',
          visible: false,
+         type:'note',
+        
         }
     constructor(props) {
         super(props)
    
         
     }
-    showModal = () => {
+    showModal1 = () => {
     this.setState({
       visible: true,
+       type:'note'
+    });
+  }
+   showModal2 = () => {
+    this.setState({
+      visible: true,
+      type:'question'
+    });
+  }
+   showModal3 = () => {
+    this.setState({
+      visible: true,
+      type:'wiki'
     });
   }
   handleOk = () => {
@@ -38,21 +53,45 @@ class CourseLearn extends Component {
       visible: false,
     });
   }
+  getCom(){
+    
+      if (this.state.type == "note") {
+          return  (<div><Input type="textarea" rows={4} />
+        
+         <Switch  checkedChildren={'截图'} unCheckedChildren={'不截图'} /></div>);
+      }else if(this.state.type == "question"){
+            return  ( <div><Input placeholder="请输入标题" />
+            <Input type="textarea" rows={4} />
+            <Switch  checkedChildren={'截图'} unCheckedChildren={'不截图'} /></div>);
+      }else{
+
+          return  (<div>暂未开放</div>);
+      }
+
+  }
+  afterClose(){
+      alert("关闭弹框")
+  }
     getSreenWidth(){
         var x = window.innerWidth-365
         
         return x;
     }
+    
     render() {
-        const { show,visible, confirmLoading, ModalText } = this.state;
+        const { show,visible, confirmLoading, ModalText,type} = this.state;
         return (<div>
- <Modal title="Title"
+        <Modal title={this.state.type=='note'?"笔记":this.state.type=='question'?"提问":"WIKI" }
           visible={visible}
           onOk={this.handleOk}
           confirmLoading={confirmLoading}
           onCancel={this.handleCancel}
+          afterClose={this.afterClose}
+          maskClosable={false}
         >
-          <p>{ModalText}</p>
+         
+         
+        {this.getCom()}
         </Modal>
             <Header />
 
@@ -66,9 +105,9 @@ class CourseLearn extends Component {
                     <div id="section-list" className="section-list" style={{right: this.state.show?'0px':'-360px'}}>
                         <div className="operator">
                             <div className={this.state.show?"op chapter light":"op chapter"} onClick={()=>this.setState({show:!this.state.show})}><em className="icon-menu"></em>章节</div>
-                            <div className="op notes" onClick={this.showModal}><em className="icon-note"></em>笔记</div>
-                            <div className="op question" onClick={this.showModal}><em className="icon-addques"></em>提问</div>
-                            <div className="op wiki" onClick={this.showModal} ><em className="icon-wiki"></em>WIKI</div>
+                            <div className="op notes" onClick={this.showModal1}><em className="icon-note"></em>笔记</div>
+                            <div className="op question" onClick={this.showModal2}><em className="icon-addques"></em>提问</div>
+                            <div className="op wiki" onClick={this.showModal3} ><em className="icon-wiki"></em>WIKI</div>
                         </div>
                         <div className="nano has-scrollbar">
                             <div className="nano-content" tabIndex="0" style={{right: '-17px'}}>
