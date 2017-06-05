@@ -3,21 +3,57 @@ import { connect } from 'dva';
 import { Link } from 'dva/router';
 import Header from '../components/Header'
 import VideoJs from '../components/VideoJs'
-import { Row, Col } from 'antd';
+import { Row, Col ,Modal, Button} from 'antd';
 class CourseLearn extends Component {
+     state={
+            show:false,
+            ModalText: 'Content of the modal',
+         visible: false,
+        }
     constructor(props) {
         super(props)
-        this.state={show:false}
+   
         
     }
+    showModal = () => {
+    this.setState({
+      visible: true,
+    });
+  }
+  handleOk = () => {
+    this.setState({
+      ModalText: 'The modal will be closed after two seconds',
+      confirmLoading: true,
+    });
+    setTimeout(() => {
+      this.setState({
+        visible: false,
+        confirmLoading: false,
+      });
+    }, 2000);
+  }
+  handleCancel = () => {
+    console.log('Clicked cancel button');
+    this.setState({
+      visible: false,
+    });
+  }
     getSreenWidth(){
         var x = window.innerWidth-365
         
         return x;
     }
     render() {
+        const { show,visible, confirmLoading, ModalText } = this.state;
         return (<div>
-
+ <Modal title="Title"
+          visible={visible}
+          onOk={this.handleOk}
+          confirmLoading={confirmLoading}
+          onCancel={this.handleCancel}
+        >
+          <p>{ModalText}</p>
+        </Modal>
             <Header />
 
             <div id="studyMain">
@@ -30,9 +66,9 @@ class CourseLearn extends Component {
                     <div id="section-list" className="section-list" style={{right: this.state.show?'0px':'-360px'}}>
                         <div className="operator">
                             <div className={this.state.show?"op chapter light":"op chapter"} onClick={()=>this.setState({show:!this.state.show})}><em className="icon-menu"></em>章节</div>
-                            <div className="op notes"><em className="icon-note"></em>笔记</div>
-                            <div className="op question"><em className="icon-addques"></em>提问</div>
-                            <div className="op wiki"><em className="icon-wiki"></em>WIKI</div>
+                            <div className="op notes" onClick={this.showModal}><em className="icon-note"></em>笔记</div>
+                            <div className="op question" onClick={this.showModal}><em className="icon-addques"></em>提问</div>
+                            <div className="op wiki" onClick={this.showModal} ><em className="icon-wiki"></em>WIKI</div>
                         </div>
                         <div className="nano has-scrollbar">
                             <div className="nano-content" tabIndex="0" style={{right: '-17px'}}>
