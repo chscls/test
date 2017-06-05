@@ -105,6 +105,13 @@ const r43 = (location, callback) => {
       require('./routes/3-5'))
   }, '35')
 };
+
+const r44 = (location, callback) => {
+  require.ensure([], require => {
+    callback(null,
+      require('./routes/CourseLearn'))
+  }, 'CourseLearn')
+};
 export default function ({ history }) {
   return (
     <Router hjsistory={history}>
@@ -142,6 +149,10 @@ export default function ({ history }) {
         <Route path="35" getComponent={r43} />
 
   </Route>
+
+
+  <Route path="CourseLearn" getComponent={r44} />
+ 
     </Router>
   );
 };

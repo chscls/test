@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
 import { Timeline,Icon } from 'antd';
+import { Link } from 'dva/router';
 class Option extends React.Component{
   constructor(props){
     super(props)
@@ -14,35 +15,35 @@ class Option extends React.Component{
     <Timeline.Item dot={<Icon type="clock-circle-o" style={{ fontSize: '16px'}}/>}>
     
        <div style={{width:'100%',height:'40px',padding:'0px 5px'}}><h1>2016-07-01 至 2016-08-01</h1></div>
-    <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>学校名</p> </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>学校名</p> </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p> </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div>
+    <Link to="School"><div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div></Link>
+      <Link to="School"><div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div></Link>
+      <Link to="School"><div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div></Link>
+      <Link to="School"><div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>学校名</p> </div></Link>
+      <Link to="School"><div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div></Link>
+      <Link to="School"><div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>学校名</p> </div></Link>
+      <Link to="School"><div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p> </div></Link>
+      <Link to="School"><div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div></Link>
+      <Link to="School"><div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div></Link>
+      <Link to="School"><div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div></Link>
       <div style={{clear:'both'}}></div>
       </Timeline.Item>
        <Timeline.Item style={{height:'240px'}}dot={<Icon type="clock-circle-o" style={{ fontSize: '16px'}}/>}>
     <div style={{width:'100%',height:'40px',padding:'0px 5px'}}><h1>2016-06-01 至 2016-07-01</h1></div>
-    <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>学校名</p> </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>学校名</p> </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div>
+    <Link to="School"> <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div></Link>
+     <Link to="School">  <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div></Link>
+     <Link to="School">  <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>学校名</p> </div></Link>
+      <Link to="School"> <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>学校名</p> </div></Link>
+      <Link to="School"> <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div></Link>
        <div style={{clear:'both'}}></div>
         </Timeline.Item>
       <Timeline.Item style={{height:'240px'}}dot={<Icon type="clock-circle-o" style={{ fontSize: '16px'}}/>}>
     <div style={{width:'100%',height:'40px',padding:'0px 5px'}}><h1>2016-05-01 至 2016-06-01</h1></div>
-    <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>学校名</p></div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p> </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p> </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>学校名</p> </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div>
-      <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>学校名</p> </div>
+    <Link to="School">  <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>学校名</p></div></Link>
+    <Link to="School">    <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p> </div></Link>
+    <Link to="School">    <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p> </div></Link>
+     <Link to="School">   <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img  src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>学校名</p> </div></Link>
+     <Link to="School">   <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/><p style={{textAlign:'center'}}>学校名</p>  </div></Link>
+      <Link to="School">  <div style={{width:'150px',height:'165px',float:'left',padding:'5px 5px'}}><img   src="http://iph.href.lu/140x140"/> <p style={{textAlign:'center'}}>学校名</p> </div></Link>
        <div style={{clear:'both'}}></div>
        </Timeline.Item>
   </Timeline></div>)
