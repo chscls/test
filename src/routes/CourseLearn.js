@@ -104,7 +104,7 @@ class CourseLearn extends Component {
          
         {this.getCom()}
         </Modal>
-            <Header />
+            
 
             <div id="studyMain">
 

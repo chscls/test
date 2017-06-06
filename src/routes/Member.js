@@ -29,7 +29,7 @@ class Member extends Component{
   }
 render(){
 return ( <Layout>
-    <Header/>
+   
    
     <Content style={{ padding: '0 50px' }}>
      

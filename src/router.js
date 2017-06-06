@@ -120,12 +120,25 @@ export default function ({ history }) {
         <Route path="Good" getComponent={r37} />
         <Route path="School" getComponent={r38} >
 
-<Route path="SchoolSearch" getComponent={r41} />
-   <Route path="Course" getComponent={r39} />
+          <Route path="SchoolSearch" getComponent={r41} />
+          <Route path="Course" getComponent={r39} />
         </Route>
-     
-        <Route path="Questions" getComponent={r40} />
 
+        <Route path="Questions" getComponent={r40} />
+        <Route path="CourseLearn" getComponent={r44} />
+        <Route path="Member" getComponent={r42} >
+
+
+          <Route path="21" getComponent={r21} />
+          <Route path="22" getComponent={r22} />
+          <Route path="31" getComponent={r31} />
+          <Route path="32" getComponent={r32} />
+          <Route path="33" getComponent={r33} />
+          <Route path="34" getComponent={r34} />
+          <Route path="11" getComponent={r11} />
+          <Route path="35" getComponent={r43} />
+
+        </Route>
       </Route>
 
 
@@ -133,26 +146,14 @@ export default function ({ history }) {
 
       <Route path="login" getComponent={r35} />
 
-       
-      
-
-  <Route path="Member" getComponent={r42} >
-
- 
-        <Route path="21" getComponent={r21} />
-        <Route path="22" getComponent={r22} />
-        <Route path="31" getComponent={r31} />
-        <Route path="32" getComponent={r32} />
-        <Route path="33" getComponent={r33} />
-        <Route path="34" getComponent={r34} />
-        <Route path="11" getComponent={r11} />
-        <Route path="35" getComponent={r43} />
-
-  </Route>
 
 
-  <Route path="CourseLearn" getComponent={r44} />
- 
+
+
+
+
+
+
     </Router>
   );
 };
