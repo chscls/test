@@ -63,6 +63,17 @@ Android Studio这款开发工具被首次公布，这也是为了方便开发者
     </TabPane>}
                                     <TabPane tab={<span><Icon type="like-o" />评论</span>} key="3">
                                         <ul className="mod-post" id="comment-list">
+
+{this.props.isLearn?<li className="post-row" id="94098">
+                                                <div className="media">
+                                                    <a href="/u/1187337/courses" target="_blank"><img src="http://img.mukewang.com/56a1d0f1000105a801000100-40-40.jpg" width="40" height="40" /></a>
+                                                </div>
+ <div className="bd">
+<Input type="textarea" rows={4} />
+ <Button type="primary">发表评论</Button>
+</div>
+</li>:""}
+
                                             <li className="post-row" id="94098">
                                                 <div className="media">
                                                     <a href="/u/1187337/courses" target="_blank"><img src="http://img.mukewang.com/56a1d0f1000105a801000100-40-40.jpg" width="40" height="40" /></a>
