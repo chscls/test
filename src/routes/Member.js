@@ -43,9 +43,7 @@ return ( <Layout>
         </Content>
       </Layout>
     </Content>
-    <Footer style={{ textAlign: 'center' }}>
-      知用慕课 ©2017 Created by 知用科技
-    </Footer>
+    
   </Layout>)
 
 

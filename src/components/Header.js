@@ -75,11 +75,11 @@ class Header extends React.Component {
                 <li className="sn-seller-center hidden j_SellerCenter">
                     <a target="_top" href="">商家中心</a>
                 </li>
-                <li className="sn-mybrand"><i className="mui-global-iconfont">㑉</i>
+               {/* <li className="sn-mybrand"><i className="mui-global-iconfont">㑉</i>
                     <a target="_top" id="J_SnMyBrand" className="sn-mybrand-link" href="">我关注的学校</a>
-                </li>
+                </li>*/}
                 <li className="sn-cart mini-cart menu"><i className="mui-global-iconfont">󰅈</i>
-                    <a className="sn-cart-link" href="" target="_top" rel="nofollow" id="mc-menu-hd">购物车<span className="mc-count mc-pt3">0</span>件</a>
+                    <Link to="Cart" className="sn-cart-link"  target="_top" rel="nofollow" id="mc-menu-hd">购物车<span className="mc-count mc-pt3">0</span>件</Link>
                 </li>
                 <li className="sn-favorite menu-item">
                     <div className="sn-menu">
