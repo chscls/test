@@ -9,6 +9,7 @@ import VTTJS_PATH from 'file!videojs-vtt.js/dist/vtt.min.js';
 import {RequestVideo} from '../utils/query';
 var ms;
 var video;
+var isPlay=false;
 class VideoJs extends Component {
    
  fetchBuffer (url, callback) {
@@ -35,7 +36,9 @@ class VideoJs extends Component {
      return video.currentTime();
  }
  play(){
+     if (isPlay) {
      video.play();
+     }
  }
 render() {
   return (
@@ -73,6 +76,10 @@ controlBar.insertBefore(newbtn,insertBeforeNode);
 video.on("pause", function(){
     
     console.log("pause");
+});
+video.on("play", function(){
+    
+    isPlay=true;
 });
 
 
