@@ -4,6 +4,7 @@ import { Link } from 'dva/router';
 import Header from '../components/Header'
 import VideoJs from '../components/VideoJs'
 import { Icon,Row, Col,Input,Modal,Switch, Button} from 'antd';
+import CourseTab from '../components/CourseTab'
 class CourseLearn extends Component {
      state={
             show:false,
@@ -284,8 +285,25 @@ class CourseLearn extends Component {
                     <input className="btn no" type="button" value="不用" id="wenda-no" />
                 </div>
             </div>
-
-
+<div style={{width:'1230px',margin:'auto'}}>
+        
+       <Row>
+           <Col span={18}>
+<CourseTab isLearn={true}/>
+</Col>
+   <Col span={6}>
+   <div className="coursedownload">
+        <h3>资料下载</h3>
+        <ul className="downlist">
+                        <li>
+              <span><Icon className="icon icon-folder"  type="folder" />课程演示案例代码</span>
+              <a href="http://img.mukewang.com/down/53eddbe50001bcca00000000.rar" className="downcode" target="_blank" download="" data-id="219" title="课程演示案例代码">下载</a>
+            </li>
+                    </ul>
+    </div>
+   </Col>
+    </Row>
+</div>
         </div>);
     }
 }
