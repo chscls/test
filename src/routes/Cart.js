@@ -2,12 +2,58 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'dva';
 import { Link } from 'dva/router';
 
+import { Table, Button } from 'antd';
+
+const columns = [{
+  title: '封面',
+  dataIndex: 'cover',
+},{
+  title: '课程',
+  dataIndex: 'name',
+}, {
+   title: '金额',
+  dataIndex: 'age',
+}];
+
+const data = [];
+for (let i = 0; i < 7; i++) {
+  data.push({
+    key: i,
+    cover:`Edwa`,
+    name: `Edward King ${i}`,
+    age: 32
+  });
+}
 
 class Cart extends Component {
-    
+      state = {
+    selectedRowKeys: [],  // Check here to configure the default column
+    loading: false,
+  };
+  start = () => {
+    this.setState({ loading: true });
+    // ajax request after empty completing
+    setTimeout(() => {
+      this.setState({
+        selectedRowKeys: [],
+        loading: false,
+      });
+    }, 1000);
+  }
+  onSelectChange = (selectedRowKeys) => {
+    console.log('selectedRowKeys changed: ', selectedRowKeys);
+    this.setState({ selectedRowKeys });
+  }
     render(){
-    return(<div className="body-main">
-
+   const { loading, selectedRowKeys } = this.state;
+    const rowSelection = {
+      selectedRowKeys,
+      onChange: this.onSelectChange,
+    };
+    const hasSelected = selectedRowKeys.length > 0;
+    return (
+      <div style={{width:'1230px',minHeight: '750px',margin:'auto'}}>
+       
 
 <div className="cart-header">
 	<div className="cart-header-warp clearfix">
@@ -15,7 +61,7 @@ class Cart extends Component {
 			<h1 className="left">我的购物车</h1>
 			
 	<div className="left js-number-box-cart">
-		共<span className="js-coures-num">1</span>门，已选择<span className="js-choice-num">1</span>门
+		共<span className="js-coures-num">{data.length}</span>门，已选择<span className="js-choice-num"> {hasSelected ? `${selectedRowKeys.length} ` : '0'}</span>门
 	</div>
 
 		</div>
@@ -32,85 +78,24 @@ class Cart extends Component {
 
 
 <div className="cart-body" id="cartBody">
-		<div className="cart-body-title clearfix">
-		<div className="item-1 l">
-			<i className="js-check-all check imv2-checkbox"></i>
-			<span className="c-93999f">全选</span>
-		</div>
-		
-		<div className="item-2 l">
-			<span className="c-4d555d">课程</span>
-		</div>
-		
-		<div className="item-3 l">
-			<span className="c-4d555d">金额</span>
-		</div>
-		
-		<div className="item-4 l">
-			<span className="c-4d555d">操作</span>
-		</div>
-	</div>
-{/*	<textarea className="storageCart" style="display:none">		[
-					{"goods_id":"204","type":"1","type_id":"109","status":"1","price":"299.00","ios_price":"348.00","service_lifetime":0,"open_discount":"0","discount_start_time":"1495555200","discount_end_time":"1495555200","discount_price":"0.00","code_white_list":10001,"code":0,"pay_price":"299.00"}
-						
-				]
-	</textarea>*/}
-	<div id="js-cart-body-table" className="cart-body-table">
-				<div className="item clearfix js-item-cart js-each-109" data-type="1" data-typeid="109" data-goodsid="204" data-price="299.00">
-			<div className="item-1">
-				<i className="js-check check imv2-checkbox" data-price="299.00"></i>
-			</div>
-			
-			<div className="item-2">
-				<a href="http://coding.imooc.com/class/109.html" target="_blank">
-					<img src="http://szimg.mukewang.com/5931273d0001289a05400300-160-90.jpg" width="160" height="90" className="left"/>
-				</a>
-				<dl className="left">
-					<a href="http://coding.imooc.com/class/109.html" target="_blank"><dt>手把手从0打造电商平台-前端开发</dt></a>
-									</dl>
-			</div>
-			
-			<div className="item-3">
-				<div className="price clearfix">
-					<em>￥</em>
-					<span>299.00</span>
-				</div>
-			</div>
-			
-			<div className="item-4">
-				<i className="imv2-close js-close-cart close"></i>
-			</div>
-		</div>
-				<div id="Anchor"></div>
-		<div className="cart-body-bot js-cart-body-bot">
-			<div className="clearfix cart-body-bot-box">
-				
-				
-				<div className="right">
-					<ul className="clearfix">
-						<li className="li-2">
-							<div className="topdiv">总计金额：</div>
-							<div className="price price-red clearfix">
-								<em>￥</em>
-								<span className="jsAltogether">299.00</span>
-							</div>
-						</li>
-						
-						<li className="li-3">
-							<span className="btn js-go-confrim">去结算</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
-
-
-
-
-</div>)
-
+        <Table style={{paddingTop:'20px'}}rowSelection={rowSelection} columns={columns} dataSource={data} pagination={false}/>
+        <div style={{ marginBottom: 16,float:'right'}}>
+         
+          <span style={{ marginLeft: 8 }}>
+            {hasSelected ? `总金额 ${selectedRowKeys.length} ` : ''}
+          </span>
+           <Button
+            type="primary"
+            onClick={this.start}
+            disabled={!hasSelected}
+           
+          >
+            结算
+          </Button>
+        </div>
+    </div>    
+      </div>
+    );
 
 }
 }
