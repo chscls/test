@@ -5,9 +5,10 @@ import styles from '../routes/IndexPage.css';
  import Category from '../components/Category'
 
  import Floors from '../components/Floors'
+  import LazyLoad from 'react-lazyload';
  const Activity2 = (props) => {
   return (
- 
+
  <div className="activity-bg">
     <div className="activity-area"></div>
     <div className="j_area area-con" data-spm="2016007">
@@ -623,9 +624,16 @@ import styles from '../routes/IndexPage.css';
 
 
 </div>
+	<LazyLoad height={200} once>  
+        <div>
 <Category/>
 <Floors/>
-</div>);
+</div>
+</LazyLoad>
+</div>
+
+
+);
 };
 
 Activity2.propTypes = {

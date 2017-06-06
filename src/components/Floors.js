@@ -2,11 +2,11 @@
 import { Icon } from 'antd';
 import { Link } from 'dva/router';
 import styles from '../routes/IndexPage.css';
- import LazyLoad from 'react-lazyload';
+  import LazyLoad from 'react-lazyload';
 
 const Floors = (props) => {
   return (
-	  	<LazyLoad height={200} once>  
+	  
        <div>
 
 		 
@@ -59,9 +59,9 @@ const Floors = (props) => {
 			<Link to="School/Course" className="grid one-grid" >
 				<div className="title">肥而不腻</div>
 				<div className="sub-title">口味独特，色泽红亮，肥而不腻，入口浓香</div>
-				
+					<LazyLoad height={200} once>  
 				<img src="16.jpg"/>
-				
+				</LazyLoad>
     
 
 			</Link>
@@ -237,8 +237,9 @@ const Floors = (props) => {
 			<Link to="School/Course"  className="grid one-grid" >
 				<div className="title">Android</div>
 				<div className="sub-title">星球大战</div>
+				<LazyLoad height={200} once>  
 				<img src="31.jpg"/>
-				
+				</LazyLoad>
     
 
 			</Link>
@@ -956,7 +957,7 @@ const Floors = (props) => {
 
 	
     </div>
-</LazyLoad>
+
 
 
 
