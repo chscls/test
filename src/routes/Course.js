@@ -23,7 +23,7 @@ class Course extends Component {
                             <Col span={19}>
 
                                 <Row>
-                                    <Col span={10}><div>
+                                    <Col span={10}><div style={{height:'263px',width:'375px'}}>
 
 
                                         <VideoJs vtt="video/demo.captions.vtt2" />
