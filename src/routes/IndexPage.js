@@ -13,7 +13,7 @@ import Videojs from 'video.js'
 import enUS from 'antd/lib/locale-provider/en_US';
 import { Row, Col, LocaleProvider,Carousel } from 'antd';
 
-
+ import LazyLoad from 'react-lazyload';
 
 class App extends Component {
   constructor(props){
@@ -31,9 +31,10 @@ class App extends Component {
          
 
              {this.props.children|| <IndexContent/>}
-        
+
+    <LazyLoad height={200} once>     
     <Footer/>
-     
+      </LazyLoad>
 
 
       </div>
