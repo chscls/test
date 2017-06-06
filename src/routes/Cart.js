@@ -6,20 +6,19 @@ import { Table, Button } from 'antd';
 
 const columns = [{
   title: '封面',
-  dataIndex: 'cover',
+   dataIndex: '', key: 'x', render: () => <img src='http://iph.href.lu/80x80'/>
 },{
   title: '课程',
   dataIndex: 'name',
 }, {
    title: '金额',
   dataIndex: 'age',
-}];
+},{ title: 'Action', dataIndex: '', key: 'A', render: () => <a href="#">Delete</a> },];
 
 const data = [];
 for (let i = 0; i < 7; i++) {
   data.push({
     key: i,
-    cover:`Edwa`,
     name: `Edward King ${i}`,
     age: 32
   });
@@ -68,7 +67,7 @@ class Cart extends Component {
 		<div className="right">
 			
 	<div className="clearfix">
-		<span className="left"><a className="js-myorderbtn" href="/myorder">我的订单历史</a></span>
+		<span className="left"><Link to="Member/11" className="js-myorderbtn" href="/myorder">我的订单历史</Link></span>
 		<span className="left num js-order-num" style={{display: 'none'}}></span>
 	</div>
 
