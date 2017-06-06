@@ -2,7 +2,7 @@
 import { Icon } from 'antd';
 import { Link } from 'dva/router';
 import styles from '../routes/IndexPage.css';
- 
+  import LazyLoad from 'react-lazyload';
  const Nav = (props) => {
    
   return (

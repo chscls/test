@@ -2,11 +2,14 @@
 import { Icon } from 'antd';
 import { Link } from 'dva/router';
 import styles from '../routes/IndexPage.css';
- 
+ import LazyLoad from 'react-lazyload';
 
 const Floors = (props) => {
   return (
+	  	<LazyLoad height={200} once>  
        <div>
+
+		 
     <div className="j_floor floor-con" >
       <div className="floor-line-con color-type-red" id="J_FloorMLRS" style={{width:'1230px'}}>
 	<i className="color-mark"></i><div className="floor-name">川菜大师</div><div className="floor-sub-name">Sichuan &amp; Cuisine &amp;Master</div>
@@ -56,6 +59,7 @@ const Floors = (props) => {
 			<Link to="School/Course" className="grid one-grid" >
 				<div className="title">肥而不腻</div>
 				<div className="sub-title">口味独特，色泽红亮，肥而不腻，入口浓香</div>
+				
 				<img src="16.jpg"/>
 				
     
@@ -950,9 +954,9 @@ const Floors = (props) => {
 </div>
 
 
-
+	
     </div>
-
+</LazyLoad>
 
 
 
