@@ -6,7 +6,6 @@ import "antd/dist/antd.less";   // 引入官方提供的 less 样式入口文件
 
 import Header from '../components/Header'
 
-import 'babel-polyfill'
 import Footer from '../components/Footer'
 import IndexContent from '../components/IndexContent'
 import Videojs from 'video.js'
