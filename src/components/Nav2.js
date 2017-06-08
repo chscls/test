@@ -11,7 +11,7 @@ import styles from '../routes/IndexPage.css';
 
 <div id="headerCon">
         <h1 id="mallLogo" style={{visibility:'visible'}}>
-        <span className="mlogo"><a href="" title="知用慕课"><s className={styles.mlogo}></s>知用慕课</a></span>
+        <span className="mlogo"><Link to="/" title="知用慕课"><s className={styles.mlogo}></s>知用慕课</Link></span>
     </h1>
     
         

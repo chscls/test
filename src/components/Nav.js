@@ -12,7 +12,7 @@ import styles from '../routes/IndexPage.css';
 <h1 id="mallLogo" style={{visibility:'visible'}}>
                     <span className="mlogo">
                     
-                     <Link to="/" title=""><s className={styles.mlogo}></s></Link>
+                     <Link to="/"><s className={styles.mlogo}></s></Link>
                     
                     </span>
                     
