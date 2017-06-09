@@ -8,7 +8,7 @@ const app = dva();
 app.model(require("./models/common"));
 app.model(require("./models/LoginUser"));
 app.model(require("./models/11"));
-
+app.model(require("./models/IndexData"));
 
 // 2. Plugins
 //app.use({});
