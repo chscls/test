@@ -1,6 +1,6 @@
 import fetch from 'dva/fetch';
-import safeeval from 'safe-eval'
-import Mock from 'mockjs';
+
+
 
 function parseText(response) {
   return response.json();

@@ -4,13 +4,25 @@ import ReactDOM from 'react-dom';
 const FormItem = Form.Item;
 
 class NormalLoginForm extends React.Component {
+  constructor(props) {
+        super(props)
+        this.state = {
+       loading: false,
+    }
+        
+    }
   handleSubmit = (e) => {
+    
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        this.setState({loading:true});
+       // console.log('Received values of form: ', values);
+       
       }
+      
     });
+    
   }
   render() {
     const { getFieldDecorator } = this.props.form;
@@ -18,14 +30,14 @@ class NormalLoginForm extends React.Component {
       <Form onSubmit={this.handleSubmit} className="login-form" style={{maxWidth: '300px'}}>
         <FormItem>
           {getFieldDecorator('userName', {
-            rules: [{ required: true, message: 'Please input your username!' }],
+            rules: [{ required: true, message: '请输入您的账号!' }],
           })(
             <Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="账号" />
           )}
         </FormItem>
         <FormItem>
           {getFieldDecorator('password', {
-            rules: [{ required: true, message: 'Please input your Password!' }],
+            rules: [{ required: true, message: '请输入您的密码!' }],
           })(
             <Input prefix={<Icon type="lock" style={{ fontSize: 13 }} />} type="password" placeholder="密码" />
           )}
@@ -38,7 +50,7 @@ class NormalLoginForm extends React.Component {
             <Checkbox>记住密码</Checkbox>
           )}
           <a className="login-form-forgot" style={{float: 'right'}} href="">忘记密码</a>
-          <Button type="primary" htmlType="submit" className="login-form-button" style={{width: '100%'}}>
+          <Button loading={this.state.loading} type="primary" htmlType="submit" className="login-form-button" style={{width: '100%'}}>
             登录
           </Button>
           没有账号? <a href="">注册!</a>
