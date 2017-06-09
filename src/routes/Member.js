@@ -5,8 +5,10 @@ import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import CustomBreadcrumb from '../components/breadcrumb'
 import Header from '../components/Header'
 import Silder from '../components/Silder'
+import { getLocalStorage, setLocalStorage } from '../utils/helper';
 const { SubMenu } = Menu;
 const { LocaleProvider, Content, Footer, Sider } = Layout;
+import { browserHistory } from 'react-router'
 
 const breadcrumbData = [
     {
@@ -20,10 +22,16 @@ const breadcrumbData = [
 class Member extends Component{
    constructor(props){
     super(props)
+    if(getLocalStorage("user")==null){
+      browserHistory.push('/')
+   
+    }
   }
+  
   componentDidMount() {
    window.scrollTo(0,0);
   }
+  
   getHeight(){
     return window.screen.availHeight-250
   }
