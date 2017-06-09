@@ -1,42 +1,70 @@
 import { login } from '../services/WmcUserSvc'
+import { getLocalStorage, setLocalStorage } from '../utils/helper';
 export default {
   namespace: 'LoginUser',
   state: {
-    token:null,
-    loading:true,
-    user:{
-      username:null,
-      id:null,
-      realname:null,
-      mobile:null,
-      nickname:null,
-       idCard:null
-    }
+    user: null,
+    loading: false,
+    msg: null,
+    suc: false
   },
   reducers: {
-    loginResult(state, action) {
-      alert("xxxxx");
+    loginSuc(state, action) {
+      return { ...state, ...action.payload };
+    },
+    loginFail(state, action) {
       return { ...state, ...action.payload };
     },
   },
   effects: {
     *login({ payload }, { call, put }) {
-        let {username,password} = payload;
+      let { username, password,loginSuc } = payload;
       let { data } = yield login({
-        username:username,
-        password:password,
+        username: username,
+        password: password,
       });
       if (data) {
-        yield put({
-          type: 'loginResult',
-          payload: {
-            token:data.body.token,
-             loading:true,
-             user:data.body.user
-          }
-        });
+        if (data.errorCode == "suc") {
+          setLocalStorage('user', data.body);
+          loginSuc(data.body);
+          yield put({
+            type: 'loginSuc',
+            payload: {
+              user: data.body,
+              loading: false,
+              suc: true
+            }
+          });
+        } else {
+          yield put({
+            type: 'loginFail',
+            payload: {
+              loading: false,
+              msg: data.msg
+            }
+          });
+        }
       }
     },
   },
-  subscriptions: {},
+  subscriptions: {
+
+    setup({ dispatch }) {
+      const data = getLocalStorage('user');
+      if (!data) {
+        dispatch({
+          type: 'login',
+          payload: {},
+        });
+      } else {
+        dispatch({
+          type: 'loginSuc',
+          payload: {
+            user: data,
+          },
+        });
+      }
+
+    }
+  }
 }

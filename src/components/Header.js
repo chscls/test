@@ -19,6 +19,12 @@ class Header extends React.Component {
      reg:false,
     });
   }
+   closeModal =(data) =>{
+       this.setState({
+      visible: false,
+       })
+       console.log(data);
+  }
     showRegModal = () => {
       
     this.setState({
@@ -118,7 +124,7 @@ class Header extends React.Component {
           footer={null}
           width={this.state.reg ? "500px" : "332px"}
         >
-          {this.state.reg ?<RegistrationForm/>:<NormalLoginForm/>}
+          {this.state.reg ?<RegistrationForm/>:<NormalLoginForm loginSuc={this.closeModal}/>}
         </Modal>
 
      

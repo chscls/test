@@ -7,9 +7,7 @@ const FormItem = Form.Item;
 class NormalLoginForm extends React.Component {
   constructor(props) {
         super(props)
-        this.state = {
-       loading: false,
-    }
+       
         
     }
   handleSubmit = (e) => {
@@ -17,24 +15,29 @@ class NormalLoginForm extends React.Component {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        this.setState({loading:true});
-       // console.log('Received values of form: ', values);
-       console.log(this.props);
-       this.props.dispatch({
+        this.setState({loading:true});  
+        const data= this.props.dispatch({
          type:'LoginUser/login',
          payload:{
             username:"zy001",
             password:"123456",
             loading:true,
+            loginSuc:this.props.loginSuc
          }
-    });
+         
+        });
+        
+        
       }
       
     });
     
   }
+
   render() {
     const { getFieldDecorator } = this.props.form;
+
+    
     return (
       <Form onSubmit={this.handleSubmit} className="login-form" style={{maxWidth: '300px'}}>
         <FormItem>
@@ -59,7 +62,7 @@ class NormalLoginForm extends React.Component {
             <Checkbox>记住密码</Checkbox>
           )}
           <a className="login-form-forgot" style={{float: 'right'}} href="">忘记密码</a>
-          <Button loading={this.state.loading} type="primary" htmlType="submit" className="login-form-button" style={{width: '100%'}}>
+          <Button loading={this.props.LoginUser.loading} type="primary" htmlType="submit" className="login-form-button" style={{width: '100%'}}>
             登录
           </Button>
           没有账号? <a href="">注册!</a>
