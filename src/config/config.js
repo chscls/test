@@ -1,6 +1,6 @@
 const config = {
-  rapHost:'http://rapapi.org/mockjsdata/19512',
-  rapFlag:true,
-  onlinePath:'/api/'
+  rapHost:'http://localhost:8090',
+  rapFlag:false,
+  onlinePath:'/soa/services/'
 }
 export default config
