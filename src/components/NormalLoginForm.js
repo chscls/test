@@ -19,8 +19,8 @@ class NormalLoginForm extends React.Component {
         const data= this.props.dispatch({
          type:'LoginUser/login',
          payload:{
-            username:"zy001",
-            password:"123456",
+            username:this.props.form.getFieldValue("userName"),
+            password:this.props.form.getFieldValue("password"),
             loading:true,
             loginSuc:this.props.loginSuc
          }
@@ -44,7 +44,7 @@ class NormalLoginForm extends React.Component {
           {getFieldDecorator('userName', {
             rules: [{ required: true, message: '请输入您的账号!' }],
           })(
-            <Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="账号" />
+            <Input  prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="账号" />
           )}
         </FormItem>
         <FormItem>

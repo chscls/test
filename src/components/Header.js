@@ -6,12 +6,22 @@ import { Form,  Input,  Checkbox } from 'antd';
 import styles from '../routes/IndexPage.css';
 import NormalLoginForm from '../components/NormalLoginForm'
 import RegistrationForm from '../components/RegistrationForm'
+import { getLocalStorage, setLocalStorage } from '../utils/helper';
 class Header extends React.Component {
+     constructor(props){
+            super(props)
+            const data = getLocalStorage('user');
+           
+            if (data) {
+               
+                this.state=({user:data});
+            
+            }
+        }
       state = {
-    ModalText: 'Content of the modal',
-    visible: false,
-   
-  }
+             ModalText: 'Content of the modal',
+             visible: false
+        }
   showModal = () => {
       
     this.setState({
@@ -21,9 +31,10 @@ class Header extends React.Component {
   }
    closeModal =(data) =>{
        this.setState({
-      visible: false,
+            visible: false,
+            user:data
        })
-       console.log(data);
+     
   }
     showRegModal = () => {
       
@@ -50,6 +61,7 @@ class Header extends React.Component {
       visible: false,
     });
   }
+ 
     render() {
         const { visible, confirmLoading, ModalText,reg } = this.state;
         
@@ -65,7 +77,12 @@ class Header extends React.Component {
 <div id="sn-bd">
         <b className="sn-edge"></b>
         <div className="sn-container">
-            <p id="login-info" className="sn-login-info"><em>喵，欢迎来知用慕课</em><a className="sn-login"  onClick={this.showModal}>请登录</a>  <a onClick={this.showRegModal} className="sn-register">免费注册</a></p>
+            <p id="login-info" className="sn-login-info"><em>喵，欢迎来知用慕课</em>
+            {this.state.user!=null?this.state.user.user.username:<span>
+             <a className="sn-login"  onClick={this.showModal}>请登录</a> 
+             <a onClick={this.showRegModal} className="sn-register">免费注册</a></span>
+             }
+             </p>
             <ul className="sn-quick-menu">
                 <li className="sn-mytaobao menu-item j_MyTaobao">
                     <div className="sn-menu">
