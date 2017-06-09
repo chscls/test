@@ -19,7 +19,7 @@ class NormalLoginForm extends React.Component {
         const data= this.props.dispatch({
          type:'LoginUser/login',
          payload:{
-            username:this.props.form.getFieldValue("userName"),
+            username:this.props.form.getFieldValue("username"),
             password:this.props.form.getFieldValue("password"),
             loading:true,
             loginSuc:this.props.loginSuc
@@ -41,14 +41,14 @@ class NormalLoginForm extends React.Component {
     return (
       <Form onSubmit={this.handleSubmit} className="login-form" style={{maxWidth: '300px'}}>
         <FormItem>
-          {getFieldDecorator('userName', {
+          {getFieldDecorator('username',{ initialValue: 'zy001' }, {
             rules: [{ required: true, message: '请输入您的账号!' }],
           })(
             <Input  prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="账号" />
           )}
         </FormItem>
         <FormItem>
-          {getFieldDecorator('password', {
+          {getFieldDecorator('password',{ initialValue: '123456' }, {
             rules: [{ required: true, message: '请输入您的密码!' }],
           })(
             <Input prefix={<Icon type="lock" style={{ fontSize: 13 }} />} type="password" placeholder="密码" />

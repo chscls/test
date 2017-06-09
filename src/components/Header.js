@@ -58,6 +58,11 @@ class Header extends React.Component {
       visible: false,
     });
   }
+  logout = () =>{
+        localStorage.removeItem('user');
+        this.setState({user:null});
+
+  }
  
     render() {
         const { visible, confirmLoading, ModalText,reg } = this.state;
@@ -75,7 +80,10 @@ class Header extends React.Component {
         <b className="sn-edge"></b>
         <div className="sn-container">
 
-     {this.state.user!=null?<p id="login-info" className="sn-login-info"><em>喵，欢迎{this.state.user.user.username}来到知用慕课</em></p>: 
+        {this.state.user!=null?<p id="login-info" className="sn-login-info">
+         <em>喵，欢迎{this.state.user.user.username}来到知用慕课</em>
+         <a className="sn-login"  onClick={this.logout}>退出</a>
+         </p>: 
             <p id="login-info" className="sn-login-info"><em>喵，欢迎来到知用慕课</em>
              <a className="sn-login"  onClick={this.showModal}>请登录</a> 
              <a onClick={this.showRegModal} className="sn-register">免费注册</a>
