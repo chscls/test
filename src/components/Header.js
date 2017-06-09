@@ -10,12 +10,9 @@ import { getLocalStorage, setLocalStorage } from '../utils/helper';
 class Header extends React.Component {
      constructor(props){
             super(props)
-            const data = getLocalStorage('user');
-           
+            const data = getLocalStorage('user'); 
             if (data) {
-               
                 this.state=({user:data});
-            
             }
         }
       state = {
