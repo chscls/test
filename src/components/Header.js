@@ -77,12 +77,14 @@ class Header extends React.Component {
 <div id="sn-bd">
         <b className="sn-edge"></b>
         <div className="sn-container">
-            <p id="login-info" className="sn-login-info"><em>喵，欢迎来知用慕课</em>
-            {this.state.user!=null?this.state.user.user.username:<span>
+
+     {this.state.user!=null?<p id="login-info" className="sn-login-info"><em>喵，欢迎{this.state.user.user.username}来到知用慕课</em></p>: 
+            <p id="login-info" className="sn-login-info"><em>喵，欢迎来到知用慕课</em>
              <a className="sn-login"  onClick={this.showModal}>请登录</a> 
-             <a onClick={this.showRegModal} className="sn-register">免费注册</a></span>
-             }
+             <a onClick={this.showRegModal} className="sn-register">免费注册</a>
              </p>
+             }
+
             <ul className="sn-quick-menu">
                 <li className="sn-mytaobao menu-item j_MyTaobao">
                     <div className="sn-menu">
