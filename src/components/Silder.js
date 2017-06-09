@@ -25,19 +25,21 @@ const Sider = React.createClass({
         mode="inline"
       >
 
-      <Menu.Item key="0"><Link to="Member/34">首页</Link></Menu.Item>
-      <Menu.Item key="10"><Link to="Member/22">我的课程</Link></Menu.Item>
-        
+        <Menu.Item key="0"><Link to="Member/34">首页</Link></Menu.Item>
+        <Menu.Item key="10"><Link to="Member/22">我的课程</Link></Menu.Item>
         <SubMenu key="sub1" title={<span>我的收藏</span>}>
           <Menu.Item key="1"><Link to="Member/31">收藏的课程</Link></Menu.Item>
           <Menu.Item key="2"><Link to="Member/32">收藏的学校</Link></Menu.Item>
-        
         </SubMenu>
-        <Menu.Item key="3"><Link to="Member/33">代码编辑器</Link></Menu.Item> 
-        <Menu.Item key="4"><Link to="Member/11">我的订单</Link></Menu.Item> 
-          <Menu.Item key="5"><Link to="Member/35">设置</Link></Menu.Item> 
+        <Menu.Item key="3"><Link to="Member/33">代码编辑器</Link></Menu.Item>
+        <Menu.Item key="4"><Link to="Member/11">我的订单</Link></Menu.Item>
+        <Menu.Item key="5"><Link to="Member/35">设置</Link></Menu.Item>
+        <SubMenu key="sub2" title={<span>管理</span>}>
+          <Menu.Item key="sub21"><Link to="Member/11">版位管理</Link></Menu.Item>
+          <Menu.Item key="sub21"><Link to="Member/11">广告管理</Link></Menu.Item>
+        </SubMenu>
       </Menu>
-      
+
     );
   },
 });
