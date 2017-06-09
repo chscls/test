@@ -16,7 +16,7 @@ class NormalLoginForm extends React.Component {
     this.props.form.validateFields((err, values) => {
       if (!err) {
         this.setState({loading:true});  
-        const data= this.props.dispatch({
+         this.props.dispatch({
          type:'LoginUser/login',
          payload:{
             username:this.props.form.getFieldValue("username"),

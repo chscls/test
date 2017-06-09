@@ -6,6 +6,7 @@ import Activity2 from '../components/Activity2'
 import { Carousel } from 'antd'
 import Nav from '../components/Nav'
   import LazyLoad from 'react-lazyload';
+  import { connect } from 'dva';
 class IndexContent extends React.Component {
   constructor(props) {
     super(props)
@@ -45,6 +46,20 @@ class IndexContent extends React.Component {
     for (var i = 0; i < x.length; i++) {
       x[i].style.backgroundColor = "rgba(238, 238, 238, 0.952941)";
     }
+  }
+  getPosterList = () => {
+    
+     this.props.dispatch({
+         type:'IndexData/getPosterList',
+         payload:{
+            count:5
+         }
+         
+        });
+  }
+  componentDidMount(){
+  
+      this.getPosterList();
   }
 
   render() {
@@ -277,5 +292,9 @@ class IndexContent extends React.Component {
 
 IndexContent.propTypes = {
 }
+function mapStateToProps({ IndexData }) {
+  return {IndexData};
+}
+export default connect(mapStateToProps)(IndexContent);
 
-export default IndexContent
+
