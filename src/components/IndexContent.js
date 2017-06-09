@@ -266,7 +266,7 @@ class IndexContent extends React.Component {
               </div>
               <div className='banner-con j_mainBanner loading' data-spm='2016006' style={{ width: '1230px' }}>
                 <div className='banner-slider j_bannerSlider' style={{ width: '1230px' }}>
-                  {this.props.IndexData.posterList.length > 0 ? <Carousel autoplay effect='fade'> {posterNodes}</Carousel>:"" }
+                  {this.props.IndexData.posterList.length >0 ? (this.props.IndexData.posterList.length == 1? posterNodes:<Carousel autoplay effect='fade'>{posterNodes}</Carousel>):""}
                 </div>
               </div>
             </div>
