@@ -23,8 +23,10 @@ function checkStatus(response) {
  * @return {object}           An object containing either "data" or "err"
  */
 export default function request(url, options) {
-  let x={method: 'GET',mode:'cors',credentials: 'omit'}
-  return fetch(url, x)
+  options.mode='cors';
+  options.credentials ='omit';
+
+  return fetch(url, options)
     .then(checkStatus)
     .then(parseText)
     .then((data) => ({ data }))

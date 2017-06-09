@@ -1,7 +1,4 @@
-import { GET } from '../utils/query'
-import { rapFlag, onlinePath } from '../config/config';
 import { query } from '../services/example'
-const API = 'member/list'
 export default {
   namespace: 'test',
   state: {

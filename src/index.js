@@ -6,7 +6,7 @@ import dva from 'dva';
 const app = dva();
 
 app.model(require("./models/common"));
-
+app.model(require("./models/LoginUser"));
 app.model(require("./models/11"));
 
 

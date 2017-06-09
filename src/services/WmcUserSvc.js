@@ -1,6 +1,7 @@
 import {  POST } from '../utils/query'
+  const x = "WmcUserSvc/"
 export async function login(param) {
-const x = "WmcUserSvc/"
+  console.log(param);
  return POST(x+'login',param);
   
 }

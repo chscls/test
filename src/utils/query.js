@@ -23,7 +23,7 @@ function getUrl(smarturl,flag) {
 
 async function POST(url,params,isJson){
   if(isJson == undefined){isJson = false};
-  return request( url,merge({
+  return request( getUrl(url,rapFlag),merge({
     method: 'POST',
     body:isJson?JSON.stringify(params):FormdataWrapper(params),
   },isJson?merge(jsonConf,cookieTrue):cookieTrue),rapFlag);

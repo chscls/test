@@ -1,6 +1,7 @@
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
+import { connect } from 'dva';
 const FormItem = Form.Item;
 
 class NormalLoginForm extends React.Component {
@@ -18,7 +19,15 @@ class NormalLoginForm extends React.Component {
       if (!err) {
         this.setState({loading:true});
        // console.log('Received values of form: ', values);
-       
+       console.log(this.props);
+       this.props.dispatch({
+         type:'LoginUser/login',
+         payload:{
+            username:"zy001",
+            password:"123456",
+            loading:true,
+         }
+    });
       }
       
     });
@@ -61,6 +70,11 @@ class NormalLoginForm extends React.Component {
 }
 NormalLoginForm.propTypes = {
 };
-const WrappedNormalLoginForm = Form.create()(NormalLoginForm);
 
-export default WrappedNormalLoginForm;
+function mapStateToProps({ LoginUser }) {
+  return {LoginUser };
+}
+
+const WrappedNormalLoginForm = Form.create()(NormalLoginForm);
+export default connect(mapStateToProps)(WrappedNormalLoginForm);
+
