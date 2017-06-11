@@ -5,8 +5,9 @@ import styles from '../routes/IndexPage.css'
 import Activity2 from '../components/Activity2'
 import { Carousel } from 'antd'
 import Nav from '../components/Nav'
-  import LazyLoad from 'react-lazyload';
-  import { connect } from 'dva';
+  import LazyLoad from 'react-lazyload'
+  import { connect } from 'dva'
+  import LogoGather from '../components/LogoGather'
 class IndexContent extends React.Component {
   constructor(props) {
     super(props)
@@ -105,9 +106,10 @@ class IndexContent extends React.Component {
                 <div className='doodle-con j_doodleCon'>
                   <a className='j_doodleLink' style={{ display: 'block', height: '100%', width: '100%' }} href=''>
                     
-                     <LazyLoad height={200} once>     
+                    <LogoGather/>
+                    {/* <LazyLoad height={200} once>     
                     <img className='doodle hide j_doodle' src='123.gif' data-src='123.gif' />
-                    </LazyLoad>
+                    </LazyLoad>*/}
                     </a>
                 </div>
               </div>
@@ -283,7 +285,7 @@ class IndexContent extends React.Component {
 
 IndexContent.propTypes = {
 }
-function mapStateToProps({ IndexData }) {
+function mapStateToProps({ IndexData}) {
   return {IndexData};
 }
 export default connect(mapStateToProps)(IndexContent);

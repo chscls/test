@@ -3,11 +3,58 @@ import { Icon } from 'antd';
 import { Link } from 'dva/router';
 import styles from '../routes/IndexPage.css';
  import Category from '../components/Category'
-
+ import { connect } from 'dva';
  import Floors from '../components/Floors'
   import LazyLoad from 'react-lazyload';
- const Activity2 = (props) => {
+  class Activity2 extends React.Component {
+  constructor(props) {
+    super(props)
+   
+}
+    getRandOrgList = () => {
+    
+     this.props.dispatch({
+         type:'RandOrg/getRandOrgList',
+         payload:{
+            count:23
+         }
+         
+        });
+  }
+  
+  componentDidMount(){
+   
+      this.getRandOrgList();
+  }
+    render(){
+
+ var orgNodes = this.props.RandOrg.orgList.map(function(org) {
+      return (
+        <li className="brand-item" key={org.id}>
+  
+      <div className="brand-img">
+        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
+      </div>
+      <div className="brand-mask">
+        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
+        <div className="coupon">
+          
+            <span>关注人数 {org.concernedNum<10000?org.concernedNum: (org.concernedNum/10000).toFixed(2)+"万"}</span>
+          
+        </div>
+        <div className="enter">
+          <Link to="School">点击进入</Link>
+        </div>
+      </div>
+  
+  </li>
+      
+      );
+    });
+
   return (
+
+
 
  <div className="activity-bg">
     <div className="activity-area"></div>
@@ -169,447 +216,11 @@ import styles from '../routes/IndexPage.css';
 <div className="brand-list">
   <ul className="init j_newHotBrandItemBody" data-spm="2016073">
 
-  
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  
-
-  
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/282323599yrn.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="4536165" data-spm-click="gostr=/tmallfp;locaid=d11;"></i>
-        <div className="coupon">
-          
-            <span>优惠券 ￥50</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  
-
-  
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28232526gzep.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="3506680" data-spm-click="gostr=/tmallfp;locaid=d12;"></i>
-        <div className="coupon">
-          
-            <span>优惠券 ￥50</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  
-
-  
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28232811wxtk.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="31128" data-spm-click="gostr=/tmallfp;locaid=d13;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 15.3万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  
-
-  
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201705/03141510maet.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="21944" data-spm-click="gostr=/tmallfp;locaid=d14;"></i>
-        <div className="coupon">
-          
-            <span>优惠券 ￥10</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  
-<li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-        <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  <li className="brand-item">
-  
-      <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
-      </div>
-      <div className="brand-mask">
-        <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
-        <div className="coupon">
-          
-            <span>关注人数 345.6万</span>
-          
-        </div>
-        <div className="enter">
-          <Link to="School">点击进入</Link>
-        </div>
-      </div>
-  
-  </li>
-  
-  
-
-  
+  {orgNodes}
  
-
-  
-
-  
-
 </ul>
   <div data-spm="fpBrandFresh">
-    <a href="#" className="refresh-btn" data-spm-click="gostr=/tmallfp;locaid=d99;">
+    <a  onClick={this.getRandOrgList} className="refresh-btn" data-spm-click="gostr=/tmallfp;locaid=d99;">
       <i className="rotate-icon fp-iconfont"></i>
       <span className="btn-text">换一批</span>
     </a>
@@ -633,10 +244,12 @@ import styles from '../routes/IndexPage.css';
 </div>
 
 
-);
-};
-
+)}
+}
 Activity2.propTypes = {
 };
 
-export default Activity2;
+function mapStateToProps({ RandOrg}) {
+  return {RandOrg};
+}
+export default connect(mapStateToProps)(Activity2);

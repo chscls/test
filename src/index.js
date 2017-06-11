@@ -9,7 +9,7 @@ app.model(require("./models/common"));
 app.model(require("./models/LoginUser"));
 app.model(require("./models/11"));
 app.model(require("./models/IndexData"));
-
+app.model(require("./models/RandOrg"));
 // 2. Plugins
 //app.use({});
 
