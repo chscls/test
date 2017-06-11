@@ -44,11 +44,11 @@ import QueueAnim from 'rc-queue-anim';
         <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
         <div className="coupon">
           
-            <span>{org.name} {org.concernedNum<10000?org.concernedNum: (org.concernedNum/10000).toFixed(2)+"万"}</span>
+            <span> 关注数量 {org.concernedNum<10000?org.concernedNum: (org.concernedNum/10000).toFixed(2)+"万"}</span>
           
         </div>
         <div className="enter">
-          <Link to="School">点击进入</Link>
+          <Link to="School" title={org.name}>点击进入</Link>
         </div>
       </div>
  </QueueAnim>
