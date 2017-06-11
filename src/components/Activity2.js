@@ -28,35 +28,36 @@ import QueueAnim from 'rc-queue-anim';
       this.getRandOrgList();
   }
     render(){
+    
  var orgNodes = this.props.RandOrg.orgList.map(function(org) {
       return (
-       <QueueAnim  key={org.id} duration='1200' delay='500' animConfig={[
+   
+        <li  key={org.id} className="brand-item">
+ <QueueAnim    duration='1000' delay='100' animConfig={[
             { scaleX: [1, 0] },
             {  scaleX: [0, 1] }
           ]} >
-        <li className="brand-item">
-  
-      <div className="brand-img">
+      <div key={org.id} className="brand-img">
         <img src={org.logo}/>
       </div>
       <div className="brand-mask">
         <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
         <div className="coupon">
           
-            <span>关注人数 {org.concernedNum<10000?org.concernedNum: (org.concernedNum/10000).toFixed(2)+"万"}</span>
+            <span>{org.name} {org.concernedNum<10000?org.concernedNum: (org.concernedNum/10000).toFixed(2)+"万"}</span>
           
         </div>
         <div className="enter">
           <Link to="School">点击进入</Link>
         </div>
       </div>
-  
+ </QueueAnim>
   </li>
-  </QueueAnim>
+
       
       );
     });
-
+   
   return (
 
 
@@ -220,7 +221,7 @@ import QueueAnim from 'rc-queue-anim';
 
 <div className="brand-list">
   <ul className="init j_newHotBrandItemBody" data-spm="2016073">
-   
+        
   {orgNodes}
 
 </ul>

@@ -14,6 +14,7 @@ export default {
       let { count } = payload;
       let { data } = yield getRandOrgList({
         count: count,
+        v:Date.parse(new Date())
       });
       if (data) {
         if (data.errorCode == "suc") {

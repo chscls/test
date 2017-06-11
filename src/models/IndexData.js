@@ -15,7 +15,8 @@ export default {
       let { count,keyword } = payload;
       let { data } = yield getPosterList({
         count: count,
-        keyword:keyword
+        keyword:keyword,
+        v:Date.parse(new Date())
       });
       if (data) {
         if (data.errorCode == "suc") {
