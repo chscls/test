@@ -52,7 +52,8 @@ class IndexContent extends React.Component {
      this.props.dispatch({
          type:'IndexData/getPosterList',
          payload:{
-            count:5
+            count:5,
+            keyword:'indexTop'
          }
          
         });

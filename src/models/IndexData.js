@@ -12,9 +12,10 @@ export default {
   effects: {
     *getPosterList({ payload }, { call, put }) {
          
-      let { count } = payload;
+      let { count,keyword } = payload;
       let { data } = yield getPosterList({
-        count: count
+        count: count,
+        keyword:keyword
       });
       if (data) {
         if (data.errorCode == "suc") {
