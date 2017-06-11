@@ -33,10 +33,7 @@ import QueueAnim from 'rc-queue-anim';
       return (
    
         <li  key={org.id} className="brand-item">
- <QueueAnim    duration='1000' delay='100' animConfig={[
-            { scaleX: [1, 0] },
-            {  scaleX: [0, 1] }
-          ]} >
+ <QueueAnim    duration='1000' delay='100' animConfig={[{ scaleX: [1, 0] },{  scaleX: [0, 1] }]} >
       <div key={org.id} className="brand-img">
         <img src={org.logo}/>
       </div>
