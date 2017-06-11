@@ -22,6 +22,7 @@ export default {
       let { data } = yield login({
         username: username,
         password: password,
+        v:Date.parse(new Date())
       });
       if (data) {
         if (data.errorCode == "suc") {
