@@ -30,11 +30,11 @@ import QueueAnim from 'rc-queue-anim';
     render(){
  var orgNodes = this.props.RandOrg.orgList.map(function(org) {
       return (
-       <QueueAnim  duration='1200' delay='500' animConfig={[
+       <QueueAnim  key={org.id} duration='1200' delay='500' animConfig={[
             { scaleX: [1, 0] },
             {  scaleX: [0, 1] }
           ]} >
-        <li className="brand-item" key={org.id}>
+        <li className="brand-item">
   
       <div className="brand-img">
         <img src={org.logo}/>
