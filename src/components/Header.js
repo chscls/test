@@ -81,7 +81,7 @@ class Header extends React.Component {
         <div className="sn-container">
 
         {this.state.user!=null?<p id="login-info" className="sn-login-info">
-         <em>喵，欢迎{this.state.user.user.username}来到知用慕课</em>
+         <em>喵，欢迎{this.state.user.username}来到知用慕课</em>
          <a className="sn-login"  onClick={this.logout}>退出</a>
          </p>: 
             <p id="login-info" className="sn-login-info"><em>喵，欢迎来到知用慕课</em>
