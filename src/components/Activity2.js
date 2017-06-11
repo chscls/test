@@ -6,6 +6,7 @@ import styles from '../routes/IndexPage.css';
  import { connect } from 'dva';
  import Floors from '../components/Floors'
   import LazyLoad from 'react-lazyload';
+import QueueAnim from 'rc-queue-anim';
   class Activity2 extends React.Component {
   constructor(props) {
     super(props)
@@ -27,13 +28,16 @@ import styles from '../routes/IndexPage.css';
       this.getRandOrgList();
   }
     render(){
-
  var orgNodes = this.props.RandOrg.orgList.map(function(org) {
       return (
+       <QueueAnim  duration='1200'  animConfig={[
+            { scaleX: [1, 0] },
+            {  scaleX: [0, 1] }
+          ]} >
         <li className="brand-item" key={org.id}>
   
       <div className="brand-img">
-        <img src="http://eas.msvtc.net:52060/u/cms/www/201704/28231225mrae.jpg"/>
+        <img src={org.logo}/>
       </div>
       <div className="brand-mask">
         <i className="fp-iconfont brand-status j_BrandStatus " data-collected="false" data-id="590022244" data-spm-click="gostr=/tmallfp;locaid=d10;"></i>
@@ -48,6 +52,7 @@ import styles from '../routes/IndexPage.css';
       </div>
   
   </li>
+  </QueueAnim>
       
       );
     });
@@ -215,9 +220,9 @@ import styles from '../routes/IndexPage.css';
 
 <div className="brand-list">
   <ul className="init j_newHotBrandItemBody" data-spm="2016073">
-
+   
   {orgNodes}
- 
+
 </ul>
   <div data-spm="fpBrandFresh">
     <a  onClick={this.getRandOrgList} className="refresh-btn" data-spm-click="gostr=/tmallfp;locaid=d99;">
