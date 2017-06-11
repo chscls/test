@@ -80,7 +80,7 @@ class LogoGather extends Component {
               width: r,
               height: r,
               opacity: b,
-              backgroundColor: `rgb(0,0,${Math.round(Math.random() * 95 + 160)})`,
+              backgroundColor: `rgb(16,${Math.round(Math.random() * 20 + 130)},233)`,
             }}
             animation={{
               y: (Math.random() * 2 - 1) * 10 || 5,

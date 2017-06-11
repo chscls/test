@@ -107,9 +107,6 @@ class IndexContent extends React.Component {
                   <a className='j_doodleLink' style={{ display: 'block', height: '100%', width: '100%' }} href=''>
                     
                     <LogoGather/>
-                    {/* <LazyLoad height={200} once>     
-                    <img className='doodle hide j_doodle' src='123.gif' data-src='123.gif' />
-                    </LazyLoad>*/}
                     </a>
                 </div>
               </div>
