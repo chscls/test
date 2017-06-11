@@ -1,5 +1,5 @@
 const config = {
-  rapHost:'http://localhost:52059/soa/services',
+  rapHost:'http://eas.msvtc.net:52059/soa/services',
   rapFlag:true,
   onlinePath:'/soa/services/'
 }
