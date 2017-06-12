@@ -6,3 +6,6 @@ export async function getPosterList(param) {
 export async function getRandOrgList(param) {
  return GET(x+'getRandOrgList',param);
 }
+export async function getCatalogGroupList(param) {
+ return GET(x+'getCatalogGroupList',param);
+}

@@ -51,7 +51,7 @@ class IndexContent extends React.Component {
   getPosterList = () => {
     
      this.props.dispatch({
-         type:'IndexData/getPosterList',
+         type:'Poster/getPosterList',
          payload:{
             count:5,
             keyword:'indexTop'
@@ -66,7 +66,7 @@ class IndexContent extends React.Component {
 
   render() {
 
-  var posterNodes = this.props.IndexData.posterList.map(function(poster) {
+  var posterNodes = this.props.Poster.posterList.map(function(poster) {
       return (
         <div key={poster.id}>
               <a href={poster.url}>
@@ -266,7 +266,7 @@ class IndexContent extends React.Component {
               </div>
               <div className='banner-con j_mainBanner loading' data-spm='2016006' style={{ width: '1230px' }}>
                 <div className='banner-slider j_bannerSlider' style={{ width: '1230px' }}>
-                  {this.props.IndexData.posterList.length >0 ? (this.props.IndexData.posterList.length == 1? posterNodes:<Carousel autoplay effect='fade'>{posterNodes}</Carousel>):""}
+                  {this.props.Poster.posterList.length >0 ? (this.props.Poster.posterList.length == 1? posterNodes:<Carousel autoplay effect='fade'>{posterNodes}</Carousel>):""}
                 </div>
               </div>
             </div>
@@ -282,8 +282,8 @@ class IndexContent extends React.Component {
 
 IndexContent.propTypes = {
 }
-function mapStateToProps({ IndexData}) {
-  return {IndexData};
+function mapStateToProps({ Poster,CatalogGroup}) {
+  return {Poster,CatalogGroup};
 }
 export default connect(mapStateToProps)(IndexContent);
 

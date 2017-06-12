@@ -1,27 +1,27 @@
-import { getPosterList } from '../services/WmcSiteSvc'
+import { getCatalogGroupList } from '../services/WmcSiteSvc'
 export default {
-  namespace: 'IndexData',
+  namespace: 'CatalogGroup',
   state: {
-    posterList:[]
+    catalogGroupList:[]
   },
-  reducers: {
-       setPosterList(state, action) {
+    reducers: {
+       setCatalogGroupList(state, action) {
       return { ...state, ...action.payload };
         }
   },
   effects: {
-    *getPosterList({ payload }, { call, put }) {
+    *getCatalogGroupList({ payload }, { call, put }) {
          
-      let { count,keyword } = payload;
+      let { count,type } = payload;
       let { data } = yield getPosterList({
         count: count,
-        keyword:keyword,
+        type:type,
         v:Date.parse(new Date())
       });
       if (data) {
         if (data.errorCode == "suc") {
           yield put({
-            type: 'setPosterList',
+            type: 'setCatalogGroupList',
             payload: {
               posterList: data.body
             }
