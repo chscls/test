@@ -73,7 +73,7 @@ class IndexContent extends React.Component {
   componentDidMount(){
   
       this.getPosterList(5,'indexTop');
-      this.getCatalogGroupList(10,'indexTop');
+      this.getCatalogGroupList(13,'indexTop');
   }
 
   render() {
@@ -85,6 +85,21 @@ class IndexContent extends React.Component {
                    <img src={poster.img} style={{ width: '100%', height: '500px' }} />
              </a>
          </div>
+      );
+    });
+     var cgs = this.props.CatalogGroup.catalogGroupList.map(function(catalogGroup) {
+      return (
+       <li key={catalogGroup.id} className='j_MenuNav nav-item nav-item-0 category-loaded' data-spm='category2016010' >
+                      <i className='fp-iconfont nav-item-icon icon'></i><i className='dot fp-iconfont'></i>
+                      <Link to='Search'
+                        style={{ color: 'black' }} href=''> 农林牧渔
+                      </Link>
+                      /
+                      <Link to='Search'
+                        style={{ color: 'black' }} href=''> 交通运输
+                      </Link>
+                      <b className='arrow'></b>
+                    </li>
       );
     });
 
@@ -131,115 +146,7 @@ class IndexContent extends React.Component {
               <div className='category-tab-content'  >
                 <div className='nav-con j_tabPannel category-tab-pannel pannel-normal'>
                   <ul id="ctc" className='normal-nav clearfix'>
-                    <li className='j_MenuNav nav-item nav-item-0 category-loaded' data-spm='category2016010' onMouseOver={this.handleMouseOver} >
-                      <i className='fp-iconfont nav-item-icon icon'></i><i className='dot fp-iconfont'></i>
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 农林牧渔
-                      </Link>
-                      /
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 交通运输
-                      </Link>
-                      <b className='arrow'></b>
-                    </li>
-                    <li className='j_MenuNav nav-item nav-item-1 category-loaded' data-spm='category2016011' onMouseOver={this.handleMouseOver} >
-                      <i className='fp-iconfont nav-item-icon icon'></i><i className='dot fp-iconfont'></i>
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 生化药品
-                      </Link>
-                      /
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 资源开发测绘
-                      </Link>
-                      <Link className='arrow'></Link>
-                    </li>
-                    <li className='j_MenuNav nav-item nav-item-1 category-loaded' data-spm='category2016011' onMouseOver={this.handleMouseOver} >
-                      <i className='fp-iconfont nav-item-icon icon'></i><i className='dot fp-iconfont'></i>
-                      <Link style={{ color: 'black' }}
-                        href=''> 材料能源
-                      </Link>
-                      /
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 土建
-                      </Link>
-                      <b className='arrow'></b>
-                    </li>
-                    <li className='j_MenuNav nav-item nav-item-1 category-loaded' data-spm='category2016011' onMouseOver={this.handleMouseOver} >
-                      <i className='fp-iconfont nav-item-icon icon'></i><i className='dot fp-iconfont'></i>
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 水利
-                      </Link>
-                      /
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 制造
-                      </Link>
-                      <b className='arrow'></b>
-                    </li>
-                    <li className='j_MenuNav nav-item nav-item-1 category-loaded' data-spm='category2016011' onMouseOver={this.handleMouseOver} >
-                      <i className='fp-iconfont nav-item-icon icon'></i><i className='dot fp-iconfont'></i>
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 电子信息
-                      </Link>
-                      /
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 环保气象安全
-                      </Link>
-                      <b className='arrow'></b>
-                    </li>
-                    <li className='j_MenuNav nav-item nav-item-1 category-loaded' data-spm='category2016011' onMouseOver={this.handleMouseOver} >
-                      <i className='fp-iconfont nav-item-icon icon'></i><i className='dot fp-iconfont'></i>
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 轻纺食品
-                      </Link>
-                      /
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 财经
-                      </Link>
-                      <b className='arrow'></b>
-                    </li>
-                    <li className='j_MenuNav nav-item nav-item-1 category-loaded' data-spm='category2016011' onMouseOver={this.handleMouseOver} >
-                      <i className='fp-iconfont nav-item-icon icon'></i><i className='dot fp-iconfont'></i>
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 医药卫生
-                      </Link>
-                      /
-                      <Link to='Search' style={{ color: 'black' }} href=''> 旅游
-                      </Link>
-                      <b className='arrow'></b>
-                    </li>
-                    <li className='j_MenuNav nav-item nav-item-1 category-loaded' data-spm='category2016011' onMouseOver={this.handleMouseOver} >
-                      <i className='fp-iconfont nav-item-icon icon'></i><i className='dot fp-iconfont'></i>
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 公共事业
-                      </Link>
-                      /
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 文化教育
-                      </Link>
-                      <b className='arrow'></b>
-                    </li>
-                    <li className='j_MenuNav nav-item nav-item-1 category-loaded' data-spm='category2016011' onMouseOver={this.handleMouseOver} >
-                      <i className='fp-iconfont nav-item-icon icon'></i><i className='dot fp-iconfont'></i>
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 艺术设计传媒
-                      </Link>
-                      /
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 公安
-                      </Link>
-                      <b className='arrow'></b>
-                    </li>
-                    <li className='j_MenuNav nav-item nav-item-1 category-loaded' data-spm='category2016011' onMouseOver={this.handleMouseOver} >
-                      <i className='fp-iconfont nav-item-icon icon'></i><i className='dot fp-iconfont'></i>
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 法律
-                      </Link>
-                      /
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 其他
-                      </Link>
-                      <b className='arrow'></b>
-                    </li>
+                    {cgs}
                   </ul>
                 </div>
               </div>
