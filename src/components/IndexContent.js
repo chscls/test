@@ -48,20 +48,32 @@ class IndexContent extends React.Component {
       x[i].style.backgroundColor = "rgba(238, 238, 238, 0.952941)";
     }
   }
-  getPosterList = () => {
+  getPosterList = (count,keyword) => {
     
      this.props.dispatch({
          type:'Poster/getPosterList',
          payload:{
-            count:5,
-            keyword:'indexTop'
+            count:count,
+            keyword:keyword
+         }
+         
+        });
+  }
+  getCatalogGroupList = (count,type) => {
+    
+     this.props.dispatch({
+         type:'CatalogGroup/getCatalogGroupList',
+         payload:{
+            count:count,
+            type:type
          }
          
         });
   }
   componentDidMount(){
   
-      this.getPosterList();
+      this.getPosterList(5,'indexTop');
+      this.getCatalogGroupList(10,'indexTop');
   }
 
   render() {

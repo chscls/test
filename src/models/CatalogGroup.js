@@ -13,7 +13,7 @@ export default {
     *getCatalogGroupList({ payload }, { call, put }) {
          
       let { count,type } = payload;
-      let { data } = yield getPosterList({
+      let { data } = yield getCatalogGroupList({
         count: count,
         type:type,
         v:Date.parse(new Date())
