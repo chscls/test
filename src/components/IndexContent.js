@@ -13,17 +13,19 @@ class IndexContent extends React.Component {
     super(props)
     this.state = {
       detailShow: 'none',
+      current:null
     }
     this.handleMouseOver = this.handleMouseOver.bind(this);
     this.handleMouseLeave= this.handleMouseLeave.bind(this);
   }
 
   handleMouseOver = (e) => {
+    var y = e.currentTarget;
     this.setState({
       detailShow: 'block',
-
+      current:y.dataset.index
     })
-    var y = e.currentTarget;
+    
     var x = y.parentNode.childNodes;
 
 
@@ -77,7 +79,27 @@ class IndexContent extends React.Component {
   }
 
   render() {
+ var currentNode=this.state.current!=null?this.props.CatalogGroup.catalogGroupList[this.state.current]:null;
 
+var content=currentNode==null?null:currentNode.items.content.map(function(c,index){
+
+    var cts = c.ids.map(function(ct,index){
+      return(<Link key={ct.id} to="School" className='hot-word '>{ct.name}</Link>);
+    });
+   return (<div key={index} className='hot-word-line'>
+                        <div className='line-title'>
+                          <div className='title-text'>
+                            {c.name}
+                          </div><i className='fp-iconfont'></i>
+                        </div>
+                       
+                        <div className='line-con'>
+                           {cts}
+                       
+                          <div className='seprate clearfix'></div>
+                        </div>
+                      </div>);
+})
   var posterNodes = this.props.Poster.posterList.map(function(poster) {
       return (
         <div key={poster.id}>
@@ -90,7 +112,7 @@ class IndexContent extends React.Component {
 
 
 
-     var cgs = this.props.CatalogGroup.catalogGroupList.map(function(catalogGroup) {
+     var cgs = this.props.CatalogGroup.catalogGroupList.map(function(catalogGroup,index) {
 
 
        var top=catalogGroup.items.top.map(function(to,index){
@@ -101,14 +123,14 @@ class IndexContent extends React.Component {
             );
        })
       return (
-       <li key={catalogGroup.id} className='j_MenuNav nav-item nav-item-0 category-loaded' data-spm='category2016010' onMouseOver={this.handleMouseOver} >
+       <li data-index={index} key={catalogGroup.id} className='j_MenuNav nav-item nav-item-0 category-loaded' data-spm='category2016010' onMouseOver={this.handleMouseOver} >
                       <i className='fp-iconfont nav-item-icon icon'></i><i className='dot fp-iconfont'></i>
                      {top}
                       <b className='arrow'></b>
                     </li>
       );
     }.bind(this));
-
+   
     return (
       <div>
         <Nav />
@@ -160,18 +182,8 @@ class IndexContent extends React.Component {
                 <div className='pannel-con j_CategoryMenuPannel' style={{ display: this.state.detailShow }}>
                   <div className='pannel-0'>
                     <div className='hot-word-con' data-spm='subpannel2016025'>
-                      <div className='hot-word-line'>
-                        <div className='line-title'>
-                          <div className='title-text'>
-                            养殖业
-                          </div><i className='fp-iconfont'></i>
-                        </div>
-                        <div className='line-con'>
-                          <Link to="School" className='hot-word highlight ' href=''>养鸡</Link>
-                          <Link to="School" className='hot-word ' href=''>养鸭</Link>
-                          <div className='seprate clearfix'></div>
-                        </div>
-                      </div>
+                      
+                       {content}
                     </div>
                   </div>
                   <div className='sub-logo-con'>
