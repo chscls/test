@@ -9,7 +9,20 @@ class Floors extends React.Component {
     super(props)
   }
 
-  
+  getIndexFloorList(count){
+ this.props.dispatch({
+      type: 'IndexFloor/getIndexFloorList',
+      payload: {
+        count: count
+      }
+
+    });
+
+  }
+   componentDidMount() {
+
+	 this.getIndexFloorList();
+  }
   render(){
 
 	 
@@ -951,7 +964,7 @@ class Floors extends React.Component {
 };
 }
 
-function mapStateToProps({Advertise }) {
-  return { Advertise};
+function mapStateToProps({Advertise,IndexFloor }) {
+  return { Advertise,IndexFloor};
 }
 export default connect(mapStateToProps)(Floors);
