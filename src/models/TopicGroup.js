@@ -23,7 +23,7 @@ export default {
           yield put({
             type: 'setTopicGroupList',
             payload: {
-              catalogGroupList: data.body
+              topicGroupList: data.body
             }
           });
         }

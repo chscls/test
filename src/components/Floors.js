@@ -2,9 +2,17 @@
 import { Icon } from 'antd';
 import { Link } from 'dva/router';
 import styles from '../routes/IndexPage.css';
+import { connect } from 'dva'
   import LazyLoad from 'react-lazyload';
+class Floors extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
-const Floors = (props) => {
+  
+  render(){
+
+	 
   return (
 	  
        <div>
@@ -129,49 +137,20 @@ const Floors = (props) => {
 	
 </div>
 <div className="right-column-con">
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
 				<Link to="School/Course" className="grid second-grid" >
 				<div className="title">卤鸭子、油烫鸭</div>
 				<div className="sub-title">色泽棕红、皮酥略甜、肉质细嫩、香气宜人</div>
 				<img src="22.jpg"/>
-				
-    
-
 			</Link>
-		
-	
-		
 				<Link to="School/Course" className="grid second-grid">
 				<div className="title">竹林小餐</div>
 				<div className="sub-title">蒜味浓厚，肥而不腻</div>
 				<img src="23.jpg"/>
-				
-    
-
 			</Link>
-		
-	
-		
 			<Link to="School/Course" className="grid second-grid">
 				<div className="title">史密斯夫妇</div>
 				<div className="sub-title">色泽美观，质嫩味鲜，麻辣浓香</div>
 				<img src="24.jpg"/>
-				
-    
-
 				</Link>
 		
 	
@@ -970,8 +949,9 @@ const Floors = (props) => {
 
   );
 };
+}
 
-Floors.propTypes = {
-};
-
-export default Floors;
+function mapStateToProps({ }) {
+  return { };
+}
+export default connect(mapStateToProps)(Floors);

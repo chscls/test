@@ -71,21 +71,12 @@ class IndexContent extends React.Component {
 
     });
   }
-  getTopicGroupList = (count) => {
-
-    this.props.dispatch({
-      type: 'TopicGroup/getTopicGroupList',
-      payload: {
-        count: count
-      }
-
-    });
-  }
+ 
   componentDidMount() {
 
     this.getPosterList(5, 'indexTop');
     this.getCatalogGroupList(12);
-     this.getTopicGroupList(5);
+
   }
 
   render() {
@@ -231,8 +222,8 @@ class IndexContent extends React.Component {
 
 IndexContent.propTypes = {
 }
-function mapStateToProps({ Poster, CatalogGroup,TopicGroup }) {
-  return { Poster, CatalogGroup,TopicGroup };
+function mapStateToProps({ Poster, CatalogGroup }) {
+  return { Poster, CatalogGroup };
 }
 export default connect(mapStateToProps)(IndexContent);
 
