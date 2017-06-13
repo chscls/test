@@ -3046,11 +3046,11 @@ body {
 
 .category-con .content-con .pannel-con .sub-logo-con .logo {
 	float: left;
-	width: 73px;
+	width: 80px;
 	margin-right: 1px;
 	margin-bottom: 1px;
-	height: 37px;
-	padding: 5px 10px;
+	height: 80px;
+	padding: 5px 5px;
 	overflow: hidden;
 	background-color: #fff
 }
@@ -3073,8 +3073,8 @@ body {
 
 .category-con .content-con .pannel-con .sub-logo-con .activity img {
 	float: left;
-	width: 189px;
-	height: 87px
+	width: 100px;
+	height: 100px
 }
 
 .nav-item-10 a.highlight,.nav-item-10 a:hover,.nav-item-10.selected,.nav-item-10.selected a,.nav-item-10.selected i,.nav-item-14 a.highlight,.nav-item-14 a:hover,.nav-item-14.selected,.nav-item-14.selected a,.nav-item-14.selected i,.pannel-10 a.highlight,.pannel-10 a:hover,.pannel-10.selected,.pannel-10.selected a,.pannel-10.selected i,.pannel-14 a.highlight,.pannel-14 a:hover,.pannel-14.selected,.pannel-14.selected a,.pannel-14.selected i {
