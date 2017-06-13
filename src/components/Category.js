@@ -20,7 +20,7 @@ class Category extends React.Component {
     getAdvertiseList = (count) => {
 
     this.props.dispatch({
-      type: 'Advertise/getAdvertiseList',
+      type: 'Poster/getAdvertiseList',
       payload: {
         count: count
       }
@@ -34,8 +34,8 @@ class Category extends React.Component {
   render(){
 		var advertise=()=> { 
 		
-			if (this.props.Advertise.advertiseList.length>0){
-			var x = this.props.Advertise.advertiseList[0]
+			if (this.props.Poster.advertiseList.length>0){
+			var x = this.props.Poster.advertiseList[0]
 				return(
 		<div  data-spm="2016901" style={{marginTop: '10px'}} className="tanx-con-mm_12852562_1778064_37802121 full-banner clearfix j_tanxBanner j_LazyloadCon fp-content-loading j_exposureCon" data-inited="1">
 					
@@ -91,8 +91,8 @@ class Category extends React.Component {
 }
 Category.propTypes = {
 };
-function mapStateToProps({Advertise,TopicGroup }) {
-  return {Advertise,TopicGroup };
+function mapStateToProps({Poster,TopicGroup }) {
+  return {Poster,TopicGroup };
 }
 export default connect(mapStateToProps)(Category);
 

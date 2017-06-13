@@ -964,7 +964,7 @@ class Floors extends React.Component {
 };
 }
 
-function mapStateToProps({Advertise,IndexFloor }) {
-  return { Advertise,IndexFloor};
+function mapStateToProps({Poster,IndexFloor }) {
+  return { Poster,IndexFloor};
 }
 export default connect(mapStateToProps)(Floors);

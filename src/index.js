@@ -12,7 +12,7 @@ app.model(require("./models/Poster"));
 app.model(require("./models/RandOrg"));
 app.model(require("./models/CatalogGroup"));
 app.model(require("./models/TopicGroup"));
-app.model(require("./models/Advertise"));
+
 // 2. Plugins
 //app.use({});
 

@@ -2,10 +2,11 @@ import { getPosterList } from '../services/WmcSiteSvc'
 export default {
   namespace: 'Poster',
   state: {
-    posterList:[]
+    posterList:[],
+    advertiseList:[]
   },
   reducers: {
-       setPosterList(state, action) {
+       suc(state, action) {
       return { ...state, ...action.payload };
         }
   },
@@ -21,9 +22,28 @@ export default {
       if (data) {
         if (data.errorCode == "suc") {
           yield put({
-            type: 'setPosterList',
+            type: 'suc',
             payload: {
               posterList: data.body
+            }
+          });
+        }
+      }
+    },
+    *getAdvertiseList({ payload }, { call, put }) {
+         
+      let { count} = payload;
+      let { data } = yield getPosterList({
+        count: count,
+        keyword:"indexAd",
+        v:Date.parse(new Date())
+      });
+      if (data) {
+        if (data.errorCode == "suc") {
+          yield put({
+            type: 'suc',
+            payload: {
+              advertiseList: data.body
             }
           });
         }
