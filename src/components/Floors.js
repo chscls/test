@@ -11,7 +11,7 @@ class Floors extends React.Component {
 
   getIndexFloorList(count){
  this.props.dispatch({
-      type: 'IndexFloor/getIndexFloorList',
+      type: 'CatalogGroup/getIndexFloorList',
       payload: {
         count: count
       }
@@ -964,7 +964,7 @@ class Floors extends React.Component {
 };
 }
 
-function mapStateToProps({Poster,IndexFloor }) {
-  return { Poster,IndexFloor};
+function mapStateToProps({Poster,CatalogGroup }) {
+  return { Poster,CatalogGroup};
 }
 export default connect(mapStateToProps)(Floors);

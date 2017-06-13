@@ -10,7 +10,7 @@ class Category extends React.Component {
   getTopicGroupList = (count) => {
 
     this.props.dispatch({
-      type: 'TopicGroup/getTopicGroupList',
+      type: 'CatalogGroup/getTopicGroupList',
       payload: {
         count: count
       }
@@ -46,7 +46,7 @@ class Category extends React.Component {
 			}
 		
 		}
-	   var content = this.props.TopicGroup.topicGroupList.map(function (f, index) {
+	   var content = this.props.CatalogGroup.topicGroupList.map(function (f, index) {
 		var last = (index<3?'':(index==3?'last-990':'last-1230'));
 		var topic = f.items.map(function(t, index){
 			if(index==0){
@@ -91,8 +91,8 @@ class Category extends React.Component {
 }
 Category.propTypes = {
 };
-function mapStateToProps({Poster,TopicGroup }) {
-  return {Poster,TopicGroup };
+function mapStateToProps({Poster,CatalogGroup}) {
+  return {Poster,CatalogGroup };
 }
 export default connect(mapStateToProps)(Category);
 
