@@ -61,13 +61,22 @@ class IndexContent extends React.Component {
 
     });
   }
-  getCatalogGroupList = (count, type) => {
+  getCatalogGroupList = (count) => {
 
     this.props.dispatch({
       type: 'CatalogGroup/getCatalogGroupList',
       payload: {
-        count: count,
-        type: type
+        count: count
+      }
+
+    });
+  }
+  getTopicGroupList = (count) => {
+
+    this.props.dispatch({
+      type: 'TopicGroup/getTopicGroupList',
+      payload: {
+        count: count
       }
 
     });
@@ -75,7 +84,8 @@ class IndexContent extends React.Component {
   componentDidMount() {
 
     this.getPosterList(5, 'indexTop');
-    this.getCatalogGroupList(13, 'indexTop');
+    this.getCatalogGroupList(12);
+     this.getTopicGroupList(5);
   }
 
   render() {
@@ -127,7 +137,7 @@ class IndexContent extends React.Component {
       })
       return (
         <li data-index={index} key={catalogGroup.id} className='j_MenuNav nav-item nav-item-0 category-loaded' data-spm='category2016010' onMouseOver={this.handleMouseOver} >
-          <i className='fp-iconfont nav-item-icon icon'></i><i className='dot fp-iconfont'></i>
+          <Icon type={catalogGroup.icon} /><i className='dot fp-iconfont'></i>
           {top}
           <b className='arrow'></b>
         </li>
@@ -221,8 +231,8 @@ class IndexContent extends React.Component {
 
 IndexContent.propTypes = {
 }
-function mapStateToProps({ Poster, CatalogGroup }) {
-  return { Poster, CatalogGroup };
+function mapStateToProps({ Poster, CatalogGroup,TopicGroup }) {
+  return { Poster, CatalogGroup,TopicGroup };
 }
 export default connect(mapStateToProps)(IndexContent);
 

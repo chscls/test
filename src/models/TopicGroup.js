@@ -1,27 +1,27 @@
 import { getCatalogGroupList } from '../services/WmcSiteSvc'
 export default {
-  namespace: 'CatalogGroup',
+  namespace: 'TopicGroup',
   state: {
-    catalogGroupList:[]
+    topicGroupList:[]
   },
     reducers: {
-       setCatalogGroupList(state, action) {
+       setTopicGroupList(state, action) {
       return { ...state, ...action.payload };
         }
   },
   effects: {
-    *getCatalogGroupList({ payload }, { call, put }) {
+    *getTopicGroupList({ payload }, { call, put }) {
          
       let { count} = payload;
       let { data } = yield getCatalogGroupList({
         count: count,
-        type:'indexTop',
+        type:'indexTopic',
         v:Date.parse(new Date())
       });
       if (data) {
         if (data.errorCode == "suc") {
           yield put({
-            type: 'setCatalogGroupList',
+            type: 'setTopicGroupList',
             payload: {
               catalogGroupList: data.body
             }
