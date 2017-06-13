@@ -17,12 +17,31 @@ class Category extends React.Component {
 
     });
   }
+    getPosterList = (count, keyword) => {
+
+    this.props.dispatch({
+      type: 'Poster/getPosterList',
+      payload: {
+        count: count,
+        keyword: keyword
+      }
+
+    });
+  }
   componentDidMount() {
 
      this.getTopicGroupList(5);
+	 /*this.getPosterList(1, 'indexTopic');*/
   }
   render(){
-		
+		var poster= this.props.Poster.posterList.map(function(p){
+				return(<div key={p.id} data-spm="2016901" style={{marginTop: '10px'}} className="tanx-con-mm_12852562_1778064_37802121 full-banner clearfix j_tanxBanner j_LazyloadCon fp-content-loading j_exposureCon" data-inited="1">
+					
+					<a href={p.url}>
+    <img src={p.img} width="1620" height="90"/></a>
+	
+	</div>)
+		});
 	   var content = this.props.TopicGroup.topicGroupList.map(function (f, index) {
 		var last = (index<3?'':(index==3?'last-990':'last-1230'));
 		var topic = f.items.map(function(t, index){
@@ -61,26 +80,15 @@ class Category extends React.Component {
 	<div className="module-body j_channelBody clearfix" style={{opacity: '1',width:'1230px'}}>
 {content}
 </div>
-	<div data-spm="2016901" style={{marginTop: '10px'}} className="tanx-con-mm_12852562_1778064_37802121 full-banner clearfix j_tanxBanner j_LazyloadCon fp-content-loading j_exposureCon" data-inited="1"><a href="">
-    <img src="12.jpg" width="1620" height="90"/></a><a href="">
-    <img src="12.jpg" width="1620" height="90"/></a>
-		<ins style={{display:'inline-block',padding:'0',margin:'0',width:'1620px',height:'90px',zoom:'1',position:'relative'}} id="tanxssp-outer-conmm_12852562_1778064_37802121">
-            <div id="tanxssp_con_mm_12852562_1778064_37802121" style={{overflow:'hidden',display:'inline-block',position:'relative',width:'1620px',height:'90px',zoom:'1',font:"12px/1.5 tahoma,'Hiragino Sans GB','microsoft yahei',sans-serif"}}>
-        <a href="" target="_blank">
-        <img  src="12.jpg" width="1620px" height="90px"/></a>
-        </div>
-        </ins>
-        <a className="j_tanxItem" id="tanx-a-mm_12852562_1778064_37802121" style={{display: 'none'}}>
-		</a>
-	</div>
+	{poster}
 </div>
   );
 };
 }
 Category.propTypes = {
 };
-function mapStateToProps({TopicGroup }) {
-  return {TopicGroup };
+function mapStateToProps({Poster,TopicGroup }) {
+  return {Poster,TopicGroup };
 }
 export default connect(mapStateToProps)(Category);
 
