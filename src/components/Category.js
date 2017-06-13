@@ -17,31 +17,35 @@ class Category extends React.Component {
 
     });
   }
-    getPosterList = (count, keyword) => {
+    getAdvertiseList = (count) => {
 
     this.props.dispatch({
-      type: 'Poster/getPosterList',
+      type: 'Advertise/getAdvertiseList',
       payload: {
-        count: count,
-        keyword: keyword
+        count: count
       }
 
     });
   }
   componentDidMount() {
-
-     this.getTopicGroupList(5);
-	 /*this.getPosterList(1, 'indexTopic');*/
+	 this.getTopicGroupList(5);
+	 this.getAdvertiseList();
   }
   render(){
-		var poster= this.props.Poster.posterList.map(function(p){
-				return(<div key={p.id} data-spm="2016901" style={{marginTop: '10px'}} className="tanx-con-mm_12852562_1778064_37802121 full-banner clearfix j_tanxBanner j_LazyloadCon fp-content-loading j_exposureCon" data-inited="1">
+		var advertise=()=> { 
+		
+			if (this.props.Advertise.advertiseList.length>0){
+			var x = this.props.Advertise.advertiseList[0]
+				return(
+		<div  data-spm="2016901" style={{marginTop: '10px'}} className="tanx-con-mm_12852562_1778064_37802121 full-banner clearfix j_tanxBanner j_LazyloadCon fp-content-loading j_exposureCon" data-inited="1">
 					
-					<a href={p.url}>
-    <img src={p.img} width="1620" height="90"/></a>
+					<a href={x.url}>
+    <img src={x.img} width="1620" height="90"/></a>
 	
 	</div>)
-		});
+			}
+		
+		}
 	   var content = this.props.TopicGroup.topicGroupList.map(function (f, index) {
 		var last = (index<3?'':(index==3?'last-990':'last-1230'));
 		var topic = f.items.map(function(t, index){
@@ -80,15 +84,15 @@ class Category extends React.Component {
 	<div className="module-body j_channelBody clearfix" style={{opacity: '1',width:'1230px'}}>
 {content}
 </div>
-	{poster}
+	{advertise()}
 </div>
   );
 };
 }
 Category.propTypes = {
 };
-function mapStateToProps({Poster,TopicGroup }) {
-  return {Poster,TopicGroup };
+function mapStateToProps({Advertise,TopicGroup }) {
+  return {Advertise,TopicGroup };
 }
 export default connect(mapStateToProps)(Category);
 

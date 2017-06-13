@@ -951,7 +951,7 @@ class Floors extends React.Component {
 };
 }
 
-function mapStateToProps({ }) {
-  return { };
+function mapStateToProps({Advertise }) {
+  return { Advertise};
 }
 export default connect(mapStateToProps)(Floors);

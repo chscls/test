@@ -12,10 +12,10 @@ export default {
   effects: {
     *getPosterList({ payload }, { call, put }) {
          
-      let { count,keyword } = payload;
+      let { count } = payload;
       let { data } = yield getPosterList({
         count: count,
-        keyword:keyword,
+        keyword:"indexTop",
         v:Date.parse(new Date())
       });
       if (data) {

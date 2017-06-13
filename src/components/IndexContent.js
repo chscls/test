@@ -50,13 +50,12 @@ class IndexContent extends React.Component {
       x[i].style.backgroundColor = "rgba(238, 238, 238, 0.952941)";
     }
   }
-  getPosterList = (count, keyword) => {
+  getPosterList = (count) => {
 
     this.props.dispatch({
       type: 'Poster/getPosterList',
       payload: {
-        count: count,
-        keyword: keyword
+        count: count
       }
 
     });
@@ -74,7 +73,7 @@ class IndexContent extends React.Component {
  
   componentDidMount() {
 
-    this.getPosterList(5, 'indexTop');
+    this.getPosterList(5);
     this.getCatalogGroupList(12);
 
   }
