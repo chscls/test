@@ -87,21 +87,27 @@ class IndexContent extends React.Component {
          </div>
       );
     });
+
+
+
      var cgs = this.props.CatalogGroup.catalogGroupList.map(function(catalogGroup) {
+
+
+       var top=catalogGroup.items.top.map(function(to,index){
+            return (
+                      <Link key={to.id} to='Search'
+                        style={{ color: 'black' }}>{index==1?"/":""}{to.name}
+                      </Link>
+            );
+       })
       return (
-       <li key={catalogGroup.id} className='j_MenuNav nav-item nav-item-0 category-loaded' data-spm='category2016010' >
+       <li key={catalogGroup.id} className='j_MenuNav nav-item nav-item-0 category-loaded' data-spm='category2016010' onMouseOver={this.handleMouseOver} >
                       <i className='fp-iconfont nav-item-icon icon'></i><i className='dot fp-iconfont'></i>
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 农林牧渔
-                      </Link>
-                      /
-                      <Link to='Search'
-                        style={{ color: 'black' }} href=''> 交通运输
-                      </Link>
+                     {top}
                       <b className='arrow'></b>
                     </li>
       );
-    });
+    }.bind(this));
 
     return (
       <div>
