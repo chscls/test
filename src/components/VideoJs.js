@@ -50,7 +50,7 @@ render() {
         data="//vjs.zencdn.net/swf/5.3.0/video-js.swf">
         <param name="movie" value="//vjs.zencdn.net/swf/5.3.0/video-js.swf" />
         <param name="allowfullscreen" value="true" />
-        <param name="flashvars" value='config={"playlist":["http://video-js.zencoder.com/oceans-clip.png", {"url": "rtmp://192.168.1.220:52058/oflaDemo/hello","autoPlay":false,"autoBuffering":true}]}' />
+        <param name="flashvars" value='config={"playlist":["https://img.alicdn.com/imgextra/i3/1712212133/TB2fsgtqW8lpuFjy0FpXXaGrpXa_!!0-tmallfun.jpg_2200x2200Q80S0.jpg_.webp", {"url": "rtmp://192.168.1.220:52058/oflaDemo/hello","autoPlay":false,"autoBuffering":true}]}' />
         
         <img src="https://img.alicdn.com/imgextra/i3/1712212133/TB2fsgtqW8lpuFjy0FpXXaGrpXa_!!0-tmallfun.jpg_2200x2200Q80S0.jpg_.webp" style={{width:'100%',height:'95%'}}  alt="Poster Image"
           title="No video playback capabilities." />
