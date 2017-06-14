@@ -44,15 +44,15 @@ render() {
   return (
 
  <video id="example_video_1"  className="video-js vjs-default-skin"  style={{width:'100%',height:'95%'}} controls preload="auto" poster="http://video-js.zencoder.com/oceans-clip.png">
-      <source src="rtmp://192.168.1.220/oflaDemo/hello" type='video/mp4"' />
+      <source src="rtmp://eas.msvtc.net:52058/oflaDemo/hello" type='video/mp4"' />
      
       <object id="flash_fallback_1" className="video-js vjs-default-skin"  style={{width:'100%',height:'95%'}}  type="application/x-shockwave-flash"
         data="//vjs.zencdn.net/swf/5.3.0/video-js.swf">
         <param name="movie" value="//vjs.zencdn.net/swf/5.3.0/video-js.swf" />
         <param name="allowfullscreen" value="true" />
-        <param name="flashvars" value='config={"playlist":["http://video-js.zencoder.com/oceans-clip.png", {"url": "rtmp://192.168.1.220/oflaDemo/hello","autoPlay":false,"autoBuffering":true}]}' />
+        <param name="flashvars" value='config={"playlist":["http://video-js.zencoder.com/oceans-clip.png", {"url": "rtmp://192.168.1.220:52058/oflaDemo/hello","autoPlay":false,"autoBuffering":true}]}' />
         
-        <img src="http://video-js.zencoder.com/oceans-clip.png" style={{width:'100%',height:'95%'}}  alt="Poster Image"
+        <img src="https://img.alicdn.com/imgextra/i3/1712212133/TB2fsgtqW8lpuFjy0FpXXaGrpXa_!!0-tmallfun.jpg_2200x2200Q80S0.jpg_.webp" style={{width:'100%',height:'95%'}}  alt="Poster Image"
           title="No video playback capabilities." />
       </object>
     </video>
