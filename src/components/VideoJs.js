@@ -42,10 +42,20 @@ class VideoJs extends Component {
  }
 render() {
   return (
-<video id="example_video_1" className="video-js vjs-default-skin"  controls style={{width:'100%',height:'98%'}}> 
-<source src='rtmp://localhost/oflaDemo/hello' type='rtmp/flv'/> rtmp格式  
-    
-</video> 
+
+ <video id="example_video_1"  className="video-js vjs-default-skin"  style={{width:'100%',height:'95%'}} controls preload="auto" poster="http://video-js.zencoder.com/oceans-clip.png">
+      <source src="rtmp://192.168.1.220/oflaDemo/hello" type='video/mp4"' />
+     
+      <object id="flash_fallback_1" className="video-js vjs-default-skin"  style={{width:'100%',height:'95%'}}  type="application/x-shockwave-flash"
+        data="//vjs.zencdn.net/swf/5.3.0/video-js.swf">
+        <param name="movie" value="//vjs.zencdn.net/swf/5.3.0/video-js.swf" />
+        <param name="allowfullscreen" value="true" />
+        <param name="flashvars" value='config={"playlist":["http://video-js.zencoder.com/oceans-clip.png", {"url": "rtmp://192.168.1.220/oflaDemo/hello","autoPlay":false,"autoBuffering":true}]}' />
+        
+        <img src="http://video-js.zencoder.com/oceans-clip.png" style={{width:'100%',height:'95%'}}  alt="Poster Image"
+          title="No video playback capabilities." />
+      </object>
+    </video>
 /*<video id="example_video_1" className="video-js vjs-default-skin" controls preload="none" width="640" height="264">
     <source src="" type='video/mp4' />
     <track kind="captions" src={this.props.vtt} srcLang="en" label="English"></track>
@@ -54,10 +64,11 @@ render() {
   );
     }
     componentDidMount(){
-   /*  var myPlayera = videojs("example_video_1");  
+  var myPlayera = videojs("example_video_1",);  
+
         //$("#videojs_videodisplay_presentation_html5_api").attr("src", "rtmp://live.hkstv.hk.lxdns.com/live/hks")  
-        myPlayera.src("rtmp://localhost/oflaDemo/hello"); //重新初始化视频地址  
-        myPlayera.load("rtmp://localhost/oflaDemo/hello"); //重新加载 */
+      //  myPlayera.src("rtmp://localhost/oflaDemo/hello"); //重新初始化视频地址  
+        //myPlayera.load("rtmp://localhost/oflaDemo/hello"); //重新加载 */
   /*   var vo = document.querySelector('video');
     videojs.BYTES_PER_SECOND_GOAL = 8 * 1024 * 1024;
    ms = new MediaSource({ mode: 'html5' });
