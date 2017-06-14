@@ -2,7 +2,8 @@
 import { Icon } from 'antd';
 import { Link } from 'dva/router';
 import styles from '../routes/IndexPage.css';
- import Category from '../components/Category'
+ import Category from '../components/Category';
+  import VideoJs from '../components/VideoJs';
  import { connect } from 'dva';
  import Floors from '../components/Floors'
   import LazyLoad from 'react-lazyload';
@@ -74,7 +75,7 @@ import QueueAnim from 'rc-queue-anim';
 
 <div className="live-play-ctn">
     
-    <div id="J_live-cover">
+    <div id="J_live-cover" style={{display: 'none'}}>
 
     <img src="https://img.alicdn.com/imgextra/i3/1712212133/TB2fsgtqW8lpuFjy0FpXXaGrpXa_!!0-tmallfun.jpg_2200x2200Q80S0.jpg_.webp" className="big-live-cover"/>
     <div className="above-cover">
@@ -101,7 +102,12 @@ import QueueAnim from 'rc-queue-anim';
         <p className="live-error-tip">主播在赶来的路上了<br/>先去看看别的直播吧~</p>
     </div>
     
-    <div id="J_prismPlayer"></div>
+    <div id="J_prismPlayer" style={{position: 'absolute', width: '488px',
+    height: '275px'}}>
+
+ <VideoJs/>
+       
+    </div>
 </div>
 
 <div className="live-slide-list show-prev">

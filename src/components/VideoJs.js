@@ -43,7 +43,7 @@ class VideoJs extends Component {
 render() {
   return (
 <video id="example_video_1" className="video-js vjs-default-skin"  controls style={{width:'100%',height:'98%'}}> 
-
+<source src='rtmp://localhost/oflaDemo/hello' type='rtmp/flv'/> rtmp格式  
     
 </video> 
 /*<video id="example_video_1" className="video-js vjs-default-skin" controls preload="none" width="640" height="264">
@@ -54,8 +54,11 @@ render() {
   );
     }
     componentDidMount(){
-    
-     var vo = document.querySelector('video');
+   /*  var myPlayera = videojs("example_video_1");  
+        //$("#videojs_videodisplay_presentation_html5_api").attr("src", "rtmp://live.hkstv.hk.lxdns.com/live/hks")  
+        myPlayera.src("rtmp://localhost/oflaDemo/hello"); //重新初始化视频地址  
+        myPlayera.load("rtmp://localhost/oflaDemo/hello"); //重新加载 */
+  /*   var vo = document.querySelector('video');
     videojs.BYTES_PER_SECOND_GOAL = 8 * 1024 * 1024;
    ms = new MediaSource({ mode: 'html5' });
  
@@ -80,7 +83,7 @@ video.on("pause", function(){
 video.on("play", function(){
     
     isPlay=true;
-});
+});*/
 
 
 
