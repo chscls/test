@@ -1,5 +1,5 @@
  import React from 'react';
-import { Icon } from 'antd';
+import { Icon,Carousel } from 'antd';
 import { Link } from 'dva/router';
 import styles from '../routes/IndexPage.css';
  import Category from '../components/Category';
@@ -11,6 +11,7 @@ import QueueAnim from 'rc-queue-anim';
   class Activity2 extends React.Component {
   constructor(props) {
     super(props)
+    this.state=({next:true})
    
 }
     getRandOrgList = () => {
@@ -23,7 +24,14 @@ import QueueAnim from 'rc-queue-anim';
          
         });
   }
+  changeNext(){
   
+    this.setState({next:true})
+  }
+   changePrev(){
+      
+    this.setState({next:false})
+  }
   componentDidMount(){
    
       this.getRandOrgList();
@@ -110,10 +118,10 @@ import QueueAnim from 'rc-queue-anim';
     </div>
 </div>
 
-<div className="live-slide-list show-prev">
+<div className={this.state.next?"live-slide-list show-next":"live-slide-list show-prev"}>
     <div className="items-ctn" style={{width: '980px'}}>
         
-            <div className="live-slide-item" data-videoindex="0">
+            <div className="live-slide-item expand-ani show-play" data-videoindex="0" >
                 <img className="slide-cover" src="https://img.alicdn.com/imgextra/i4/2260313241/TB2O90nurBmpuFjSZFAXXaQ0pXa_!!0-tmallfun.jpg_400x400Q80S0.jpg_.webp"/>
                 <div className="bottom-gradin-mask"></div>
                 
@@ -194,8 +202,8 @@ import QueueAnim from 'rc-queue-anim';
     </div>
     
     
-        <a href="#" className="slide-page-next"></a>
-        <a href="#" className="slide-page-prev"></a>
+        <a onClick={this.changePrev.bind(this)}  className="slide-page-next"></a>
+        <a onClick={this.changeNext.bind(this)} className="slide-page-prev"></a>
     
 </div>
 
@@ -204,7 +212,9 @@ import QueueAnim from 'rc-queue-anim';
     <div className="forecast-list-ctn">
         <ul className="fc-item-list">
             
-                <li className="fc-item" style={{marginTop: '-40px'}}>
+
+             <Carousel vertical="true" dots="false" autoplay="true">
+  <li className="fc-item">
                     <p className="fc-text">看直播互动赢红包！</p>
                     <p className="fc-time"></p>
                 </li>
@@ -213,6 +223,8 @@ import QueueAnim from 'rc-queue-anim';
                     <p className="fc-text">学校直播边看边学！</p>
                     <p className="fc-time"></p>
                 </li>
+  </Carousel>
+              
             
         </ul>
     </div>
