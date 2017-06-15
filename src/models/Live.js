@@ -30,7 +30,7 @@ export default {
     },  
     *getLiveAnnounceList({ payload }, { call, put }) {
       let { count } = payload;
-      let { data } = yield getLiveList({
+      let { data } = yield getLiveAnnounceList({
         count: count,
         v:Date.parse(new Date())
       });

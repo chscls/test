@@ -43,7 +43,7 @@ class VideoJs extends Component {
 render() {
   return (
 
- <video id="example_video_1"  className="video-js vjs-default-skin"  style={{width:'100%',height:'100%'}} controls preload="auto" poster="http://video-js.zencoder.com/oceans-clip.png">
+ <video id="example_video_1"  className="video-js vjs-default-skin"  style={{width:'100%',height:'100%'}} controls preload="auto" >
       <source src="rtmp://eas.msvtc.net:52058/oflaDemo/hello" type='video/mp4"' />
      
       <object id="flash_fallback_1" className="video-js vjs-default-skin"  style={{width:'100%',height:'100%'}}  type="application/x-shockwave-flash"

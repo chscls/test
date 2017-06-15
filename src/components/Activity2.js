@@ -33,6 +33,15 @@ import QueueAnim from 'rc-queue-anim';
          
         });
   }
+   getLiveAnnounceList= (count) => {
+  this.props.dispatch({
+         type:'Live/getLiveAnnounceList',
+         payload:{
+            count:count
+         }
+         
+        });
+  }
   changeNext(){
   
     this.setState({next:true})
@@ -45,6 +54,13 @@ import QueueAnim from 'rc-queue-anim';
    
       this.getRandOrgList(23);
       this.getLiveList(6);
+       this.getLiveAnnounceList(6);
+  }
+  handleMouseOver(e){
+      e.currentTarget.className="live-slide-item expand-ani show-play";
+  }
+   handleMouseLeave(e){
+      e.currentTarget.className="live-slide-item expand-ani";
   }
     render(){
     
@@ -73,9 +89,17 @@ import QueueAnim from 'rc-queue-anim';
       
       );
     });
+    var announces=this.props.Live.liveAnnounceList.map(function(la,Index){
+       
+ return(<li key={la.id} className="fc-item">
+                    <p className="fc-text">{la.title}</p>
+                    <p className="fc-time"></p>
+                </li>);
+    })
+
    var lives=this.props.Live.liveList.map(function(live,Index){
 
-    return(<div key={live.id} className="live-slide-item expand-ani show-play" data-videoindex="0" >
+    return(<div key={live.id} onMouseOver={this.handleMouseOver}  onMouseLeave={this.handleMouseLeave} className="live-slide-item expand-ani" data-videoindex="0" >
                 <img className="slide-cover" src={live.cover}/>
                 <div className="bottom-gradin-mask"></div>
                 
@@ -108,7 +132,7 @@ import QueueAnim from 'rc-queue-anim';
 
 <div className="live-play-ctn">
     
-    <div id="J_live-cover" style={{display: 'none'}}>
+    <div id="J_live-cover" >
 
     <img src="https://img.alicdn.com/imgextra/i3/1712212133/TB2fsgtqW8lpuFjy0FpXXaGrpXa_!!0-tmallfun.jpg_2200x2200Q80S0.jpg_.webp" className="big-live-cover"/>
     <div className="above-cover">
@@ -159,18 +183,11 @@ import QueueAnim from 'rc-queue-anim';
     <div className="forecast-list-ctn">
         <ul className="fc-item-list">
             
-
+{this.props.Live.liveAnnounceList.length>0?
              <Carousel vertical="true" dots="false" autoplay="true">
-  <li className="fc-item">
-                    <p className="fc-text">看直播互动赢红包！</p>
-                    <p className="fc-time"></p>
-                </li>
-            
-                <li className="fc-item">
-                    <p className="fc-text">学校直播边看边学！</p>
-                    <p className="fc-time"></p>
-                </li>
-  </Carousel>
+{announces} 
+  </Carousel>:""
+  }
               
             
         </ul>
