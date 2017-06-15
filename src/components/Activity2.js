@@ -14,12 +14,21 @@ import QueueAnim from 'rc-queue-anim';
     this.state=({next:true})
    
 }
-    getRandOrgList = () => {
+    getRandOrgList = (count) => {
     
      this.props.dispatch({
          type:'RandOrg/getRandOrgList',
          payload:{
-            count:23
+            count:count
+         }
+         
+        });
+  }
+  getLiveList= (count) => {
+  this.props.dispatch({
+         type:'Live/getLiveList',
+         payload:{
+            count:count
          }
          
         });
@@ -34,7 +43,8 @@ import QueueAnim from 'rc-queue-anim';
   }
   componentDidMount(){
    
-      this.getRandOrgList();
+      this.getRandOrgList(23);
+      this.getLiveList(6);
   }
     render(){
     
@@ -63,10 +73,25 @@ import QueueAnim from 'rc-queue-anim';
       
       );
     });
-   
+   var lives=this.props.Live.liveList.map(function(live,Index){
+
+    return(<div key={live.id} className="live-slide-item expand-ani show-play" data-videoindex="0" >
+                <img className="slide-cover" src={live.cover}/>
+                <div className="bottom-gradin-mask"></div>
+                
+                <div className="above-cover">
+                    <a href="#" className="slide-item-play-btn">
+                        <img className="wait-play-img" src="//gw.alicdn.com/tps/TB1v5fhLpXXXXX2XFXXXXXXXXXX-144-118.png"/>
+                        <img className="is-playing-img" src="//img.alicdn.com/tps/TB1xHzfLpXXXXbSapXXXXXXXXXX-74-62.png"/>
+                    </a>
+                    <p className="live-title"># {live.name}</p>
+                </div>
+            </div>);
+     
+ }.bind(this))
   return (
 
-
+ 
 
  <div className="activity-bg">
     <div className="activity-area"></div>
@@ -119,86 +144,8 @@ import QueueAnim from 'rc-queue-anim';
 </div>
 
 <div className={this.state.next?"live-slide-list show-next":"live-slide-list show-prev"}>
-    <div className="items-ctn" style={{width: '980px'}}>
-        
-            <div className="live-slide-item expand-ani show-play" data-videoindex="0" >
-                <img className="slide-cover" src="https://img.alicdn.com/imgextra/i4/2260313241/TB2O90nurBmpuFjSZFAXXaQ0pXa_!!0-tmallfun.jpg_400x400Q80S0.jpg_.webp"/>
-                <div className="bottom-gradin-mask"></div>
-                
-                <div className="above-cover">
-                    <a href="#" className="slide-item-play-btn">
-                        <img className="wait-play-img" src="//gw.alicdn.com/tps/TB1v5fhLpXXXXX2XFXXXXXXXXXX-144-118.png"/>
-                        <img className="is-playing-img" src="//img.alicdn.com/tps/TB1xHzfLpXXXXbSapXXXXXXXXXX-74-62.png"/>
-                    </a>
-                    <p className="live-title"># 挑选一双完美的高跟鞋</p>
-                </div>
-            </div>
-        
-            <div className="live-slide-item" data-videoindex="1">
-                <img className="slide-cover" src="https://img.alicdn.com/imgextra/i2/2890584587/TB2XmaSq9xjpuFjSszeXXaeMVXa_!!0-tmallfun.jpg_400x400Q80S0.jpg_.webp"/>
-                <div className="bottom-gradin-mask"></div>
-                
-                <div className="above-cover">
-                    <a href="#" className="slide-item-play-btn">
-                        <img className="wait-play-img" src="//gw.alicdn.com/tps/TB1v5fhLpXXXXX2XFXXXXXXXXXX-144-118.png"/>
-                        <img className="is-playing-img" src="//img.alicdn.com/tps/TB1xHzfLpXXXXbSapXXXXXXXXXX-74-62.png"/>
-                    </a>
-                    <p className="live-title"># 【智能家居】拯救不起床的赖床君</p>
-                </div>
-            </div>
-        
-            <div className="live-slide-item" data-videoindex="2">
-                <img className="slide-cover" src="https://img.alicdn.com/imgextra/i2/851999160/TB2Vcubub4npuFjSZFmXXXl4FXa_!!0-tmallfun.jpg_400x400Q80S0.jpg_.webp"/>
-                <div className="bottom-gradin-mask"></div>
-                
-                <div className="above-cover">
-                    <a href="#" className="slide-item-play-btn">
-                        <img className="wait-play-img" src="//gw.alicdn.com/tps/TB1v5fhLpXXXXX2XFXXXXXXXXXX-144-118.png"/>
-                        <img className="is-playing-img" src="//img.alicdn.com/tps/TB1xHzfLpXXXXbSapXXXXXXXXXX-74-62.png"/>
-                    </a>
-                    <p className="live-title"># 银饰专场 - 欢迎来看</p>
-                </div>
-            </div>
-        
-            <div className="live-slide-item" data-videoindex="3">
-                <img className="slide-cover" src="https://img.alicdn.com/imgextra/i2/1675711085/TB2XHkRtUhnpuFjSZFpXXcpuXXa_!!0-tmallfun.jpg_400x400Q80S0.jpg_.webp"/>
-                <div className="bottom-gradin-mask"></div>
-                
-                <div className="above-cover">
-                    <a href="#" className="slide-item-play-btn">
-                        <img className="wait-play-img" src="//gw.alicdn.com/tps/TB1v5fhLpXXXXX2XFXXXXXXXXXX-144-118.png"/>
-                        <img className="is-playing-img" src="//img.alicdn.com/tps/TB1xHzfLpXXXXbSapXXXXXXXXXX-74-62.png"/>
-                    </a>
-                    <p className="live-title"># 如何选配装饰画？</p>
-                </div>
-            </div>
-        
-            <div className="live-slide-item" data-videoindex="4">
-                <img className="slide-cover" src="https://img.alicdn.com/imgextra/i1/358462928/TB2S6K3q9xjpuFjSszeXXaeMVXa_!!0-tmallfun.jpg_400x400Q80S0.jpg_.webp"/>
-                <div className="bottom-gradin-mask"></div>
-                
-                <div className="above-cover">
-                    <a href="#" className="slide-item-play-btn">
-                        <img className="wait-play-img" src="//gw.alicdn.com/tps/TB1v5fhLpXXXXX2XFXXXXXXXXXX-144-118.png"/>
-                        <img className="is-playing-img" src="//img.alicdn.com/tps/TB1xHzfLpXXXXbSapXXXXXXXXXX-74-62.png"/>
-                    </a>
-                    <p className="live-title"># 川菜大师带你(｡･∀･)ﾉﾞ嗨！</p>
-                </div>
-            </div>
-        
-            <div className="live-slide-item expand-ani show-play" data-videoindex="5">
-                <img className="slide-cover" src="https://img.alicdn.com/imgextra/i3/1712212133/TB2fsgtqW8lpuFjy0FpXXaGrpXa_!!0-tmallfun.jpg_400x400Q80S0.jpg_.webp"/>
-                <div className="bottom-gradin-mask"></div>
-                
-                <div className="above-cover">
-                    <a href="#" className="slide-item-play-btn">
-                        <img className="wait-play-img" src="//gw.alicdn.com/tps/TB1v5fhLpXXXXX2XFXXXXXXXXXX-144-118.png"/>
-                        <img className="is-playing-img" src="//img.alicdn.com/tps/TB1xHzfLpXXXXbSapXXXXXXXXXX-74-62.png"/>
-                    </a>
-                    <p className="live-title"># 带您去看智慧农场</p>
-                </div>
-            </div>
-        
+    <div className="items-ctn" style={{width: '980px'}}> 
+           {lives}
     </div>
     
     
@@ -270,7 +217,7 @@ import QueueAnim from 'rc-queue-anim';
 Activity2.propTypes = {
 };
 
-function mapStateToProps({ RandOrg}) {
-  return {RandOrg};
+function mapStateToProps({ RandOrg,Live}) {
+  return {RandOrg,Live};
 }
 export default connect(mapStateToProps)(Activity2);

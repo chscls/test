@@ -11,7 +11,7 @@ app.model(require("./models/11"));
 app.model(require("./models/Poster"));
 app.model(require("./models/RandOrg"));
 app.model(require("./models/CatalogGroup"));
-
+app.model(require("./models/Live"));
 // 2. Plugins
 //app.use({});
 
