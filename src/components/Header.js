@@ -94,11 +94,11 @@ class Header extends React.Component {
                 <li className="sn-mytaobao menu-item j_MyTaobao">
                     <div className="sn-menu">
                          {this.state.user!=null?
-                        <Link to="Member/22" className="menu-hd" target="_top" rel="nofollow" tabIndex="0" aria-haspopup="true" aria-expanded="false">个人中心<b></b></Link>
+                        <Link to="Member/34" className="menu-hd" target="_top" rel="nofollow" tabIndex="0" aria-haspopup="true" aria-expanded="false">个人中心<b></b></Link>
                         :<a onClick={this.showModal} className="menu-hd" target="_top" rel="nofollow" tabIndex="0" aria-haspopup="true" aria-expanded="false">个人中心<b></b></a>}
                         <div className="menu-bd" role="menu" aria-hidden="true" id="menu-20">
                             <div className="menu-bd-panel" id="myTaobaoPanel">
-                                <a href="" target="_top" rel="nofollow">已学课程</a>
+                                 <Link to="Member/22"  target="_top" rel="nofollow">已学课程</Link>
                                 <a href="" target="_top" rel="nofollow">已教课程</a>
                             </div>
                         </div>

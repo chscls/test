@@ -7,7 +7,7 @@ const MenuItemGroup = Menu.ItemGroup;
 const Sider = React.createClass({
   getInitialState() {
     return {
-      current: '1',
+      current: '0',
     };
   },
   handleClick(e) {
@@ -20,7 +20,7 @@ const Sider = React.createClass({
     return (
       <Menu onClick={this.handleClick}
         style={{ width: 200 }}
-        defaultOpenKeys={['sub1']}
+        defaultOpenKeys={[]}
         selectedKeys={[this.state.current]}
         mode="inline"
       >
@@ -35,7 +35,7 @@ const Sider = React.createClass({
         <Menu.Item key="4"><Link to="Member/11">我的订单</Link></Menu.Item>
         <Menu.Item key="5"><Link to="Member/35">设置</Link></Menu.Item>
         <SubMenu key="sub2" title={<span>管理</span>}>
-          <Menu.Item key="sub21"><Link to="Member/11">版位管理</Link></Menu.Item>
+          <Menu.Item key="sub21"><Link to="Member/WmcPosterSpacePage">版位管理</Link></Menu.Item>
           <Menu.Item key="sub21"><Link to="Member/11">广告管理</Link></Menu.Item>
         </SubMenu>
       </Menu>
