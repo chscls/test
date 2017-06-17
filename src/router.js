@@ -125,7 +125,12 @@ const r46 = (location, callback) => {
       require('./routes/manage/WmcPosterSpacePage'))
   }, 'WmcPosterSpacePage')
 };
-
+const r47 = (location, callback) => {
+  require.ensure([], require => {
+    callback(null,
+      require('./routes/manage/WmcPosterPage'))
+  }, 'WmcPosterPage')
+};
 
 
 export default function ({ history }) {
@@ -155,7 +160,7 @@ export default function ({ history }) {
           <Route path="11" getComponent={r11} />
           <Route path="35" getComponent={r43} />
           <Route path="WmcPosterSpacePage" getComponent={r46} />
-
+          <Route path="WmcPosterPage" getComponent={r47} />
 
         </Route>
       </Route>

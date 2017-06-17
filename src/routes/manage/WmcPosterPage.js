@@ -8,14 +8,24 @@ const columns = [
     dataIndex: 'id',
     key: 'id'
   }, {
-    title: '关键字',
-    dataIndex: 'keyword',
-    key: 'keyword',
-  }, {
     title: '名称',
-    dataIndex: 'name',
-    key: 'name',
+    dataIndex: 'title',
+    key: 'title',
+  },{
+    title: '图片',
+    dataIndex: 'img',
+    key: 'img',
+    render: text => <img style={{width:'100px'}} src={text}/>,
+  }, {
+    title: '优先级',
+    dataIndex: 'priority',
+    key: 'priority',
+  }, {
+    title: '路径',
+    dataIndex: 'url',
+    key: 'url',
   }
+  
 ];
 
 const rowSelection = {
@@ -26,13 +36,13 @@ const rowSelection = {
     disabled: record.name === 'Disabled User',    // Column configuration not to be checked
   }),
 };
-class WmcPosterSpacePage extends React.Component{
+class WmcPosterPage extends React.Component{
   constructor(props){
     super(props)
   }
   render(){
-    let {data,loading} = this.props.WmcPosterSpace.list;
-    let pagination = this.props.WmcPosterSpace.pagination;
+    let {data,loading} = this.props.WmcPoster.list;
+    let pagination = this.props.WmcPoster.pagination;
     return (
       <Table
        rowSelection={rowSelection}
@@ -46,7 +56,7 @@ class WmcPosterSpacePage extends React.Component{
   }
   handleTableChange(pagination, filters, sorter){
     this.props.dispatch({
-      type:'WmcPosterSpace/changePage',
+      type:'WmcPoster/changePage',
       payload:{
         pagination:{
           current:pagination.current,
@@ -62,7 +72,7 @@ class WmcPosterSpacePage extends React.Component{
     // 更新列表
     
     this.props.dispatch({
-      type:'WmcPosterSpace/fetchRemote',
+      type:'WmcPoster/fetchRemote',
       payload:{
         current:current,
         pageSize:10,
@@ -79,7 +89,7 @@ class WmcPosterSpacePage extends React.Component{
         },{
           name:'管理'
         },{
-          name:'广告版位'
+          name:'广告'
         }
       ]
     };
@@ -90,7 +100,7 @@ class WmcPosterSpacePage extends React.Component{
     this.fetch(1);
   }
 }
-function mapStateToProps({ common,WmcPosterSpace }) {
-  return {common,WmcPosterSpace};
+function mapStateToProps({ common,WmcPoster }) {
+  return {common,WmcPoster};
 }
-export default connect(mapStateToProps)(WmcPosterSpacePage);
+export default connect(mapStateToProps)(WmcPosterPage);

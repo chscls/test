@@ -1,13 +1,13 @@
-import { getPosterSpacePage } from '../../services/WmcManageSvc'
+import { getPosterPage } from '../../services/WmcManageSvc'
 export default {
-  namespace: 'WmcPosterSpace',
+  namespace: 'WmcPoster',
   state: {
     list:{
       data:[],
       loading:true,
     },
     pagination:{
-      current:1,
+     current:1,
       pageSize:10,
       total:null
     }
@@ -16,7 +16,7 @@ export default {
     fetchList(state, action) {
       return { ...state, ...action.payload };
     },
-    changePage(state, action) {
+     changePage(state, action) {
       return { ...state, ...action.payload };
     },
   },
@@ -24,11 +24,12 @@ export default {
     *fetchRemote({ payload }, { call, put }) {
        
       let {current,pageSize} = payload;
-      let { data } = yield getPosterSpacePage({
+      let { data } = yield getPosterPage({
         pageNo: current,
         pageSize:pageSize,
       });
       if (data) {
+       
         yield put({
           type: 'fetchList',
           payload: {
