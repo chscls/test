@@ -17,12 +17,12 @@ class Activity2 extends React.Component {
         } )
 
     }
-    getRandOrgList = (count) => {
-
-        this.props.dispatch({
+    getRandOrgList = () => {
+    
+      this.props.dispatch({
             type: 'RandOrg/getRandOrgList',
             payload: {
-                count: count
+                count: 23
             }
 
         });
@@ -217,7 +217,7 @@ class Activity2 extends React.Component {
 
                             </ul>
                             <div data-spm="fpBrandFresh">
-                                <a onClick={this.getRandOrgList} className="refresh-btn" data-spm-click="gostr=/tmallfp;locaid=d99;">
+                                <a onClick={this.getRandOrgList.bind(this)} className="refresh-btn" data-spm-click="gostr=/tmallfp;locaid=d99;">
                                     <i className="rotate-icon fp-iconfont"></i>
                                     <span className="btn-text">换一批</span>
                                 </a>

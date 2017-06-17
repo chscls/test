@@ -5,7 +5,9 @@ export default {
     orgList:[]
   },
   reducers: {
-    getRandOrgListSuc(state, action) {
+    
+    suc(state, action) {
+     
       return { ...state, ...action.payload };
     },
   },
@@ -18,8 +20,9 @@ export default {
       });
       if (data) {
         if (data.errorCode == "suc") {
+          
           yield put({
-            type: 'getRandOrgListSuc',
+            type: 'suc',
             payload: {
               orgList: data.body
             }
