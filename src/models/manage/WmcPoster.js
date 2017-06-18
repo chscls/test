@@ -22,7 +22,10 @@ export default {
   },
   effects: {
     *fetchRemote({ payload }, { call, put }) {
-       
+       if(payload.token==null){
+          payload.auth()
+          return
+       }
       let {current,pageSize,token} = payload;
       let { data } = yield getPosterPage({
         pageNo: current,

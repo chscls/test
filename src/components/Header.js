@@ -8,6 +8,7 @@ import NormalLoginForm from '../components/NormalLoginForm'
 import RegistrationForm from '../components/RegistrationForm'
 import { getLocalStorage, setLocalStorage } from '../utils/helper';
 import { connect } from 'dva'
+import { browserHistory } from 'react-router'
 class Header extends React.Component {
      constructor(props){
             super(props)
@@ -23,7 +24,7 @@ class Header extends React.Component {
 
         });
      }
-    closeModal =(data) =>{
+    closeModal =() =>{
         this.props.dispatch({
             type: 'LoginUser/closeModal',
             payload: {
@@ -31,7 +32,7 @@ class Header extends React.Component {
             }
 
         });
-     
+       
   }
     showRegModal = () => {
       
@@ -63,8 +64,8 @@ class Header extends React.Component {
     });*/
   }
   logout = () =>{
-        /*localStorage.removeItem('user');
-        this.setState({user:null});*/
+        localStorage.removeItem('user');
+        this.setState({user:null});
 
   }
  

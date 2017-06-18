@@ -22,7 +22,10 @@ export default {
   },
   effects: {
     *fetchRemote({ payload }, { call, put }) {
-       
+       if(payload.token==null){
+          payload.auth()
+          return
+       }
       let {current,pageSize,token} = payload;
       let { data } = yield getPosterSpacePage({
         pageNo: current,
@@ -31,6 +34,7 @@ export default {
          v:Date.parse(new Date())
       });
       if (data) {
+         if(data.errorCode=="suc"){
         yield put({
           type: 'fetchList',
           payload: {
@@ -45,6 +49,9 @@ export default {
             }
           }
         });
+         }else if(data.errorCode=="auth"){
+          payload.auth()
+         }
       }
     },
   },

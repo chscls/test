@@ -84,13 +84,14 @@ class WmcPosterPage extends React.Component{
         current:current,
         pageSize:10,
         loading:false,
-        token:this.props.LoginUser.user.token,
+        token:this.props.LoginUser.user!=null?this.props.LoginUser.user.token:null,
         auth: function(){
               this.props.dispatch({
             type: 'LoginUser/showModal',
             payload: {
                 visible: true,
                 reg:false,
+                path:"/Member/WmcPosterPage"
             }
 
             });
