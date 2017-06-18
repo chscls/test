@@ -27,6 +27,7 @@ export default {
       let { data } = yield getPosterSpacePage({
         pageNo: current,
         pageSize:pageSize,
+         v:Date.parse(new Date())
       });
       if (data) {
         yield put({
