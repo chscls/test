@@ -68,6 +68,7 @@ class WmcPosterSpacePage extends React.Component{
         current:current,
         pageSize:10,
         loading:false,
+        token:this.props.LoginUser.user.token
       }
     });
   }
@@ -91,7 +92,7 @@ class WmcPosterSpacePage extends React.Component{
     this.fetch(1);
   }
 }
-function mapStateToProps({ common,WmcPosterSpace }) {
-  return {common,WmcPosterSpace};
+function mapStateToProps({ common,WmcPosterSpace,LoginUser}) {
+  return {common,WmcPosterSpace,LoginUser};
 }
 export default connect(mapStateToProps)(WmcPosterSpacePage);

@@ -23,10 +23,11 @@ export default {
   effects: {
     *fetchRemote({ payload }, { call, put }) {
        
-      let {current,pageSize} = payload;
+      let {current,pageSize,token} = payload;
       let { data } = yield getPosterSpacePage({
         pageNo: current,
         pageSize:pageSize,
+        token:token,
          v:Date.parse(new Date())
       });
       if (data) {

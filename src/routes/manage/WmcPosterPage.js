@@ -74,6 +74,7 @@ class WmcPosterPage extends React.Component{
     });
     this.fetch(pagination.current)
   }
+ 
   fetch(current){
     // 更新列表
     
@@ -83,7 +84,17 @@ class WmcPosterPage extends React.Component{
         current:current,
         pageSize:10,
         loading:false,
-        token:this.props.LoginUser.user.token
+        token:this.props.LoginUser.user.token,
+        auth: function(){
+              this.props.dispatch({
+            type: 'LoginUser/showModal',
+            payload: {
+                visible: true,
+                reg:false,
+            }
+
+            });
+        }.bind(this)
       }
     });
   }
