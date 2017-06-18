@@ -67,6 +67,7 @@ class Header extends React.Component {
         localStorage.removeItem('user');
         this.setState({user:null});
 
+   
   }
  
     render() {
