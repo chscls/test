@@ -41,6 +41,7 @@ class WmcPosterSpacePage extends React.Component{
         pagination={pagination}
         onChange={this.handleTableChange.bind(this)}
         loading={loading}
+        rowKey="id"
       />
     )
   }

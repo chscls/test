@@ -6,13 +6,25 @@ export default {
     user: null,
     loading: false,
     msg: null,
-    suc: false
+    suc: false,
+    visible:false,
+    reg:false,
+    confirmLoading:false
   },
   reducers: {
     loginSuc(state, action) {
       return { ...state, ...action.payload };
     },
     loginFail(state, action) {
+      return { ...state, ...action.payload };
+    },
+    showModal(state, action) {
+      return { ...state, ...action.payload };
+    },
+    closeModal(state, action) {
+      return { ...state, ...action.payload };
+    },
+    showRegModal(state, action) {
       return { ...state, ...action.payload };
     },
   },

@@ -7,41 +7,45 @@ import styles from '../routes/IndexPage.css';
 import NormalLoginForm from '../components/NormalLoginForm'
 import RegistrationForm from '../components/RegistrationForm'
 import { getLocalStorage, setLocalStorage } from '../utils/helper';
+import { connect } from 'dva'
 class Header extends React.Component {
      constructor(props){
             super(props)
-            const data = getLocalStorage('user'); 
-            if (data) {
-                this.state=({user:data});
+           
+        } 
+     showModal = () => {
+       this.props.dispatch({
+            type: 'LoginUser/showModal',
+            payload: {
+                visible: true,
+                reg:false,
             }
-        }
-      state = {
-             ModalText: 'Content of the modal',
-             visible: false
-        }
-  showModal = () => {
-      
-    this.setState({
-      visible: true,
-     reg:false,
-    });
-  }
-   closeModal =(data) =>{
-       this.setState({
-            visible: false,
-            user:data
-       })
+
+        });
+     }
+    closeModal =(data) =>{
+        this.props.dispatch({
+            type: 'LoginUser/closeModal',
+            payload: {
+                visible: false
+            }
+
+        });
      
   }
     showRegModal = () => {
       
-    this.setState({
-      visible: true,
-      reg:true,
-    });
+        this.props.dispatch({
+            type: 'LoginUser/showModal',
+            payload: {
+                visible: true,
+                reg:true,
+            }
+
+        });
   }
-  handleOk = () => {
-    this.setState({
+ handleOk = () => {
+ /*   this.setState({
       ModalText: 'The modal will be closed after two seconds',
       confirmLoading: true,
     });
@@ -50,22 +54,22 @@ class Header extends React.Component {
         visible: false,
         confirmLoading: false,
       });
-    }, 2000);
+    }, 2000);*/
   }
   handleCancel = () => {
-    console.log('Clicked cancel button');
+   /* console.log('Clicked cancel button');
     this.setState({
       visible: false,
-    });
+    });*/
   }
   logout = () =>{
-        localStorage.removeItem('user');
-        this.setState({user:null});
+        /*localStorage.removeItem('user');
+        this.setState({user:null});*/
 
   }
  
     render() {
-        const { visible, confirmLoading, ModalText,reg } = this.state;
+   
         
   return (
      <div id="site-nav" className={styles.siteNav}>
@@ -80,8 +84,8 @@ class Header extends React.Component {
         <b className="sn-edge"></b>
         <div className="sn-container">
 
-        {this.state.user!=null?<p id="login-info" className="sn-login-info">
-         <em>喵，欢迎{this.state.user.username}来到知用慕课</em>
+        {this.props.LoginUser.user!=null?<p id="login-info" className="sn-login-info">
+         <em>喵，欢迎{this.props.LoginUser.user.username}来到知用慕课</em>
          <a className="sn-login"  onClick={this.logout}>退出</a>
          </p>: 
             <p id="login-info" className="sn-login-info"><em>喵，欢迎来到知用慕课</em>
@@ -93,7 +97,7 @@ class Header extends React.Component {
             <ul className="sn-quick-menu">
                 <li className="sn-mytaobao menu-item j_MyTaobao">
                     <div className="sn-menu">
-                         {this.state.user!=null?
+                         {this.props.LoginUser.user!=null?
                         <Link to="Member/34" className="menu-hd" target="_top" rel="nofollow" tabIndex="0" aria-haspopup="true" aria-expanded="false">个人中心<b></b></Link>
                         :<a onClick={this.showModal} className="menu-hd" target="_top" rel="nofollow" tabIndex="0" aria-haspopup="true" aria-expanded="false">个人中心<b></b></a>}
                         <div className="menu-bd" role="menu" aria-hidden="true" id="menu-20">
@@ -142,15 +146,15 @@ class Header extends React.Component {
 
 
 
-<Modal title={this.state.reg ? "注册" : "登录"} 
-          visible={visible}
+<Modal title={this.props.LoginUser.reg ? "注册" : "登录"} 
+          visible={this.props.LoginUser.visible}
           onOk={this.handleOk}
-          confirmLoading={confirmLoading}
+          confirmLoading={this.props.LoginUser.confirmLoading}
           onCancel={this.handleCancel}
           footer={null}
-          width={this.state.reg ? "500px" : "332px"}
+          width={this.props.LoginUser.reg ? "500px" : "332px"}
         >
-          {this.state.reg ?<RegistrationForm/>:<NormalLoginForm loginSuc={this.closeModal}/>}
+          {this.props.LoginUser.reg ?<RegistrationForm/>:<NormalLoginForm loginSuc={this.closeModal}/>}
         </Modal>
 
      
@@ -164,4 +168,7 @@ class Header extends React.Component {
 Header.propTypes = {
 };
 
-export default Header;
+function mapStateToProps({ LoginUser }) {
+  return { LoginUser};
+}
+export default connect(mapStateToProps)(Header);

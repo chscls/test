@@ -16,6 +16,11 @@ const columns = [
     dataIndex: 'img',
     key: 'img',
     render: text => <img style={{width:'100px'}} src={text}/>,
+  },{
+     title: '栏位名称',
+    dataIndex: 'spaceName',
+    key: 'spaceName',
+
   }, {
     title: '优先级',
     dataIndex: 'priority',
@@ -51,6 +56,7 @@ class WmcPosterPage extends React.Component{
         pagination={pagination}
         onChange={this.handleTableChange.bind(this)}
         loading={loading}
+         rowKey="id"
       />
     )
   }
