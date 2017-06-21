@@ -132,12 +132,19 @@ const r47 = (location, callback) => {
   }, 'WmcPosterPage')
 };
 
+const r48 = (location, callback) => {
+  require.ensure([], require => {
+    callback(null,
+      require('./routes/manage/SiteManage'))
+  }, 'SiteManage')
+};
+
 
 export default function ({ history }) {
   return (
     <Router hjsistory={history}>
       <Route path="/" component={IndexPage}>
-         <Route path="Cart" getComponent={r45} />
+        <Route path="Cart" getComponent={r45} />
         <Route path="Search" getComponent={r36} />
         <Route path="Good" getComponent={r37} />
         <Route path="School" getComponent={r38} >
@@ -159,9 +166,10 @@ export default function ({ history }) {
           <Route path="34" getComponent={r34} />
           <Route path="11" getComponent={r11} />
           <Route path="35" getComponent={r43} />
-          <Route path="WmcPosterSpacePage" getComponent={r46} />
-          <Route path="WmcPosterPage" getComponent={r47} />
-
+          <Route path="SiteManage" getComponent={r48} >
+            <Route path="WmcPosterSpacePage" getComponent={r46} />
+            <Route path="WmcPosterPage" getComponent={r47} />
+          </Route>
         </Route>
       </Route>
 

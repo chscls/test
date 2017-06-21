@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'dva';
 import {Table,Icon} from 'antd';
-
+import { Input,Button} from 'antd';
+const Search = Input.Search;
 const columns = [
   {
     title: 'Id',
@@ -33,6 +34,7 @@ const columns = [
   
 ];
 
+
 const rowSelection = {
   onChange: (selectedRowKeys, selectedRows) => {
     console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
@@ -45,10 +47,52 @@ class WmcPosterPage extends React.Component{
   constructor(props){
     super(props)
   }
+
+  state = {
+    selectedRowKeys: [],  // Check here to configure the default column
+    loading: false,
+  };
+  start = () => {
+    this.setState({ loading: true });
+    // ajax request after empty completing
+    setTimeout(() => {
+      this.setState({
+        selectedRowKeys: [],
+        loading: false,
+      });
+    }, 1000);
+  }
+  onSelectChange = (selectedRowKeys) => {
+    console.log('selectedRowKeys changed: ', selectedRowKeys);
+    this.setState({ selectedRowKeys });
+  }
   render(){
-    let {data,loading} = this.props.WmcPoster.list;
+    let {data} = this.props.WmcPoster.list;
     let pagination = this.props.WmcPoster.pagination;
+      const { loading, selectedRowKeys } = this.state;
+    const rowSelection = {
+      selectedRowKeys,
+      onChange: this.onSelectChange,
+    };
+    const hasSelected = selectedRowKeys.length > 0;
     return (
+
+      <div>
+      <div style={{height:'50px',padding:'5px 5px',width:'100%'}}>
+         <Button
+            type="primary"
+            onClick={this.start}
+            disabled={!hasSelected}
+            loading={loading}
+          >
+            删除
+          </Button>
+           <span style={{ marginLeft: 8 }}>
+            {hasSelected ? `选中 ${selectedRowKeys.length} 个数据` : ''}
+          </span>
+           <Button style={{marginLeft:'5px',float:'right'}} type="primary" icon="search">搜索</Button>
+         <Input style={{width:'200px',float:'right'}} placeholder="名称" />
+        </div>
       <Table
        rowSelection={rowSelection}
         columns={columns}
@@ -58,6 +102,7 @@ class WmcPosterPage extends React.Component{
         loading={loading}
          rowKey="id"
       />
+      </div>
     )
   }
   handleTableChange(pagination, filters, sorter){

@@ -3,11 +3,11 @@ import { connect } from 'dva';
 import { Link } from 'dva/router';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import CustomBreadcrumb from '../components/breadcrumb'
-import Header from '../components/Header'
+
 import Silder from '../components/Silder'
 import { getLocalStorage, setLocalStorage } from '../utils/helper';
 const { SubMenu } = Menu;
-const { LocaleProvider, Content, Footer, Sider } = Layout;
+const { LocaleProvider, Content, Header,Footer, Sider } = Layout;
 import { browserHistory } from 'react-router'
 
 const breadcrumbData = [
@@ -37,17 +37,19 @@ class Member extends Component{
   }
 render(){
 return ( <Layout>
-   
-   
-    <Content style={{ padding: '0 50px' }}>
+    <Header style={{backgroundColor:'#ececec',height:'30px',lineHeight:'30px'}}>
+    <CustomBreadcrumb data={this.props.common.breadcrumb} />  
+      </Header>
+
+    <Content style={{ padding: '0px 50px' }}>
      
-      <Layout style={{ padding: '24px 0', background: '#fff' }}>
+      <Layout style={{ padding: '0px 0', background: '#fff' }}>
         <Sider width={200} style={{ background: '#fff' }}>
            <Silder />
         </Sider>
-        <Content style={{ padding: '0 24px', minHeight: this.getHeight() }}>
-           <CustomBreadcrumb data={this.props.common.breadcrumb} />
-           <div style={{marginTop:'20px'}}> {this.props.children||'内容区域'}</div>
+        <Content style={{ padding: '4px 24px', minHeight: this.getHeight() }}>
+           
+           <div > {this.props.children||'内容区域'}</div>
         </Content>
       </Layout>
     </Content>
