@@ -263,12 +263,16 @@ class WmcPosterForm extends React.Component {
 
 
       <FormItem  {...formItemLayout} label="名称">
-        {getFieldDecorator('title')(
+        {getFieldDecorator('title', {
+          rules: [{ required: true, message: 'Please select your gender!' }],
+        })(
           <Input type="text" />
         )}
       </FormItem>
       <FormItem  {...formItemLayout} label="路径">
-        {getFieldDecorator('url')(
+        {getFieldDecorator('url', {
+          rules: [{ required: true, message: 'Please select your gender!' }],
+        })(
           <Input type="text" />
         )}
       </FormItem>
