@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'dva';
-import {Table,Icon} from 'antd';
-import { Input,Button} from 'antd';
+import { Table, Icon } from 'antd';
+import { Input, Button, Modal,Form } from 'antd';
+const FormItem = Form.Item;
 const Search = Input.Search;
 const columns = [
   {
@@ -12,13 +13,13 @@ const columns = [
     title: '名称',
     dataIndex: 'title',
     key: 'title',
-  },{
+  }, {
     title: '图片',
     dataIndex: 'img',
     key: 'img',
-    render: text => <img style={{width:'100px'}} src={text}/>,
-  },{
-     title: '栏位名称',
+    render: text => <img style={{ width: '100px' }} src={text} />,
+  }, {
+    title: '栏位名称',
     dataIndex: 'spaceName',
     key: 'spaceName',
 
@@ -31,7 +32,7 @@ const columns = [
     dataIndex: 'url',
     key: 'url',
   }
-  
+
 ];
 
 
@@ -43,14 +44,15 @@ const rowSelection = {
     disabled: record.name === 'Disabled User',    // Column configuration not to be checked
   }),
 };
-class WmcPosterPage extends React.Component{
-  constructor(props){
+class WmcPosterPage extends React.Component {
+  constructor(props) {
     super(props)
   }
 
   state = {
     selectedRowKeys: [],  // Check here to configure the default column
     loading: false,
+    visible: false
   };
   start = () => {
     this.setState({ loading: true });
@@ -66,20 +68,41 @@ class WmcPosterPage extends React.Component{
     console.log('selectedRowKeys changed: ', selectedRowKeys);
     this.setState({ selectedRowKeys });
   }
-  render(){
-    let {data} = this.props.WmcPoster.list;
+  add = () => {
+    this.setState({ visible: true });
+  }
+  close = () => {
+    this.setState({ visible: false });
+  }
+  handleOk=() =>{
+    this.setState({
+      ModalText: 'The modal will be closed after two seconds',
+      confirmLoading: true,
+    });
+   
+   
+  }
+  render() {
+    let { data } = this.props.WmcPoster.list;
     let pagination = this.props.WmcPoster.pagination;
-      const { loading, selectedRowKeys } = this.state;
+    const { loading, selectedRowKeys ,visible, confirmLoading} = this.state;
     const rowSelection = {
       selectedRowKeys,
       onChange: this.onSelectChange,
     };
     const hasSelected = selectedRowKeys.length > 0;
+    
     return (
 
       <div>
-      <div style={{height:'50px',padding:'5px 5px',width:'100%'}}>
-         <Button
+        <div style={{ height: '50px', padding: '5px 5px', width: '100%' }}>
+          <Button
+            type="primary"
+            onClick={this.add.bind(this)}
+          >
+            新增
+          </Button>
+          <Button style={{ marginLeft: '5px' }}
             type="primary"
             onClick={this.start}
             disabled={!hasSelected}
@@ -87,84 +110,146 @@ class WmcPosterPage extends React.Component{
           >
             删除
           </Button>
-           <span style={{ marginLeft: 8 }}>
+          <span style={{ marginLeft: 8 }}>
             {hasSelected ? `选中 ${selectedRowKeys.length} 个数据` : ''}
           </span>
-           <Button style={{marginLeft:'5px',float:'right'}} type="primary" icon="search">搜索</Button>
-         <Input style={{width:'200px',float:'right'}} placeholder="名称" />
+          <Button style={{ marginLeft: '5px', float: 'right' }} type="primary" icon="search">搜索</Button>
+          <Input style={{ width: '200px', float: 'right' }} placeholder="名称" />
         </div>
-      <Table
-       rowSelection={rowSelection}
-        columns={columns}
-        dataSource={data}
-        pagination={pagination}
-        onChange={this.handleTableChange.bind(this)}
-        loading={loading}
-         rowKey="id"
-      />
+        <Table
+          rowSelection={rowSelection}
+          columns={columns}
+          dataSource={data}
+          pagination={pagination}
+          onChange={this.handleTableChange.bind(this)}
+          loading={loading}
+          rowKey="id"
+        />
+
+
+
+        <Modal title="新增版位"
+          visible={visible}
+         onOk={this.handleOk}
+          confirmLoading={confirmLoading}
+          onCancel={this.close.bind(this)}
+          width={"500px"}
+        >
+          <WrappedWmcPosterForm />
+        </Modal>
       </div>
     )
   }
-  handleTableChange(pagination, filters, sorter){
+  handleTableChange(pagination, filters, sorter) {
     this.props.dispatch({
-      type:'WmcPoster/changePage',
-      payload:{
-        pagination:{
-          current:pagination.current,
-          pageSize:pagination.pageSize,
+      type: 'WmcPoster/changePage',
+      payload: {
+        pagination: {
+          current: pagination.current,
+          pageSize: pagination.pageSize,
           showQuickJumper: true,
-          loading:true
+          loading: true
         }
       }
     });
     this.fetch(pagination.current)
   }
- 
-  fetch(current){
+
+  fetch(current) {
     // 更新列表
-    
+
     this.props.dispatch({
-      type:'WmcPoster/fetchRemote',
-      payload:{
-        current:current,
-        pageSize:10,
-        loading:false,
-        token:this.props.LoginUser.user!=null?this.props.LoginUser.user.token:null,
-        auth: function(){
-              this.props.dispatch({
+      type: 'WmcPoster/fetchRemote',
+      payload: {
+        current: current,
+        pageSize: 10,
+        loading: false,
+        token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
+        auth: function () {
+          this.props.dispatch({
             type: 'LoginUser/showModal',
             payload: {
-                visible: true,
-                reg:false,
-                path:"/Member/WmcPosterPage"
+              visible: true,
+              reg: false,
+              path: "/Member/WmcPosterPage"
             }
 
-            });
+          });
         }.bind(this)
       }
     });
   }
-  componentDidMount(){
+  componentDidMount() {
     const breadcrumbData = {
-      breadcrumb:[
+      breadcrumb: [
         {
-          name:'首页',
-          path:'/'
-        },{
-          name:'管理'
-        },{
-          name:'广告'
+          name: '首页',
+          path: '/'
+        }, {
+          name: '管理'
+        }, {
+          name: '广告'
         }
       ]
     };
     this.props.dispatch({
-      type:'common/changeBreadcrumb',
-      payload:breadcrumbData
+      type: 'common/changeBreadcrumb',
+      payload: breadcrumbData
     });
     this.fetch(1);
   }
 }
-function mapStateToProps({ common,WmcPoster,LoginUser}) {
-  return {common,WmcPoster,LoginUser};
+function mapStateToProps({ common, WmcPoster, LoginUser }) {
+  return { common, WmcPoster, LoginUser };
 }
 export default connect(mapStateToProps)(WmcPosterPage);
+
+
+
+class WmcPosterForm extends React.Component {
+
+
+render(){
+   const { getFieldDecorator } = this.props.form;
+const formItemLayout = {
+  labelCol: {
+    xs: { span: 24 },
+    sm: { span: 4 },
+  },
+  wrapperCol: {
+    xs: { span: 24 },
+    sm: { span: 20 },
+  },
+};
+const config = {
+  rules: [{ type: 'object', required: true, message: 'Please select time!' }],
+};
+const rangeConfig = {
+  rules: [{ type: 'array', required: true, message: 'Please select time!' }],
+};
+  return (<Form >
+
+    
+
+        <FormItem  {...formItemLayout} label="名称">
+          {getFieldDecorator('name')(
+            <Input  type="text" />
+          )}
+        </FormItem>
+         <FormItem  {...formItemLayout} label="关键字">
+          {getFieldDecorator('keyword')(
+            <Input  type="text" />
+          )}
+        </FormItem>
+
+     
+     
+  </Form>)
+}
+
+}
+function mapStateToProps2({ WmcPoster }) {
+  return { WmcPoster };
+}
+const WrappedWmcPosterForm = Form.create()(WmcPosterForm)
+connect(mapStateToProps2)(WrappedWmcPosterForm)

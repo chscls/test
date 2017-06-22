@@ -77,7 +77,12 @@ class WmcPosterSpacePage extends React.Component{
 
  <div>
       <div style={{height:'50px',padding:'5px 5px',width:'100%'}}>
-         <Button
+          <Button
+            type="primary"
+          >
+            新增
+          </Button>
+         <Button style={{marginLeft:'5px'}}
             type="primary"
             onClick={this.start}
             disabled={!hasSelected}
