@@ -11,11 +11,11 @@ export default {
   },
   effects: {
     *updateSite({ payload }, { call, put }) {
-payload.v=Date.parse(new Date());
-var x =payload.back;
-payload.back=null;
+      
+      console.log(payload.values);
+    //values.v=Date.parse(new Date());
         let { data } = yield updateSite(
-       payload);
+       payload.values);
       if (data) {
         yield put({
           type: 'suc',
@@ -24,7 +24,7 @@ payload.back=null;
            
           }
         });
-       x();
+       payload.back();
       }
     },
 

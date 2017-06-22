@@ -21,11 +21,12 @@ class WmcSiteView extends React.Component {
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 this.setState({ loading: true });
+                values.id=this.props.WmcSite.site.id;
+                
                 this.props.dispatch({
                     type: 'WmcSite/updateSite',
                     payload: {
-                        name: this.props.form.getFieldValue("name"),
-                        id: this.props.WmcSite.site.id,
+                        values:values, 
                         back:()=>{
                             message.info('保存成功');
                             this.setState({isEdit:false,loading: false })
