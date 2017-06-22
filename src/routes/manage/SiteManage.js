@@ -11,7 +11,7 @@ class SiteManage extends React.Component{
     
 }
  state = {
-    current: 'mail',
+    current: 'mail1',
   }
   handleClick = (e) => {
     console.log('click ', e);
@@ -33,19 +33,20 @@ class SiteManage extends React.Component{
         selectedKeys={[this.state.current]}
         mode="horizontal"
       >
+       <Menu.Item key="mail1">
+          <Link to="Member/SiteManage/WmcSiteView">站点管理</Link>
+        </Menu.Item>
         <Menu.Item key="mail">
           <Link to="Member/SiteManage/WmcPosterSpacePage">版位管理</Link>
         </Menu.Item>
         <Menu.Item key="sub22"><Link to="Member/SiteManage/WmcPosterPage">广告管理</Link></Menu.Item>
-         <SubMenu title={<span><Icon type="setting" />3级菜单 - Submenu</span>}>
-          <MenuItemGroup title="Item 1">
-            <Menu.Item key="setting:1">4级菜单1</Menu.Item>
-            <Menu.Item key="setting:2">4级菜单2</Menu.Item>
+         <SubMenu title={<span>版面管理</span>}>
+          <MenuItemGroup title="首页版面">
+            <Menu.Item key="setting:1">顶层目录组</Menu.Item>
+            <Menu.Item key="setting:2">目录主题</Menu.Item>
+            <Menu.Item key="setting:3">楼层</Menu.Item>
           </MenuItemGroup>
-          <MenuItemGroup title="Item 2">
-            <Menu.Item key="setting:3">4级菜单3</Menu.Item>
-            <Menu.Item key="setting:4">4级菜单4</Menu.Item>
-          </MenuItemGroup>
+         
         </SubMenu>
       </Menu>
       {this.props.children|| ""}

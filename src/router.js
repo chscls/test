@@ -138,6 +138,12 @@ const r48 = (location, callback) => {
       require('./routes/manage/SiteManage'))
   }, 'SiteManage')
 };
+const r49 = (location, callback) => {
+  require.ensure([], require => {
+    callback(null,
+      require('./routes/manage/siteManage/WmcSiteView'))
+  }, 'WmcSiteView')
+};
 
 
 export default function ({ history }) {
@@ -167,6 +173,7 @@ export default function ({ history }) {
           <Route path="11" getComponent={r11} />
           <Route path="35" getComponent={r43} />
           <Route path="SiteManage" getComponent={r48} >
+             <Route path="WmcSiteView" getComponent={r49} />
             <Route path="WmcPosterSpacePage" getComponent={r46} />
             <Route path="WmcPosterPage" getComponent={r47} />
           </Route>

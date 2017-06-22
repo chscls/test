@@ -14,6 +14,7 @@ app.model(require("./models/CatalogGroup"));
 app.model(require("./models/Live"));
 app.model(require("./models/manage/WmcPosterSpace"));
 app.model(require("./models/manage/WmcPoster"));
+app.model(require("./models/manage/WmcSite"));
 // 2. Plugins
 //app.use({});
 

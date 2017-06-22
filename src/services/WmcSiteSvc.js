@@ -9,3 +9,6 @@ export async function getRandOrgList(param) {
 export async function getCatalogGroupList(param) {
  return GET(x+'getCatalogGroupList',param);
 }
+export async function getSite(param) {
+ return GET(x+'getSite',param);
+}

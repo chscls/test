@@ -35,12 +35,12 @@ const Sider = React.createClass({
         <Menu.Item key="4"><Link to="Member/11">我的订单</Link></Menu.Item>
         <Menu.Item key="5"><Link to="Member/35">设置</Link></Menu.Item>
         <SubMenu key="sub2" title={<span>管理</span>}>
-          <Menu.Item key="sub21"><Link to="Member/SiteManage/WmcPosterSpacePage">站点管理</Link></Menu.Item>
+          <Menu.Item key="sub21"><Link to="Member/SiteManage/WmcSiteView">站点管理</Link></Menu.Item>
         <Menu.Item key="sub22"><Link to="Member/SiteManage/WmcPosterSpacePage">课程管理</Link></Menu.Item>
         <Menu.Item key="sub23"><Link to="Member/SiteManage/WmcPosterSpacePage">订单管理</Link></Menu.Item>
        <Menu.Item key="sub24"><Link to="Member/SiteManage/WmcPosterSpacePage">学校管理</Link></Menu.Item>
         <Menu.Item key="sub25"><Link to="Member/SiteManage/WmcPosterSpacePage">会员管理</Link></Menu.Item>
-      
+      <Menu.Item key="sub26"><Link to="Member/SiteManage/WmcPosterSpacePage">直播管理</Link></Menu.Item>
         </SubMenu>
       </Menu>
 
