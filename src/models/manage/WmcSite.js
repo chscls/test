@@ -1,4 +1,4 @@
-import { getSite } from '../../services/WmcSiteSvc'
+import { getSite,updateSite } from '../../services/WmcSiteSvc'
 export default {
   namespace: 'WmcSite',
   state: {
@@ -10,6 +10,24 @@ export default {
     }
   },
   effects: {
+    *updateSite({ payload }, { call, put }) {
+payload.v=Date.parse(new Date());
+var x =payload.back;
+payload.back=null;
+        let { data } = yield updateSite(
+       payload);
+      if (data) {
+        yield put({
+          type: 'suc',
+          payload: {
+            site:data.body
+           
+          }
+        });
+       x();
+      }
+    },
+
     *getSite({ payload }, { call, put }) {
      
      

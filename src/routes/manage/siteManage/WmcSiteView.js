@@ -1,19 +1,46 @@
 import React from 'react';
 import { connect } from 'dva';
 import { Link } from 'dva/router'
-import { Form, Row, Col, Input, Button } from 'antd';
+import { Form, Row, Col, Input, Button, message } from 'antd';
 const FormItem = Form.Item;
 
 class WmcSiteView extends React.Component {
     constructor(props) {
         super(props)
-        this.state = ({ isEdit: false, text: "编辑" })
+        this.state = ({ isEdit: false ,loading:false})
+        
     }
     changeEdit = () => {
-        this.setState({ isEdit: !this.state.isEdit, text: this.state.text == "编辑" ? "锁定" : "编辑" })
+        this.setState({ isEdit: !this.state.isEdit})
 
     }
 
+    handleSubmit = (e) => {
+
+        e.preventDefault();
+        this.props.form.validateFields((err, values) => {
+            if (!err) {
+                this.setState({ loading: true });
+                this.props.dispatch({
+                    type: 'WmcSite/updateSite',
+                    payload: {
+                        name: this.props.form.getFieldValue("name"),
+                        id: this.props.WmcSite.site.id,
+                        back:()=>{
+                            message.info('保存成功');
+                            this.setState({isEdit:false,loading: false })
+                        }
+                        
+                    }
+
+                });
+
+
+            }
+
+        });
+
+    }
     render() {
         const { getFieldDecorator } = this.props.form;
         const formItemLayout = {
@@ -34,25 +61,34 @@ class WmcSiteView extends React.Component {
         };
         return (
             <Form onSubmit={this.handleSubmit} layout="inline">
-                  <Row style={{margin:'5px 0'}}>
-                <Button
-                    type="primary"
-                    onClick={this.changeEdit.bind(this)}
-                >
-                    {this.state.text}
-                </Button>
-                {this.state.isEdit?<Button style={{marginLeft:'5px'}}
-                    type="primary"
-                >
-                    保存
-                </Button>:""}
-                 </Row>
+                <Row style={{ margin: '5px 0' }}>
+                    <Button
+                        type="primary"
+                        onClick={this.changeEdit.bind(this)}
+                    >
+                        {this.state.isEdit ? "锁定" : "编辑" }
+                    </Button>
+                    {this.state.isEdit ? <Button loading={this.state.loading} style={{ marginLeft: '5px' }}
+                        type="primary" onClick={this.handleSubmit.bind(this)}
+                    >
+                        保存
+                </Button> : ""}
+                </Row>
                 <Row>
                     <Col span="12">
-                        <FormItem  {...formItemLayout} label="站点id"><Input disabled={true} type="text" value={this.props.WmcSite.site.id} /></FormItem>
+
+
+                        <FormItem  {...formItemLayout} label="站点id" ><Input disabled={true} type="text" value={this.props.WmcSite.site.id} /></FormItem>
                     </Col>
                     <Col span="12">
-                        <FormItem  {...formItemLayout} label="站点名称"><Input disabled={!this.state.isEdit} type="text" value={this.props.WmcSite.site.name} /></FormItem>
+
+                        <FormItem  {...formItemLayout} label="站点名称">
+                            {getFieldDecorator('name',{ initialValue: this.props.WmcSite.site.name })(
+                                <Input disabled={!this.state.isEdit} type="text"  />
+                            )}
+                        </FormItem>
+
+                        <FormItem   ></FormItem>
                     </Col>
                 </Row>
             </Form>
