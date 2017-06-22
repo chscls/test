@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'dva';
 import { Table, Icon } from 'antd';
-import { Input, Button, Modal,Form } from 'antd';
+import { Input, Button, Modal,Form,Select,Upload, message } from 'antd';
 const FormItem = Form.Item;
 const Search = Input.Search;
+const Option = Select.Option;
 const columns = [
   {
     title: 'Id',
@@ -80,7 +81,7 @@ class WmcPosterPage extends React.Component {
       confirmLoading: true,
     });
    
-   
+
   }
   render() {
     let { data } = this.props.WmcPoster.list;
@@ -129,6 +130,7 @@ class WmcPosterPage extends React.Component {
 
 
         <Modal title="新增版位"
+        maskClosable={false}
           visible={visible}
          onOk={this.handleOk}
           confirmLoading={confirmLoading}
@@ -205,9 +207,36 @@ function mapStateToProps({ common, WmcPoster, LoginUser }) {
 export default connect(mapStateToProps)(WmcPosterPage);
 
 
+function getBase64(img, callback) {
+  const reader = new FileReader();
+  reader.addEventListener('load', () => callback(reader.result));
+  reader.readAsDataURL(img);
+}
 
+function beforeUpload(file) {
+  const isJPG = file.type === 'image/jpeg';
+  if (!isJPG) {
+    message.error('You can only upload JPG file!');
+  }
+  const isLt2M = file.size / 1024 / 1024 < 2;
+  if (!isLt2M) {
+    message.error('Image must smaller than 2MB!');
+  }
+  return isJPG && isLt2M;
+}
 class WmcPosterForm extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state={}
+  }
 
+  
+  handleChange = (info) => {
+    if (info.file.status === 'done') {
+      // Get this url from response in real world.
+      getBase64(info.file.originFileObj, imageUrl => this.setState({ imageUrl }));
+    }
+  }
 
 render(){
    const { getFieldDecorator } = this.props.form;
@@ -227,22 +256,74 @@ const config = {
 const rangeConfig = {
   rules: [{ type: 'array', required: true, message: 'Please select time!' }],
 };
+const imageUrl = this.state.imageUrl;
   return (<Form >
 
     
 
         <FormItem  {...formItemLayout} label="名称">
-          {getFieldDecorator('name')(
+          {getFieldDecorator('title')(
             <Input  type="text" />
           )}
         </FormItem>
-         <FormItem  {...formItemLayout} label="关键字">
-          {getFieldDecorator('keyword')(
+         <FormItem  {...formItemLayout} label="路径">
+          {getFieldDecorator('url')(
+            <Input  type="text" />
+          )}
+        </FormItem>
+       <FormItem  {...formItemLayout} label="优先级">
+          {getFieldDecorator('priority')(
             <Input  type="text" />
           )}
         </FormItem>
 
-     
+          <FormItem
+          label="版位"
+          {...formItemLayout}
+        >
+          {getFieldDecorator('spaceId', {
+            rules: [{ required: true, message: 'Please select your gender!' }],
+          })(
+            <Select
+              placeholder="Select a option and change input text above"
+              onChange={this.handleSelectChange}
+            >
+              <Option value="male">male</Option>
+               <Option value="male2">male</Option>
+                <Option value="male3">male</Option>
+              <Option value="female33">female</Option>  
+              <Option value="female">female</Option>
+               <Option value="female31">female</Option>
+                <Option value="female32">female</Option>
+                 <Option value="female333">female</Option>
+                  <Option value="female3333">female</Option>
+                  <Option value="female3131313">female</Option>
+                   <Option value="female33333">female</Option>
+            </Select>
+          )}
+        </FormItem>
+ <FormItem>
+        <Upload 
+         style={{ margin:'auto',display: 'block',
+  border: '1px dashed #d9d9d9', width: '470px',height:'150px',
+   borderRadius: '6px',
+  cursor: 'pointer'}}
+        name="avatar"
+        showUploadList={false}
+        action="//jsonplaceholder.typicode.com/posts/"
+        beforeUpload={beforeUpload}
+        onChange={this.handleChange}
+      >
+        {
+          imageUrl ?
+            <img src={imageUrl} alt="" className="avatar" /> :
+            <Icon type="plus" style={{ display: 'table-cell',
+  verticalAlign: 'middle', width: '470px',height:'150px',
+  fontSize: '28px',
+  color: '#999'}} />
+        }
+      </Upload>
+      </FormItem>
      
   </Form>)
 }
