@@ -122,13 +122,13 @@ const r45 = (location, callback) => {
 const r46 = (location, callback) => {
   require.ensure([], require => {
     callback(null,
-      require('./routes/manage/WmcPosterSpacePage'))
+      require('./routes/manage/siteManage/WmcPosterSpacePage'))
   }, 'WmcPosterSpacePage')
 };
 const r47 = (location, callback) => {
   require.ensure([], require => {
     callback(null,
-      require('./routes/manage/WmcPosterPage'))
+      require('./routes/manage/siteManage/WmcPosterPage'))
   }, 'WmcPosterPage')
 };
 
