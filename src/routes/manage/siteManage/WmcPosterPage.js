@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
 import { Table, Icon } from 'antd';
-import { Input, Button, Modal,Form,Select,Upload, message } from 'antd';
+import { Input, Button, Modal, Form, Select, Upload, message } from 'antd';
 const FormItem = Form.Item;
 const Search = Input.Search;
 const Option = Select.Option;
@@ -75,24 +75,24 @@ class WmcPosterPage extends React.Component {
   close = () => {
     this.setState({ visible: false });
   }
-  handleOk=() =>{
+  handleOk = () => {
     this.setState({
       ModalText: 'The modal will be closed after two seconds',
       confirmLoading: true,
     });
-   
+
 
   }
   render() {
     let { data } = this.props.WmcPoster.list;
     let pagination = this.props.WmcPoster.pagination;
-    const { loading, selectedRowKeys ,visible, confirmLoading} = this.state;
+    const { loading, selectedRowKeys, visible, confirmLoading } = this.state;
     const rowSelection = {
       selectedRowKeys,
       onChange: this.onSelectChange,
     };
     const hasSelected = selectedRowKeys.length > 0;
-    
+
     return (
 
       <div>
@@ -130,9 +130,9 @@ class WmcPosterPage extends React.Component {
 
 
         <Modal title="新增版位"
-        maskClosable={false}
+          maskClosable={false}
           visible={visible}
-         onOk={this.handleOk}
+          onOk={this.handleOk}
           confirmLoading={confirmLoading}
           onCancel={this.close.bind(this)}
           width={"500px"}
@@ -227,10 +227,10 @@ function beforeUpload(file) {
 class WmcPosterForm extends React.Component {
   constructor(props) {
     super(props)
-    this.state={}
+    this.state = {}
   }
 
-  
+
   handleChange = (info) => {
     if (info.file.status === 'done') {
       // Get this url from response in real world.
@@ -238,95 +238,99 @@ class WmcPosterForm extends React.Component {
     }
   }
 
-render(){
-   const { getFieldDecorator } = this.props.form;
-const formItemLayout = {
-  labelCol: {
-    xs: { span: 24 },
-    sm: { span: 4 },
-  },
-  wrapperCol: {
-    xs: { span: 24 },
-    sm: { span: 20 },
-  },
-};
-const config = {
-  rules: [{ type: 'object', required: true, message: 'Please select time!' }],
-};
-const rangeConfig = {
-  rules: [{ type: 'array', required: true, message: 'Please select time!' }],
-};
-const imageUrl = this.state.imageUrl;
-  return (<Form >
+  render() {
+    const { getFieldDecorator } = this.props.form;
+    const formItemLayout = {
+      labelCol: {
+        xs: { span: 24 },
+        sm: { span: 4 },
+      },
+      wrapperCol: {
+        xs: { span: 24 },
+        sm: { span: 20 },
+      },
+    };
+    const config = {
+      rules: [{ type: 'object', required: true, message: 'Please select time!' }],
+    };
+    const rangeConfig = {
+      rules: [{ type: 'array', required: true, message: 'Please select time!' }],
+    };
+    const imageUrl = this.state.imageUrl;
+    return (<Form >
 
-    
 
-        <FormItem  {...formItemLayout} label="名称">
-          {getFieldDecorator('title')(
-            <Input  type="text" />
-          )}
-        </FormItem>
-         <FormItem  {...formItemLayout} label="路径">
-          {getFieldDecorator('url')(
-            <Input  type="text" />
-          )}
-        </FormItem>
-       <FormItem  {...formItemLayout} label="优先级">
-          {getFieldDecorator('priority')(
-            <Input  type="text" />
-          )}
-        </FormItem>
 
-          <FormItem
-          label="版位"
-          {...formItemLayout}
-        >
-          {getFieldDecorator('spaceId', {
-            rules: [{ required: true, message: 'Please select your gender!' }],
-          })(
-            <Select
-              placeholder="Select a option and change input text above"
-              onChange={this.handleSelectChange}
-            >
-              <Option value="male">male</Option>
-               <Option value="male2">male</Option>
-                <Option value="male3">male</Option>
-              <Option value="female33">female</Option>  
-              <Option value="female">female</Option>
-               <Option value="female31">female</Option>
-                <Option value="female32">female</Option>
-                 <Option value="female333">female</Option>
-                  <Option value="female3333">female</Option>
-                  <Option value="female3131313">female</Option>
-                   <Option value="female33333">female</Option>
-            </Select>
-          )}
-        </FormItem>
- <FormItem>
-        <Upload 
-         style={{ margin:'auto',display: 'block',
-  border: '1px dashed #d9d9d9', width: '470px',height:'150px',
-   borderRadius: '6px',
-  cursor: 'pointer'}}
-        name="avatar"
-        showUploadList={false}
-        action="//jsonplaceholder.typicode.com/posts/"
-        beforeUpload={beforeUpload}
-        onChange={this.handleChange}
-      >
-        {
-          imageUrl ?
-            <img src={imageUrl} alt="" className="avatar" /> :
-            <Icon type="plus" style={{ display: 'table-cell',
-  verticalAlign: 'middle', width: '470px',height:'150px',
-  fontSize: '28px',
-  color: '#999'}} />
-        }
-      </Upload>
+      <FormItem  {...formItemLayout} label="名称">
+        {getFieldDecorator('title')(
+          <Input type="text" />
+        )}
       </FormItem>
-     
-  </Form>)
-}
+      <FormItem  {...formItemLayout} label="路径">
+        {getFieldDecorator('url')(
+          <Input type="text" />
+        )}
+      </FormItem>
+      <FormItem  {...formItemLayout} label="优先级">
+        {getFieldDecorator('priority')(
+          <Input type="text" />
+        )}
+      </FormItem>
+
+      <FormItem
+        label="版位"
+        {...formItemLayout}
+      >
+        {getFieldDecorator('spaceId', {
+          rules: [{ required: true, message: 'Please select your gender!' }],
+        })(
+          <Select
+            placeholder="Select a option and change input text above"
+            onChange={this.handleSelectChange}
+          >
+            <Option value="male">male</Option>
+            <Option value="male2">male</Option>
+            <Option value="male3">male</Option>
+            <Option value="female33">female</Option>
+            <Option value="female">female</Option>
+            <Option value="female31">female</Option>
+            <Option value="female32">female</Option>
+            <Option value="female333">female</Option>
+            <Option value="female3333">female</Option>
+            <Option value="female3131313">female</Option>
+            <Option value="female33333">female</Option>
+          </Select>
+          )}
+      </FormItem>
+      <FormItem>
+        <Upload
+          style={{
+            margin: 'auto', display: 'block',
+            border: '1px dashed #d9d9d9', width: '470px', height: '150px',
+            borderRadius: '6px',
+            cursor: 'pointer'
+          }}
+          name="avatar"
+          showUploadList={false}
+          action="//jsonplaceholder.typicode.com/posts/"
+          beforeUpload={beforeUpload}
+          onChange={this.handleChange}
+        >
+          {
+            imageUrl ?
+              <img src={imageUrl} alt="" className="avatar" /> :
+              <Icon type="plus" style={{
+                display: 'table-cell',
+                verticalAlign: 'middle', width: '470px', height: '150px',
+                fontSize: '28px',
+                color: '#999'
+              }} />
+          }
+        </Upload>
+      </FormItem>
+
+    </Form>)
+  }
 
 }
 function mapStateToProps2({ WmcPoster }) {
