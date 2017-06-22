@@ -11,9 +11,8 @@ export default {
   },
   effects: {
     *updateSite({ payload }, { call, put }) {
-      
-      console.log(payload.values);
-    //values.v=Date.parse(new Date());
+     
+    payload.values.v=Date.parse(new Date());
         let { data } = yield updateSite(
        payload.values);
       if (data) {
