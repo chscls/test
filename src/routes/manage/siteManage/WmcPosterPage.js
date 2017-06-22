@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'dva';
 import { Table, Icon } from 'antd';
-import { Input, Button, Modal, Form, Select, Upload, message } from 'antd';
+import { Input, Button, Slider,Modal, Form, Select, Upload, message } from 'antd';
+import {rapHost} from '../../../config/config'
 const FormItem = Form.Item;
 const Search = Input.Search;
 const Option = Select.Option;
@@ -273,7 +274,8 @@ class WmcPosterForm extends React.Component {
       </FormItem>
       <FormItem  {...formItemLayout} label="优先级">
         {getFieldDecorator('priority')(
-          <Input type="text" />
+          <Slider min={1} max={100}  />
+          
         )}
       </FormItem>
 
@@ -310,9 +312,9 @@ class WmcPosterForm extends React.Component {
             borderRadius: '6px',
             cursor: 'pointer'
           }}
-          name="avatar"
+          name="file"
           showUploadList={false}
-          action="//jsonplaceholder.typicode.com/posts/"
+          action={rapHost+"/WmcSiteSvc/upload"}
           beforeUpload={beforeUpload}
           onChange={this.handleChange}
         >
