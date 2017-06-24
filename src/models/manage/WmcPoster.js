@@ -2,6 +2,7 @@ import { getPosterPage } from '../../services/WmcManageSvc'
 export default {
   namespace: 'WmcPoster',
   state: {
+    submit:false,
     list:{
       data:[],
       loading:true,
@@ -18,7 +19,7 @@ export default {
     },
      changePage(state, action) {
       return { ...state, ...action.payload };
-    },
+    }
   },
   effects: {
     *fetchRemote({ payload }, { call, put }) {
