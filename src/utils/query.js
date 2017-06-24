@@ -2,7 +2,7 @@ import request from '../utils/request';
 import qs ,{ parse } from 'qs';
 import FormdataWrapper from 'object-to-formdata';
 import merge from 'merge-object';
-import {rapHost, onlinePath,rapFlag} from '../config/config'
+import {rapHost, onlinePath,rapFlag, onlineImagePath,rapImagePath} from '../config/config'
 import fetch from 'dva/fetch';
 const cookieTrue = {
   credentials: 'include'
@@ -16,6 +16,13 @@ const jsonConf = {
 function getUrl(smarturl,flag) {
   if(flag){
     return rapHost + '/' + smarturl;
+  }else{
+    return onlinePath + smarturl;
+  }
+}
+function getImgUrl(smarturl) {
+  if(rapFlag){
+    return rapImagePath  + smarturl;
   }else{
     return onlinePath + smarturl;
   }
@@ -38,5 +45,5 @@ async function GET(url,params){
 
 
 export {
-  POST,GET
+  POST,GET,getImgUrl
 }
