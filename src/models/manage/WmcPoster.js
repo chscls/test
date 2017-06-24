@@ -1,61 +1,86 @@
-import { getPosterPage } from '../../services/WmcManageSvc'
+import { getPosterPage,savePoster } from '../../services/WmcManageSvc'
 export default {
   namespace: 'WmcPoster',
   state: {
-    submit:false,
-    list:{
-      data:[],
-      loading:true,
+    submit: false,
+    list: {
+      data: [],
+      loading: true,
     },
-    pagination:{
-     current:1,
-      pageSize:10,
-      total:null
+    pagination: {
+      current: 1,
+      pageSize: 10,
+      total: null
     }
   },
   reducers: {
     fetchList(state, action) {
       return { ...state, ...action.payload };
     },
-     changePage(state, action) {
+    changePage(state, action) {
       return { ...state, ...action.payload };
-    }
+    },
+   /* suc(state,action){
+       return { ...state, ...action.payload };
+    }*/
   },
   effects: {
     *fetchRemote({ payload }, { call, put }) {
-       if(payload.token==null){
-          payload.auth()
-          return
-       }
-      let {current,pageSize,token} = payload;
+      if (payload.token == null) {
+        payload.auth()
+        return
+      }
+      let { current, pageSize, token } = payload;
       let { data } = yield getPosterPage({
         pageNo: current,
-        pageSize:pageSize,
-        token:token,
-         v:Date.parse(new Date())
+        pageSize: pageSize,
+        token: token,
+        v: Date.parse(new Date())
       });
       if (data) {
-        if(data.errorCode=="suc"){
-        yield put({
-          type: 'fetchList',
-          payload: {
-            list: {
-              data:data.body.list,
-              loading:false
-            },
-            pagination: {
-                current:data.body.pageNo,
-                pageSize:data.body.pageSize,
-                total:data.body.totalCount
+        if (data.errorCode == "suc") {
+          yield put({
+            type: 'fetchList',
+            payload: {
+              list: {
+                data: data.body.list,
+                loading: false
+              },
+              pagination: {
+                current: data.body.pageNo,
+                pageSize: data.body.pageSize,
+                total: data.body.totalCount
+              }
             }
-          }
-        });
-        }else if(data.errorCode=="auth"){
+          });
+        } else if (data.errorCode == "auth") {
           payload.auth()
 
         }
       }
     },
+    *savePoster({ payload }, { call, put }) {
+      if (payload.token == null) {
+        payload.auth()
+        return
+      }
+      payload.v=Date.parse(new Date());
+    
+      let { data } = yield savePoster( payload.values);
+      if (data) {
+        if (data.errorCode == "suc") {
+         /* yield put({
+            type: 'suc',
+            payload: {
+            }
+          });*/
+          payload.back()
+        } else if (data.errorCode == "auth") {
+          payload.auth()
+
+        }
+      }
+    }
   },
   subscriptions: {},
 }

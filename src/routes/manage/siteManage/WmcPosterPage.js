@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'dva';
 import { Table, Icon } from 'antd';
-import { Input, Button, Slider,Modal, Form, Select, Upload, message } from 'antd';
-import {getImgUrl}from '../../../utils/query';
-import {rapHost} from '../../../config/config';
+import { Input, Button, Slider, Modal, Form, Select, Upload, message } from 'antd';
+import { getImgUrl } from '../../../utils/query';
+import { rapHost } from '../../../config/config';
 
 const FormItem = Form.Item;
 const Search = Input.Search;
@@ -79,16 +79,42 @@ class WmcPosterPage extends React.Component {
     this.setState({ visible: false });
   }
   handleOk = (e) => {
+    var x = this.refs.WmcPosterForm.refs.wrappedComponent.refs.formWrappedComponent
+    x.submit(e, (values) => {
+      this.setState({
 
-  this.setState({
-      
-      confirmLoading: true,
+        confirmLoading: true,
+      });
+     
+          this.props.dispatch({
+            type: 'WmcPoster/savePoster',
+            payload: {
+              values: values,
+              token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
+              back: () => {
+                message.info('保存成功');
+                this.setState({ visible: false, confirmLoading: false })
+                 this.fetch(1);
+              },
+              auth: () => {
+                this.props.dispatch({
+                  type: 'LoginUser/showModal',
+                  payload: {
+                    visible: true,
+                    reg: false,
+                    path: "/Member/WmcPosterPage"
+                  }
+
+                });
+              }
+
+            }
+
+          });
+
     });
-    e.preventDefault();
-
-    var x=this.refs.WmcPosterForm.refs.wrappedComponent.refs.formWrappedComponent
-    x.submit22();
   }
+
   render() {
     let { data } = this.props.WmcPoster.list;
     let pagination = this.props.WmcPoster.pagination;
@@ -143,7 +169,7 @@ class WmcPosterPage extends React.Component {
           onCancel={this.close.bind(this)}
           width={"500px"}
         >
-        <WrappedWmcPosterForm ref="WmcPosterForm" />
+          <WrappedWmcPosterForm ref="WmcPosterForm" />
         </Modal>
       </div>
     )
@@ -231,15 +257,22 @@ class WmcPosterForm extends React.Component {
     super(props)
     this.state = {}
   }
-submit22=function(){
-  alert("XXXXXXXXXX");
-}
+  submit = (e, callback) => {
+
+    e.preventDefault();
+    this.props.form.validateFields((err, values) => {
+      if (!err) {
+        values.img = this.state.imageUrl;
+        callback(values);
+      }
+    });
+  }
 
   handleChange = (info) => {
     if (info.file.status === 'done') {
       // Get this url from response in real world.
-     this.setState({ imageUrl:info.file.response.body })
-     // getBase64(info.file.originFileObj, imageUrl => this.setState({ imageUrl }));
+      this.setState({ imageUrl: info.file.response.body })
+      // getBase64(info.file.originFileObj, imageUrl => this.setState({ imageUrl }));
     }
   }
 
@@ -271,19 +304,19 @@ submit22=function(){
           rules: [{ required: true, message: 'Please select your gender!' }],
         })(
           <Input type="text" />
-        )}
+          )}
       </FormItem>
       <FormItem  {...formItemLayout} label="路径">
         {getFieldDecorator('url', {
           rules: [{ required: true, message: 'Please select your gender!' }],
         })(
           <Input type="text" />
-        )}
+          )}
       </FormItem>
       <FormItem  {...formItemLayout} label="优先级">
         {getFieldDecorator('priority')(
-          <Slider min={1} max={100}  />
-          
+          <Slider min={1} max={100} />
+
         )}
       </FormItem>
 
@@ -298,17 +331,11 @@ submit22=function(){
             placeholder="Select a option and change input text above"
             onChange={this.handleSelectChange}
           >
-            <Option value="male">male</Option>
-            <Option value="male2">male</Option>
-            <Option value="male3">male</Option>
-            <Option value="female33">female</Option>
-            <Option value="female">female</Option>
-            <Option value="female31">female</Option>
-            <Option value="female32">female</Option>
-            <Option value="female333">female</Option>
-            <Option value="female3333">female</Option>
-            <Option value="female3131313">female</Option>
-            <Option value="female33333">female</Option>
+            <Option value="1">male1</Option>
+            <Option value="2">male2</Option>
+            <Option value="3">male3</Option>
+            <Option value="4">female4</Option>
+
           </Select>
           )}
       </FormItem>
@@ -322,13 +349,13 @@ submit22=function(){
           }}
           name="file"
           showUploadList={false}
-          action={rapHost+"/WmcSiteSvc/upload"}
+          action={rapHost + "/WmcSiteSvc/upload"}
           beforeUpload={beforeUpload}
           onChange={this.handleChange}
         >
           {
             imageUrl ?
-              <img style={{width:'470px',height:'150px'}} src={getImgUrl(imageUrl)} alt="" className="avatar" /> :
+              <img style={{ width: '470px', height: '150px' }} src={getImgUrl(imageUrl)} alt="" className="avatar" /> :
               <Icon type="plus" style={{
                 display: 'table-cell',
                 verticalAlign: 'middle', width: '470px', height: '150px',
