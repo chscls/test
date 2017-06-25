@@ -379,7 +379,7 @@ class WmcPosterForm extends React.Component {
         label="版位"
         {...formItemLayout}
       >
-        {getFieldDecorator('spaceId', {
+        {getFieldDecorator('spaceId',{ initialValue: this.props.poster!=null?this.props.poster.spaceId:null}, {
           rules: [{ required: true, message: 'Please select your gender!' }],
         })(
           <Select
