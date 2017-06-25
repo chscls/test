@@ -28,6 +28,7 @@ class WmcPosterPage extends React.Component {
     loading: false,
     visible: false,
     poster:null,
+    selectList:[],
     modalTitle:'新增'
   };
   start = () => {
@@ -46,7 +47,33 @@ class WmcPosterPage extends React.Component {
   }
   add = (e,index) => {
    
-    this.setState({ visible: true ,poster:index!=null?this.props.WmcPoster.list.data[index]:null,modalTitle:index!=null?"编辑":"新增"});
+
+
+ this.props.dispatch({
+        type: 'WmcPosterSpace/getPosterSpaceList',
+        payload: {
+          token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
+          back: (list) => {
+             this.setState({ selectList:list,visible: true ,poster:index!=null?this.props.WmcPoster.list.data[index]:null,modalTitle:index!=null?"编辑":"新增"});
+          },
+          auth: () => {
+            this.props.dispatch({
+              type: 'LoginUser/showModal',
+              payload: {
+                visible: true,
+                reg: false,
+                path: "/Member/WmcPosterPage"
+              }
+
+            });
+          }
+
+        }
+
+      });
+
+
+   
   
   }
   close = () => {
@@ -141,7 +168,7 @@ class WmcPosterPage extends React.Component {
 
     let { data } = this.props.WmcPoster.list;
     let pagination = this.props.WmcPoster.pagination;
-    const { modalTitle,poster,loading, selectedRowKeys, visible, confirmLoading } = this.state;
+    const { modalTitle,selectList,poster,loading, selectedRowKeys, visible, confirmLoading } = this.state;
     const rowSelection = {
       selectedRowKeys,
       onChange: this.onSelectChange,
@@ -192,7 +219,7 @@ class WmcPosterPage extends React.Component {
           onCancel={this.close.bind(this)}
           width={"500px"}
         >
-          <WrappedWmcPosterForm ref="WmcPosterForm" poster={poster} />
+          <WrappedWmcPosterForm ref="WmcPosterForm" poster={poster} selectList={selectList}/>
         </Modal>
       </div>
     )
@@ -256,8 +283,8 @@ class WmcPosterPage extends React.Component {
     this.fetch(1);
   }
 }
-function mapStateToProps({ common, WmcPoster, LoginUser }) {
-  return { common, WmcPoster, LoginUser };
+function mapStateToProps({ common, WmcPoster, LoginUser,WmcPosterSpace }) {
+  return { common, WmcPoster, LoginUser,WmcPosterSpace};
 }
 export default connect(mapStateToProps)(WmcPosterPage)
 
@@ -300,6 +327,11 @@ class WmcPosterForm extends React.Component {
   }
 
   render() {
+    var opts = this.props.selectList.map(function (s, index) {
+            return(<Option key={s.id} value={s.id} >{s.name} </Option>)
+    })
+
+    
     const { getFieldDecorator } = this.props.form;
     const formItemLayout = {
       labelCol: {
@@ -354,10 +386,8 @@ class WmcPosterForm extends React.Component {
             placeholder="Select a option and change input text above"
             onChange={this.handleSelectChange}
           >
-            <Option value="1">male1</Option>
-            <Option value="2">male2</Option>
-            <Option value="3">male3</Option>
-            <Option value="4">female4</Option>
+          {opts}
+       
 
           </Select>
           )}

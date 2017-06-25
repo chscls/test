@@ -1,4 +1,4 @@
-import { getPosterSpacePage } from '../../services/WmcManageSvc'
+import { getPosterSpacePage,getPosterSpaceList } from '../../services/WmcManageSvc'
 export default {
   namespace: 'WmcPosterSpace',
   state: {
@@ -54,6 +54,25 @@ export default {
          }
       }
     },
+    *getPosterSpaceList({ payload }, { call, put }) {
+       if(payload.token==null){
+          payload.auth()
+          return
+       }
+      let {token} = payload;
+      let { data } = yield getPosterSpaceList({
+        token:token,
+         v:Date.parse(new Date())
+      });
+      if (data) {
+         if(data.errorCode=="suc"){
+           payload.back(data.body);
+       
+         }else if(data.errorCode=="auth"){
+          payload.auth()
+         }
+      }
+    }
   },
   subscriptions: {},
 }
