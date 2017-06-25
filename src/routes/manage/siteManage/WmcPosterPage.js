@@ -8,36 +8,6 @@ import { rapHost } from '../../../config/config';
 const FormItem = Form.Item;
 const Search = Input.Search;
 const Option = Select.Option;
-const columns = [
-  {
-    title: 'Id',
-    dataIndex: 'id',
-    key: 'id'
-  }, {
-    title: '名称',
-    dataIndex: 'title',
-    key: 'title',
-  }, {
-    title: '图片',
-    dataIndex: 'img',
-    key: 'img',
-    render: text => <img style={{ width: '100px' }} src={text} />,
-  }, {
-    title: '栏位名称',
-    dataIndex: 'spaceName',
-    key: 'spaceName',
-
-  }, {
-    title: '优先级',
-    dataIndex: 'priority',
-    key: 'priority',
-  }, {
-    title: '路径',
-    dataIndex: 'url',
-    key: 'url',
-  }
-
-];
 
 
 const rowSelection = {
@@ -72,11 +42,15 @@ class WmcPosterPage extends React.Component {
     console.log('selectedRowKeys changed: ', selectedRowKeys);
     this.setState({ selectedRowKeys });
   }
-  add = () => {
+  add = (index) => {
     this.setState({ visible: true });
   }
   close = () => {
     this.setState({ visible: false });
+  }
+  handleEdit=(e) => {
+
+    this.add(e.target.dataset.index);
   }
   handleOk = (e) => {
     var x = this.refs.WmcPosterForm.refs.wrappedComponent.refs.formWrappedComponent
@@ -85,37 +59,73 @@ class WmcPosterPage extends React.Component {
 
         confirmLoading: true,
       });
-     
-          this.props.dispatch({
-            type: 'WmcPoster/savePoster',
-            payload: {
-              values: values,
-              token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
-              back: () => {
-                message.info('保存成功');
-                this.setState({ visible: false, confirmLoading: false })
-                 this.fetch(1);
-              },
-              auth: () => {
-                this.props.dispatch({
-                  type: 'LoginUser/showModal',
-                  payload: {
-                    visible: true,
-                    reg: false,
-                    path: "/Member/WmcPosterPage"
-                  }
 
-                });
+      this.props.dispatch({
+        type: 'WmcPoster/savePoster',
+        payload: {
+          values: values,
+          token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
+          back: () => {
+            message.info('保存成功');
+            this.setState({ visible: false, confirmLoading: false })
+            this.fetch(1);
+          },
+          auth: () => {
+            this.props.dispatch({
+              type: 'LoginUser/showModal',
+              payload: {
+                visible: true,
+                reg: false,
+                path: "/Member/WmcPosterPage"
               }
 
-            }
+            });
+          }
 
-          });
+        }
+
+      });
 
     });
   }
 
   render() {
+    const columns = [
+  {
+    title: 'Id',
+    dataIndex: 'id',
+    key: 'id'
+  }, {
+    title: '名称',
+    dataIndex: 'title',
+    key: 'title',
+  }, {
+    title: '图片',
+    dataIndex: 'img',
+    key: 'img',
+    render: text => <img style={{ width: '100px' }} src={getImgUrl(text)} />,
+  }, {
+    title: '栏位名称',
+    dataIndex: 'spaceName',
+    key: 'spaceName',
+
+  }, {
+    title: '优先级',
+    dataIndex: 'priority',
+    key: 'priority',
+  }, {
+    title: '路径',
+    dataIndex: 'url',
+    key: 'url',
+  }, {
+    title: '操作',
+    dataIndex: '',
+    key: 'edit',
+    render: (text,record, index) => <a data-index={index} onClick={this.handleEdit.bind(this)}>编辑</a>
+  },
+
+];
+
     let { data } = this.props.WmcPoster.list;
     let pagination = this.props.WmcPoster.pagination;
     const { loading, selectedRowKeys, visible, confirmLoading } = this.state;
