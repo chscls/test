@@ -27,98 +27,98 @@ class WmcPosterPage extends React.Component {
     selectedRowKeys: [],  // Check here to configure the default column
     loading: false,
     visible: false,
-    poster:null,
-    selectList:[],
-    modalTitle:'新增'
+    poster: null,
+    selectList: [],
+    modalTitle: '新增'
   };
   start = () => {
-   
+
     this.setState({ loading: true });
     // ajax request after empty completing
-     this.props.dispatch({
-        type: 'WmcPoster/deletePoster',
-        payload: {
-          token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
-          ids:this.state.selectedRowKeys,
-          back: (list) => {
-            this.setState({ loading: false ,selectList:[]});
-            this.fetch(1);
-          },
-          auth: () => {
-            this.props.dispatch({
-              type: 'LoginUser/showModal',
-              payload: {
-                visible: true,
-                reg: false,
-                path: "/Member/WmcPosterPage"
-              }
+    this.props.dispatch({
+      type: 'WmcPoster/deletePoster',
+      payload: {
+        token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
+        ids: this.state.selectedRowKeys,
+        back: (list) => {
+          this.setState({ loading: false, selectedRowKeys: [] });
+          this.fetch(1);
+        },
+        auth: () => {
+          this.props.dispatch({
+            type: 'LoginUser/showModal',
+            payload: {
+              visible: true,
+              reg: false,
+              path: "/Member/WmcPosterPage"
+            }
 
-            });
-          }
-
+          });
         }
 
-      });
+      }
+
+    });
   }
   onSelectChange = (selectedRowKeys) => {
     console.log('selectedRowKeys changed: ', selectedRowKeys);
     this.setState({ selectedRowKeys });
   }
-  add = (e,index) => {
-   
+  add = (e, index) => {
 
 
- this.props.dispatch({
-        type: 'WmcPosterSpace/getPosterSpaceList',
-        payload: {
-          token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
-          back: (list) => {
-             this.setState({ selectList:list,visible: true ,poster:index!=null?this.props.WmcPoster.list.data[index]:null,modalTitle:index!=null?"编辑":"新增"});
-          },
-          auth: () => {
-            this.props.dispatch({
-              type: 'LoginUser/showModal',
-              payload: {
-                visible: true,
-                reg: false,
-                path: "/Member/WmcPosterPage"
-              }
 
-            });
-          }
+    this.props.dispatch({
+      type: 'WmcPosterSpace/getPosterSpaceList',
+      payload: {
+        token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
+        back: (list) => {
+          this.setState({ selectList: list, visible: true, poster: index != null ? this.props.WmcPoster.list.data[index] : null, modalTitle: index != null ? "编辑" : "新增" });
+        },
+        auth: () => {
+          this.props.dispatch({
+            type: 'LoginUser/showModal',
+            payload: {
+              visible: true,
+              reg: false,
+              path: "/Member/WmcPosterPage"
+            }
 
+          });
         }
 
-      });
+      }
+
+    });
 
 
-   
-  
+
+
   }
   close = () => {
     this.setState({ visible: false });
   }
-  handleEdit=(e) => {
+  handleEdit = (e) => {
     this.set
-    this.add(e,e.target.dataset.index);
+    this.add(e, e.target.dataset.index);
   }
   handleOk = (e) => {
     var x = this.refs.WmcPosterForm.refs.wrappedComponent.refs.formWrappedComponent
     x.submit(e, (values) => {
-     
- if(values.img==null){
+
+      if (values.img == null) {
         message.info('请选择图片');
         return
       }
-       this.setState({
+      this.setState({
 
         confirmLoading: true,
       });
-       
-      if(this.state.poster.id!=null){
-        values.id=this.state.poster.id
+
+      if (this.state.poster.id != null) {
+        values.id = this.state.poster.id
       }
-      
+
       this.props.dispatch({
         type: 'WmcPoster/saveOrUpdatePoster',
         payload: {
@@ -150,44 +150,44 @@ class WmcPosterPage extends React.Component {
 
   render() {
     const columns = [
-  {
-    title: 'Id',
-    dataIndex: 'id',
-    key: 'id'
-  }, {
-    title: '名称',
-    dataIndex: 'title',
-    key: 'title',
-  }, {
-    title: '图片',
-    dataIndex: 'img',
-    key: 'img',
-    render: text => <img style={{ width: '100px' }} src={getImgUrl(text)} />,
-  }, {
-    title: '栏位名称',
-    dataIndex: 'spaceName',
-    key: 'spaceName',
+      {
+        title: 'Id',
+        dataIndex: 'id',
+        key: 'id'
+      }, {
+        title: '名称',
+        dataIndex: 'title',
+        key: 'title',
+      }, {
+        title: '图片',
+        dataIndex: 'img',
+        key: 'img',
+        render: text => <img style={{ width: '100px' }} src={getImgUrl(text)} />,
+      }, {
+        title: '栏位名称',
+        dataIndex: 'spaceName',
+        key: 'spaceName',
 
-  }, {
-    title: '优先级',
-    dataIndex: 'priority',
-    key: 'priority',
-  }, {
-    title: '路径',
-    dataIndex: 'url',
-    key: 'url',
-  }, {
-    title: '操作',
-    dataIndex: '',
-    key: 'edit',
-    render: (text,record, index) => <a data-index={index} onClick={this.handleEdit.bind(this)}>编辑</a>
-  },
+      }, {
+        title: '优先级',
+        dataIndex: 'priority',
+        key: 'priority',
+      }, {
+        title: '路径',
+        dataIndex: 'url',
+        key: 'url',
+      }, {
+        title: '操作',
+        dataIndex: '',
+        key: 'edit',
+        render: (text, record, index) => <a data-index={index} onClick={this.handleEdit.bind(this)}>编辑</a>
+      },
 
-];
+    ];
 
     let { data } = this.props.WmcPoster.list;
     let pagination = this.props.WmcPoster.pagination;
-    const { modalTitle,selectList,poster,loading, selectedRowKeys, visible, confirmLoading } = this.state;
+    const { modalTitle, selectList, poster, loading, selectedRowKeys, visible, confirmLoading } = this.state;
     const rowSelection = {
       selectedRowKeys,
       onChange: this.onSelectChange,
@@ -238,7 +238,7 @@ class WmcPosterPage extends React.Component {
           onCancel={this.close.bind(this)}
           width={"500px"}
         >
-          <WrappedWmcPosterForm ref="WmcPosterForm" poster={poster} selectList={selectList}/>
+          <WrappedWmcPosterForm ref="WmcPosterForm" poster={poster} selectList={selectList} />
         </Modal>
       </div>
     )
@@ -302,8 +302,8 @@ class WmcPosterPage extends React.Component {
     this.fetch(1);
   }
 }
-function mapStateToProps({ common, WmcPoster, LoginUser,WmcPosterSpace }) {
-  return { common, WmcPoster, LoginUser,WmcPosterSpace};
+function mapStateToProps({ common, WmcPoster, LoginUser, WmcPosterSpace }) {
+  return { common, WmcPoster, LoginUser, WmcPosterSpace };
 }
 export default connect(mapStateToProps)(WmcPosterPage)
 
@@ -324,7 +324,7 @@ function beforeUpload(file) {
 class WmcPosterForm extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {imageUrl:this.props.poster!=null?this.props.poster.img:null}
+    this.state = { imageUrl: this.props.poster != null ? this.props.poster.img : null }
   }
   submit = (e, callback) => {
 
@@ -347,10 +347,10 @@ class WmcPosterForm extends React.Component {
 
   render() {
     var opts = this.props.selectList.map(function (s, index) {
-            return(<Option key={s.id} value={s.id} >{s.name} </Option>)
+      return (<Option key={s.id} value={s.id} >{s.name} </Option>)
     })
 
-    
+
     const { getFieldDecorator } = this.props.form;
     const formItemLayout = {
       labelCol: {
@@ -374,22 +374,22 @@ class WmcPosterForm extends React.Component {
 
 
       <FormItem  {...formItemLayout} label="名称">
-        {getFieldDecorator('title',{ initialValue: this.props.poster!=null?this.props.poster.title:''}, {
+        {getFieldDecorator('title', { initialValue: this.props.poster != null ? this.props.poster.title : '' }, {
           rules: [{ required: true, message: 'Please select your gender!' }],
         })(
           <Input type="text" />
           )}
       </FormItem>
       <FormItem  {...formItemLayout} label="路径">
-        {getFieldDecorator('url',{ initialValue: this.props.poster!=null?this.props.poster.url:''}, {
+        {getFieldDecorator('url', { initialValue: this.props.poster != null ? this.props.poster.url : '' }, {
           rules: [{ required: true, message: 'Please select your gender!' }],
         })(
           <Input type="text" />
           )}
       </FormItem>
       <FormItem  {...formItemLayout} label="优先级">
-        {getFieldDecorator('priority',{ initialValue: this.props.poster!=null?this.props.poster.priority:1})(
-          <Slider min={1} max={100}   />
+        {getFieldDecorator('priority', { initialValue: this.props.poster != null ? this.props.poster.priority : 1 })(
+          <Slider min={1} max={100} />
 
         )}
       </FormItem>
@@ -398,15 +398,15 @@ class WmcPosterForm extends React.Component {
         label="版位"
         {...formItemLayout}
       >
-        {getFieldDecorator('spaceId',{ initialValue: this.props.poster!=null?this.props.poster.spaceId:null}, {
+        {getFieldDecorator('spaceId', { initialValue: this.props.poster != null ? this.props.poster.spaceId : null }, {
           rules: [{ required: true, message: 'Please select your gender!' }],
         })(
           <Select
             placeholder="Select a option and change input text above"
             onChange={this.handleSelectChange}
           >
-          {opts}
-       
+            {opts}
+
 
           </Select>
           )}
