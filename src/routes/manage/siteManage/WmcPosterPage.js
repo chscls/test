@@ -41,7 +41,7 @@ class WmcPosterPage extends React.Component {
           token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
           ids:this.state.selectedRowKeys,
           back: (list) => {
-            this.setState({ loading: false });
+            this.setState({ loading: false ,selectList:[]});
             this.fetch(1);
           },
           auth: () => {
