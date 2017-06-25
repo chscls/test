@@ -59,13 +59,22 @@ class WmcPosterPage extends React.Component {
   handleOk = (e) => {
     var x = this.refs.WmcPosterForm.refs.wrappedComponent.refs.formWrappedComponent
     x.submit(e, (values) => {
-      this.setState({
+     
+ if(values.img==null){
+        message.info('请选择图片');
+        return
+      }
+       this.setState({
 
         confirmLoading: true,
       });
-
+       
+      if(this.state.poster.id!=null){
+        values.id=this.state.poster.id
+      }
+      
       this.props.dispatch({
-        type: 'WmcPoster/savePoster',
+        type: 'WmcPoster/saveOrUpdatePoster',
         payload: {
           values: values,
           token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
@@ -269,7 +278,7 @@ function beforeUpload(file) {
 class WmcPosterForm extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {imageUrl:this.props.poster!=null?this.props.poster.img:null}
   }
   submit = (e, callback) => {
 
@@ -308,7 +317,7 @@ class WmcPosterForm extends React.Component {
     const rangeConfig = {
       rules: [{ type: 'array', required: true, message: 'Please select time!' }],
     };
-    const imageUrl = this.state.imageUrl;
+    const imageUrl = this.state.imageUrl
     return (<Form >
 
 

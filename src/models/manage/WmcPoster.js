@@ -1,4 +1,4 @@
-import { getPosterPage,savePoster } from '../../services/WmcManageSvc'
+import { getPosterPage,saveOrUpdatePoster } from '../../services/WmcManageSvc'
 export default {
   namespace: 'WmcPoster',
   state: {
@@ -59,14 +59,14 @@ export default {
         }
       }
     },
-    *savePoster({ payload }, { call, put }) {
+    *saveOrUpdatePoster({ payload }, { call, put }) {
       if (payload.token == null) {
         payload.auth()
         return
       }
       payload.v=Date.parse(new Date());
     
-      let { data } = yield savePoster( payload.values);
+      let { data } = yield saveOrUpdatePoster( payload.values);
       if (data) {
         if (data.errorCode == "suc") {
          /* yield put({

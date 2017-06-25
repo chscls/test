@@ -6,6 +6,6 @@ export async function getPosterSpacePage(param) {
 export async function getPosterPage(param) {
  return GET(x+'getPosterPage',param);
 }
-export async function savePoster(param) {
- return POST(x+'savePoster',param);
+export async function saveOrUpdatePoster(param) {
+ return POST(x+'saveOrUpdatePoster',param);
 }

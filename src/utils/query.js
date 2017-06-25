@@ -21,6 +21,9 @@ function getUrl(smarturl,flag) {
   }
 }
 function getImgUrl(smarturl) {
+  if(smarturl==null){
+    return '';
+  }
   if(rapFlag){
     return rapImagePath  + smarturl;
   }else{
