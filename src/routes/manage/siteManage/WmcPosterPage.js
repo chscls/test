@@ -26,7 +26,9 @@ class WmcPosterPage extends React.Component {
   state = {
     selectedRowKeys: [],  // Check here to configure the default column
     loading: false,
-    visible: false
+    visible: false,
+    poster:null,
+    modalTitle:'新增'
   };
   start = () => {
     this.setState({ loading: true });
@@ -42,15 +44,17 @@ class WmcPosterPage extends React.Component {
     console.log('selectedRowKeys changed: ', selectedRowKeys);
     this.setState({ selectedRowKeys });
   }
-  add = (index) => {
-    this.setState({ visible: true });
+  add = (e,index) => {
+   
+    this.setState({ visible: true ,poster:index!=null?this.props.WmcPoster.list.data[index]:null,modalTitle:index!=null?"编辑":"新增"});
+  
   }
   close = () => {
     this.setState({ visible: false });
   }
   handleEdit=(e) => {
-
-    this.add(e.target.dataset.index);
+    this.set
+    this.add(e,e.target.dataset.index);
   }
   handleOk = (e) => {
     var x = this.refs.WmcPosterForm.refs.wrappedComponent.refs.formWrappedComponent
@@ -128,7 +132,7 @@ class WmcPosterPage extends React.Component {
 
     let { data } = this.props.WmcPoster.list;
     let pagination = this.props.WmcPoster.pagination;
-    const { loading, selectedRowKeys, visible, confirmLoading } = this.state;
+    const { modalTitle,poster,loading, selectedRowKeys, visible, confirmLoading } = this.state;
     const rowSelection = {
       selectedRowKeys,
       onChange: this.onSelectChange,
@@ -171,7 +175,7 @@ class WmcPosterPage extends React.Component {
 
 
 
-        <Modal title="新增版位"
+        <Modal title={modalTitle}
           maskClosable={false}
           visible={visible}
           onOk={this.handleOk}
@@ -179,7 +183,7 @@ class WmcPosterPage extends React.Component {
           onCancel={this.close.bind(this)}
           width={"500px"}
         >
-          <WrappedWmcPosterForm ref="WmcPosterForm" />
+          <WrappedWmcPosterForm ref="WmcPosterForm" poster={poster} />
         </Modal>
       </div>
     )
@@ -310,22 +314,22 @@ class WmcPosterForm extends React.Component {
 
 
       <FormItem  {...formItemLayout} label="名称">
-        {getFieldDecorator('title', {
+        {getFieldDecorator('title',{ initialValue: this.props.poster!=null?this.props.poster.title:''}, {
           rules: [{ required: true, message: 'Please select your gender!' }],
         })(
           <Input type="text" />
           )}
       </FormItem>
       <FormItem  {...formItemLayout} label="路径">
-        {getFieldDecorator('url', {
+        {getFieldDecorator('url',{ initialValue: this.props.poster!=null?this.props.poster.url:''}, {
           rules: [{ required: true, message: 'Please select your gender!' }],
         })(
           <Input type="text" />
           )}
       </FormItem>
       <FormItem  {...formItemLayout} label="优先级">
-        {getFieldDecorator('priority')(
-          <Slider min={1} max={100} />
+        {getFieldDecorator('priority',{ initialValue: this.props.poster!=null?this.props.poster.priority:1})(
+          <Slider min={1} max={100}   />
 
         )}
       </FormItem>
@@ -382,6 +386,7 @@ class WmcPosterForm extends React.Component {
 }
 WmcPosterForm.propTypes = {
 };
+
 
 const WrappedWmcPosterForm = Form.create({ withRef: true })(WmcPosterForm);
 
