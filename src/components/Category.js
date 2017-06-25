@@ -3,6 +3,7 @@ import { Icon } from 'antd';
 import { Link } from 'dva/router';
 import styles from '../routes/IndexPage.css';
 import { connect } from 'dva'
+import { getImgUrl } from '../utils/query';
 class Category extends React.Component {
   constructor(props) {
     super(props)
@@ -40,7 +41,7 @@ class Category extends React.Component {
 		<div  data-spm="2016901" style={{marginTop: '10px'}} className="tanx-con-mm_12852562_1778064_37802121 full-banner clearfix j_tanxBanner j_LazyloadCon fp-content-loading j_exposureCon" data-inited="1">
 					
 					<a href={x.url}>
-    <img src={x.img} width="1620" height="90"/></a>
+    <img src={getImgUrl(x.img)} width="1620" height="90"/></a>
 	
 	</div>)
 			}

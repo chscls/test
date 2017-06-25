@@ -8,6 +8,7 @@ import Nav from '../components/Nav'
 import LazyLoad from 'react-lazyload'
 import { connect } from 'dva'
 import LogoGather from '../components/LogoGather'
+import { getImgUrl } from '../utils/query';
 class IndexContent extends React.Component {
   constructor(props) {
     super(props)
@@ -109,7 +110,7 @@ class IndexContent extends React.Component {
       return (
         <div key={poster.id}>
           <a href={poster.url}>
-            <img src={poster.img} style={{ width: '100%', height: '500px' }} />
+            <img src={getImgUrl(poster.img)} style={{ width: '100%', height: '500px' }} />
           </a>
         </div>
       );

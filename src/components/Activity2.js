@@ -8,6 +8,7 @@ import { connect } from 'dva';
 import Floors from '../components/Floors'
 import LazyLoad from 'react-lazyload';
 import QueueAnim from 'rc-queue-anim';
+
 class Activity2 extends React.Component {
     constructor(props) {
         super(props)

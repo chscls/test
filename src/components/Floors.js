@@ -4,6 +4,7 @@ import { Link } from 'dva/router';
 import styles from '../routes/IndexPage.css';
 import { connect } from 'dva'
 import LazyLoad from 'react-lazyload';
+import { getImgUrl } from '../utils/query';
 class Floors extends React.Component {
 	constructor(props) {
 		super(props)
@@ -78,7 +79,7 @@ class Floors extends React.Component {
 				</div>
 			</div>
 			{index%2==0?"":<div data-spm="2016901" style={{ marginTop: '10px' }} className="tanx-con-mm_12852562_1778064_37802121 full-banner clearfix j_tanxBanner j_LazyloadCon fp-content-loading j_exposureCon" data-inited="1"><a href="">
-					<img src={this.props.Poster.advertiseList[y].img} width="1620" height="90" /></a>
+					<img src={getImgUrl(this.props.Poster.advertiseList[y].img)} width="1620" height="90" /></a>
 					
 				</div>}
 				</div>
