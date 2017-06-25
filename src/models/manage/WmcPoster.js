@@ -1,4 +1,4 @@
-import { getPosterPage,saveOrUpdatePoster } from '../../services/WmcManageSvc'
+import { getPosterPage,saveOrUpdatePoster,deletePoster } from '../../services/WmcManageSvc'
 export default {
   namespace: 'WmcPoster',
   state: {
@@ -53,6 +53,28 @@ export default {
               }
             }
           });
+        } else if (data.errorCode == "auth") {
+          payload.auth()
+
+        }
+      }
+    },
+    *deletePoster({ payload }, { call, put }) {
+      if (payload.token == null) {
+        payload.auth()
+        return
+      }
+      console.log(payload.ids);
+    
+      let { data } = yield deletePoster({
+          token:payload.token,
+          ids:payload.ids,
+          v:Date.parse(new Date()),
+      } );
+      if (data) {
+        if (data.errorCode == "suc") {
+         
+          payload.back()
         } else if (data.errorCode == "auth") {
           payload.auth()
 

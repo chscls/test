@@ -13,3 +13,6 @@ export async function getPosterPage(param) {
 export async function saveOrUpdatePoster(param) {
  return POST(x+'saveOrUpdatePoster',param);
 }
+export async function deletePoster(param) {
+ return POST(x+'deletePoster',param);
+}

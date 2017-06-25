@@ -32,14 +32,33 @@ class WmcPosterPage extends React.Component {
     modalTitle:'新增'
   };
   start = () => {
+   
     this.setState({ loading: true });
     // ajax request after empty completing
-    setTimeout(() => {
-      this.setState({
-        selectedRowKeys: [],
-        loading: false,
+     this.props.dispatch({
+        type: 'WmcPoster/deletePoster',
+        payload: {
+          token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
+          ids:this.state.selectedRowKeys,
+          back: (list) => {
+            this.setState({ loading: false });
+            this.fetch(1);
+          },
+          auth: () => {
+            this.props.dispatch({
+              type: 'LoginUser/showModal',
+              payload: {
+                visible: true,
+                reg: false,
+                path: "/Member/WmcPosterPage"
+              }
+
+            });
+          }
+
+        }
+
       });
-    }, 1000);
   }
   onSelectChange = (selectedRowKeys) => {
     console.log('selectedRowKeys changed: ', selectedRowKeys);
