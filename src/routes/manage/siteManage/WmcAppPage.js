@@ -209,7 +209,7 @@ class WmcAppPage extends React.Component {
   }
   handleTableChange(pagination, filters, sorter) {
     this.props.dispatch({
-      type: 'WmcApp/changePage',
+      type: NameSpace+'/changePage',
       payload: {
         pagination: {
           current: pagination.current,
@@ -226,7 +226,7 @@ class WmcAppPage extends React.Component {
     // 更新列表
 
     this.props.dispatch({
-      type: 'WmcApp/fetchRemote',
+      type: NameSpace+'/fetchRemote',
       payload: {
         current: current,
         pageSize: 10,
