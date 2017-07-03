@@ -276,6 +276,7 @@ function beforeUpload(file) {
 class AddAndUpdateForm extends React.Component {
   constructor(props) {
     super(props)
+    
     this.state = { imageUrl: this.props.selectObj != null ? this.props.selectObj.logo : null }
   }
   submit = (e, callback) => {

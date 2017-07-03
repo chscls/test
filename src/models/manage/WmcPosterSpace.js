@@ -1,4 +1,4 @@
-import { getPosterSpacePage,getPosterSpaceList } from '../../services/WmcManageSvc'
+import { getPosterSpacePage,getPosterSpaceList,saveOrUpdatePosterSpace,deletePosterSpace } from '../../services/WmcManageSvc'
 export default {
   namespace: 'WmcPosterSpace',
   state: {
@@ -71,6 +71,51 @@ export default {
          }else if(data.errorCode=="auth"){
           payload.auth()
          }
+      }
+    },
+   
+   *delete({ payload }, { call, put }) {
+      if (payload.token == null) {
+        payload.auth()
+        return
+      }
+      console.log(payload.ids);
+    
+      let { data } = yield deletePosterSpace({
+          token:payload.token,
+          ids:payload.ids,
+          v:Date.parse(new Date()),
+      } );
+      if (data) {
+        if (data.errorCode == "suc") {
+         
+          payload.back()
+        } else if (data.errorCode == "auth") {
+          payload.auth()
+
+        }
+      }
+    },
+    *saveOrUpdate({ payload }, { call, put }) {
+      if (payload.token == null) {
+        payload.auth()
+        return
+      }
+      payload.v=Date.parse(new Date());
+    
+      let { data } = yield saveOrUpdatePosterSpace( payload.values);
+      if (data) {
+        if (data.errorCode == "suc") {
+         /* yield put({
+            type: 'suc',
+            payload: {
+            }
+          });*/
+          payload.back()
+        } else if (data.errorCode == "auth") {
+          payload.auth()
+
+        }
       }
     }
   },
