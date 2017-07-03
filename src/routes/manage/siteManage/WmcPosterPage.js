@@ -106,10 +106,7 @@ class WmcPosterPage extends React.Component {
     var x = this.refs.WmcPosterForm.refs.wrappedComponent.refs.formWrappedComponent
     x.submit(e, (values) => {
 
-      if (values.img == null) {
-        message.info('请选择图片');
-        return
-      }
+    
       this.setState({
 
         confirmLoading: true,
@@ -331,6 +328,10 @@ class WmcPosterForm extends React.Component {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
+          if (this.state.imageUrl == null) {
+        message.info('请选择图片');
+        return
+      }
         values.img = this.state.imageUrl;
         callback(values);
       }
