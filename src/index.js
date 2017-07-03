@@ -5,6 +5,15 @@ import dva from 'dva';
 // 1. Initialize
 const app = dva();
 
+
+
+
+
+// 2. Plugins
+//app.use({});
+
+// 3. Model
+//app.model(require('./models/example'));
 app.model(require("./models/common"));
 app.model(require("./models/LoginUser"));
 app.model(require("./models/11"));
@@ -16,12 +25,7 @@ app.model(require("./models/manage/WmcPosterSpace"));
 app.model(require("./models/manage/WmcPoster"));
 app.model(require("./models/manage/WmcSite"));
 app.model(require("./models/manage/WmcApp"));
-
-// 2. Plugins
-//app.use({});
-
-// 3. Model
-//app.model(require('./models/example'));
+app.model(require("./models/manage/WmcCatalogGroup"));
 
 // 4. Router
 app.router(require('./router'));

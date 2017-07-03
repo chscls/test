@@ -27,3 +27,14 @@ export async function saveOrUpdateApp(param) {
 export async function deleteApp(param) {
  return POST(x+'deleteApp',param);
 }
+
+
+export async function getCatalogGroupPage(param) {
+ return GET(x+'getCatalogGroupPage',param);
+}
+export async function saveOrUpdateCatalogGroup(param) {
+ return POST(x+'saveOrUpdateCatalogGroup',param);
+}
+export async function deleteCatalogGroup(param) {
+ return POST(x+'deleteCatalogGroup',param);
+}

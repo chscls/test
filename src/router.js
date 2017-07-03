@@ -152,6 +152,14 @@ const r50 = (location, callback) => {
   }, 'WmcAppPage')
 };
 
+const r51 = (location, callback) => {
+  require.ensure([], require => {
+    callback(null,
+      require('./routes/manage/siteManage/WmcCatalogGroupPage'))
+  }, 'WmcCatalogGroupPage')
+};
+
+
 
 export default function ({ history }) {
   return (
@@ -184,6 +192,7 @@ export default function ({ history }) {
             <Route path="WmcPosterSpacePage" getComponent={r46} />
             <Route path="WmcPosterPage" getComponent={r47} />
              <Route path="WmcAppPage" getComponent={r50} />
+             <Route path="WmcCatalogGroupPage" getComponent={r51} />
           </Route>
         </Route>
       </Route>

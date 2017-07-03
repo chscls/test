@@ -8,7 +8,7 @@ import { rapHost } from '../../../config/config';
 const FormItem = Form.Item;
 const Search = Input.Search;
 const Option = Select.Option;
-const NameSpace = "WmcApp";
+const NameSpace = "WmcCatalogGroup";
  const breadcrumbData = {
       breadcrumb: [
         {
@@ -17,12 +17,12 @@ const NameSpace = "WmcApp";
         }, {
           name: '管理'
         }, {
-          name: '应用'
+          name: '目录组管理'
         }
       ]
     };
-const RoutePath = "/Member/SiteManage/WmcAppPage";
-class WmcAppPage extends React.Component {
+const RoutePath = "/Member/SiteManage/WmcCatalogGroup";
+class WmcCatalogGroupPage extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -117,8 +117,8 @@ class WmcAppPage extends React.Component {
   }
 
   render() {
-     let { data } = this.props.WmcApp.list;
-    let pagination = this.props.WmcApp.pagination;
+     let { data } = this.props.WmcCatalogGroup.list;
+    let pagination = this.props.WmcCatalogGroup.pagination;
     const columns = [
       {
         title: 'Id',
@@ -255,10 +255,10 @@ class WmcAppPage extends React.Component {
     this.fetch(1);
   }
 }
-function mapStateToProps({ common, WmcApp, LoginUser }) {
-  return { common, WmcApp, LoginUser };
+function mapStateToProps({ common, WmcCatalogGroup, LoginUser }) {
+  return { common, WmcCatalogGroup, LoginUser };
 }
-export default connect(mapStateToProps)(WmcAppPage)
+export default connect(mapStateToProps)(WmcCatalogGroupPage)
 
 
 
