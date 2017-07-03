@@ -47,7 +47,7 @@ class SiteManage extends React.Component{
           <MenuItemGroup title="首页版面">
             <Menu.Item key="setting:1"><Link to="Member/SiteManage/WmcCatalogGroupPage">顶层目录组</Link></Menu.Item>
             <Menu.Item key="setting:2"><Link to="Member/SiteManage/WmcCatalogGroupPage">目录主题</Link></Menu.Item>
-            <Menu.Item key="setting:3"><Link to="Member/SiteManage/WmcCatalogGroupPage">楼层</Link></Menu.Item>
+            <Menu.Item key="setting:3"><Link to={{pathname:'Member/SiteManage/WmcCatalogGroupPage',query:{type:'indexTop'}}}>楼层</Link></Menu.Item>
           </MenuItemGroup>
          
         </SubMenu>

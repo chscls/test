@@ -25,6 +25,7 @@ const RoutePath = "/Member/SiteManage/WmcCatalogGroup";
 class WmcCatalogGroupPage extends React.Component {
   constructor(props) {
     super(props)
+    console.log(this.props.location.query.type);
   }
 
   state = {

@@ -192,7 +192,7 @@ export default function ({ history }) {
             <Route path="WmcPosterSpacePage" getComponent={r46} />
             <Route path="WmcPosterPage" getComponent={r47} />
              <Route path="WmcAppPage" getComponent={r50} />
-             <Route path="WmcCatalogGroupPage" getComponent={r51} />
+             <Route path="WmcCatalogGroupPage" getComponent={r51}  />
           </Route>
         </Route>
       </Route>
