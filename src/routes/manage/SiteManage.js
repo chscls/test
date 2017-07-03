@@ -14,7 +14,7 @@ class SiteManage extends React.Component{
     current: 'mail1',
   }
   handleClick = (e) => {
-    console.log('click ', e);
+   
     this.setState({
       current: e.key,
     });

@@ -9,6 +9,18 @@ const FormItem = Form.Item;
 const Search = Input.Search;
 const Option = Select.Option;
 const NameSpace = "WmcApp";
+ const breadcrumbData = {
+      breadcrumb: [
+        {
+          name: '首页',
+          path: '/'
+        }, {
+          name: '管理'
+        }, {
+          name: '應用'
+        }
+      ]
+    };
 const RoutePath = "/Member/SiteManage/WmcAppPage";
 class WmcAppPage extends React.Component {
   constructor(props) {
@@ -226,7 +238,7 @@ class WmcAppPage extends React.Component {
             payload: {
               visible: true,
               reg: false,
-              path: "/Member/WmcPosterPage"
+              path: RoutePath
             }
 
           });
@@ -235,18 +247,7 @@ class WmcAppPage extends React.Component {
     });
   }
   componentDidMount() {
-    const breadcrumbData = {
-      breadcrumb: [
-        {
-          name: '首页',
-          path: '/'
-        }, {
-          name: '管理'
-        }, {
-          name: '应用'
-        }
-      ]
-    };
+   
     this.props.dispatch({
       type: 'common/changeBreadcrumb',
       payload: breadcrumbData
