@@ -1,6 +1,7 @@
 import request from '../utils/request';
 import qs ,{ parse } from 'qs';
 import FormdataWrapper from '../utils/object-to-formdata-custom';
+import merge from 'merge-object';
 import {rapHost, onlinePath,rapFlag, onlineImagePath,rapImagePath} from '../config/config'
 import fetch from 'dva/fetch';
 const cookieTrue = {
