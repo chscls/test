@@ -79,7 +79,6 @@ export default {
         payload.auth()
         return
       }
-      console.log(payload.ids);
     
       let { data } = yield deletePosterSpace({
           token:payload.token,

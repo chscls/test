@@ -64,7 +64,6 @@ export default {
         payload.auth()
         return
       }
-      console.log(payload.ids);
     
       let { data } = yield deleteApp({
           token:payload.token,
