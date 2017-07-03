@@ -16,3 +16,14 @@ export async function saveOrUpdatePoster(param) {
 export async function deletePoster(param) {
  return POST(x+'deletePoster',param);
 }
+
+
+export async function getAppPage(param) {
+ return GET(x+'getAppPage',param);
+}
+export async function saveOrUpdateApp(param) {
+ return POST(x+'saveOrUpdateApp',param);
+}
+export async function deleteApp(param) {
+ return POST(x+'deleteApp',param);
+}

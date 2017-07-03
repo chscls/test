@@ -27,7 +27,7 @@ class WmcPosterPage extends React.Component {
     selectedRowKeys: [],  // Check here to configure the default column
     loading: false,
     visible: false,
-    poster: null,
+    poster: {},
     selectList: [],
     modalTitle: '新增'
   };
@@ -99,7 +99,7 @@ class WmcPosterPage extends React.Component {
     this.setState({ visible: false });
   }
   handleEdit = (e) => {
-    this.set
+    
     this.add(e, e.target.dataset.index);
   }
   handleOk = (e) => {
