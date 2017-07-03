@@ -64,7 +64,7 @@ render() {
   );
     }
     componentDidMount(){
-  var myPlayera = videojs("example_video_1",);  
+  video = videojs("example_video_1",);  
 
         //$("#videojs_videodisplay_presentation_html5_api").attr("src", "rtmp://live.hkstv.hk.lxdns.com/live/hks")  
       //  myPlayera.src("rtmp://localhost/oflaDemo/hello"); //重新初始化视频地址  
