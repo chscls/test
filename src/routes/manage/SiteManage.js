@@ -36,6 +36,9 @@ class SiteManage extends React.Component{
        <Menu.Item key="mail1">
           <Link to="Member/SiteManage/WmcSiteView">站点管理</Link>
         </Menu.Item>
+          <Menu.Item key="mail2">
+          <Link to="Member/SiteManage/WmcAppPage">应用管理</Link>
+        </Menu.Item>
         <Menu.Item key="mail">
           <Link to="Member/SiteManage/WmcPosterSpacePage">版位管理</Link>
         </Menu.Item>
