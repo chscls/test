@@ -106,11 +106,6 @@ export default {
       let { data } = yield saveOrUpdatePosterSpace( payload.values);
       if (data) {
         if (data.errorCode == "suc") {
-         /* yield put({
-            type: 'suc',
-            payload: {
-            }
-          });*/
           payload.back()
         } else if (data.errorCode == "auth") {
           payload.auth()
