@@ -8,16 +8,8 @@ import { rapHost } from '../../../config/config';
 const FormItem = Form.Item;
 const Search = Input.Search;
 const Option = Select.Option;
-
-
-const rowSelection = {
-  onChange: (selectedRowKeys, selectedRows) => {
-    console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
-  },
-  getCheckboxProps: record => ({
-    disabled: record.name === 'Disabled User',    // Column configuration not to be checked
-  }),
-};
+const NameSpace = "WmcApp";
+const RoutePath = "/Member/SiteManage/WmcAppPage";
 class WmcAppPage extends React.Component {
   constructor(props) {
     super(props)
@@ -27,15 +19,15 @@ class WmcAppPage extends React.Component {
     selectedRowKeys: [],  // Check here to configure the default column
     loading: false,
     visible: false,
-    app: {},
+    selectObj: {},
     modalTitle: '新增'
   };
-  start = () => {
+  delete = () => {
 
     this.setState({ loading: true });
     // ajax request after empty completing
     this.props.dispatch({
-      type: 'WmcApp/deleteApp',
+      type: NameSpace+'/delete',
       payload: {
         token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
         ids: this.state.selectedRowKeys,
@@ -49,7 +41,7 @@ class WmcAppPage extends React.Component {
             payload: {
               visible: true,
               reg: false,
-              path: "/Member/SiteManage/WmcAppPage"
+              path: RoutePath
             }
 
           });
@@ -60,38 +52,31 @@ class WmcAppPage extends React.Component {
     });
   }
   onSelectChange = (selectedRowKeys) => {
-    console.log('selectedRowKeys changed: ', selectedRowKeys);
     this.setState({ selectedRowKeys });
   }
   
   close = () => {
     this.setState({ visible: false });
   }
-
-
   add = (e, index) => {
-
-    this.setState({  visible: true, app: index != null ? this.props.WmcApp.list.data[index] : null, modalTitle: index != null ? "编辑" : "新增" });
+    this.setState({  visible: true, selectObj: index != null ? this.props.WmcApp.list.data[index] : null, modalTitle: index != null ? "编辑" : "新增" });
   }
   handleEdit = (e) => {
     this.add(e, e.target.dataset.index);
   }
   handleOk = (e) => {
-    var x = this.refs.WmcAppForm.refs.wrappedComponent.refs.formWrappedComponent
+    var x = this.refs.WrappedForm.refs.wrappedComponent.refs.formWrappedComponent
     x.submit(e, (values) => {
-
-      
       this.setState({
-
         confirmLoading: true,
       });
 
-      if (this.state.app != null&&this.state.app.id != null) {
-        values.id = this.state.app.id
+      if (this.state.selectObj != null&&this.state.selectObj.id != null) {
+        values.id = this.state.selectObj.id
       }
 
       this.props.dispatch({
-        type: 'WmcApp/saveOrUpdateApp',
+        type: NameSpace+'/saveOrUpdate',
         payload: {
           values: values,
           token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
@@ -106,7 +91,7 @@ class WmcAppPage extends React.Component {
               payload: {
                 visible: true,
                 reg: false,
-                path: "/Member/SiteManage/WmcAppPage"
+                path: RoutePath
               }
 
             });
@@ -120,6 +105,8 @@ class WmcAppPage extends React.Component {
   }
 
   render() {
+     let { data } = this.props.WmcApp.list;
+    let pagination = this.props.WmcApp.pagination;
     const columns = [
       {
         title: 'Id',
@@ -151,9 +138,8 @@ class WmcAppPage extends React.Component {
 
     ];
     
-    let { data } = this.props.WmcApp.list;
-    let pagination = this.props.WmcApp.pagination;
-    const { modalTitle, selectList, app, loading, selectedRowKeys, visible, confirmLoading } = this.state;
+   
+    const { modalTitle, selectList, selectObj, loading, selectedRowKeys, visible, confirmLoading } = this.state;
     const rowSelection = {
       selectedRowKeys,
       onChange: this.onSelectChange,
@@ -172,7 +158,7 @@ class WmcAppPage extends React.Component {
           </Button>
           <Button style={{ marginLeft: '5px' }}
             type="primary"
-            onClick={this.start}
+            onClick={this.delete}
             disabled={!hasSelected}
             loading={loading}
           >
@@ -204,7 +190,7 @@ class WmcAppPage extends React.Component {
           onCancel={this.close.bind(this)}
           width={"500px"}
         >
-          <WrappedWmcAppForm ref="WmcAppForm" app={app} selectList={selectList} />
+          <WrappedForm ref="WrappedForm" selectObj={selectObj}  />
         </Modal>
       </div>
     )
@@ -287,10 +273,10 @@ function beforeUpload(file) {
   return isJPG && isLt2M;
 }
 
-class WmcAppForm extends React.Component {
+class AddAndUpdateForm extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { imageUrl: this.props.app != null ? this.props.app.logo : null }
+    this.state = { imageUrl: this.props.selectObj != null ? this.props.selectObj.logo : null }
   }
   submit = (e, callback) => {
 
@@ -341,21 +327,21 @@ class WmcAppForm extends React.Component {
 
 
       <FormItem  {...formItemLayout} label="名称">
-        {getFieldDecorator('name', { initialValue: this.props.app != null ? this.props.app.name : '' }, {
+        {getFieldDecorator('name', { initialValue: this.props.selectObj != null ? this.props.selectObj.name : '' }, {
           rules: [{ required: true, message: 'Please select your gender!' }],
         })(
           <Input type="text" />
           )}
       </FormItem>
       <FormItem  {...formItemLayout} label="路径">
-        {getFieldDecorator('path', { initialValue: this.props.app != null ? this.props.app.path: '' }, {
+        {getFieldDecorator('path', { initialValue: this.props.selectObj != null ? this.props.selectObj.path: '' }, {
           rules: [{ required: true, message: 'Please select your gender!' }],
         })(
           <Input type="text" />
           )}
       </FormItem>
       <FormItem  {...formItemLayout} label="优先级">
-        {getFieldDecorator('priority', { initialValue: this.props.app != null ? this.props.app.priority : 1 })(
+        {getFieldDecorator('priority', { initialValue: this.props.selectObj != null ? this.props.selectObj.priority : 1 })(
           <Slider min={1} max={100} />
 
         )}
@@ -393,9 +379,9 @@ class WmcAppForm extends React.Component {
   }
 
 }
-WmcAppForm.propTypes = {
+AddAndUpdateForm.propTypes = {
 };
 
 
-const WrappedWmcAppForm = Form.create({ withRef: true })(WmcAppForm);
+const WrappedForm = Form.create({ withRef: true })(AddAndUpdateForm);
 

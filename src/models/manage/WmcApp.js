@@ -59,7 +59,7 @@ export default {
         }
       }
     },
-    *deleteApp({ payload }, { call, put }) {
+    *delete({ payload }, { call, put }) {
       if (payload.token == null) {
         payload.auth()
         return
@@ -81,7 +81,7 @@ export default {
         }
       }
     },
-    *saveOrUpdateApp({ payload }, { call, put }) {
+    *saveOrUpdate({ payload }, { call, put }) {
       if (payload.token == null) {
         payload.auth()
         return
