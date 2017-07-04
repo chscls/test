@@ -1,6 +1,6 @@
 import { getLiveAnnouncePage,saveOrUpdateLiveAnnounce,deleteLiveAnnounce } from '../../services/WmcManageSvc'
 export default {
-  namespace: 'LiveAnnounce',
+  namespace: 'WmcLiveAnnounce',
   state: {
     submit: false,
     list: {
