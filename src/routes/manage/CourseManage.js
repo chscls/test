@@ -11,7 +11,7 @@ class CourseManage extends React.Component{
     
 }
  state = {
-    current: 'mail1',
+    current: 'mail2',
   }
   handleClick = (e) => {
    

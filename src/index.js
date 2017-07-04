@@ -26,7 +26,7 @@ app.model(require("./models/manage/WmcPoster"));
 app.model(require("./models/manage/WmcSite"));
 app.model(require("./models/manage/WmcApp"));
 app.model(require("./models/manage/WmcCatalogGroup"));
-
+app.model(require("./models/manage/WmcCourse"));
 // 4. Router
 app.router(require('./router'));
 
