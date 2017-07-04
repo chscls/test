@@ -67,7 +67,7 @@ class WmcCatalogGroupPage extends React.Component {
   onSelectChange = (selectedRowKeys) => {
     this.setState({ selectedRowKeys });
   }
-  
+ 
   close = () => {
     this.setState({ visible: false });
   }
@@ -233,7 +233,7 @@ class WmcCatalogGroupPage extends React.Component {
         pageSize: 10,
         loading: false,
         token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
-        type:this.props.location.query.type,
+        type:this.props.params.type,
         auth: function () {
           this.props.dispatch({
             type: 'LoginUser/showModal',
