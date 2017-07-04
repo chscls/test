@@ -198,6 +198,27 @@ const r57 = (location, callback) => {
   }, 'WmcOrderPage')
 };
 
+const r58 = (location, callback) => {
+  require.ensure([], require => {
+    callback(null,
+      require('./routes/manage/LiveManage'))
+  }, 'LiveManage')
+};
+const r59 = (location, callback) => {
+  require.ensure([], require => {
+    callback(null,
+      require('./routes/manage/liveManage/WmcLivePage'))
+  }, 'WmcLivePage')
+};
+
+const r60 = (location, callback) => {
+  require.ensure([], require => {
+    callback(null,
+      require('./routes/manage/liveManage/WmcLiveAnnouncePage'))
+  }, 'WmcLiveAnnouncePage')
+};
+
+
 
 
 export default function ({ history }) {
@@ -244,6 +265,12 @@ export default function ({ history }) {
                <Route path="WmcOrderPage" getComponent={r57} />
 
              </Route>
+
+  <Route path="LiveManage" getComponent={r58} >
+               <Route path="WmcLivePage" getComponent={r59} />
+ <Route path="WmcLiveAnnouncePage" getComponent={r60} />
+             </Route>
+             
         </Route>
       </Route>
       <Route path="login" getComponent={r35} />

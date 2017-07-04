@@ -84,3 +84,26 @@ export async function saveOrUpdateOrder(param) {
 export async function deleteOrder(param) {
  return POST(x+'deleteOrder',param);
 }
+
+
+export async function getLivePage(param) {
+ return GET(x+'getLivePage',param);
+}
+export async function saveOrUpdateLive(param) {
+ return POST(x+'saveOrUpdateLive',param);
+}
+export async function deleteLive(param) {
+ return POST(x+'deleteLive',param);
+}
+
+
+
+export async function getLiveAnnouncePage(param) {
+ return GET(x+'getLiveAnnouncePage',param);
+}
+export async function saveOrUpdateLiveAnnounce(param) {
+ return POST(x+'saveOrUpdateLiveAnnounce',param);
+}
+export async function deleteLiveAnnounce(param) {
+ return POST(x+'deleteLiveAnnounce',param);
+}
