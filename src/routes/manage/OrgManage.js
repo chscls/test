@@ -50,4 +50,4 @@ class OrgManage extends React.Component{
 function mapStateToProps({ }) {
   return {};
 }
-export default connect(mapStateToProps)(LiveManage);
+export default connect(mapStateToProps)(OrgManage);
