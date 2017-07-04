@@ -248,6 +248,13 @@ class WmcCatalogGroupPage extends React.Component {
       }
     });
   }
+
+  componentWillReceiveProps(nextProps){
+    if(nextProps.location.key!=this.props.location.key){
+this.fetch(1);
+    }
+    
+  }
   componentDidMount() {
     this.props.dispatch({
       type: 'common/changeBreadcrumb',
