@@ -17,7 +17,7 @@ const NameSpace = "WmcLive";
         }, {
           name: '管理'
         }, {
-          name: '应用'
+          name: '直播管理'
         }
       ]
     };

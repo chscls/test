@@ -17,7 +17,7 @@ const NameSpace = "WmcLiveAnnounce";
         }, {
           name: '管理'
         }, {
-          name: '应用'
+          name: '预告管理'
         }
       ]
     };

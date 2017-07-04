@@ -17,7 +17,7 @@ const NameSpace = "WmcOrder";
         }, {
           name: '管理'
         }, {
-          name: '应用'
+          name: '订单管理'
         }
       ]
     };
