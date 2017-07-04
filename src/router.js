@@ -219,6 +219,22 @@ const r60 = (location, callback) => {
 };
 
 
+const r61 = (location, callback) => {
+  require.ensure([], require => {
+    callback(null,
+      require('./routes/manage/OrgManage'))
+  }, 'OrgManage')
+};
+
+const r62 = (location, callback) => {
+  require.ensure([], require => {
+    callback(null,
+      require('./routes/manage/orgManage/WmcOrgPage'))
+  }, 'WmcOrgPage')
+};
+
+
+
 
 
 export default function ({ history }) {
@@ -266,9 +282,14 @@ export default function ({ history }) {
 
              </Route>
 
-  <Route path="LiveManage" getComponent={r58} >
+            <Route path="LiveManage" getComponent={r58} >
                <Route path="WmcLivePage" getComponent={r59} />
- <Route path="WmcLiveAnnouncePage" getComponent={r60} />
+                  <Route path="WmcLiveAnnouncePage" getComponent={r60} />
+             </Route>
+
+             <Route path="OrgManage" getComponent={r61} >
+               <Route path="WmcOrgPage" getComponent={r62} />
+                  
              </Route>
              
         </Route>

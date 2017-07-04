@@ -38,7 +38,7 @@ const Sider = React.createClass({
           <Menu.Item key="sub21"><Link to="Member/SiteManage/WmcSiteView">站点管理</Link></Menu.Item>
         <Menu.Item key="sub22"><Link to="Member/CourseManage/WmcCoursePage">课程管理</Link></Menu.Item>
         <Menu.Item key="sub23"><Link to="Member/OrderManage/WmcOrderPage">订单管理</Link></Menu.Item>
-       <Menu.Item key="sub24"><Link to="Member/SiteManage/WmcPosterSpacePage">学校管理</Link></Menu.Item>
+       <Menu.Item key="sub24"><Link to="Member/OrgManage/WmcOrgPage">学校管理</Link></Menu.Item>
         <Menu.Item key="sub25"><Link to="Member/SiteManage/WmcPosterSpacePage">会员管理</Link></Menu.Item>
       <Menu.Item key="sub26"><Link to="Member/LiveManage/WmcLivePage">直播管理</Link></Menu.Item>
         </SubMenu>
