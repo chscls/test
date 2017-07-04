@@ -9,23 +9,23 @@ const FormItem = Form.Item;
 const Search = Input.Search;
 const Option = Select.Option;
 const NameSpace = "WmcCatalogGroup";
- const breadcrumbData = {
-      breadcrumb: [
-        {
-          name: '首页',
-          path: '/'
-        }, {
-          name: '管理'
-        }, {
-          name: '目录组管理'
-        }
-      ]
-    };
+const breadcrumbData = {
+  breadcrumb: [
+    {
+      name: '首页',
+      path: '/'
+    }, {
+      name: '管理'
+    }, {
+      name: '目录组管理'
+    }
+  ]
+};
 const RoutePath = "/Member/SiteManage/WmcCatalogGroup";
 class WmcCatalogGroupPage extends React.Component {
   constructor(props) {
     super(props)
-   
+
   }
 
   state = {
@@ -40,7 +40,7 @@ class WmcCatalogGroupPage extends React.Component {
     this.setState({ loading: true });
     // ajax request after empty completing
     this.props.dispatch({
-      type: NameSpace+'/delete',
+      type: NameSpace + '/delete',
       payload: {
         token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
         ids: this.state.selectedRowKeys,
@@ -67,12 +67,12 @@ class WmcCatalogGroupPage extends React.Component {
   onSelectChange = (selectedRowKeys) => {
     this.setState({ selectedRowKeys });
   }
- 
+
   close = () => {
     this.setState({ visible: false });
   }
   add = (e, index) => {
-    this.setState({  visible: true, selectObj: index != null ? this.props.WmcApp.list.data[index] : null, modalTitle: index != null ? "编辑" : "新增" });
+    this.setState({ visible: true, selectObj: index != null ? this.props.WmcApp.list.data[index] : null, modalTitle: index != null ? "编辑" : "新增" });
   }
   handleEdit = (e) => {
     this.add(e, e.target.dataset.index);
@@ -84,12 +84,12 @@ class WmcCatalogGroupPage extends React.Component {
         confirmLoading: true,
       });
 
-      if (this.state.selectObj != null&&this.state.selectObj.id != null) {
+      if (this.state.selectObj != null && this.state.selectObj.id != null) {
         values.id = this.state.selectObj.id
       }
 
       this.props.dispatch({
-        type: NameSpace+'/saveOrUpdate',
+        type: NameSpace + '/saveOrUpdate',
         payload: {
           values: values,
           token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
@@ -118,7 +118,7 @@ class WmcCatalogGroupPage extends React.Component {
   }
 
   render() {
-     let { data } = this.props.WmcCatalogGroup.list;
+    let { data } = this.props.WmcCatalogGroup.list;
     let pagination = this.props.WmcCatalogGroup.pagination;
     const columns = [
       {
@@ -150,8 +150,8 @@ class WmcCatalogGroupPage extends React.Component {
       },
 
     ];
-    
-   
+
+
     const { modalTitle, selectList, selectObj, loading, selectedRowKeys, visible, confirmLoading } = this.state;
     const rowSelection = {
       selectedRowKeys,
@@ -203,14 +203,14 @@ class WmcCatalogGroupPage extends React.Component {
           onCancel={this.close.bind(this)}
           width={"500px"}
         >
-          <WrappedForm ref="WrappedForm" selectObj={selectObj}  />
+          <WrappedForm ref="WrappedForm" selectObj={selectObj} />
         </Modal>
       </div>
     )
   }
   handleTableChange(pagination, filters, sorter) {
     this.props.dispatch({
-      type: NameSpace+'/changePage',
+      type: NameSpace + '/changePage',
       payload: {
         pagination: {
           current: pagination.current,
@@ -227,13 +227,13 @@ class WmcCatalogGroupPage extends React.Component {
     // 更新列表
 
     this.props.dispatch({
-      type: NameSpace+'/fetchRemote',
+      type: NameSpace + '/fetchRemote',
       payload: {
         current: current,
         pageSize: 10,
         loading: false,
         token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
-        type:this.props.params.type,
+        type: this.props.params.type,
         auth: function () {
           this.props.dispatch({
             type: 'LoginUser/showModal',
@@ -249,11 +249,11 @@ class WmcCatalogGroupPage extends React.Component {
     });
   }
 
-  componentWillReceiveProps(nextProps){
-    if(nextProps.location.key!=this.props.location.key){
-this.fetch(1);
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.location.key != this.props.location.key) {
+      this.fetch(1);
     }
-    
+
   }
   componentDidMount() {
     this.props.dispatch({
@@ -285,7 +285,7 @@ function beforeUpload(file) {
 class AddAndUpdateForm extends React.Component {
   constructor(props) {
     super(props)
-    
+
     this.state = { imageUrl: this.props.selectObj != null ? this.props.selectObj.logo : null }
   }
   submit = (e, callback) => {
@@ -294,9 +294,9 @@ class AddAndUpdateForm extends React.Component {
     this.props.form.validateFields((err, values) => {
       if (!err) {
         if (this.state.imageUrl == null) {
-        message.info('请选择图片');
-        return
-         }
+          message.info('请选择图片');
+          return
+        }
         values.logo = this.state.imageUrl;
         callback(values);
       }
@@ -312,7 +312,7 @@ class AddAndUpdateForm extends React.Component {
   }
 
   render() {
-   
+
 
     const { getFieldDecorator } = this.props.form;
     const formItemLayout = {
@@ -344,7 +344,7 @@ class AddAndUpdateForm extends React.Component {
           )}
       </FormItem>
       <FormItem  {...formItemLayout} label="路径">
-        {getFieldDecorator('path', { initialValue: this.props.selectObj != null ? this.props.selectObj.path: '' }, {
+        {getFieldDecorator('path', { initialValue: this.props.selectObj != null ? this.props.selectObj.path : '' }, {
           rules: [{ required: true, message: 'Please select your gender!' }],
         })(
           <Input type="text" />
@@ -357,7 +357,7 @@ class AddAndUpdateForm extends React.Component {
         )}
       </FormItem>
 
-     
+
       <FormItem>
         <Upload
           style={{
