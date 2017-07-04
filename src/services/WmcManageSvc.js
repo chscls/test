@@ -49,3 +49,26 @@ export async function saveOrUpdateCourse(param) {
 export async function deleteCourse(param) {
  return POST(x+'deleteCourse',param);
 }
+
+
+export async function getTopicPage(param) {
+ return GET(x+'getTopicPage',param);
+}
+export async function saveOrUpdateTopic(param) {
+ return POST(x+'saveOrUpdateTopic',param);
+}
+export async function deleteTopic(param) {
+ return POST(x+'deleteTopic',param);
+}
+
+
+
+export async function getCatalogPage(param) {
+ return GET(x+'getCatalogPage',param);
+}
+export async function saveOrUpdateCatalog(param) {
+ return POST(x+'saveOrUpdateCatalog',param);
+}
+export async function deleteCatalog(param) {
+ return POST(x+'deleteCatalog',param);
+}
