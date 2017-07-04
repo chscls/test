@@ -38,3 +38,14 @@ export async function saveOrUpdateCatalogGroup(param) {
 export async function deleteCatalogGroup(param) {
  return POST(x+'deleteCatalogGroup',param);
 }
+
+
+export async function getCoursePage(param) {
+ return GET(x+'getCoursePage',param);
+}
+export async function saveOrUpdateCourse(param) {
+ return POST(x+'saveOrUpdateCourse',param);
+}
+export async function deleteCourse(param) {
+ return POST(x+'deleteCourse',param);
+}
