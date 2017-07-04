@@ -107,3 +107,13 @@ export async function saveOrUpdateLiveAnnounce(param) {
 export async function deleteLiveAnnounce(param) {
  return POST(x+'deleteLiveAnnounce',param);
 }
+
+export async function getOrgPage(param) {
+ return GET(x+'getOrgPage',param);
+}
+export async function saveOrUpdateOrg(param) {
+ return POST(x+'saveOrUpdateOrg',param);
+}
+export async function deleteOrg(param) {
+ return POST(x+'deleteOrg',param);
+}
