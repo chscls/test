@@ -117,3 +117,13 @@ export async function saveOrUpdateOrg(param) {
 export async function deleteOrg(param) {
  return POST(x+'deleteOrg',param);
 }
+
+export async function getUserPage(param) {
+ return GET(x+'getUserPage',param);
+}
+export async function saveOrUpdateUser(param) {
+ return POST(x+'saveOrUpdateUser',param);
+}
+export async function deleteUser(param) {
+ return POST(x+'deleteUser',param);
+}

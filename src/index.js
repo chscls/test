@@ -33,6 +33,7 @@ app.model(require("./models/manage/WmcOrder"));
 app.model(require("./models/manage/WmcLive"));
 app.model(require("./models/manage/WmcLiveAnnounce"));
 app.model(require("./models/manage/WmcOrg"));
+app.model(require("./models/manage/WmcUser"));
 // 4. Router
 app.router(require('./router'));
 

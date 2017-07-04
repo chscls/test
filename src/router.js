@@ -234,6 +234,22 @@ const r62 = (location, callback) => {
 };
 
 
+const r63 = (location, callback) => {
+  require.ensure([], require => {
+    callback(null,
+      require('./routes/manage/UserManage'))
+  }, 'UserManage')
+};
+
+const r64 = (location, callback) => {
+  require.ensure([], require => {
+    callback(null,
+      require('./routes/manage/userManage/WmcUserPage'))
+  }, 'WmcUserPage')
+};
+
+
+
 
 
 
@@ -289,6 +305,11 @@ export default function ({ history }) {
 
              <Route path="OrgManage" getComponent={r61} >
                <Route path="WmcOrgPage" getComponent={r62} />
+                  
+             </Route>
+
+                   <Route path="UserManage" getComponent={r63} >
+               <Route path="WmcUserPage" getComponent={r64} />
                   
              </Route>
              
