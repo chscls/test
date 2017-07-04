@@ -185,6 +185,19 @@ const r55 = (location, callback) => {
   }, 'WmcTopicPage')
 };
 
+const r56 = (location, callback) => {
+  require.ensure([], require => {
+    callback(null,
+      require('./routes/manage/OrderManage'))
+  }, 'OrderManage')
+};
+const r57 = (location, callback) => {
+  require.ensure([], require => {
+    callback(null,
+      require('./routes/manage/orderManage/WmcOrderPage'))
+  }, 'WmcOrderPage')
+};
+
 
 
 export default function ({ history }) {
@@ -224,6 +237,11 @@ export default function ({ history }) {
                <Route path="WmcCoursePage" getComponent={r53} />
  <Route path="WmcCatalogPage" getComponent={r54} />
  <Route path="WmcTopicPage" getComponent={r55} />
+
+             </Route>
+
+              <Route path="OrderManage" getComponent={r56} >
+               <Route path="WmcOrderPage" getComponent={r57} />
 
              </Route>
         </Route>

@@ -72,3 +72,15 @@ export async function saveOrUpdateCatalog(param) {
 export async function deleteCatalog(param) {
  return POST(x+'deleteCatalog',param);
 }
+
+
+
+export async function getOrderPage(param) {
+ return GET(x+'getOrderPage',param);
+}
+export async function saveOrUpdateOrder(param) {
+ return POST(x+'saveOrUpdateOrder',param);
+}
+export async function deleteOrder(param) {
+ return POST(x+'deleteOrder',param);
+}
