@@ -250,7 +250,8 @@ class WmcCatalogGroupPage extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.location.key != this.props.location.key) {
+    console.log(nextProps);
+    if (nextProps.location.pathname != this.props.location.pathname) {
       this.fetch(1);
     }
 
