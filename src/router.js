@@ -188,29 +188,15 @@ export default function ({ history }) {
           <Route path="11" getComponent={r11} />
           <Route path="35" getComponent={r43} />
           <Route path="SiteManage" getComponent={r48} >
-             <Route path="WmcSiteView" getComponent={r49} />
+            <Route path="WmcSiteView" getComponent={r49} />
             <Route path="WmcPosterSpacePage" getComponent={r46} />
             <Route path="WmcPosterPage" getComponent={r47} />
-             <Route path="WmcAppPage" getComponent={r50} />
-             <Route path="WmcCatalogGroupPage/:type" getComponent={r51}/>
-            
+            <Route path="WmcAppPage" getComponent={r50} />
+            <Route path="WmcCatalogGroupPage/:type" getComponent={r51} />
           </Route>
         </Route>
       </Route>
-
-
-
-
       <Route path="login" getComponent={r35} />
-
-
-
-
-
-
-
-
-
     </Router>
   );
 };
