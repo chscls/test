@@ -45,9 +45,9 @@ class SiteManage extends React.Component{
         <Menu.Item key="sub22"><Link to="Member/SiteManage/WmcPosterPage">广告管理</Link></Menu.Item>
          <SubMenu title={<span>版面管理</span>}>
           <MenuItemGroup title="首页版面">
-            <Menu.Item key="setting:1"><Link to="Member/SiteManage/WmcCatalogGroupPage">顶层目录组</Link></Menu.Item>
-            <Menu.Item key="setting:2"><Link to="Member/SiteManage/WmcCatalogGroupPage">目录主题</Link></Menu.Item>
-            <Menu.Item key="setting:3"><Link to={{pathname:'Member/SiteManage/WmcCatalogGroupPage',query:{type:'indexTop'}}}>楼层</Link></Menu.Item>
+            <Menu.Item key="setting:1"><Link to={{pathname:'Member/SiteManage/WmcCatalogGroupPage',query:{type:'indexTop'}}}>顶层目录组</Link></Menu.Item>
+            <Menu.Item key="setting:2"><Link to={{pathname:'Member/SiteManage/WmcCatalogGroupPage',query:{type:'indexTopic'}}}>目录主题</Link></Menu.Item>
+            <Menu.Item key="setting:3"><Link to={{pathname:'Member/SiteManage/WmcCatalogGroupPage',query:{type:'indexFloor'}}}>楼层</Link></Menu.Item>
           </MenuItemGroup>
          
         </SubMenu>

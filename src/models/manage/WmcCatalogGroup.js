@@ -30,11 +30,12 @@ export default {
         payload.auth()
         return
       }
-      let { current, pageSize, token } = payload;
+      let { current, pageSize, token,type } = payload;
       let { data } = yield getCatalogGroupPage({
         pageNo: current,
         pageSize: pageSize,
         token: token,
+        type:type,
         v: Date.parse(new Date())
       });
       if (data) {

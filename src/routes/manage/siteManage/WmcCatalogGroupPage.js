@@ -25,7 +25,7 @@ const RoutePath = "/Member/SiteManage/WmcCatalogGroup";
 class WmcCatalogGroupPage extends React.Component {
   constructor(props) {
     super(props)
-    console.log(this.props.location.query.type);
+   
   }
 
   state = {
@@ -233,6 +233,7 @@ class WmcCatalogGroupPage extends React.Component {
         pageSize: 10,
         loading: false,
         token: this.props.LoginUser.user != null ? this.props.LoginUser.user.token : null,
+        type:this.props.location.query.type,
         auth: function () {
           this.props.dispatch({
             type: 'LoginUser/showModal',
@@ -248,7 +249,6 @@ class WmcCatalogGroupPage extends React.Component {
     });
   }
   componentDidMount() {
-   
     this.props.dispatch({
       type: 'common/changeBreadcrumb',
       payload: breadcrumbData
