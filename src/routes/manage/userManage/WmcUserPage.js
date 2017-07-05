@@ -252,6 +252,7 @@ class WmcUserPage extends React.Component {
       type: 'common/changeBreadcrumb',
       payload: breadcrumbData
     });
+ 
     this.fetch(1);
   }
 }
